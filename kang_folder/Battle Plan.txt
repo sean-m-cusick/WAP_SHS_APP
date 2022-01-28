@@ -39,3 +39,4 @@ RShiny Dashboard
 
 Extension:
 Vaccination vs Affection Rate
+Forcast

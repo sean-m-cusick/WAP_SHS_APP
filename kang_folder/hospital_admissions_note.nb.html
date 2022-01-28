@@ -216,8 +216,37 @@ pre code {
 
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGphbml0b3IpXG5saWJyYXJ5KGpzb25saXRlKVxuYGBgIn0= -->
+<pre class="r"><code>library(tidyverse)
+library(janitor)
+library(jsonlite)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGFfYWdlX25fc2V4X2pzb24gPC0gcGFzdGUwKFwiaHR0cHM6Ly93d3cub3BlbmRhdGEubmhzLnNjb3QvYXBpLzMvYWN0aW9uL2RhdGFzdG9yZV9zZWFyY2g/XCIsIFwicmVzb3VyY2VfaWQ9ZjhmM2E0MzUtMTkyNS00YzVhLWIyZTgtZTU4ZmRhY2YwNGJiXCIpICU+JSBcbmZyb21KU09OKClcblxuaGFfYWdlX2RlcHJpdmF0aW9uX2pzb24gPC0gcGFzdGUwKFwiaHR0cHM6Ly93d3cub3BlbmRhdGEubmhzLnNjb3QvYXBpLzMvYWN0aW9uL2RhdGFzdG9yZV9zZWFyY2g/XCIsIFwicmVzb3VyY2VfaWQ9NzQ2ZjliYWMtNzdmMS00M2ZlLWI2OWYtNWNhMmNkZTIyMDFiXCIpICU+JSBcbmZyb21KU09OKClcblxuXG5cbmBgYCJ9 -->
+<pre class="r"><code>ha_age_n_sex_json &lt;- paste0(&quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?&quot;, &quot;resource_id=f8f3a435-1925-4c5a-b2e8-e58fdacf04bb&quot;) %&gt;% 
+fromJSON()
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogImhvc3BpdGFsX2FkbWlzc2lvbnNfbm90ZSINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCg==</div>
+ha_age_deprivation_json &lt;- paste0(&quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?&quot;, &quot;resource_id=746f9bac-77f1-43fe-b69f-5ca2cde2201b&quot;) %&gt;% 
+fromJSON()
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGFfYWdlX25fc2V4IDwtIGhhX2FnZV9uX3NleFtbXCJyZXN1bHRcIl1dW1tcInJlY29yZHNcIl1dXG5oYV9hZ2Vfbl9zZXhcbmBgYCJ9 -->
+<pre class="r"><code>ha_age_n_sex &lt;- ha_age_n_sex[[&quot;result&quot;]][[&quot;records&quot;]]
+ha_age_n_sex</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+
+<div id="rmd-source-code">LS0tDQp0aXRsZTogImhvc3BpdGFsX2FkbWlzc2lvbnNfbm90ZSINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCmBgYHtyfQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpsaWJyYXJ5KGphbml0b3IpDQpsaWJyYXJ5KGpzb25saXRlKQ0KYGBgDQoNCg0KYGBge3J9DQpoYV9hZ2Vfbl9zZXhfanNvbiA8LSBwYXN0ZTAoImh0dHBzOi8vd3d3Lm9wZW5kYXRhLm5ocy5zY290L2FwaS8zL2FjdGlvbi9kYXRhc3RvcmVfc2VhcmNoPyIsICJyZXNvdXJjZV9pZD1mOGYzYTQzNS0xOTI1LTRjNWEtYjJlOC1lNThmZGFjZjA0YmIiKSAlPiUgDQpmcm9tSlNPTigpDQoNCmhhX2FnZV9kZXByaXZhdGlvbl9qc29uIDwtIHBhc3RlMCgiaHR0cHM6Ly93d3cub3BlbmRhdGEubmhzLnNjb3QvYXBpLzMvYWN0aW9uL2RhdGFzdG9yZV9zZWFyY2g/IiwgInJlc291cmNlX2lkPTc0NmY5YmFjLTc3ZjEtNDNmZS1iNjlmLTVjYTJjZGUyMjAxYiIpICU+JSANCmZyb21KU09OKCkNCg0KDQoNCmBgYA0KDQpgYGB7cn0NCmhhX2FnZV9uX3NleCA8LSBoYV9hZ2Vfbl9zZXhbWyJyZXN1bHQiXV1bWyJyZWNvcmRzIl1dDQpoYV9hZ2Vfbl9zZXgNCmBgYA0KDQo=</div>
 
 
 

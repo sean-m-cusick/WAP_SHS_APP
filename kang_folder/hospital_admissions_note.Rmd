@@ -3,3 +3,26 @@ title: "hospital_admissions_note"
 output: html_notebook
 ---
 
+```{r}
+library(tidyverse)
+library(janitor)
+library(jsonlite)
+```
+
+
+```{r}
+ha_age_n_sex_json <- paste0("https://www.opendata.nhs.scot/api/3/action/datastore_search?", "resource_id=f8f3a435-1925-4c5a-b2e8-e58fdacf04bb") %>% 
+fromJSON()
+
+ha_age_deprivation_json <- paste0("https://www.opendata.nhs.scot/api/3/action/datastore_search?", "resource_id=746f9bac-77f1-43fe-b69f-5ca2cde2201b") %>% 
+fromJSON()
+
+
+
+```
+
+```{r}
+ha_age_n_sex <- ha_age_n_sex[["result"]][["records"]]
+ha_age_n_sex
+```
+
