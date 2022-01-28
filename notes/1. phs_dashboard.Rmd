@@ -1,0 +1,207 @@
+---
+title: " "
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    df_print: paged
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align = 'center')
+```
+
+
+
+```{r, echo = FALSE, out.width = '80%'}
+knitr::include_graphics("images/logo.png")
+```
+
+
+# PHS RShiny Dashboard Project
+
+## Project aims and learning objectives
+
+
+Over the next week (and a bit) you will work in a group to build a dashboard to consolidate and expand everything you have learned, including:
+
+* Data cleaning and wrangling
+* Statistical analysis to identify patterns, trends or relationships 
+* Data visualisation
+* R Shiny
+* Collaborative git
+
+<br>
+<hr> 
+
+## PHS Dashboard Brief
+
+
+Since the start of the pandemic, NHS Scotland has had to adjust and adapt to unforeseen and changing circumstances on a continual basis to meet the ever changing demand and challenges facing it. While the pandemic has been an unforeseen pressure, one predictable pressure is the winter period and effect it has on unscheduled care and subsequent capacity and demand on hospital services in the NHS. 
+
+Hospital services make up a considerable part of the whole healthcare system and as such draw much of the attention in terms of the statistics in the public domain. 
+
+**We would like you to create a dashboard using R-Shiny and PHS open data on secondary care to investigate what has been happening from 2020 onwards in the acute hospital sector**. We would like you to use the data and visualisations in your dashboard to tell the story of and weave your narrative of the pandemic and its impact on the secondary care sector in NHS Scotland. 
+
+More specifically, we would like to to look at the following question:
+
+> Consider the impact that winter may have on the health care , primarily the hospital (acute care) sector. To what extent is the ‘winter crises’ the media predicts real? How has winter impacted NHS Scotland’s hospital system in the past? Why might it be even more critical in the coming year and might the pandemic influence the potential scenario.
+
+We want you to look at this from three different aspects:
+
+  * Temporal: How has this issue changed over time? (Is it getting better or worse?)  
+  
+  * Geographic: How does this issue differ between areas in Scotland? (Where should efforts be focussed?)  
+  
+  * Demographic: Who is most affected by this issue? (Who should be targeted with efforts?)  
+  
+
+**What's crucial in both is not to look at these questions in isolation, but rather, to understand the bigger picture.  Some things you might want to think about to include in your project are:**
+
+* The whole system: from what’s coming through the front door in A&E and then how it filters through; how many emergency admissions are there, how many electives, how does this impact the lengths of stay people have in hospital? 
+
+* What does this mean for the number of people in intensive care and the number of beds? 
+
+* Do people have longer lengths of stay from elective or emergency admissions? 
+
+* Capacity – what is happening to the number of beds over the period? Perhaps think about the specialities these are if there has been specific variation? 
+
+* Are there any demographic groups that are driving the activity?  
+
+* Are there key cohorts of patient (based on their demographics) that drive the overall hospital activity?
+
+* How significant is deprivation as a driver of hospital activity?
+
+* Are there specialty’s that have more stable activity patterns over time and how much of an impact is stability on overall activity?
+
+* How significant are the differences in hospital activity across the country? Does urban/rural have an impact or is it related to the size and capacity of the health board?
+
+
+We **do not expect your presentation to answer all of these**, but they are excellent starting points for your investigations. 
+
+<br>
+<hr> 
+
+# Open Data  
+
+To use the data, you will need to clean, manipulate and match the data to get it into a suitable format to analyse and use to put into the dashboards. You may wish to link the source files to the available lookups to give greater clarity and explanation to some of the terms and codes. Feel free to use these or any others you may find on the PHS open data platform. Some files/topics you might want to use (but not exhaustive) are in the links below:
+
+* [Hospital Activity page](https://www.opendata.nhs.scot/dataset/inpatient-and-daycase-activity/resource/c3b4be64-5fb4-4a2f-af41-b0012f0a276a)  
+
+* [Hospital Activity by Speciality](https://www.opendata.nhs.scot/dataset/inpatient-and-daycase-activity/resource/c3b4be64-5fb4-4a2f-af41-b0012f0a276a)  
+
+* [Hospital Activity and Patient Demographics](https://www.opendata.nhs.scot/dataset/inpatient-and-daycase-activity/resource/00c00ecc-b533-426e-a433-42d79bdea5d4)  
+
+* [Hospital Activity and Deprivation](https://www.opendata.nhs.scot/dataset/inpatient-and-daycase-activity/resource/4fc640aa-bdd4-4fbe-805b-1da1c8ed6383)  
+
+* [Hospitalisations due to Covid 19](https://www.opendata.nhs.scot/dataset/covid-19-wider-impacts-hospital-admissions)  
+
+* [A&E attendances and performance data](https://www.opendata.nhs.scot/dataset/monthly-emergency-department-activity-and-waiting-times) 
+
+* [Quarterly Hospital Beds Information - Datasets - Scottish Health and Social Care Open Data - nhs.scot](https://www.opendata.nhs.scot/dataset/hospital-beds-information)  
+
+* [Delayed discharge data](https://www.opendata.nhs.scot/dataset/hospital-beds-information)  
+
+
+
+<br>
+<hr> 
+
+# Project Specifics 
+
+## The RShiny dashboard
+
+It is up to you what information you include in your dashboard based on the brief. However, your dashboard must contain **both** statistical analyses (e.g. means, standard deviations, confidence intervals, and/or correlations between variables) as well as visualisations of the data. Both of these should provide insights that answer the questions in the brief, and any important metrics should be highlighted within the context of the brief.
+
+
+
+## The presentation
+
+You will present your results as a group in the form of an oral presentation. You should present two things:
+
+* A presentation that gives an outline and background to your app
+* Your working dashboard (as a demo)
+
+The presentation must provide evidence for each of the knowledge and skills outcomes below:
+
+* Communicate key performance indicators (KPIs)
+* Relevant selection of visuals
+* Overview of the dashboard, findings and insights
+* Presentation skills, such as tailoring communication to a specific audience, i.e. a client/non-tech audience
+
+You can create slides any way you like, e.g. using Keynote, PowerPoint, Google Slides, Prezi, or [any of the available ways](https://bookdown.org/yihui/rmarkdown/xaringan.html) to [create presentations in RStudio](https://bookdown.org/yihui/rmarkdown/presentations.html). 
+
+In the presentation session you will have up to 15 minutes to present your slides and dashboard, + 5 minutes to answer any questions. It's important that **all members of the group contribute to the creation as well as the delivery of the presentation.**
+
+
+## Timeline
+
+| Date | Activity |
+|-----------------|-------------------------------------|
+| Friday | Project handout & start planning |
+| Weekend | Work on projects |
+| Monday - Thursday | Work on projects |
+| Friday | Project presentations! |
+
+
+## .gitignore file 
+
+Before adding any scripts to your repo we want to make sure the .gitignore file contains all the correct file names to ignore. It should include:
+```{r, eval = FALSE}
+.Rproj.user
+.Rhistory
+.RData
+.DStore
+```
+
+When you create a new RStudio Project that is also a Git repo it creates a .gitignore file with all these included. 
+
+The instructors will be able to help with .gitignores before you get started. If ever face an issue where haven't included '.Rproj.user' and want to add it after the fact [here](https://github.com/STAT545-UBC/Discussion/issues/122) is a useful link to how to fix it. 
+
+
+
+
+<br>
+<hr> 
+
+# How to approach the project
+
+## Team learning goals
+
+At the start of the project, have a discussion to establish what everyone in your team wants to get out of it. Some people may be more focused on practicing what they’ve already learned, some may be keen to try out something new. Find a way of enabling team members to reach their learning goals while ensuring the project is completed.
+
+## Plan, plan, plan...
+
+Planning is key when it comes to this group project. Use planning tools, e.g. Trello, to clearly divide tasks between members and prioritise them. Your allocated time to complete the project will go by quicker than you expect so good time management is also key.
+
+A recommended approach is to first properly read through the project brief and decide what is being asked. You will be sharing your plans with the instructors so they can see if you’ve captured the essence of the project brief. Familiarise yourself with the available data so you know what constraints you will have to work within when trying to answer the questions in the brief. Once you’ve decided what key info needs to go in, a good next step would then be to design the dashboard visually first with pens and paper or using an online tool that's good for wireframing such as https://excalidraw.com.
+
+It is important that everyone in the group understands what the common tasks and goals to complete are. So make sure everyone knows what their role involves before you start splitting up to work on individual parts of the dashboard.
+
+## Set your MVP
+
+It will be extremely beneficial if you label your different ideas and tasks as either 'MVP' or 'Extension' in the planning stage. Set out an MVP that only contains features that are crucial to delivering the requirements. Split the project up into small deliverables that can be tackled one at a time.
+
+## Communication
+
+It is extremely important to maintain healthy communication with your group throughout the project. Be open to everyone's thoughts and ideas, even if you disagree with them. If you think something could be better, use constructive criticism to build on ideas rather than just tearing them down completely. While we understand it's impossible for everyone to contribute exactly the same amount, make sure all members are given the **opportunity to contribute in a meaningful way** to the project.
+
+We recommend you plan the project as a group, and split off once roles, goals and tasks have been agreed on.
+
+Once you are doing individual work for the project, remember to have team stand-ups at least twice a day (once in the morning and once in the afternoon/at the end of the day) to make sure you are keeping each other updated on progress and any potential challenges. 
+
+If there are any problems with communication, or within the team in general, please reach out to an instructor as soon as possible and we will try to deal with it accordingly. We will try to monitor the progress of each group, but don't hesitate to reach out to us if you are worried about anything related to your group or the project.
+
+## Branching
+
+Part of the group project is using Git and GitHub collaboratively to work on the same project at the same time using different branches. It is recommended that you split up your app into a ui.R, server.R and and any additional R scripts to source in for best collaboration. Create a 'skeleton' UI and Server in the respective files as well as read in the data in your global file, before you create your own branches so you are all working from the same starting point.
+
+You can practice switching branches and merging before getting started on 'proper' project code so that you are all familiar with how it works for when you have your real code.
+
+
+## Checks
+
+It’s easy to get so caught up in whether your code runs or not it can be easy to think your analysis ‘works’ if your code runs … but have you taken a moment to think about whether your numbers are reasonable and make sense?
+
+Make sure you are checking your output/results. It's more important to have correct figures than an additional functionality!

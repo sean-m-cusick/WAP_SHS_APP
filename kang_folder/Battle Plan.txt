@@ -1,0 +1,41 @@
+PHS Dashboard Brief
+PBS - Public Health Service
+
+Aim - Create a dashboard using R-Shiny and PHS open data on secondary care to investigate what has been happening from 2020 onwards in the acute hospital sector
+    - tell the story of and weave your narrative of the pandemic and its impact on the secondary care sector in NHS Scotland.
+
+Main Questions - Consider the impact that winter may have on the health care , primarily the hospital (acute care) sector. 
+1. To what extent is the ‘winter crises’ the media predicts real? 
+2. How has winter impacted NHS Scotland’s hospital system in the past? 
+3. Why might it be even more critical in the coming year and might the pandemic influence the potential scenario.
+
+3 Aspects: 
+Temporal: How has this issue changed over time? (Is it getting better or worse?)
+Geographic: How does this issue differ between areas in Scotland? (Where should efforts be focussed?)
+Demographic: Who is most affected by this issue? (Who should be targeted with efforts?)
+
+3 Aspects Sample Questions:
+The whole system: from what’s coming through the front door in A&E and then how it filters through; how many emergency admissions are there, how many electives, how does this impact the lengths of stay people have in hospital?
+
+Do people have longer lengths of stay from elective or emergency admissions?
+
+What does this mean for the number of people in intensive care and the number of beds?
+Capacity – what is happening to the number of beds over the period? Perhaps think about the specialities these are if there has been specific variation?
+
+How significant are the differences in hospital activity across the country? Does urban/rural have an impact or is it related to the size and capacity of the health board?
+Are there specialty’s that have more stable activity patterns over time and how much of an impact is stability on overall activity?
+
+Are there any demographic groups that are driving the activity?
+Are there key cohorts of patient (based on their demographics) that drive the overall hospital activity?
+How significant is deprivation as a driver of hospital activity?
+
+
+
+
+Make:
+RShiny Dashboard
+- Stat Analysis
+
+
+Extension:
+Vaccination vs Affection Rate
