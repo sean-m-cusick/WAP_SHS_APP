@@ -32,3 +32,21 @@ hosp_activity_demographics %>%
   summarise(count = n())
 ```
 
+```{r}
+hosp_activity_demographics %>% 
+  group_by(length_of_episode) %>% 
+  summarise(count = n())
+```
+
+```{r}
+hosp_activity_demographics %>% 
+  group_by(length_of_stay) %>% 
+  summarise(count = n())
+```
+
+
+```{r}
+hosp_activity_demographics %>% 
+  group_by(stays) %>% 
+  summarise(count = n())
+```
