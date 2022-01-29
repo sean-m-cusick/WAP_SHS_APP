@@ -1,0 +1,12 @@
+---
+title: "PHS Shiny Dashboard"
+author: "Aububakar, Kang, Lucy, Sean"
+output: html_notebook
+---
+
+```{r, libraries, echo=FALSE, include=FALSE}
+library(ggplot2)
+library(tidyverse)
+library(janitor)
+```
+
