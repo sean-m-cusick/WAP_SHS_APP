@@ -1,5 +1,6 @@
 ---
 title: "Project Description Outline"
+author: "Team KLAS"
 output:
   html_document:
     df_print: paged
@@ -9,36 +10,103 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# **Name of Dashboard**
 
-### Names of group members
+### Members of Team KLAS
 
-Person 1, Person 2, Person 3
+* Aboubakar Hameed
+* Kang Hin Lee
+* Lucy Burns
+* Seàn M. Cusick
 
 ### Roles & responsibilities of each member
 
-**Person 1** worked on ...
+* **Aboubakar Hameed** was responsible for ...; furthermore, supported <spatial visualisations>, <data cleaning>,... 
 
-**Person 2** worked on ...
+* **Kang Hin Lee** was responsible for ...; furthermore, supported <spatial visualisations>, <data cleaning>,... 
 
-**Person 3** worked on ...
+* **Lucy Burns** was responsible for ...; furthermore, supported <spatial visualisations>, <data cleaning>,... 
 
-**Everyone** worked on ...
+* **Seàn M. Cusick** was responsible for Project Management & Documentation; furthermore, supported <spatial visualisations>, <data cleaning>,...  
+
+* **All team members** worked on <spatial visualisations>, <data cleaning>,... 
 
 ### Brief description of dashboard topic
 
-Our dashboard contains ...
+Our dashboard contains three sections:
+1. checkboxes of each health board
+2. drop down menu for individual hospitals in that health board
+3. Tabs
+  1). Map of Scotland
+  2). Time series graphs
+  3). proportional graphs
+  
+additionally, a number of buttons such as:
+* reset
+* select all
 
 Our topic is ...
 
 The dashboard outlines our topic in terms of ...
 
+***  
+
 ### Stages of the project
 
-* Planning & dashboard wireframe
-* Git branching & version control
-* Choosing datasets
+* Role Allocation  
+* Project Management  
+  * Work Breakdown Structure  
+  * Project Gantt  
+  * Git branching  
+  * Version control  
+* Application Development  
+  * Choosing datasets  
+  * Dashboard wireframe  
+***
 
-and so on ...
+#### **Role Allocation**
+
+asdf
+
+#### **Project Management**
+
+asdf
+
+
+##### Work Breakdown Structure
+
+asdf
+
+
+##### Project Gantt
+
+asdf
+
+
+##### Git branching
+
+asdf
+
+
+##### Version Control
+
+asdf
+
+
+#### **Application Development**
+
+asdf
+
+
+##### Dataset Selection
+
+asdf
+
+##### Dashboard wireframe
+
+asdf
+
+***
 
 ### Which tools were used in the project
 
