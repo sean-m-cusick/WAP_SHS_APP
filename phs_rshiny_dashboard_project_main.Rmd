@@ -87,9 +87,15 @@ bed_pubnote_id = "25bdc37b-4a77-4ff8-9b3a-edaba6e1c613"
 
 ```{r}
 # Extract Dataframe via API
-board_of_treatment_n_specialty <- phs_df_func(bt_ans_id)
+board_of_treatment_age_sex <- phs_df_func(bt_ans_id)
 
 # Acorynm Dictionary
 phs_dictionary_example <- phs_dictionary_func(bt_ans_id)
 ```
 
+```{r}
+# Extract Dataframe via API
+board_of_treatment_n_specialty <- phs_df_func(bt_spe_id)
+
+# Acorynm Dictionary
+```
