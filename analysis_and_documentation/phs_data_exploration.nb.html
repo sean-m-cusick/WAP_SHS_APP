@@ -219,9 +219,149 @@ pre code {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-text-begin -->
+<p>Link to all Public Health Scotland (PHS) datasets can be found <a href="https://www.opendata.nhs.scot/dataset">here</a></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5cbmJ0X3NwZV9kYXRhID0gY2xlYW5fbmFtZXMocmVhZF9jc3YoXCIuLi9yYXdfZGF0YS9pbnBhdGllbnRfYW5kX2RheWNhc2VfYnlfbmhzX2JvYXJkX29mX3RyZWF0bWVudF9hbmRfc3BlY2lhbHR5LmNzdlwiKSlcblxuYGBgIn0= -->
+<pre class="r"><code>
+
+bt_spe_data = clean_names(read_csv(&quot;../raw_data/inpatient_and_daycase_by_nhs_board_of_treatment_and_specialty.csv&quot;))
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogOTUyNDMgQ29sdW1uczogMThcbi0tIENvbHVtbiBzcGVjaWZpY2F0aW9uIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5EZWxpbWl0ZXI6IFwiLFwiXG5jaHIgKDEyKTogUXVhcnRlciwgUXVhcnRlclFGLCBIQiwgSEJRRiwgTG9jYXRpb24sIExvY2F0aW9uUUYsIEFkbWlzc2lvblR5cGUsIEFkbWlzc2lvblR5cGVRLi4uXG5kYmwgICg2KTogRXBpc29kZXMsIExlbmd0aE9mRXBpc29kZSwgQXZlcmFnZUxlbmd0aE9mRXBpc29kZSwgU3BlbGxzLCBMZW5ndGhPZlNwZWxsLCBBdmVyYWdlLi4uXG5cbmkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG5pIFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
+<pre><code>Rows: 95243 Columns: 18
+-- Column specification -----------------------------------------------------------------------
+Delimiter: &quot;,&quot;
+chr (12): Quarter, QuarterQF, HB, HBQF, Location, LocationQF, AdmissionType, AdmissionTypeQ...
+dbl  (6): Episodes, LengthOfEpisode, AverageLengthOfEpisode, Spells, LengthOfSpell, Average...
+
+i Use `spec()` to retrieve the full column specification for this data.
+i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBidCAtIEFjdGl2aXR5IGJ5IEJvYXJkIG9mIFRyZWF0bWVudFxuYGBgIn0= -->
+<pre class="r"><code># bt - Activity by Board of Treatment</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBGdW5jdGlvbiBmb3IgZmV0Y2hpbmcgcGhzIGRhdGFmcmFtZXNcbnBoc19kZl9mdW5jIDwtIGZ1bmN0aW9uKGlkKXtcbiAgXG4gICMgTGluayB0ZW1wbGF0ZXMgZm9yIHNpbXBsaWNpdHlcbiAgcGhzX3VybCA9IFwiaHR0cHM6Ly93d3cub3BlbmRhdGEubmhzLnNjb3QvYXBpLzMvYWN0aW9uL2RhdGFzdG9yZV9zZWFyY2g/cmVzb3VyY2VfaWQ9XCJcbiAgIyBmZXRjaCBtYXhpbXVtIDk5OSc5OTkgcmVzdWx0cyBmb3Igc2ltcGxpY2l0eVxuICBsaW1pdF91cmwgPSBcIiZsaW1pdD05OTk5OTlcIlxuICBcbiAgIyBjb25zdHJ1Y3QgVVJMIGZvciBmZXRjaGluZyBwcm9jZXNzXG4gIHVybF9saW5rIDwtIHBhc3RlMChwaHNfdXJsLCBpZCwgbGltaXRfdXJsKSAlPiUgXG5mcm9tSlNPTigpXG4gIFxuICAjIGNvbnN0cnVjdCBkYXRhZnJhbWUgZnJvbSB1cmxcbiAgcGhzX2RmIDwtICB1cmxfbGlua1tbXCJyZXN1bHRcIl1dW1tcInJlY29yZHNcIl1dXG4gIHJldHVybihwaHNfZGYpXG59XG5cblxucGhzX2RpY3Rpb25hcnlfZnVuYyA8LSBmdW5jdGlvbihpZCl7XG4gIFxuICAjIExpbmsgdGVtcGxhdGVzIGZvciBzaW1wbGljaXR5XG4gIHBoc191cmwgPSBcImh0dHBzOi8vd3d3Lm9wZW5kYXRhLm5ocy5zY290L2FwaS8zL2FjdGlvbi9kYXRhc3RvcmVfc2VhcmNoP3Jlc291cmNlX2lkPVwiXG4gICMgZmV0Y2ggbWF4aW11bSA5OTknOTk5IHJlc3VsdHMgZm9yIHNpbXBsaWNpdHlcbiAgbGltaXRfdXJsID0gXCImbGltaXQ9MTBcIlxuICBcbiAgIyBjb25zdHJ1Y3QgVVJMIGZvciBmZXRjaGluZyBwcm9jZXNzXG4gIHVybF9saW5rIDwtIHBhc3RlMChwaHNfdXJsLCBpZCwgbGltaXRfdXJsKSAlPiUgXG5mcm9tSlNPTigpXG4gIFxuICAjIGNvbnN0cnVjdCBkYXRhZnJhbWUgZnJvbSB1cmxcbiAgcGhzX2RpY3Rpb25hcnkgPC0gIHVybF9saW5rW1tcInJlc3VsdFwiXV1bW1wiZmllbGRzXCJdXVxuICByZXR1cm4ocGhzX2RpY3Rpb25hcnkpXG59XG5cbmBgYCJ9 -->
+<pre class="r"><code># Function for fetching phs dataframes
+phs_df_func &lt;- function(id){
+  
+  # Link templates for simplicity
+  phs_url = &quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=&quot;
+  # fetch maximum 999&#39;999 results for simplicity
+  limit_url = &quot;&amp;limit=999999&quot;
+  
+  # construct URL for fetching process
+  url_link &lt;- paste0(phs_url, id, limit_url) %&gt;% 
+fromJSON()
+  
+  # construct dataframe from url
+  phs_df &lt;-  url_link[[&quot;result&quot;]][[&quot;records&quot;]]
+  return(phs_df)
+}
+
+
+phs_dictionary_func &lt;- function(id){
+  
+  # Link templates for simplicity
+  phs_url = &quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=&quot;
+  # fetch maximum 999&#39;999 results for simplicity
+  limit_url = &quot;&amp;limit=10&quot;
+  
+  # construct URL for fetching process
+  url_link &lt;- paste0(phs_url, id, limit_url) %&gt;% 
+fromJSON()
+  
+  # construct dataframe from url
+  phs_dictionary &lt;-  url_link[[&quot;result&quot;]][[&quot;fields&quot;]]
+  return(phs_dictionary)
+}
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jIEhvc3BpdGFsIEFjdGl2aXR5IHBhZ2VcbmJvYXJkX29mX3RyZWF0bWVudF9uX3NwZWNpYWx0eSA8LSBwaHNfZGZfZnVuYyhib2FyZF9vZl90cmVhdG1lbnRfbl9zcGVjaWFsdHlfaWQpXG5cbiMgSG9zcGl0YWwgQWN0aXZpdHkgYnkgU3BlY2lhbGl0eVxuIyBcbiMgSG9zcGl0YWwgQWN0aXZpdHkgYW5kIFBhdGllbnQgRGVtb2dyYXBoaWNzXG4jIFxuIyBIb3NwaXRhbCBBY3Rpdml0eSBhbmQgRGVwcml2YXRpb25cbiMgXG4jIEhvc3BpdGFsaXNhdGlvbnMgZHVlIHRvIENvdmlkIDE5XG5oYl9hZ2Vfbl9zZXggPC0gcGhzX2RmX2Z1bmMoaGJfYWdlX25fc2V4X2lkKVxuaGJfYWdlX2RlcHJpdmF0aW9uIDwtIHBoc19kZl9mdW5jKGhiX2FnZV9kZXByaXZhdGlvbl9pZClcbmhiX3NwZWNpYWx0eSA8LSBwaHNfZGZfZnVuYyhoYl9zcGVjaWFsdHlfaWQpXG5cbmhzY3BfYWdlX25fc2V4IDwtIHBoc19kZl9mdW5jKGhzY3BfYWdlX25fc2V4X2lkKVxuaHNjcF9kZXByaXZhdGlvbiA8LSBwaHNfZGZfZnVuYyhoc2NwX2RlcHJpdmF0aW9uX2lkKVxuaHNjcF9zcGVjaWFsdHkgPC0gcGhzX2RmX2Z1bmMoaHNjcF9zcGVjaWFsdHlfaWQpXG5cbiMgQSZFIGF0dGVuZGFuY2VzIGFuZCBwZXJmb3JtYW5jZSBkYXRhXG4jIFxuIyBRdWFydGVybHkgSG9zcGl0YWwgQmVkcyBJbmZvcm1hdGlvbiAtIERhdGFzZXRzIC0gU2NvdHRpc2ggSGVhbHRoIGFuZCBTb2NpYWwgQ2FyZSBPcGVuIERhdGEgLSBuaHMuc2NvdFxuIyBcbiMgRGVsYXllZCBkaXNjaGFyZ2UgZGF0YVxuXG5cblxuYGBgIn0= -->
+<pre class="r"><code>
+# Hospital Activity page
+board_of_treatment_n_specialty &lt;- phs_df_func(board_of_treatment_n_specialty_id)
+
+# Hospital Activity by Speciality
+# 
+# Hospital Activity and Patient Demographics
+# 
+# Hospital Activity and Deprivation
+# 
+# Hospitalisations due to Covid 19
+hb_age_n_sex &lt;- phs_df_func(hb_age_n_sex_id)
+hb_age_deprivation &lt;- phs_df_func(hb_age_deprivation_id)
+hb_specialty &lt;- phs_df_func(hb_specialty_id)
+
+hscp_age_n_sex &lt;- phs_df_func(hscp_age_n_sex_id)
+hscp_deprivation &lt;- phs_df_func(hscp_deprivation_id)
+hscp_specialty &lt;- phs_df_func(hscp_specialty_id)
+
+# A&amp;E attendances and performance data
+# 
+# Quarterly Hospital Beds Information - Datasets - Scottish Health and Social Care Open Data - nhs.scot
+# 
+# Delayed discharge data
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2xpbXBzZShidF9zcGVfZGF0YSlcbmBgYCJ9 -->
+<pre class="r"><code>glimpse(bt_spe_data)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogOTUsMjQzXG5Db2x1bW5zOiAxOFxuJCBxdWFydGVyICAgICAgICAgICAgICAgICAgICAgIDxjaHI+IFwiMjAxNlEyXCIsIFwiMjAxNlEzXCIsIFwiMjAxNlE0XCIsIFwiMjAxN1ExXCIsIFwiMjAxN1EyXCIsIFwiMjAxN1F+XG4kIHF1YXJ0ZXJfcWYgICAgICAgICAgICAgICAgICAgPGNocj4gTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCB+XG4kIGhiICAgICAgICAgICAgICAgICAgICAgICAgICAgPGNocj4gXCJTQjA4MDFcIiwgXCJTQjA4MDFcIiwgXCJTQjA4MDFcIiwgXCJTQjA4MDFcIiwgXCJTQjA4MDFcIiwgXCJTQjA4MH5cbiQgaGJxZiAgICAgICAgICAgICAgICAgICAgICAgICA8Y2hyPiBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIH5cbiQgbG9jYXRpb24gICAgICAgICAgICAgICAgICAgICA8Y2hyPiBcIkQxMDJIXCIsIFwiRDEwMkhcIiwgXCJEMTAySFwiLCBcIkQxMDJIXCIsIFwiRDEwMkhcIiwgXCJEMTAySFwiLCBcIkR+XG4kIGxvY2F0aW9uX3FmICAgICAgICAgICAgICAgICAgPGNocj4gTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCB+XG4kIGFkbWlzc2lvbl90eXBlICAgICAgICAgICAgICAgPGNocj4gXCJFbGVjdGl2ZSBJbnBhdGllbnRzXCIsIFwiRWxlY3RpdmUgSW5wYXRpZW50c1wiLCBcIkVsZWN0aXZlIH5cbiQgYWRtaXNzaW9uX3R5cGVfcWYgICAgICAgICAgICA8Y2hyPiBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIH5cbiQgc3BlY2lhbHR5ICAgICAgICAgICAgICAgICAgICA8Y2hyPiBcIkEyXCIsIFwiQTJcIiwgXCJBMlwiLCBcIkEyXCIsIFwiQTJcIiwgXCJBMlwiLCBcIkEyXCIsIFwiQTJcIiwgXCJBMlwiLCBcIkF+XG4kIHNwZWNpYWx0eV9uYW1lICAgICAgICAgICAgICAgPGNocj4gXCJDYXJkaW9sb2d5XCIsIFwiQ2FyZGlvbG9neVwiLCBcIkNhcmRpb2xvZ3lcIiwgXCJDYXJkaW9sb2d5XCIsIH5cbiQgZXBpc29kZXMgICAgICAgICAgICAgICAgICAgICA8ZGJsPiAyNTYsIDI1NiwgMjU3LCAyNTksIDI1NSwgMjI1LCAyMzgsIDI0MSwgMjQ0LCAyMjgsIDI0NCwgMn5cbiQgbGVuZ3RoX29mX2VwaXNvZGUgICAgICAgICAgICA8ZGJsPiA1NTksIDM2MSwgMzE4LCA2MDcsIDM5MCwgNDk2LCAzMjgsIDcwOCwgMzkxLCAzOTEsIDQ3MSwgNX5cbiQgYXZlcmFnZV9sZW5ndGhfb2ZfZXBpc29kZSAgICA8ZGJsPiAyLjE4MzU5NCwgMS40MTAxNTYsIDEuMjM3MzU0LCAyLjM0MzYyOSwgMS41Mjk0MTIsIDIuMjA0NH5cbiQgYXZlcmFnZV9sZW5ndGhfb2ZfZXBpc29kZV9xZiA8Y2hyPiBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIH5cbiQgc3BlbGxzICAgICAgICAgICAgICAgICAgICAgICA8ZGJsPiAzMDIsIDMwMSwgMjk2LCAyOTAsIDMwNSwgMjYyLCAyNjEsIDI4MCwgMjg4LCAyNzksIDI3MywgM35cbiQgbGVuZ3RoX29mX3NwZWxsICAgICAgICAgICAgICA8ZGJsPiA4NTgsIDU0NiwgNDQ5LCA3MjIsIDUxMSwgNjg2LCA0MTgsIDgzMSwgNTM1LCA1NzcsIDU2OSwgN35cbiQgYXZlcmFnZV9sZW5ndGhfb2Zfc3BlbGwgICAgICA8ZGJsPiAyLjg0MTA2MCwgMS44MTM5NTMsIDEuNTE2ODkyLCAyLjQ4OTY1NSwgMS42NzU0MTAsIDIuNjE4M35cbiQgYXZlcmFnZV9sZW5ndGhfb2Zfc3BlbGxfcWYgICA8Y2hyPiBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIE5BLCBOQSwgTkEsIH5cbiJ9 -->
+<pre><code>Rows: 95,243
+Columns: 18
+$ quarter                      &lt;chr&gt; &quot;2016Q2&quot;, &quot;2016Q3&quot;, &quot;2016Q4&quot;, &quot;2017Q1&quot;, &quot;2017Q2&quot;, &quot;2017Q~
+$ quarter_qf                   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ~
+$ hb                           &lt;chr&gt; &quot;SB0801&quot;, &quot;SB0801&quot;, &quot;SB0801&quot;, &quot;SB0801&quot;, &quot;SB0801&quot;, &quot;SB080~
+$ hbqf                         &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ~
+$ location                     &lt;chr&gt; &quot;D102H&quot;, &quot;D102H&quot;, &quot;D102H&quot;, &quot;D102H&quot;, &quot;D102H&quot;, &quot;D102H&quot;, &quot;D~
+$ location_qf                  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ~
+$ admission_type               &lt;chr&gt; &quot;Elective Inpatients&quot;, &quot;Elective Inpatients&quot;, &quot;Elective ~
+$ admission_type_qf            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ~
+$ specialty                    &lt;chr&gt; &quot;A2&quot;, &quot;A2&quot;, &quot;A2&quot;, &quot;A2&quot;, &quot;A2&quot;, &quot;A2&quot;, &quot;A2&quot;, &quot;A2&quot;, &quot;A2&quot;, &quot;A~
+$ specialty_name               &lt;chr&gt; &quot;Cardiology&quot;, &quot;Cardiology&quot;, &quot;Cardiology&quot;, &quot;Cardiology&quot;, ~
+$ episodes                     &lt;dbl&gt; 256, 256, 257, 259, 255, 225, 238, 241, 244, 228, 244, 2~
+$ length_of_episode            &lt;dbl&gt; 559, 361, 318, 607, 390, 496, 328, 708, 391, 391, 471, 5~
+$ average_length_of_episode    &lt;dbl&gt; 2.183594, 1.410156, 1.237354, 2.343629, 1.529412, 2.2044~
+$ average_length_of_episode_qf &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ~
+$ spells                       &lt;dbl&gt; 302, 301, 296, 290, 305, 262, 261, 280, 288, 279, 273, 3~
+$ length_of_spell              &lt;dbl&gt; 858, 546, 449, 722, 511, 686, 418, 831, 535, 577, 569, 7~
+$ average_length_of_spell      &lt;dbl&gt; 2.841060, 1.813953, 1.516892, 2.489655, 1.675410, 2.6183~
+$ average_length_of_spell_qf   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ~</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYnRfc3BlX2RhdGEgJT4lIFxuICBncm91cF9ieShzcGVjaWFsdHlfbmFtZSkgJT4lIFxuICBjb3VudChuID0gbigpKVxuYGBgIn0= -->
+<pre class="r"><code>bt_spe_data %&gt;% 
+  group_by(specialty_name) %&gt;% 
+  count(n = n())</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU3RvcmluZyBjb3VudHMgaW4gYG5uYCwgYXMgYG5gIGFscmVhZHkgcHJlc2VudCBpbiBpbnB1dFxuaSBVc2UgYG5hbWUgPSBcIm5ld19uYW1lXCJgIHRvIHBpY2sgYSBuZXcgbmFtZS5cbiJ9 -->
+<pre><code>Storing counts in `nn`, as `n` already present in input
+i Use `name = &quot;new_name&quot;` to pick a new name.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImdyb3VwZWRfZGYiLCJ0YmxfZGYiLCJ0YmwiLCJkYXRhLmZyYW1lIl0sIm5yb3ciOjMyLCJuY29sIjozLCJzdW1tYXJ5Ijp7IkEgdGliYmxlIjpbIjMyIHggMyJdLCJHcm91cHMiOlsic3BlY2lhbHR5X25hbWUgWzMyXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJzVlV6VzRUTVJCMjBxUlZ0aitrTGRDcUlMUW5CQkpFYW9FekttMVZlaUNOMGxUaUJ1NW0yclcwc1ZlMkE2UmM0TTR6Y0lJRDRoR1F1UEFBSERoeWdDZHArSGF6bTI2Y0J5Q1NzL1kzUDU3NXhqUHQzZWNQdk9jZVkyeUdWVXBsTmxQRmxzM3V0RGEzSG0weFZpbmpWR0lWVmt1K2I2QzFtcW95VnNmeU04SGNkaFNSUGh0a3g0VnR5Y25Za0t3SVRJWjVPMXgzaFlyVVdPdjZDTEdoMGp3UWdYL1UxMmVrYytueVRpU2tDSGprNzVNc09sb2ZDNXJVMXlvT0IyYkM3YVhob1F5S2dwV3hvTTBuSTVuZkpkM2p0Z2l0NzNGOXoyOHFRLzV0dnhOcXhhMS9aNi9adVR1V3k2NEt0SkNwRVhSMkJUOGhTM21VOVgxdXJGWWtMZW1pMzNxU2pVWU16NmdyQWlFcHc2L2srQ1FMYTRDRlZmZVBjUlBYQTlkcVpaKzA0RmFEUFVjeS81U1RrNUozME92MVpSRlpQWkNuRkZpaCtnYnhHK0ptSFAvYUFTS1hScndpSDJVaTEzMDlQVTl6WEV0clVnQVdVc0JNSkxWNEdJYzI1RkZ2SXBZV2p5TGtrdHpvY3RPS1FPYlVDMWxyVThoUFJDUXNySlIwclpiYUpLZDV2dG9tRXdzTlpxYlpYR2lIMUhkSXU5WFJISmpQWmRjLzFIaXJNVStNbkZEbWpyT2trVnphRmlVNy8xOVhIZ2RqNStpSUptUFhicUtYM3llZGpmVVNqNkdGTHY2RG8wSXh2K085L0lMZUQ4WTIzakYyNHh0ME5sQ1MzOEMrb08wL0k4T2YwTmV3ZTRzaVA4UVovcGZQUjkvYVI2d1A0TzhUYkFMc045RWZqOEgxVjJkK1ZBTVUwbVN6SXdlOUxyZThjYXA1anh6MW1sYXZHeEs0eWZJcEl6ZzJIQTcvdW41enBmcG9qSTNxYjJJS0JJL3M0RVVpemtlWXpEWmxLZkYvNFhpYVUzSHlsdUNybk15NXFoTnJTVHZBMGhQVjhZOUdGd21iMU45THBhUGZZcmIzQy91WjBZMlZZZWFwbW5tYUpYbDIrUlNyRWFaSmxGOENIdElNR3pIR2dNMTVBMm9hVmxtZTYzbG94UnhKVTJNWC93QXFDU3BpM2dVQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["specialty_name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["n"],"name":[2],"type":["int"],"align":["right"]},{"label":["nn"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"Allergy","2":"95243","3":"122"},{"1":"Anaesthetics","2":"95243","3":"4430"},{"1":"Cardiology","2":"95243","3":"5404"},{"1":"Cardiothoracic Surgery","2":"95243","3":"1153"},{"1":"Clinical Genetics","2":"95243","3":"6"},{"1":"Clinical Neurophysiology","2":"95243","3":"96"},{"1":"Clinical Oncology","2":"95243","3":"2640"},{"1":"Clinical Radiology","2":"95243","3":"991"},{"1":"Dermatology","2":"95243","3":"1647"},{"1":"Ear, Nose & Throat (ENT)","2":"95243","3":"4286"},{"1":"Endocrinology & Diabetes","2":"95243","3":"3027"},{"1":"Gastroenterology","2":"95243","3":"4547"},{"1":"General Medicine","2":"95243","3":"6784"},{"1":"General Surgery","2":"95243","3":"7099"},{"1":"Genito-Urinary Medicine","2":"95243","3":"26"},{"1":"Geriatric Medicine","2":"95243","3":"5083"},{"1":"Haematology","2":"95243","3":"4521"},{"1":"Immunology","2":"95243","3":"421"},{"1":"Infectious Diseases","2":"95243","3":"1999"},{"1":"Intensive Care Medicine","2":"95243","3":"882"},{"1":"Medical Oncology","2":"95243","3":"2683"},{"1":"Neurology","2":"95243","3":"2356"},{"1":"Neurosurgery","2":"95243","3":"1805"},{"1":"Ophthalmology","2":"95243","3":"4474"},{"1":"Palliative Medicine","2":"95243","3":"1805"},{"1":"Plastic Surgery","2":"95243","3":"2462"},{"1":"Rehabilitation Medicine","2":"95243","3":"2444"},{"1":"Renal Medicine","2":"95243","3":"3236"},{"1":"Respiratory Medicine","2":"95243","3":"4963"},{"1":"Rheumatology","2":"95243","3":"2353"},{"1":"Trauma and Orthopaedic Surgery","2":"95243","3":"6207"},{"1":"Urology","2":"95243","3":"5291"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[32]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlBIUyBTaGlueSBEYXNoYm9hcmQiDQphdXRob3I6ICJBdWJ1YmFrYXIsIEthbmcsIEx1Y3ksIFNlYW4iDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7ciwgbGlicmFyaWVzLCBlY2hvPUZBTFNFLCBpbmNsdWRlPUZBTFNFfQ0KbGlicmFyeShnZ3Bsb3QyKQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpsaWJyYXJ5KGphbml0b3IpDQpgYGANCg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlBIUyBTaGlueSBEYXNoYm9hcmQiDQphdXRob3I6ICJBdWJ1YmFrYXIsIEthbmcsIEx1Y3ksIFNlYW4iDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7ciBsaWJyYXJpZXMsIGVjaG89RkFMU0UsIGluY2x1ZGU9RkFMU0V9DQpsaWJyYXJ5KGdncGxvdDIpDQpsaWJyYXJ5KHRpZHl2ZXJzZSkNCmxpYnJhcnkoamFuaXRvcikNCmxpYnJhcnkoanNvbmxpdGUpDQpgYGANCg0KDQpMaW5rIHRvIGFsbCBQdWJsaWMgSGVhbHRoIFNjb3RsYW5kIChQSFMpIGRhdGFzZXRzIGNhbiBiZSBmb3VuZCBbaGVyZV0oaHR0cHM6Ly93d3cub3BlbmRhdGEubmhzLnNjb3QvZGF0YXNldCkNCmBgYHtyIE9wZW4gRGF0YX0NCiMgSG9zcGl0YWwgQWN0aXZpdHkNCg0KDQpidF9zcGVfZGF0YSA9IGNsZWFuX25hbWVzKHJlYWRfY3N2KCIuLi9yYXdfZGF0YS9pbnBhdGllbnRfYW5kX2RheWNhc2VfYnlfbmhzX2JvYXJkX29mX3RyZWF0bWVudF9hbmRfc3BlY2lhbHR5LmNzdiIpKQ0KIyBidCAtIEFjdGl2aXR5IGJ5IEJvYXJkIG9mIFRyZWF0bWVudA0KDQoNCmJ0X2Fuc19pZCA9ICIwMGMwMGVjYy1iNTMzLTQyNmUtYTQzMy00MmQ3OWJkZWE1ZDQiDQpidF9kZXBfaWQgPSAiNGZjNjQwYWEtYmRkNC00ZmJlLTgwNWItMWRhMWM4ZWQ2MzgzIg0KYnRfc3BlX2lkID0gImMzYjRiZTY0LTVmYjQtNGEyZi1hZjQxLWIwMDEyZjBhMjc2YSIgDQoNCiMgSG9zcGl0YWxpc2F0aW9ucyBkdWUgdG8gQ292aWQgMTkNCiMgaGIgLSBIZWFsdGggQm9hcmQgQWRtaXNzaW9ucw0KaGJfYW5zX2lkID0gImY4ZjNhNDM1LTE5MjUtNGM1YS1iMmU4LWU1OGZkYWNmMDRiYiINCmhiX2RlcF9pZCA9ICI3NDZmOWJhYy03N2YxLTQzZmUtYjY5Zi01Y2EyY2RlMjIwMWIiDQpoYl9zcGVfaWQgPSAiYjhhZWI1MzktZmNmOC00ZjY2LWFhZTgtMjAyMTM1MDhhMWI3Ig0KDQpoc2NwX2FnZV9uX3NleF9pZCA9ICJhZWM1Y2MwMC0zYWQ2LTQxZmItOTEwMS0zN2M2NmJhZDI5ZDQiDQpoc2NwX2RlcHJpdmF0aW9uX2lkID0gIjk1YTMyNGIzLTc2MTAtNDE1MS05Mjg3LWNjZDljYjE5MTY4NiINCmhzY3Bfc3BlY2lhbHR5X2lkID0gICIwMjY5Njc3My03YWFmLTQ4Y2UtYjNkNS00NzlkODZmYzgzMzQiDQoNCg0KIyBBJkUgYXR0ZW5kYW5jZXMgYW5kIHBlcmZvcm1hbmNlIGRhdGENCkFuRV9BY3RfaWQgPSAiMmE0YWRjMGEtZThlMy00NjA1LTlhZGUtNjFlMTNhODViM2I5Ig0KDQogDQojIFF1YXJ0ZXJseSBIb3NwaXRhbCBCZWRzIEluZm9ybWF0aW9uIC0gRGF0YXNldHMgLSBTY290dGlzaCBIZWFsdGggYW5kIFNvY2lhbCBDYXJlIE9wZW4gRGF0YSAtIG5ocy5zY290DQojIERlbGF5ZWQgZGlzY2hhcmdlIGRhdGENCmJlZF9pbmZvX2lkID0gIjI1YmRjMzdiLTRhNzctNGZmOC05YjNhLWVkYWJhNmUxYzYxMyINCmJlZF9wdWJub3RlX2lkID0gIjI1YmRjMzdiLTRhNzctNGZmOC05YjNhLWVkYWJhNmUxYzYxMyINCg0KDQoNCmBgYA0KDQpgYGB7cn0NCiMgRnVuY3Rpb24gZm9yIGZldGNoaW5nIHBocyBkYXRhZnJhbWVzDQpwaHNfZGZfZnVuYyA8LSBmdW5jdGlvbihpZCl7DQogIA0KICAjIExpbmsgdGVtcGxhdGVzIGZvciBzaW1wbGljaXR5DQogIHBoc191cmwgPSAiaHR0cHM6Ly93d3cub3BlbmRhdGEubmhzLnNjb3QvYXBpLzMvYWN0aW9uL2RhdGFzdG9yZV9zZWFyY2g/cmVzb3VyY2VfaWQ9Ig0KICAjIGZldGNoIG1heGltdW0gOTk5Jzk5OSByZXN1bHRzIGZvciBzaW1wbGljaXR5DQogIGxpbWl0X3VybCA9ICImbGltaXQ9OTk5OTk5Ig0KICANCiAgIyBjb25zdHJ1Y3QgVVJMIGZvciBmZXRjaGluZyBwcm9jZXNzDQogIHVybF9saW5rIDwtIHBhc3RlMChwaHNfdXJsLCBpZCwgbGltaXRfdXJsKSAlPiUgDQpmcm9tSlNPTigpDQogIA0KICAjIGNvbnN0cnVjdCBkYXRhZnJhbWUgZnJvbSB1cmwNCiAgcGhzX2RmIDwtICB1cmxfbGlua1tbInJlc3VsdCJdXVtbInJlY29yZHMiXV0NCiAgcmV0dXJuKHBoc19kZikNCn0NCg0KDQpwaHNfZGljdGlvbmFyeV9mdW5jIDwtIGZ1bmN0aW9uKGlkKXsNCiAgDQogICMgTGluayB0ZW1wbGF0ZXMgZm9yIHNpbXBsaWNpdHkNCiAgcGhzX3VybCA9ICJodHRwczovL3d3dy5vcGVuZGF0YS5uaHMuc2NvdC9hcGkvMy9hY3Rpb24vZGF0YXN0b3JlX3NlYXJjaD9yZXNvdXJjZV9pZD0iDQogICMgZmV0Y2ggbWF4aW11bSA5OTknOTk5IHJlc3VsdHMgZm9yIHNpbXBsaWNpdHkNCiAgbGltaXRfdXJsID0gIiZsaW1pdD0xMCINCiAgDQogICMgY29uc3RydWN0IFVSTCBmb3IgZmV0Y2hpbmcgcHJvY2Vzcw0KICB1cmxfbGluayA8LSBwYXN0ZTAocGhzX3VybCwgaWQsIGxpbWl0X3VybCkgJT4lIA0KZnJvbUpTT04oKQ0KICANCiAgIyBjb25zdHJ1Y3QgZGF0YWZyYW1lIGZyb20gdXJsDQogIHBoc19kaWN0aW9uYXJ5IDwtICB1cmxfbGlua1tbInJlc3VsdCJdXVtbImZpZWxkcyJdXQ0KICByZXR1cm4ocGhzX2RpY3Rpb25hcnkpDQp9DQoNCmBgYA0KDQpgYGB7cn0NCg0KIyBIb3NwaXRhbCBBY3Rpdml0eSBwYWdlDQpib2FyZF9vZl90cmVhdG1lbnRfbl9zcGVjaWFsdHkgPC0gcGhzX2RmX2Z1bmMoYm9hcmRfb2ZfdHJlYXRtZW50X25fc3BlY2lhbHR5X2lkKQ0KDQojIEhvc3BpdGFsIEFjdGl2aXR5IGJ5IFNwZWNpYWxpdHkNCiMgDQojIEhvc3BpdGFsIEFjdGl2aXR5IGFuZCBQYXRpZW50IERlbW9ncmFwaGljcw0KIyANCiMgSG9zcGl0YWwgQWN0aXZpdHkgYW5kIERlcHJpdmF0aW9uDQojIA0KIyBIb3NwaXRhbGlzYXRpb25zIGR1ZSB0byBDb3ZpZCAxOQ0KaGJfYWdlX25fc2V4IDwtIHBoc19kZl9mdW5jKGhiX2FnZV9uX3NleF9pZCkNCmhiX2FnZV9kZXByaXZhdGlvbiA8LSBwaHNfZGZfZnVuYyhoYl9hZ2VfZGVwcml2YXRpb25faWQpDQpoYl9zcGVjaWFsdHkgPC0gcGhzX2RmX2Z1bmMoaGJfc3BlY2lhbHR5X2lkKQ0KDQpoc2NwX2FnZV9uX3NleCA8LSBwaHNfZGZfZnVuYyhoc2NwX2FnZV9uX3NleF9pZCkNCmhzY3BfZGVwcml2YXRpb24gPC0gcGhzX2RmX2Z1bmMoaHNjcF9kZXByaXZhdGlvbl9pZCkNCmhzY3Bfc3BlY2lhbHR5IDwtIHBoc19kZl9mdW5jKGhzY3Bfc3BlY2lhbHR5X2lkKQ0KDQojIEEmRSBhdHRlbmRhbmNlcyBhbmQgcGVyZm9ybWFuY2UgZGF0YQ0KIyANCiMgUXVhcnRlcmx5IEhvc3BpdGFsIEJlZHMgSW5mb3JtYXRpb24gLSBEYXRhc2V0cyAtIFNjb3R0aXNoIEhlYWx0aCBhbmQgU29jaWFsIENhcmUgT3BlbiBEYXRhIC0gbmhzLnNjb3QNCiMgDQojIERlbGF5ZWQgZGlzY2hhcmdlIGRhdGENCg0KDQoNCmBgYA0KDQpgYGB7ciBCb1QgU3BlY2lhbGl0eX0NCmdsaW1wc2UoYnRfc3BlX2RhdGEpDQoNCmJ0X3NwZV9kYXRhICU+JSANCiAgZ3JvdXBfYnkoc3BlY2lhbHR5X25hbWUpICU+JSANCiAgY291bnQobiA9IG4oKSkNCmBgYA0KDQo=</div>
 
 
 

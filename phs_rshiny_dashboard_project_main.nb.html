@@ -221,19 +221,24 @@ pre code {
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGAifQ== -->
 <pre class="r"><code>library(tidyverse)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICdkYnBseXInOlxuICBtZXRob2QgICAgICAgICBmcm9tXG4gIHByaW50LnRibF9sYXp5ICAgICBcbiAgcHJpbnQudGJsX3NxbCAgICAgIFxuLS0gQXR0YWNoaW5nIHBhY2thZ2VzIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gdGlkeXZlcnNlIDEuMy4xIC0tXG52IGdncGxvdDIgMy4zLjUgICAgIHYgcHVycnIgICAwLjMuNFxudiB0aWJibGUgIDMuMS42ICAgICB2IGRwbHlyICAgMS4wLjdcbnYgdGlkeXIgICAxLjEuNCAgICAgdiBzdHJpbmdyIDEuNC4wXG52IHJlYWRyICAgMi4xLjAgICAgIHYgZm9yY2F0cyAwLjUuMVxuLS0gQ29uZmxpY3RzIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gdGlkeXZlcnNlX2NvbmZsaWN0cygpIC0tXG54IGRwbHlyOjpmaWx0ZXIoKSBtYXNrcyBzdGF0czo6ZmlsdGVyKClcbnggZHBseXI6OmxhZygpICAgIG1hc2tzIHN0YXRzOjpsYWcoKVxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICdkYnBseXInOlxuICBtZXRob2QgICAgICAgICBmcm9tXG4gIHByaW50LnRibF9sYXp5ICAgICBcbiAgcHJpbnQudGJsX3NxbCAgICAgIFxuLS0gQXR0YWNoaW5nIHBhY2thZ2VzIC0tLS0tLS0tLS0tLS0tLS0tLVxudiBnZ3Bsb3QyIDMuMy41ICAgICB2IHB1cnJyICAgMC4zLjRcbnYgdGliYmxlICAzLjEuNiAgICAgdiBkcGx5ciAgIDEuMC43XG52IHRpZHlyICAgMS4xLjQgICAgIHYgc3RyaW5nciAxLjQuMFxudiByZWFkciAgIDIuMS4xICAgICB2IGZvcmNhdHMgMC41LjFcbi0tIENvbmZsaWN0cyAtLSB0aWR5dmVyc2VfY29uZmxpY3RzKCkgLS1cbnggbHVicmlkYXRlOjphcy5kaWZmdGltZSgpIG1hc2tzIGJhc2U6OmFzLmRpZmZ0aW1lKClcbnggbHVicmlkYXRlOjpkYXRlKCkgICAgICAgIG1hc2tzIGJhc2U6OmRhdGUoKVxueCBkcGx5cjo6ZmlsdGVyKCkgICAgICAgICAgbWFza3Mgc3RhdHM6OmZpbHRlcigpXG54IGx1YnJpZGF0ZTo6aW50ZXJzZWN0KCkgICBtYXNrcyBiYXNlOjppbnRlcnNlY3QoKVxueCBkcGx5cjo6bGFnKCkgICAgICAgICAgICAgbWFza3Mgc3RhdHM6OmxhZygpXG54IGx1YnJpZGF0ZTo6c2V0ZGlmZigpICAgICBtYXNrcyBiYXNlOjpzZXRkaWZmKClcbnggbHVicmlkYXRlOjp1bmlvbigpICAgICAgIG1hc2tzIGJhc2U6OnVuaW9uKClcbiJ9 -->
 <pre><code>Registered S3 methods overwritten by &#39;dbplyr&#39;:
   method         from
   print.tbl_lazy     
   print.tbl_sql      
--- Attaching packages ------------------------------------------------------------------------------------------------------------- tidyverse 1.3.1 --
+-- Attaching packages ------------------
 v ggplot2 3.3.5     v purrr   0.3.4
 v tibble  3.1.6     v dplyr   1.0.7
 v tidyr   1.1.4     v stringr 1.4.0
-v readr   2.1.0     v forcats 0.5.1
--- Conflicts ---------------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
-x dplyr::filter() masks stats::filter()
-x dplyr::lag()    masks stats::lag()</code></pre>
+v readr   2.1.1     v forcats 0.5.1
+-- Conflicts -- tidyverse_conflicts() --
+x lubridate::as.difftime() masks base::as.difftime()
+x lubridate::date()        masks base::date()
+x dplyr::filter()          masks stats::filter()
+x lubridate::intersect()   masks base::intersect()
+x dplyr::lag()             masks stats::lag()
+x lubridate::setdiff()     masks base::setdiff()
+x lubridate::union()       masks base::union()</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShqYW5pdG9yKVxuYGBgIn0= -->
 <pre class="r"><code>library(janitor)</code></pre>
@@ -262,15 +267,46 @@ The following object is masked from ‘package:purrr’:
 <p>#————— API Function —————#</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICBwaHNfZGljdGlvbmFyeSAlPiUgXG4gICAganNvbmxpdGU6OmZsYXR0ZW4ocmVjdXJzaXZlID0gVFJVRSkgJT4lIFxuICAgIHNlbGVjdCh0eXBlLCBpZCwgaW5mby5sYWJlbClcblxuYGBgIn0= -->
-<pre class="r"><code>  phs_dictionary %&gt;% 
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBGdW5jdGlvbiBmb3IgZmV0Y2hpbmcgcGhzIGRhdGFmcmFtZXNcbnBoc19kZl9mdW5jIDwtIGZ1bmN0aW9uKGlkKXtcbiAgXG4gICMgTGluayB0ZW1wbGF0ZXMgZm9yIHNpbXBsaWNpdHlcbiAgcGhzX3VybCA9IFwiaHR0cHM6Ly93d3cub3BlbmRhdGEubmhzLnNjb3QvYXBpLzMvYWN0aW9uL2RhdGFzdG9yZV9zZWFyY2g/cmVzb3VyY2VfaWQ9XCJcbiAgIyBmZXRjaCBtYXhpbXVtIDk5OSc5OTkgcmVzdWx0cyBmb3Igc2ltcGxpY2l0eVxuICBsaW1pdF91cmwgPSBcIiZsaW1pdD05OTk5OTlcIlxuICBcbiAgIyBjb25zdHJ1Y3QgVVJMIGZvciBmZXRjaGluZyBwcm9jZXNzXG4gIHVybF9saW5rIDwtIHBhc3RlMChwaHNfdXJsLCBpZCwgbGltaXRfdXJsKSAlPiVcbiAgICBmcm9tSlNPTigpXG4gIFxuICAjIGNvbnN0cnVjdCBkYXRhZnJhbWUgZnJvbSB1cmxcbiAgcGhzX2RmIDwtICB1cmxfbGlua1tbXCJyZXN1bHRcIl1dW1tcInJlY29yZHNcIl1dXG4gIHJldHVybihwaHNfZGYpXG59XG5cblxucGhzX2RpY3Rpb25hcnlfZnVuYyA8LSBmdW5jdGlvbihpZCl7XG4gIFxuICAjIExpbmsgdGVtcGxhdGVzIGZvciBzaW1wbGljaXR5XG4gIHBoc191cmwgPSBcImh0dHBzOi8vd3d3Lm9wZW5kYXRhLm5ocy5zY290L2FwaS8zL2FjdGlvbi9kYXRhc3RvcmVfc2VhcmNoP3Jlc291cmNlX2lkPVwiXG4gICMgZmV0Y2ggbWF4aW11bSA5OTknOTk5IHJlc3VsdHMgZm9yIHNpbXBsaWNpdHlcbiAgbGltaXRfdXJsID0gXCImbGltaXQ9MTBcIlxuICBcbiAgIyBjb25zdHJ1Y3QgVVJMIGZvciBmZXRjaGluZyBwcm9jZXNzXG4gIHVybF9saW5rIDwtIHBhc3RlMChwaHNfdXJsLCBpZCwgbGltaXRfdXJsKSAlPiVcbiAgICBmcm9tSlNPTigpXG4gIFxuICAjIGNvbnN0cnVjdCBkYXRhZnJhbWUgZnJvbSB1cmxcbiAgcGhzX2RpY3Rpb25hcnkgPC0gIHVybF9saW5rW1tcInJlc3VsdFwiXV1bW1wiZmllbGRzXCJdXSAlPiUgXG4gICAganNvbmxpdGU6OmZsYXR0ZW4ocmVjdXJzaXZlID0gVFJVRSkgJT4lIFxuICAgIHNlbGVjdChpZCwgaW5mby5sYWJlbCwgdHlwZSlcbiAgIyAgICBqc29ubGl0ZTo6ZmxhdHRlbihyZWN1cnNpdmUgPSBUUlVFLCB1c2UubmFtZXMgPSBUUlVFKVxuXG4gIHJldHVybihwaHNfZGljdGlvbmFyeSlcbn1cblxuYGBgIn0= -->
+<pre class="r"><code># Function for fetching phs dataframes
+phs_df_func &lt;- function(id){
+  
+  # Link templates for simplicity
+  phs_url = &quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=&quot;
+  # fetch maximum 999&#39;999 results for simplicity
+  limit_url = &quot;&amp;limit=999999&quot;
+  
+  # construct URL for fetching process
+  url_link &lt;- paste0(phs_url, id, limit_url) %&gt;%
+    fromJSON()
+  
+  # construct dataframe from url
+  phs_df &lt;-  url_link[[&quot;result&quot;]][[&quot;records&quot;]]
+  return(phs_df)
+}
+
+
+phs_dictionary_func &lt;- function(id){
+  
+  # Link templates for simplicity
+  phs_url = &quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=&quot;
+  # fetch maximum 999&#39;999 results for simplicity
+  limit_url = &quot;&amp;limit=10&quot;
+  
+  # construct URL for fetching process
+  url_link &lt;- paste0(phs_url, id, limit_url) %&gt;%
+    fromJSON()
+  
+  # construct dataframe from url
+  phs_dictionary &lt;-  url_link[[&quot;result&quot;]][[&quot;fields&quot;]] %&gt;% 
     jsonlite::flatten(recursive = TRUE) %&gt;% 
-    select(type, id, info.label)
+    select(id, info.label, type)
+  #    jsonlite::flatten(recursive = TRUE, use.names = TRUE)
+
+  return(phs_dictionary)
+}
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gaXMuZGF0YS5mcmFtZSh4KSA6IG9iamVjdCAncGhzX2RpY3Rpb25hcnknIG5vdCBmb3VuZFxuIn0= -->
-<pre><code>Error in is.data.frame(x) : object &#39;phs_dictionary&#39; not found</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#————— PHS API ID —————#</p>
@@ -309,13 +345,13 @@ bed_pubnote_id = &quot;25bdc37b-4a77-4ff8-9b3a-edaba6e1c613&quot;</code></pre>
 <p>#————— PHS Function Examples —————#</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTksIm5jb2wiOjMsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzE5IHggM10iXX19LCJyZGYiOiJINHNJQUFBQUFBQUFCc1ZWelU4VU1SUWY5b09QamFoeGc4R0RTUThjTU1MS1lpQkJUNHRBTUVFVUlRWlBwanZ6ZHJheDI0NXRGM1p2bnIwYS8xM3dkYllkWjRaTmlGSGpKRFBUOTNzZmZiL1gxL2I5M3Zuenhua2pDSUpxVUp1cEJOVTZEb1BaVisvYW0xdWJRVkNyb0RRVDFJSUYreCtoVlRNMURZTDcrRGFkb3ZxSlJXNDRkektreW9CeTRvSVRUdzRjVURuY2RhUGE0VzZHemgvSmtCb21oWk1iWHM0c0ZqdlJnR21OME5rNEFRZmVLNENaYmZVVVJuN1lpYjN4L0g3Q3RJeEFlK2NqRUxIcHYrMDUzTUVQT3hlZ2FBelR0Y3ZUdGRuVTlWTkR4MzZHTzk3S2dnNXJsZ0xrVkV0VFZCallseHFMZVkyUE0xNDk2d05SMEFNRklnU1NnR0l5SWxTVEw1T0NrOVdQK0p3Y1AzSDJiVndJem5vTU5UMnBpRnNXd2tURWJLVkZUQklsTDVpdEplVWtvb1k2eCs4NzZ4R0xtU0doclYzcTNBZktUWjkwSlZVUmtUMWlGRkF6QUdGSWwycEFTS0J1S0NLcUdIcGdUdFNRdGpha2t5akd5ZVpHZTJjTm93MkZVZU0wYWhyME5KU0dVNEVjOE4yK01hZE9JR1NZV1RxcFMrMXBrZFBoYnA0T2pXTUZNVFdZVDQ3TnQ2MmJiS1JPbUtGOGpmd09VNXZsSDNIUTB4ZkdOLzd0Vkg3WURxQitBeENET3lCTkVkRUUvZElrOVF1eXp5RTA3QUxJYStGZy9aTHNEMERGMkRqakFucW1xTkRZVVRqc2NFNzI2RGpFOVhSUzNyQW9wMnk5c1V0dXU4aXFzRTl2cDdaaXFXa1lsZm1zSHNDQWNuajJCaisrc1Zkd2g1ZnQyaHRrREZSaGRNQ1dGRm10SHh3UEIxMU1DYzJoZUJnc24wbHNBY0xUclRkRi85anR6WndGRmQ2SU9LTVBKZEpUajRvOCs4cytibC9Nbk9tVVBXRUdCZ1FGSVhIdGtvU2pYWmRuaDkydjVIWHVrRmtxWjU1WFBwcVNkbXJ3cjFNdTNROU1HSC9xR3hqOWovR2NHR0xQczNDNitMZThpdmRsWGRBQmR0Q2tGbFYvQVdaWFpZT0pubXh4MmdXZUJiRjNXekhJZ3BLWExSOW8wUWI0R3FSUHN6eGJ5S24yczNtd1lSZXAxVlBvajlKVnlXVk9KdmFzUWFlS3ZWL3FKZWNaVlFMdURZWE5KRm9QKzBQeGViMXRKMGpWazNmUi9adTVjWFV5WmVYYWhhcTdVTFBZWWt6NDNxN25xM0FYR2FlRVczaGZaSTNUUUZTM2pHMTJqNFNTZXlUbEZsejlCSkJDMDliT0NBQUEifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["id"],"name":[1],"type":["chr"],"align":["left"]},{"label":["info.label"],"name":[2],"type":["chr"],"align":["left"]},{"label":["type"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"_id","2":"NA","3":"int","_rn_":"1"},{"1":"Quarter","2":"The reference period as quarter (YYYYQN)","3":"text","_rn_":"2"},{"1":"QuarterQF","2":"Qualifier for Quarter indicating provisional data","3":"text","_rn_":"3"},{"1":"HB","2":"9-digit codes for health board of treatment based on boundaries as at 1st April 2019, country code for Scotland and 6-digit codes for special board","3":"text","_rn_":"4"},{"1":"HBQF","2":"Qualifier for HB indicating aggregated data","3":"text","_rn_":"5"},{"1":"Location","2":"5-digit codes for hospital, 9-digit codes for health board of treatment and country code for Scotland and 6-digit codes for special boards","3":"text","_rn_":"6"},{"1":"LocationQF","2":"Qualifier for Location indicating aggregated data","3":"text","_rn_":"7"},{"1":"AdmissionType","2":"The admission type of the patient as: Elective Inpatients; Emergency Inpatients; Transfers; All Daycases; All Inpatients; All Inpatients and Daycases","3":"text","_rn_":"8"},{"1":"AdmissionTypeQF","2":"Qualifier for AdmissionType indicating aggregated data","3":"text","_rn_":"9"},{"1":"Sex","2":"The sex of the patient (Female/Male)","3":"text","_rn_":"10"},{"1":"Age","2":"Age of the patient 10 year age bands","3":"text","_rn_":"11"},{"1":"Episodes","2":"Number of episodes","3":"numeric","_rn_":"12"},{"1":"LengthOfEpisode","2":"Total length of episodes","3":"numeric","_rn_":"13"},{"1":"AverageLengthOfEpisode","2":"Average length of an episode","3":"text","_rn_":"14"},{"1":"AverageLengthOfEpisodeQF","2":"Qualifier for AverageLengthOfEpisode indicating where this data item is not applicable","3":"text","_rn_":"15"},{"1":"Stays","2":"Number of stays","3":"numeric","_rn_":"16"},{"1":"LengthOfStay","2":"Total length of stays","3":"numeric","_rn_":"17"},{"1":"AverageLengthOfStay","2":"Average length of a stay","3":"text","_rn_":"18"},{"1":"AverageLengthOfStayQF","2":"Qualifier for AverageLengthOfEpisode indicating where this data item is not applicable","3":"text","_rn_":"19"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[19]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBFeHRyYWN0IERhdGFmcmFtZSB2aWEgQVBJXG5ib2FyZF9vZl90cmVhdG1lbnRfbl9zcGVjaWFsdHkgPC0gcGhzX2RmX2Z1bmMoYnRfYW5zX2lkKVxuXG4jIEFjb3J5bm0gRGljdGlvbmFyeVxucGhzX2RpY3Rpb25hcnlfZXhhbXBsZSA8LSBwaHNfZGljdGlvbmFyeV9mdW5jKGJ0X2Fuc19pZClcbmBgYCJ9 -->
+<pre class="r"><code># Extract Dataframe via API
+board_of_treatment_n_specialty &lt;- phs_df_func(bt_ans_id)
+
+# Acorynm Dictionary
+phs_dictionary_example &lt;- phs_dictionary_func(bt_ans_id)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
