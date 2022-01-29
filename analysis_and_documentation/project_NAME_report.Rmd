@@ -1,7 +1,15 @@
-# phs_rshiny_dashboard_grp1
-Project to create an R shiny dashboard for Public Health Scotland, by Team KLAS
+---
+title: "Project Description Outline"
+author: "Team KLAS"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
 
-
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 # **Name of Dashboard**
 
 ### Members of Team KLAS
@@ -9,7 +17,7 @@ Project to create an R shiny dashboard for Public Health Scotland, by Team KLAS
 * Aboubakar Hameed
 * Kang Hin Lee
 * Lucy Burns
-* Se‡n M. Cusick
+* Se√†n M. Cusick
 
 ### Roles & responsibilities of each member
 
@@ -19,7 +27,7 @@ Project to create an R shiny dashboard for Public Health Scotland, by Team KLAS
 
 * **Lucy Burns** was responsible for ...; furthermore, supported <spatial visualisations>, <data cleaning>,... 
 
-* **Se‡n M. Cusick** was responsible for Project Management & Documentation; furthermore, supported <spatial visualisations>, <data cleaning>,...  
+* **Se√†n M. Cusick** was responsible for Project Management & Documentation; furthermore, supported <spatial visualisations>, <data cleaning>,...  
 
 * **All team members** worked on <spatial visualisations>, <data cleaning>,... 
 
@@ -33,6 +41,15 @@ Our dashboard contains three sections:
   2). Time series graphs
   3). proportional graphs
   
+additionally, a number of buttons such as:
+* reset
+* select all
+
+Our topic is ...
+
+The dashboard outlines our topic in terms of ...
+
+***  
 
 ### Stages of the project
 
@@ -101,15 +118,38 @@ asdf
 
 and so on ...
 
-### How did you gather and synthesise 
+### How did you gather and synthesise requirements for the project?
+
+We synthesised the information given in the brief by ...
+
+We prioritised ...
+
 ### Motivations for using the data you have chosen
 
+We used the dataset on ... to answer ... and because it was ...
 
-### Data quality and potential bias, 
+### Data quality and potential bias, including a brief summary of data cleaning and transformations
+
+According to the About tab on the dataset page/dedicated page online, the data quality ...
+
+The dataset may/may not be biased because ...
+
+To clean the datasets we ...
+
 ### How is the data stored and structured
 
+[**Hint**: This page offers a good starting point for understanding the data structure: https://guides.statistics.gov.scot/article/34-understanding-the-data-structure]
+
+The data is in the form of ...
+
+This means ...
+
+Benefits of storing the data like this are ...
 
 ### Ethical and legal considerations of the data
 
+[**Hint:** this page contains information on the Open Government License which covers most datasets on statistics.gov.scot: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/]
 
-### Results
+There are no/There may be ethical considerations, because ...
+
+The datasets are covered by the Open Government License, which means ...
