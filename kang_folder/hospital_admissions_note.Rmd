@@ -1,0 +1,113 @@
+---
+title: "hospital_admissions_note"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(janitor)
+library(jsonlite)
+```
+
+
+```{r}
+# Hospital Activity
+
+# bt - Activity by Board of Treatment
+
+
+bt_ans_id = "00c00ecc-b533-426e-a433-42d79bdea5d4"
+bt_dep_id = "4fc640aa-bdd4-4fbe-805b-1da1c8ed6383"
+bt_spe_id = "c3b4be64-5fb4-4a2f-af41-b0012f0a276a" 
+
+# Hospitalisations due to Covid 19
+# hb - Health Board Admissions
+hb_ans_id = "f8f3a435-1925-4c5a-b2e8-e58fdacf04bb"
+hb_dep_id = "746f9bac-77f1-43fe-b69f-5ca2cde2201b"
+hb_spe_id = "b8aeb539-fcf8-4f66-aae8-20213508a1b7"
+
+hscp_age_n_sex_id = "aec5cc00-3ad6-41fb-9101-37c66bad29d4"
+hscp_deprivation_id = "95a324b3-7610-4151-9287-ccd9cb191686"
+hscp_specialty_id =  "02696773-7aaf-48ce-b3d5-479d86fc8334"
+
+
+# A&E attendances and performance data
+AnE_Act_id = "2a4adc0a-e8e3-4605-9ade-61e13a85b3b9"
+
+ 
+# Quarterly Hospital Beds Information - Datasets - Scottish Health and Social Care Open Data - nhs.scot
+# Delayed discharge data
+bed_info_id = "25bdc37b-4a77-4ff8-9b3a-edaba6e1c613"
+bed_pubnote_id = "25bdc37b-4a77-4ff8-9b3a-edaba6e1c613"
+
+
+
+```
+
+```{r}
+# Function for fetching phs dataframes
+phs_df_func <- function(id){
+  
+  # Link templates for simplicity
+  phs_url = "https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id="
+  # fetch maximum 999'999 results for simplicity
+  limit_url = "&limit=999999"
+  
+  # construct URL for fetching process
+  url_link <- paste0(phs_url, id, limit_url) %>% 
+fromJSON()
+  
+  # construct dataframe from url
+  phs_df <-  url_link[["result"]][["records"]]
+  return(phs_df)
+}
+
+
+phs_dictionary_func <- function(id){
+  
+  # Link templates for simplicity
+  phs_url = "https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id="
+  # fetch maximum 999'999 results for simplicity
+  limit_url = "&limit=10"
+  
+  # construct URL for fetching process
+  url_link <- paste0(phs_url, id, limit_url) %>% 
+fromJSON()
+  
+  # construct dataframe from url
+  phs_dictionary <-  url_link[["result"]][["fields"]]
+  return(phs_dictionary)
+}
+
+```
+
+```{r}
+
+# Hospital Activity page
+board_of_treatment_n_specialty <- phs_df_func(board_of_treatment_n_specialty_id)
+
+# Hospital Activity by Speciality
+# 
+# Hospital Activity and Patient Demographics
+# 
+# Hospital Activity and Deprivation
+# 
+# Hospitalisations due to Covid 19
+hb_age_n_sex <- phs_df_func(hb_age_n_sex_id)
+hb_age_deprivation <- phs_df_func(hb_age_deprivation_id)
+hb_specialty <- phs_df_func(hb_specialty_id)
+
+hscp_age_n_sex <- phs_df_func(hscp_age_n_sex_id)
+hscp_deprivation <- phs_df_func(hscp_deprivation_id)
+hscp_specialty <- phs_df_func(hscp_specialty_id)
+
+# A&E attendances and performance data
+# 
+# Quarterly Hospital Beds Information - Datasets - Scottish Health and Social Care Open Data - nhs.scot
+# 
+# Delayed discharge data
+
+
+
+```
+

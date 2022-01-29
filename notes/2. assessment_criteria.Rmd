@@ -1,0 +1,63 @@
+---
+title: "Assessment Criteria"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    df_print: paged
+  pdf_document: default
+css: ../../../styles.css
+---
+
+<br>
+
+<div class="emphasis">
+
+**Note:** The following are outcomes from SQA's Data Science Project. These are required to complete the PDA.
+
+</div>
+
+
+
+## Description
+
+The description must contain all skills from outcome 1 as well as some skills from outcome 2.
+
+The description must show evidence of knowledge/skills/awareness in the following areas from outcome 1:
+
+  * Stages in a data science project 
+  * Roles in a data science project team 
+  * Collaboration tools
+  * Project management methods and software 
+  * Source control systems 
+  * Business understanding including gathering and synthesising requirements for the project
+  * Data requirements including data sources
+  * Ethical and legal considerations including data bias
+
+As well as these from outcome 2:
+
+  * Project planning and allocation of tasks and resources
+  * Quality control and quality assurance
+  * Data architecture and data modelling
+
+
+## Dashboard
+
+The dashboard must contain evidence of all skills/knowledge in outcome 2 not covered by the description:
+
+  * Data transformations including data cleaning
+  * Exploratory data analysis
+  * Statistical analyses to identify patterns, trends and relationships in the dataset
+  * Interpreting the results of statistical analysis
+
+## Presentation
+
+The oral presentation must contain evidence of all skills/knowledge covered by outcome 3. This checklist will be filled in by an observing instructor (either observing live, or watching a recording of the presentation)
+
+  * Key performance indicators
+  * Selection of visualisations
+  * Dashboards and reports
+  * Presentation skills
+  * Tailoring communication to a specific audience
+  * Communicating the findings of the project
+
