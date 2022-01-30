@@ -62,7 +62,7 @@ phs_dictionary_func <- function(id){
 # PHS API (ID)
 #--------------------------------------------------------------------------#
 ```{r, echo=FALSE, message=FALSE, results='hide'}
-# Hospital Activity (Data group 1)
+# Data Group 01 - Hospital Activity
 # Dataset 1A - Hospital Activity by Speciality
 ha_spe_api = "c3b4be64-5fb4-4a2f-af41-b0012f0a276a" 
 # Dataset 1B - Hospital Activity and Patient Demographics
@@ -71,14 +71,13 @@ ha_ans_api = "00c00ecc-b533-426e-a433-42d79bdea5d4"
 ha_dep_api = "4fc640aa-bdd4-4fbe-805b-1da1c8ed6383"
 
 
-# Hospitalisations due to Covid 19 (Data group 2)
+# Data Group 02 - Hospitalisations due to Covid 19
 # Dataset 2A - Admissions By Health Board and Specialty
 cov_hb_spe_api = "b8aeb539-fcf8-4f66-aae8-20213508a1b7"
 # Dataset 2B - Admissions By Health Board and Patient Demographics
 cov_hb_ans_api = "f8f3a435-1925-4c5a-b2e8-e58fdacf04bb"
 # Dataset 2C - Admissions By Health Board and Deprivation
 cov_hb_dep_api = "746f9bac-77f1-43fe-b69f-5ca2cde2201b"
-
 # Dataset 2D - Admissions By HSCP and Specialty
 cov_hscp_spe_api =  "02696773-7aaf-48ce-b3d5-479d86fc8334"
 # Dataset 2E - Admissions By HSCP and Patient Demographics
@@ -86,29 +85,40 @@ cov_hscp_ans_api = "aec5cc00-3ad6-41fb-9101-37c66bad29d4"
 # Dataset 2F - Admissions By HSCP and Deprivation
 cov_hscp_dep_api = "95a324b3-7610-4151-9287-ccd9cb191686"
 
-# A&E attendances and performance data
-ane_act_api = "2a4adc0a-e8e3-4605-9ade-61e13a85b3b9"
+# Data Group 03 -  A&E Activity
+# A&E Activity by Health Board, Age and Sex
+ane_hb_ans_api = "388fd86c-dc0b-4655-b4b1-f13644bfd8d2"
+# A&E Activity by Health Board and Deprivation
+ane_hb_dep_api = "ec70ded6-9f45-4348-aaa9-b1b40ddae6a4"
+# A&E Activity by HSCP, Age and Sex
+ane_hscp_ans_api =  "a5677672-cc57-4b36-a884-84d6befd570f"
+# A&E Activity by HSCP and Deprivation
+ane_hscp_dep_api =  "39da7e8d-0ecf-41b7-aef1-cd898ba8b4fa"
 
- 
-# Quarterly Hospital Beds Information - Datasets - Scottish Health and Social Care Open Data - nhs.scot
-# Delayed discharge data
-bed_info_api = "25bdc37b-4a77-4ff8-9b3a-edaba6e1c613"
-bed_pubnote_api = "25bdc37b-4a77-4ff8-9b3a-edaba6e1c613"
+# Data Group 04 - Bed Capacity
+# Beds by Board of Treatment and Specialty
+bed_info_api = "f272bb7d-5320-4491-84c1-614a2c064007"
 
-# Location / ID Identifier
-# Hospital List (Health Board)
+
+# Data Group 00 -  Location / ID Identifier
+# Hospital LOCATION List
+hospital_location_api = "c698f450-eeed-41a0-88f7-c1e40a568acc"
+# Health Board List (Health Board)
 health_board_api = "652ff726-e676-4a20-abda-435b98dd7bdc"
 special_health_board_api = "0450a5a2-f600-4569-a9ae-5d6317141899"
-hospital_location_api = "c698f450-eeed-41a0-88f7-c1e40a568acc"
 # HSCP List 
 hscp_api = "944765d7-d0d9-46a0-b377-abb3de51d08e"
 
+
+#Sample DF Reader (Press Ctrl+Shift+C to uncomment)
+sample_DF <- phs_df_func(bed_info_api)
+view(sample_DF)
 ```
 
 # Load in API Dataframe (Backup)
 #--------------------------------------------------------------------------#
 ```{r}
-
+# Data Group 01
 # Dataset 1A - Hospital Activity by Speciality
 backup_ha_spe = phs_df_func(ha_spe_api)
 # Dataset 1B - Hospital Activity and Patient Demographics
@@ -117,15 +127,14 @@ backup_ha_ans = phs_df_func(ha_ans_api)
 backup_ha_dep = phs_df_func(ha_dep_api)
 
 
-
-# Hospitalisations due to Covid 19 (Data group 2)
+# Data Group 02
+# Hospitalisations due to Covid 19
 # Dataset 2A - Admissions By Health Board and Specialty
 backup_cov_hb_spe = phs_df_func(cov_hb_spe_api)
 # Dataset 2B - Admissions By Health Board and Patient Demographics
 backup_cov_hb_ans = phs_df_func(cov_hb_ans_api)
 # Dataset 2C - Admissions By Health Board and Deprivation
 backup_cov_hb_dep = phs_df_func(cov_hb_dep_api)
-
 # Dataset 2D - Admissions By HSCP and Specialty
 backup_cov_hscp_spe = phs_df_func(cov_hscp_spe_api)
 # Dataset 2E - Admissions By HSCP and Patient Demographics
@@ -134,6 +143,22 @@ backup_cov_hscp_ans = phs_df_func(cov_hscp_ans_api)
 backup_cov_hscp_dep = phs_df_func(cov_hscp_dep_api)
 
 
+# Data Group 03 
+# A&E Activity by Health Board, Age and Sex
+backup_ane_hb_ans <- phs_df_func(ane_hb_ans_api)
+# A&E Activity by Health Board and Deprivation
+backup_ane_hb_dep <- phs_df_func(ane_hb_dep_api)
+# A&E Activity by HSCP, Age and Sex
+backup_ane_hscp_ans =  phs_df_func(ane_hscp_ans_api)
+# A&E Activity by HSCP and Deprivation
+backup_ane_hscp_dep =  phs_df_func(ane_hscp_dep_api)
+
+
+# Data Group 04 - Bed Capacity
+# Beds by Board of Treatment and Specialty
+backup_bed_info = phs_df_func(bed_info_api)
+
+# Data Group 00 - Hospital Location Info
 backup_hospital_location = phs_df_func(hospital_location_api)
 ```
 
@@ -167,8 +192,8 @@ hospital_location_func <- function(df, key_col){
 
 ## Data Group 01 - Hospital Activity
 ```{r}
-# clean_ha_df_func(dataframe)
-clean_ha_df_func <- function(df){
+# clean_quart_df_func(dataframe)
+clean_quart_df_func <- function(df){
                 df <- df %>% 
                 select(-ends_with("qf"), -id) %>% 
                 mutate(year = substr(quarter, 1,4),
@@ -180,11 +205,13 @@ clean_ha_df_func <- function(df){
 }
 
 # Dataset 1A - Hospital Activity by Speciality
-df_ha_spe <- clean_ha_df_func(backup_ha_spe)
+df_ha_spe <- clean_quart_df_func(backup_ha_spe)
 # Dataset 1B - Hospital Activity and Patient Demographics
-df_ha_ans <- clean_ha_df_func(backup_ha_ans)
+# change column "age" to "age_group" for consisitency
+df_ha_ans <- clean_quart_df_func(backup_ha_ans) %>% 
+    rename(age_group = age)
 # Dataset 1C - Hospital Activity and Deprivation
-df_ha_dep <- clean_ha_df_func(backup_ha_dep) 
+df_ha_dep <- clean_quart_df_func(backup_ha_dep) 
 
 
 ```
@@ -192,7 +219,7 @@ df_ha_dep <- clean_ha_df_func(backup_ha_dep)
 ## Data Group 02 - Hospitalisations due to Covid 19
 ```{r}
 # Clean Hospitalisations Dataset function
-clean_cov_df_func <- function(df){
+clean_wkend_df_func <- function(df){
                   df <- df %>% 
                   # Remove any columns ends with qf (Qualifier)
                   select(-ends_with("qf"), -id) %>% 
@@ -207,29 +234,90 @@ clean_cov_df_func <- function(df){
 }
 
 # Dataset 2A - Admissions By Health Board and Specialty
-df_cov_hb_spe  <- clean_cov_df_func(backup_cov_hb_spe)
+df_cov_hb_spe  <- clean_wkend_df_func(backup_cov_hb_spe)
 # Dataset 2B - Admissions By Health Board and Patient Demographics
-df_cov_hb_ans <- clean_cov_df_func(backup_cov_hb_ans)
+df_cov_hb_ans <- clean_wkend_df_func(backup_cov_hb_ans)
 # Dataset 2C - Admissions By Health Board and Deprivation
-df_cov_hb_dep <- clean_cov_df_func(backup_cov_hb_dep)
+df_cov_hb_dep <- clean_wkend_df_func(backup_cov_hb_dep)
 # Dataset 2D - Admissions By HSCP and Specialty
-df_cov_hscp_spe <- clean_cov_df_func(backup_cov_hscp_spe)
+df_cov_hscp_spe <- clean_wkend_df_func(backup_cov_hscp_spe)
 # Dataset 2E - Admissions By HSCP and Patient Demographics
-df_cov_hscp_ans <- clean_cov_df_func(backup_cov_hscp_ans)
+df_cov_hscp_ans <- clean_wkend_df_func(backup_cov_hscp_ans)
 # Dataset 2F - Admissions By HSCP and Deprivation
-df_cov_hscp_dep <- clean_cov_df_func(backup_cov_hscp_dep)
+df_cov_hscp_dep <- clean_wkend_df_func(backup_cov_hscp_dep)
 
 ```
 
-# Extra Code that maybe useful
+##Data Group 03 - A&E Activity
 ```{r}
-# Join multiple location dataset with hospital location
-# df_ha_dep <- backup_ha_dep %>% 
-#   select(-ends_with("qf"), -id) %>% 
-#   left_join(df_hospital_location %>% select(location, hb, location_name, long, lat),
-#             by = c("location","hb"),
-#             all.x = TRUE)
+# Data Group 03 -  A&E Activity
 
+# A&E Activity by Health Board, Age and Sex
+df_ane_hb_ans <- clean_wkend_df_func(backup_ane_hb_ans)
+
+# A&E Activity by Health Board and Deprivation
+df_ane_hb_dep <- clean_wkend_df_func(backup_ane_hb_dep)
+# A&E Activity by HSCP, Age and Sex
+df_ane_hscp_ans <-  clean_wkend_df_func(backup_ane_hscp_ans)
+# A&E Activity by HSCP and Deprivation
+df_ane_hscp_dep <-  clean_wkend_df_func(backup_ane_hscp_dep)
+
+
+```
+
+
+## Data Group 04 - Hospital Bed Information
+```{r}
+bed_info <- clean_quart_df_func(backup_bed_info)
+```
+
+
+## Age & Sex Data Frame related
+```{r}
+age_group_ha_ans <- df_ha_ans %>% 
+    mutate(age_group = factor(age_group, levels = c("0-9 years","10-19 years" ,"20-29 year", "30-39 years", "40-49 years", "50-59 years", "60-69 years", "70-79 years", "80-89 years", "90 years and over"))) %>%
+  arrange(age_group)
+
+age_group_cov_hb_ans <- df_cov_hb_ans %>% 
+  filter(age_group != "All ages") %>% 
+  mutate(age_group = factor(age_group, levels = c("Under 5","5 - 14" ,"15 - 44", "45 - 64", "65 - 74", "75 - 84", "85 and over")
+  )) %>%
+  arrange(age_group)
+
+age_group_cov_hscp_ans <- df_cov_hscp_ans %>% 
+  filter(age_group != "All ages") %>% 
+  mutate(age_group = factor(age_group, levels = c("Under 5","5 - 14" ,"15 - 44", "45 - 64", "65 - 74", "75 - 84", "85 and over")
+  )) %>%
+  arrange(age_group)
+
+age_ane_hscp_ans <- df_ane_hscp_ans %>% 
+  filter(age_group != "All ages") %>% 
+  mutate(age_group = factor(age_group, levels = c("Under 5","5 - 14" ,"15 - 44", "45 - 64", "65 - 74", "75 - 84", "85 and over")
+  )) %>%
+  arrange(age_group)
+
+```
+
+# Graph Sample
+```{r}
+# Graph Sample
+age_group_cov_hb_ans %>% 
+  group_by(age_group) %>% 
+  summarise(count = n()) %>% 
+  ggplot()+
+  aes(x = age_group, y = count, fill = age_group)+
+  geom_bar(stat = "identity")+
+  labs(
+    title = "This is a Title",
+    subtitile = "This is a subtitle"
+    ) +
+  xlab("X label") +
+  ylab("Y label")
+
+```
+
+# Redundant Code Dumping Ground
+```{r}
 
 ```
 
