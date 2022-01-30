@@ -47,7 +47,34 @@ bed_pubnote_id = "25bdc37b-4a77-4ff8-9b3a-edaba6e1c613"
 
 
 
+
+
 ```
+
+#------------------ Three questions: -------------------#
+
+```{r}
+
+# How does winter affect hospital activity?
+# A&E/Department activity/ by time
+
+
+
+# How does deprivation affect hospital activity?
+# A&E/ Department activity by SIMD
+
+
+
+# How does Covid affect hospital activity?
+# Was there a change post Q1 2020?
+
+
+
+```
+
+
+
+
 
 ```{r}
 # Function for fetching phs dataframes
