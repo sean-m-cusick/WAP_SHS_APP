@@ -39,4 +39,9 @@ RShiny Dashboard
 
 Extension:
 Vaccination vs Affection Rate
+Hospital vs HSCP
 Forcast
+
+
+Sunday
+Find relevant dataframe to ask the questions
