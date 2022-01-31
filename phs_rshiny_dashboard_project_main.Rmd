@@ -11,6 +11,10 @@ library(sf)
 library(janitor)
 library(jsonlite)
 library(lubridate)
+library(rgdal)
+library(here)
+library(broom)
+
 ```
 
 # API Function
@@ -214,6 +218,7 @@ backup_bed_info = phs_df_func(api_bed_info)
 
 # Data Group 00 - Hospital Location Info
 backup_hospital_location = phs_df_func(api_hospital_location)
+backup_health_board = phs_dictionary_func(api_health_board)
 ```
 
 
@@ -253,6 +258,11 @@ hospital_location_func <- function(df, key_col){
             return(df)
 }
 
+
+df_health_board <- backup_health_board
+
+NHSBoards <- readOGR(dsn = "SG_NHS_HealthBoards_2019.shp", 
+                     layer = "SG_NHS_HealthBoards_2019")
 
 ```
 
@@ -383,6 +393,45 @@ age_group_cov_hb_ans %>%
   ylab("Y label")
 
 ```
+
+
+```{r}
+
+
+autosave
+
+
+  save_path = "..\\phs_rshiny_dashboard_grp1\\raw_data\\"
+  dataframes_list <- as.list( ls.str(mode = "list"))
+  dataframes_list_csv <- paste0(dataframes_list, ".csv")
+  file_path = paste0(save_path, dataframes_list_csv)
+  
+for (x in 1: length(dataframes_list)){
+  data_frame_name <- paste0(dataframes_list[x], ".csv")
+  data_frame_file_path <- paste0(save_path,data_frame_name)
+  write.csv(data_frame_name,data_frame_file_path, row.names = FALSE)
+  
+}
+
+
+
+write.csv(df_ha_ans,"..\\phs_rshiny_dashboard_grp1\\raw_data\\df_ha_ans.csv", row.names = FALSE)
+
+  
+  
+  
+file_path = paste0(save_path,file_name)  
+
+
+write.csv(age_ane_hscp_ans,save_path + file_name+".csv", row.names = FALSE)
+
+```
+
+
+
+
+
+
 
 # Redundant Code Dumping Ground
 ```{r}
