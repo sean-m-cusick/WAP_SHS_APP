@@ -1,0 +1,21 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(jsonlite)
+library(tidyverse)
+library(sf)
+```
+
+
+```{r}
+scottish_hospitals <- paste0("https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c698f450-eeed-41a0-88f7-c1e40a568acc&limit=300") %>% 
+fromJSON()
+```
+
+```{r}
+hospitals <- scottish_hospitals[["result"]][["records"]]
+```
+

@@ -217,77 +217,35 @@ pre code {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGAifQ== -->
-<pre class="r"><code>library(tidyverse)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICdkYnBseXInOlxuICBtZXRob2QgICAgICAgICBmcm9tXG4gIHByaW50LnRibF9sYXp5ICAgICBcbiAgcHJpbnQudGJsX3NxbCAgICAgIFxu4pSA4pSAIEF0dGFjaGluZyBwYWNrYWdlcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgdGlkeXZlcnNlIDEuMy4xIOKUgOKUgFxu4pyTIGdncGxvdDIgMy4zLjUgICAgIOKckyBwdXJyciAgIDAuMy40XG7inJMgdGliYmxlICAzLjEuNiAgICAg4pyTIGRwbHlyICAgMS4wLjdcbuKckyB0aWR5ciAgIDEuMS40ICAgICDinJMgc3RyaW5nciAxLjQuMFxu4pyTIHJlYWRyICAgMi4wLjIgICAgIOKckyBmb3JjYXRzIDAuNS4xXG7ilIDilIAgQ29uZmxpY3RzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2VfY29uZmxpY3RzKCkg4pSA4pSAXG54IGRwbHlyOjpmaWx0ZXIoKSBtYXNrcyBzdGF0czo6ZmlsdGVyKClcbnggZHBseXI6OmxhZygpICAgIG1hc2tzIHN0YXRzOjpsYWcoKVxuIn0= -->
-<pre><code>Registered S3 methods overwritten by &#39;dbplyr&#39;:
-  method         from
-  print.tbl_lazy     
-  print.tbl_sql      
-── Attaching packages ────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.1 ──
-✓ ggplot2 3.3.5     ✓ purrr   0.3.4
-✓ tibble  3.1.6     ✓ dplyr   1.0.7
-✓ tidyr   1.1.4     ✓ stringr 1.4.0
-✓ readr   2.0.2     ✓ forcats 0.5.1
-── Conflicts ───────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-x dplyr::filter() masks stats::filter()
-x dplyr::lag()    masks stats::lag()</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShzZilcbmBgYCJ9 -->
-<pre class="r"><code>library(sf)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShqc29ubGl0ZSlcbmxpYnJhcnkodGlkeXZlcnNlKVxubGlicmFyeShzZilcbmBgYCJ9 -->
+<pre class="r"><code>library(jsonlite)
+library(tidyverse)
+library(sf)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiTGlua2luZyB0byBHRU9TIDMuOC4xLCBHREFMIDMuMi4xLCBQUk9KIDcuMi4xOyBzZl91c2VfczIoKSBpcyBUUlVFXG4ifQ== -->
 <pre><code>Linking to GEOS 3.8.1, GDAL 3.2.1, PROJ 7.2.1; sf_use_s2() is TRUE</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShoZXJlKVxuYGBgIn0= -->
-<pre class="r"><code>library(here)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiaGVyZSgpIHN0YXJ0cyBhdCAvVXNlcnMvbHVjeS9Eb2N1bWVudHMvRG9jdW1lbnRzIC0gQmFycmEvQ29kZWNsYW4vZ3JvdXAgMSBwcm9qZWN0L3Boc19yc2hpbnlfZGFzaGJvYXJkX2dycDFcbiJ9 -->
-<pre><code>here() starts at /Users/lucy/Documents/Documents - Barra/Codeclan/group 1 project/phs_rshiny_dashboard_grp1</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShqYW5pdG9yKVxuYGBgIn0= -->
-<pre class="r"><code>library(janitor)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYamFuaXRvcuKAmVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6c3RhdHPigJk6XG5cbiAgICBjaGlzcS50ZXN0LCBmaXNoZXIudGVzdFxuIn0= -->
-<pre><code>
-Attaching package: ‘janitor’
-
-The following objects are masked from ‘package:stats’:
-
-    chisq.test, fisher.test</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBMb2FkaW5nIGluIFNjb3RsYW5kIE5IUyBIZWFsdGhib2FyZHNcbm5oc19zaGFwZSA8LSBzdF9yZWFkKGhlcmUoXCJtYXBfZGF0YS9TR19OSFNfSGVhbHRoQm9hcmRzXzIwMTkvU0dfTkhTX0hlYWx0aEJvYXJkc18yMDE5LnNocFwiKSkgXG5gYGAifQ== -->
-<pre class="r"><code># Loading in Scotland NHS Healthboards
-nhs_shape &lt;- st_read(here(&quot;map_data/SG_NHS_HealthBoards_2019/SG_NHS_HealthBoards_2019.shp&quot;)) </code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5ob3NwaXRhbHMgPC0gc2NvdHRpc2hfaG9zcGl0YWxzIDwtIHBhc3RlMChcImh0dHBzOi8vd3d3Lm9wZW5kYXRhLm5ocy5zY290L2FwaS8zL2FjdGlvbi9kYXRhc3RvcmVfc2VhcmNoP3Jlc291cmNlX2lkPWM2OThmNDUwLWVlZWQtNDFhMC04OGY3LWMxZTQwYTU2OGFjYyZsaW1pdD0zMDBcIikgJT4lIFxuZnJvbUpTT04oKVxuYGBgIn0= -->
+<pre class="r"><code>
+hospitals &lt;- scottish_hospitals &lt;- paste0(&quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c698f450-eeed-41a0-88f7-c1e40a568acc&amp;limit=300&quot;) %&gt;% 
+fromJSON()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUmVhZGluZyBsYXllciBgU0dfTkhTX0hlYWx0aEJvYXJkc18yMDE5JyBmcm9tIGRhdGEgc291cmNlIFxuICBgL1VzZXJzL2x1Y3kvRG9jdW1lbnRzL0RvY3VtZW50cyAtIEJhcnJhL0NvZGVjbGFuL2dyb3VwIDEgcHJvamVjdC9waHNfcnNoaW55X2Rhc2hib2FyZF9ncnAxL21hcF9kYXRhL1NHX05IU19IZWFsdGhCb2FyZHNfMjAxOS9TR19OSFNfSGVhbHRoQm9hcmRzXzIwMTkuc2hwJyBcbiAgdXNpbmcgZHJpdmVyIGBFU1JJIFNoYXBlZmlsZSdcblNpbXBsZSBmZWF0dXJlIGNvbGxlY3Rpb24gd2l0aCAxNCBmZWF0dXJlcyBhbmQgNCBmaWVsZHNcbkdlb21ldHJ5IHR5cGU6IE1VTFRJUE9MWUdPTlxuRGltZW5zaW9uOiAgICAgWFlcbkJvdW5kaW5nIGJveDogIHhtaW46IDU1MTIuOTk4IHltaW46IDUzMDI1MC44IHhtYXg6IDQ3MDMzMiB5bWF4OiAxMjIwMzAyXG5Qcm9qZWN0ZWQgQ1JTOiBPU0dCIDE5MzYgLyBCcml0aXNoIE5hdGlvbmFsIEdyaWRcbiJ9 -->
-<pre><code>Reading layer `SG_NHS_HealthBoards_2019&#39; from data source 
-  `/Users/lucy/Documents/Documents - Barra/Codeclan/group 1 project/phs_rshiny_dashboard_grp1/map_data/SG_NHS_HealthBoards_2019/SG_NHS_HealthBoards_2019.shp&#39; 
-  using driver `ESRI Shapefile&#39;
-Simple feature collection with 14 features and 4 fields
-Geometry type: MULTIPOLYGON
-Dimension:     XY
-Bounding box:  xmin: 5512.998 ymin: 530250.8 xmax: 470332 ymax: 1220302
-Projected CRS: OSGB 1936 / British National Grid</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChuaHNfc2hhcGUpJT4lXG4gIHN0X3NpbXBsaWZ5KGRUb2xlcmFuY2UgPSAxMDAwKSBcbmBgYCJ9 -->
-<pre class="r"><code>plot(nhs_shape)%&gt;%
-  st_simplify(dTolerance = 1000) </code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaG9zcGl0YWxzIDwtIHNjb3R0aXNoX2hvc3BpdGFsc1tbXCJyZXN1bHRcIl1dW1tcInJlY29yZHNcIl1dXG5gYGAifQ== -->
+<pre class="r"><code>hospitals &lt;- scottish_hospitals[[&quot;result&quot;]][[&quot;records&quot;]]</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KHNmKQpsaWJyYXJ5KGhlcmUpCmxpYnJhcnkoamFuaXRvcikKYGBgCgoKYGBge3J9CiMgTG9hZGluZyBpbiBTY290bGFuZCBOSFMgSGVhbHRoYm9hcmRzCm5oc19zaGFwZSA8LSBzdF9yZWFkKGhlcmUoIm1hcF9kYXRhL1NHX05IU19IZWFsdGhCb2FyZHNfMjAxOS9TR19OSFNfSGVhbHRoQm9hcmRzXzIwMTkuc2hwIikpIApgYGAKCmBgYHtyfQpwbG90KG5oc19zaGFwZSklPiUKICBzdF9zaW1wbGlmeShkVG9sZXJhbmNlID0gMTAwMCkgCmBgYAoKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CmxpYnJhcnkoanNvbmxpdGUpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KHNmKQpgYGAKCgpgYGB7cn0Kc2NvdHRpc2hfaG9zcGl0YWxzIDwtIHBhc3RlMCgiaHR0cHM6Ly93d3cub3BlbmRhdGEubmhzLnNjb3QvYXBpLzMvYWN0aW9uL2RhdGFzdG9yZV9zZWFyY2g/cmVzb3VyY2VfaWQ9YzY5OGY0NTAtZWVlZC00MWEwLTg4ZjctYzFlNDBhNTY4YWNjJmxpbWl0PTMwMCIpICU+JSAKZnJvbUpTT04oKQpgYGAKCmBgYHtyfQpob3NwaXRhbHMgPC0gc2NvdHRpc2hfaG9zcGl0YWxzW1sicmVzdWx0Il1dW1sicmVjb3JkcyJdXQpgYGAKCg==</div>
 
 
 
@@ -334,7 +292,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("nhs_healthboards.Rmd");
+  window.initializeSourceEmbed("hospitals.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>
