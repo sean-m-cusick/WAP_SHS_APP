@@ -29,11 +29,16 @@ bed_by_bord_json <- fromJSON(bed_by_bord_url, flatten = TRUE)
 
 ```{r}
  bed_by_bord <- bed_by_bord_json$result$records
+<<<<<<< Updated upstream
 bed_by_bord <- bed_by_bord %>% 
+=======
+head(bed_by_bord) %>% 
+>>>>>>> Stashed changes
   clean_names()
 ```
 ![](image/code_bed.png)
  
+<<<<<<< Updated upstream
  
 ```{r}
 bed_by_bord %>% 
@@ -46,4 +51,6 @@ bed_by_bord %>%
  
  
  
+=======
+>>>>>>> Stashed changes
  [codes for the dataset](https://www.opendata.nhs.scot/dataset/hospital-beds-information/resource/f272bb7d-5320-4491-84c1-614a2c064007)
