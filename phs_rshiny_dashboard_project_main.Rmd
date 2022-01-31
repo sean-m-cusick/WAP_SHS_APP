@@ -67,6 +67,17 @@ phs_dictionary_func <- function(id){
 # PHS API (ID)
 #--------------------------------------------------------------------------#
 ```{r, echo=FALSE, message=FALSE, results='hide'}
+# Data Group 00 -  Location / ID Identifier ----
+# Hospital LOCATION List
+api_hospital_location = "c698f450-eeed-41a0-88f7-c1e40a568acc"
+# Health Board List (Health Board)
+api_health_board = "652ff726-e676-4a20-abda-435b98dd7bdc"
+api_special_health_board = "0450a5a2-f600-4569-a9ae-5d6317141899"
+# HSCP List 
+api_hscp = "944765d7-d0d9-46a0-b377-abb3de51d08e"
+####
+####
+####
 # Data Group 01 - Hospital Activity ----
 # Dataset 1A - Hospital Activity by Speciality
 api_ha_spe = "c3b4be64-5fb4-4a2f-af41-b0012f0a276a" 
@@ -108,43 +119,23 @@ api_ane_hscp_dep =  "39da7e8d-0ecf-41b7-aef1-cd898ba8b4fa"
 # Data Group 04 - Bed Capacity ----
 # Beds by Board of Treatment and Specialty
 api_bed_info = "f272bb7d-5320-4491-84c1-614a2c064007"
+
 ####
 ####
 ####
-# Data Group 00 -  Location / ID Identifier ----
-# Hospital LOCATION List
-api_hospital_location = "c698f450-eeed-41a0-88f7-c1e40a568acc"
-# Health Board List (Health Board)
-api_health_board = "652ff726-e676-4a20-abda-435b98dd7bdc"
-api_special_health_board = "0450a5a2-f600-4569-a9ae-5d6317141899"
-# HSCP List 
-api_hscp = "944765d7-d0d9-46a0-b377-abb3de51d08e"
-####
-####
-####
-# COVID-19 Wider Impacts - Scottish Ambulance Services ----
+# Data Group 05 - COVID-19 Wider Impacts - Scottish Ambulance Services ----
 # SAS Incidents By Health Board, Age and Sex
 api_sas_health_board_age_sex = "d1d2d098-193f-489c-940a-a828fdcfc357"
-#SAS Incidents By Health Board and Deprivation
+# SAS Incidents By Health Board and Deprivation
 api_sas_health_deprivation = "12e52d78-bff5-4fde-8085-f1b03667a8e5"
-#SAS Incidents By HSCP, Age and Sex
-api_sas_hscp__age_sex = "0a3992c3-a712-4adf-b3b3-928850cc65ff"
-#SAS Incidents By HSCP and Deprivation
+# SAS Incidents By HSCP, Age and Sex
+api_sas_hscp_age_sex = "0a3992c3-a712-4adf-b3b3-928850cc65ff"
+# SAS Incidents By HSCP and Deprivation
 api_sas_hscp_deprivation = "1329dfdb-0dd7-428b-9afb-b8fb3e438518"
 ####
 ####
 ####
-#Total Cases By Deprivation ----
-api_sco_cov_total_deprivation = "a965ee86-0974-4c93-bbea-e839e27d7085"
-####
-####
-####
-# Daily Case Trends By Deprivation -----
-api_sco_dov_daily_deprivation = "a38a4c21-7c75-4ecd-a511-3f83e0e8f0c3"
-####
-####
-####
-# Daily COVID-19 Cases in Scotland ----
+# Data Group 06 - Daily COVID-19 Cases in Scotland ----
 # Total Cases By Health Board
 api_total_cov_health_board = "7fad90e5-6f19-455b-bc07-694a22f8d5dc"
 # Total Cases By Local Authority
@@ -168,6 +159,16 @@ api_daily_trend_deprivation = "a38a4c21-7c75-4ecd-a511-3f83e0e8f0c3"
 ####
 ####
 ####
+# Total Cases By Deprivation ----
+api_sco_cov_total_deprivation = "a965ee86-0974-4c93-bbea-e839e27d7085"
+####
+####
+####
+# Daily Case Trends By Deprivation -----
+api_sco_dov_daily_deprivation = "a38a4c21-7c75-4ecd-a511-3f83e0e8f0c3"
+####
+####
+####
 #Sample DF Reader (Press Ctrl+Shift+C to uncomment) ----
 # sample_DF <- phs_df_func(api_bed_info)
 # view(sample_DF)
@@ -176,6 +177,10 @@ api_daily_trend_deprivation = "a38a4c21-7c75-4ecd-a511-3f83e0e8f0c3"
 # Load in API Dataframe (Backup)
 #--------------------------------------------------------------------------#
 ```{r}
+# Data Group 00 - Hospital Location Info
+backup_hospital_location = phs_df_func(api_hospital_location)
+backup_health_board = phs_dictionary_func(api_health_board)
+
 # Data Group 01
 # Dataset 1A - Hospital Activity by Speciality
 backup_ha_spe = phs_df_func(api_ha_spe)
@@ -215,10 +220,40 @@ backup_ane_hscp_dep =  phs_df_func(api_ane_hscp_dep)
 # Data Group 04 - Bed Capacity
 # Beds by Board of Treatment and Specialty
 backup_bed_info = phs_df_func(api_bed_info)
+#
 
-# Data Group 00 - Hospital Location Info
-backup_hospital_location = phs_df_func(api_hospital_location)
-backup_health_board = phs_dictionary_func(api_health_board)
+# Data Group 05 - COVID-19 Wider Impacts - Scottish Ambulance Services ----
+backup_sas_health_board_age_sex = phs_df_func(api_sas_health_board_age_sex)
+backup_sas_health_deprivation = phs_df_func(api_sas_health_deprivation)
+backup_sas_hscp_age_sex = phs_df_func(api_sas_hscp_age_sex)
+backup_sas_hscp_deprivation = phs_df_func(api_sas_hscp_deprivation)
+####
+####
+####
+# Data Group 06 - Daily COVID-19 Cases in Scotland ----
+backup_total_cov_health_board  = phs_df_func(api_total_cov_health_board)
+backup_total_cov_local_authority = phs_df_func(api_total_cov_local_authority)
+backup_total_cov_age_sex = phs_df_func(api_total_cov_age_sex)
+backup_total_cov_deprivation = phs_df_func(api_total_cov_deprivation)
+backup_daily_cumulative_cov = phs_df_func(api_daily_cumulative_cov)
+backup_daily_trends_health_board = phs_df_func(api_daily_trends_health_board)
+backup_daily_trends_local_authority = phs_df_func(api_daily_trends_local_authority)
+backup_seven_day_trends_neighbourhood = phs_df_func(api_seven_day_trends_neighbourhood)
+backup_daily_trend_age_sex = phs_df_func(api_daily_trend_age_sex)
+backup_daily_trend_deprivation = phs_df_func(api_daily_trend_deprivation)
+####
+####
+####
+# Total Cases By Deprivation ----
+backup_sco_cov_total_deprivation = phs_df_func(api_sco_cov_total_deprivation)
+####
+####
+####
+# Daily Case Trends By Deprivation -----
+backup_sco_dov_daily_deprivation = phs_df_func(api_sco_dov_daily_deprivation)
+
+
+
 ```
 
 
@@ -344,8 +379,47 @@ df_ane_hscp_dep <-  clean_wkend_df_func(backup_ane_hscp_dep)
 
 ## Data Group 04 - Hospital Bed Information
 ```{r}
-bed_info <- clean_quart_df_func(backup_bed_info)
+df_bed_info <- clean_quart_df_func(backup_bed_info)
 ```
+
+
+```{r}
+# Data Group 05 - COVID-19 Wider Impacts - Scottish Ambulance Services ----
+df_sas_health_board_age_sex <- backup_sas_health_board_age_sex
+df_sas_health_deprivation <- backup_sas_health_deprivation
+df_sas_hscp_age_sex <- backup_sas_hscp_age_sex
+df_sas_hscp_deprivation <- backup_sas_hscp_deprivation
+####
+####
+####
+# Data Group 06 - Daily COVID-19 Cases in Scotland ----
+df_total_cov_health_board <- backup_total_cov_health_board
+df_total_cov_local_authority <- backup_total_cov_local_authority
+df_total_cov_age_sex <- backup_total_cov_age_sex
+df_total_cov_deprivation <- backup_total_cov_deprivation
+df_daily_cumulative_cov <- backup_daily_cumulative_cov
+df_daily_trends_health_board <- backup_daily_trends_health_board
+df_daily_trends_local_authority <- backup_daily_trends_local_authority
+df_seven_day_trends_neighbourhood <- backup_seven_day_trends_neighbourhood
+df_daily_trend_age_sex <- backup_daily_trend_age_sex
+df_daily_trend_deprivation <- backup_daily_trend_deprivation
+####
+####
+####
+# Total Cases By Deprivation ----
+df_sco_cov_total_deprivation <- backup_sco_cov_total_deprivation
+####
+####
+####
+# Daily Case Trends By Deprivation -----
+df_sco_dov_daily_deprivation <- backup_sco_dov_daily_deprivation
+```
+
+
+
+
+
+
 
 
 ## Age & Sex Data Frame related
@@ -398,35 +472,53 @@ age_group_cov_hb_ans %>%
 ```{r}
 
 
-autosave
-
-
-  save_path = "..\\phs_rshiny_dashboard_grp1\\raw_data\\"
-  dataframes_list <- as.list( ls.str(mode = "list"))
-  dataframes_list_csv <- paste0(dataframes_list, ".csv")
-  file_path = paste0(save_path, dataframes_list_csv)
-  
-for (x in 1: length(dataframes_list)){
-  data_frame_name <- paste0(dataframes_list[x], ".csv")
-  data_frame_file_path <- paste0(save_path,data_frame_name)
-  write.csv(data_frame_name,data_frame_file_path, row.names = FALSE)
-  
-}
-
-
-
-write.csv(df_ha_ans,"..\\phs_rshiny_dashboard_grp1\\raw_data\\df_ha_ans.csv", row.names = FALSE)
-
-  
-  
-  
-file_path = paste0(save_path,file_name)  
-
-
-write.csv(age_ane_hscp_ans,save_path + file_name+".csv", row.names = FALSE)
+# autosave
+# 
+# 
+#   save_path = paste0("..\\phs_rshiny_dashboard_grp1\\raw_data\\")
+#   dataframes_list <- as.list( ls.str(mode = "list"))
+#   dataframes_list_csv <- paste0(dataframes_list, ".csv")
+#   file_path = paste0(save_path, dataframes_list_csv)
+#   
+# for (x in 1: length(dataframes_list)){
+#   data_frame_name <- paste0(dataframes_list[x], ".csv")
+#   data_frame_file_path <- paste0(save_path,data_frame_name)
+#   write.csv(as.character(data_frame_name), as.character(data_frame_file_path), row.names = FALSE)
+#   
+# }
+# 
+# 
+# 
+write.csv(df_sco_dov_daily_deprivation,"..\\phs_rshiny_dashboard_grp1\\raw_data\\df_sco_dov_daily_deprivation.csv", row.names = FALSE)
+# 
+#   
+#   
+#   
+# file_path = paste0(save_path,file_name)  
+# 
+# 
+# write.csv(age_ane_hscp_ans,save_path + file_name+".csv", row.names = FALSE)
 
 ```
 
+```{r}
+df_daily_cumulative_cov <- backup_daily_cumulative_cov
+df_daily_trends_health_board <- backup_daily_trends_health_board
+df_daily_trends_local_authority <- backup_daily_trends_local_authority
+df_seven_day_trends_neighbourhood <- backup_seven_day_trends_neighbourhood
+df_daily_trend_age_sex <- backup_daily_trend_age_sex
+df_daily_trend_deprivation <- backup_daily_trend_deprivation
+####
+####
+####
+# Total Cases By Deprivation ----
+df_sco_cov_total_deprivation <- backup_sco_cov_total_deprivation
+####
+####
+####
+# Daily Case Trends By Deprivation -----
+df_sco_dov_daily_deprivation <- backup_sco_dov_daily_deprivation
+```
 
 
 
