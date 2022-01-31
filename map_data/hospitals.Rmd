@@ -1,0 +1,50 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(jsonlite)
+library(tidyverse)
+library(sf)
+library(janitor)
+library(leaflet)
+```
+
+
+```{r}
+scottish_hospitals <- paste0("https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c698f450-eeed-41a0-88f7-c1e40a568acc&limit=300") %>% 
+fromJSON()
+```
+
+```{r}
+hospitals <- scottish_hospitals[["result"]][["records"]]
+```
+
+```{r}
+hospitals <- clean_names(hospitals)
+```
+
+```{r}
+hospitals <- hospitals %>% 
+  mutate(x_coordinate = replace_na(x_coordinate, 327699),
+         y_coordinate = replace_na(y_coordinate, 669148))
+```
+
+```{r}
+#> Linking to GEOS 3.6.1, GDAL 2.2.3, proj.4 4.9.3
+lat_long <- hospitals %>%
+  st_as_sf(coords = c("x_coordinate", "y_coordinate"), crs = 27700) %>%
+  st_transform(4326) %>%
+  st_coordinates() %>%
+  as_tibble()
+```
+
+```{r}
+# Produces an interactive map
+lat_long %>% 
+leaflet() %>% 
+    addTiles() %>% 
+    addCircleMarkers(lng = ~X, 
+                   lat = ~Y)
+```

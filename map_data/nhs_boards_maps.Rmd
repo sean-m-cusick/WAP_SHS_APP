@@ -1,0 +1,40 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+---
+title: "Scottish Health Boards"
+output: html_notebook
+---
+
+> Copyright Scottish Government, contains Ordnance Survey data © Crown copyright and database right (insert year); The dataset covers all of Scotland, and is coterminous with Local Authorities (OS BoundaryLine, October 2017 with amendments at Keltybridge and Westfield); Open Government Licence (<http://www.nationalarchives.gov.uk/doc/open-government-licence/>)
+
+Created from a [tutorial](https://github.com/mmoench16/Personal-Website/blob/b2fca6b7bda4d0f4b21eb30c1338ad199979633f/content/post/2018-09-04-shapefiles-in-r-with-ggplot2-rgdal.Rmd) by mmoench16 with an up to date data file
+
+```{r}
+library(tidyverse)
+library(rgdal)
+library(here)
+library(broom)
+```
+
+```{r, eval = FALSE}
+NHSBoards <- readOGR(dsn = "SG_NHS_HealthBoards_2019.shp", 
+                     layer = "SG_NHS_HealthBoards_2019")
+```
+
+```{r, eval = FALSE}
+# tidy() comes from the package library(broom)
+# This produces a simple outline map of the NHS Boards
+NHSBoards_tidy <- tidy(NHSBoards)
+ggplot(NHSBoards_tidy, aes(x = long, y = lat, group = group)) +
+  geom_polygon(color = "black", size = 0.1, fill = "seagreen") +
+  coord_equal() +
+  theme_minimal()
+```
+
+```{r, eval=FALSE}
+NHSBoards$id <- row.names(NHSBoards)
+NHSBoards_tidy <- left_join(NHSBoards_tidy, NHSBoards@data)
+```
+
