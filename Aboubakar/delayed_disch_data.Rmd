@@ -1,0 +1,15 @@
+---
+title: "Delayed discharge data"
+output:
+   html_document:
+    code_folding: hide
+    df_print: paged
+    number_sections: yes
+    toc_float: yes
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
