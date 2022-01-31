@@ -7,6 +7,7 @@ output: html_notebook
 #--------------------------------------------------------------------------#
 ```{r, echo=FALSE, message=FALSE, results='hide'}
 library(tidyverse)
+library(sf)
 library(janitor)
 library(jsonlite)
 library(lubridate)
@@ -171,9 +172,21 @@ backup_hospital_location = phs_df_func(api_hospital_location)
 # Hospital Location
 df_hospital_location <-  backup_hospital_location %>%
   select(-ends_with("qf"), -id) %>% 
-  rename(long = x_coordinate,
-         lat = y_coordinate)
-
+ mutate(x_coordinate = replace_na(x_coordinate, 327699),
+         y_coordinate = replace_na(y_coordinate, 669148))
+  
+  
+df_lat_long_convert <- df_hospital_location %>%
+  st_as_sf(coords = c("x_coordinate", "y_coordinate"), crs = 27700) %>%
+  st_transform(4326) %>%
+  st_coordinates() %>%
+  as_tibble() %>% 
+  rename(longitude = X,
+        latitude = Y)
+  
+df_hospital_location <- df_hospital_location %>% 
+  bind_cols(df_lat_long_convert)
+  
 # function to assign hospital name, longitude & latitude to dataframe
 # hospital_location_func(datafram, "key column")
 hospital_location_func <- function(df, key_col){
