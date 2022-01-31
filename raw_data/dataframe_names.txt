@@ -1,0 +1,31 @@
+
+
+# Data Group 05 - COVID-19 Wider Impacts - Scottish Ambulance Services ----
+df_sas_health_board_age_sex
+df_sas_health_deprivation
+df_sas_hscp_age_sex
+df_sas_hscp_deprivation
+####
+####
+####
+# Data Group 06 - Daily COVID-19 Cases in Scotland ----
+df_total_cov_health_board
+df_total_cov_local_authority
+df_total_cov_age_sex
+df_total_cov_deprivation
+df_daily_cumulative_cov
+df_daily_trends_health_board
+df_daily_trends_local_authority
+df_seven_day_trends_neighbourhood
+df_daily_trend_age_sex
+df_daily_trend_deprivation
+####
+####
+####
+# Total Cases By Deprivation ----
+df_sco_cov_total_deprivation
+####
+####
+####
+# Daily Case Trends By Deprivation -----
+df_sco_dov_daily_deprivation
