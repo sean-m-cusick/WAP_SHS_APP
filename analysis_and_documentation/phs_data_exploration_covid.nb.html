@@ -220,17 +220,23 @@ pre code {
 <h1>How does Covid affect hospital activity</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShqYW5pdG9yKVxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGdncGxvdDIpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShqYW5pdG9yKVxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGdncGxvdDIpXG5saWJyYXJ5KGhlcmUpXG5cbmhlcmU6OmhlcmUoKVxuYGBgIn0= -->
 <pre class="r"><code>library(janitor)
 library(tidyverse)
-library(ggplot2)</code></pre>
+library(ggplot2)
+library(here)
+
+here::here()</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRTovRGF0YSBBbmFseXN0L2NvZGVjbGFuL2NvZGVjbGFuX2hvbWV3b3JrX1NNQy9waHNfcnNoaW55X2Rhc2hib2FyZF9ncnAxXCJcbiJ9 -->
+<pre><code>[1] &quot;E:/Data Analyst/codeclan/codeclan_homework_SMC/phs_rshiny_dashboard_grp1&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudG90YWxfY292aWRfYWdlX3NleCA8LSBjbGVhbl9uYW1lcyhyZWFkX2NzdihcInJhd19kYXRhL2RmX3RvdGFsX2Nvdl9hZ2Vfc2V4LmNzdlwiKSlcbmBgYCJ9 -->
-<pre class="r"><code>total_covid_age_sex &lt;- clean_names(read_csv(&quot;raw_data/df_total_cov_age_sex.csv&quot;))</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudG90YWxfY292aWRfYWdlX3NleCA8LSBjbGVhbl9uYW1lcyhyZWFkX2NzdihoZXJlKFwicmF3X2RhdGEvZGZfdG90YWxfY292X2FnZV9zZXguY3N2XCIpKSlcbmBgYCJ9 -->
+<pre class="r"><code>total_covid_age_sex &lt;- clean_names(read_csv(here(&quot;raw_data/df_total_cov_age_sex.csv&quot;)))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiUm93czogMjEgQ29sdW1uczogMTNcbi0tIENvbHVtbiBzcGVjaWZpY2F0aW9uIC0tLS0tLS0tLS0tLS0tLS1cbkRlbGltaXRlcjogXCIsXCJcbmNociAoNSk6IGNvdW50cnksIHNleCwgc2V4X3FmLCBhZ2VfZy4uLlxuZGJsICg4KTogaWQsIGRhdGUsIHRvdGFsX3Bvc2l0aXZlLCBjLi4uXG5cbmkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG5pIFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
 <pre><code>Rows: 21 Columns: 13
@@ -242,9 +248,9 @@ dbl (8): id, date, total_positive, c...
 i Use `spec()` to retrieve the full column specification for this data.
 i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICBcbnRvdGFsX2NvdmlkX2RlcHJpdmF0aW9uIDwtIGNsZWFuX25hbWVzKHJlYWRfY3N2KFwicmF3X2RhdGEvZGZfdG90YWxfY292X2RlcHJpdmF0aW9uLmNzdlwiKSlcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICBcbnRvdGFsX2NvdmlkX2RlcHJpdmF0aW9uIDwtIGNsZWFuX25hbWVzKHJlYWRfY3N2KGhlcmUoXCJyYXdfZGF0YS9kZl90b3RhbF9jb3ZfZGVwcml2YXRpb24uY3N2XCIpKSlcbmBgYCJ9 -->
 <pre class="r"><code>  
-total_covid_deprivation &lt;- clean_names(read_csv(&quot;raw_data/df_total_cov_deprivation.csv&quot;))</code></pre>
+total_covid_deprivation &lt;- clean_names(read_csv(here(&quot;raw_data/df_total_cov_deprivation.csv&quot;)))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiUm93czogNSBDb2x1bW5zOiAxMFxuLS0gQ29sdW1uIHNwZWNpZmljYXRpb24gLS0tLS0tLS0tLS0tLS0tLVxuRGVsaW1pdGVyOiBcIixcIlxuY2hyICgxKTogY291bnRyeVxuZGJsICg5KTogaWQsIGRhdGUsIHNpbWRfcXVpbnRpbGUsIHRvLi4uXG5cbmkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG5pIFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
 <pre><code>Rows: 5 Columns: 10
@@ -256,9 +262,9 @@ dbl (9): id, date, simd_quintile, to...
 i Use `spec()` to retrieve the full column specification for this data.
 i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICBcbnRvdGFsX2NvdmlkX2hlYWx0aF9ib2FyZCA8LSBjbGVhbl9uYW1lcyhyZWFkX2NzdihcInJhd19kYXRhL2RmX3RvdGFsX2Nvdl9oZWFsdGhfYm9hcmQuY3N2XCIpKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICBcbnRvdGFsX2NvdmlkX2hlYWx0aF9ib2FyZCA8LSBjbGVhbl9uYW1lcyhyZWFkX2NzdihoZXJlKFwicmF3X2RhdGEvZGZfdG90YWxfY292X2hlYWx0aF9ib2FyZC5jc3ZcIikpKVxuYGBgIn0= -->
 <pre class="r"><code>  
-total_covid_health_board &lt;- clean_names(read_csv(&quot;raw_data/df_total_cov_health_board.csv&quot;))</code></pre>
+total_covid_health_board &lt;- clean_names(read_csv(here(&quot;raw_data/df_total_cov_health_board.csv&quot;)))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiUm93czogMTUgQ29sdW1uczogMTNcbi0tIENvbHVtbiBzcGVjaWZpY2F0aW9uIC0tLS0tLS0tLS0tLS0tLS1cbkRlbGltaXRlcjogXCIsXCJcbmNociAgKDMpOiBoYiwgaGJxZiwgaGJfbmFtZVxuZGJsICgxMCk6IGlkLCBkYXRlLCBuZXdfcG9zaXRpdmUsIHRvLi4uXG5cbmkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG5pIFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
 <pre><code>Rows: 15 Columns: 13
@@ -270,9 +276,9 @@ dbl (10): id, date, new_positive, to...
 i Use `spec()` to retrieve the full column specification for this data.
 i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICBcbnRvdGFsX2NvdmlkX2xvY2FsX2F1dGhvcml0eSA8LSBjbGVhbl9uYW1lcyhyZWFkX2NzdihcInJhd19kYXRhL2RmX3RvdGFsX2Nvdl9sb2NhbF9hdXRob3JpdHkuY3N2XCIpKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICBcbnRvdGFsX2NvdmlkX2xvY2FsX2F1dGhvcml0eSA8LSBjbGVhbl9uYW1lcyhyZWFkX2NzdihoZXJlKFwicmF3X2RhdGEvZGZfdG90YWxfY292X2xvY2FsX2F1dGhvcml0eS5jc3ZcIikpKVxuYGBgIn0= -->
 <pre class="r"><code>  
-total_covid_local_authority &lt;- clean_names(read_csv(&quot;raw_data/df_total_cov_local_authority.csv&quot;))</code></pre>
+total_covid_local_authority &lt;- clean_names(read_csv(here(&quot;raw_data/df_total_cov_local_authority.csv&quot;)))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiUm93czogMzIgQ29sdW1uczogMTJcbi0tIENvbHVtbiBzcGVjaWZpY2F0aW9uIC0tLS0tLS0tLS0tLS0tLS1cbkRlbGltaXRlcjogXCIsXCJcbmNociAgKDIpOiBjYSwgY2FfbmFtZVxuZGJsICgxMCk6IGlkLCBkYXRlLCBuZXdfcG9zaXRpdmUsIHRvLi4uXG5cbmkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG5pIFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
 <pre><code>Rows: 32 Columns: 12
@@ -287,9 +293,32 @@ i Specify the column types or set `show_col_types = FALSE` to quiet this message
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudG90YWxfY292aWRfYWdlX3NleCAlPiUgXG4gIG11dGF0ZShkYXRlID0geW1kKGRhdGUpLFxuICAgICAgICAgeWVhciA9IHllYXIoZGF0ZSksXG4gICAgICAgICBtb250aCA9IG1vbnRoKGRhdGUpLFxuICAgICAgICAgZGF5X24gPSBkYXkoZGF0ZSksXG4gICAgICAgICB3ZWVrZGF5ID0gd2RheShkYXRlLCBsYWJlbCA9IFRSVUUpLFxuICAgICAgICAgLmJlZm9yZSA9IGRhdGUpXG5gYGAifQ== -->
+<pre class="r"><code>total_covid_age_sex %&gt;% 
+  mutate(date = ymd(date),
+         year = year(date),
+         month = month(date),
+         day_n = day(date),
+         weekday = wday(date, label = TRUE),
+         .before = date)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MjEsIm5jb2wiOjE3LCJzdW1tYXJ5Ijp7IkEgdGliYmxlIjpbIjIxIHggMTciXX19LCJyZGYiOiJINHNJQUFBQUFBQUFCdTJYZlZBVVpSakFsL3VBQXhGbEVGQWpKRlF5RmJ3N1ByV2NlMjVrb0JJTWhVYW5VbHk1RlU3UDNlTnVUMlFHaFZLanJFRUR3eXhNTFV4TlRhMFVSU3NNL0N6SEVZeEFCVUZFVUZDVG1mSmpETnA3UHk3dVp2elBKcHJwblhubjkzenMrN3p2OCt6TzdyT3o0dWRFZXMzeFloaEd6aWpjWkl4Y0tZbU0rN1FValRaYXl6QUttYVM1TVFyRzA4NWwwbFYra3VBclRSOXArdXQrWTlBQWhsQkZPSlJ3R09Gd3dpRENFTUpRd2pHRVlZVGpDTWNUVGlTTUlGUVRhZ2kxaEpHRVVZVFJEQjNvdkxENUkyd2Y0R1JjNmp2UUtZM0I5dk5LYzlTVG4zSWFXL2JrcDlNRDdtN2lsbkltcXlRTmxhWUhzY3BUYlR3Vmt3V0htR2JqcURpYk16aXNXVFlxSmxpTWpnaXM2TEtWTXNQRVd1bE9NbUwwRUN3R3p1SUk1cjZRelJBRml5VDFTakh3QTF4YlVtV3Y5a0FuemxiZVJ4S2tXU3ZpV1pIRCtTQzdQN0Y3cGs3V3F1MGo4bi9EUDJCd0xyWjdBcmVFTlhFRFFsTWsvenV5TWswUVdaT2pNRksxK3FReFlFbSt2d2FYTyttaERoR0ZFRTJVa3hvOW1hZ3FUVFJ5TzNRdDhtdWpIRHJ5UnpuMEtLVEhVRjBlbzU1QVhUSElGZXU0TkJicGNWUjNqNHMybTJ6V2dYMnMvKzQ5eDYvK2U3ZzMwSSs2TGRvSm5kQ0MyQjBVZ3V5cWRTbUlicFk0Wk8rWnZ3Nng0YlVxeEovL0xFQ3NxY2E4ZHhLdDF6K3RWaUM5ZlMyT2QyUG1GbVJYMWpZZ3ZhOGJ4N2s3Wmo1aTR6RjBEaml6Q1BNQTF2V2FRZ09EQno1di9hcXl5RlhQajRIR0lXVUJvMEsyUW11cDhscWlJUlJhOXJZVmxlVUZ3S1ZKYVdmV0ZySlE2emVweFR4NktsUy9ISmZUWHVjTFAxemNkekJNdXdtKzE2ek9teWYzaHRQcWF4djBTYTN3eTRldGdTSTdCWDROalQ2dnJSd09UUjNMbVcwdFJkQVVGNWFUWExNWEdzcmJYbGZkRElMelh6WXVDdC8zSFJ5UFNiclNkNlVFZnB4NzQxWmRiQmtjMjNYMkV3TjdGRTUrbTNRNDhKbGl1UEQyaEhyakNKWGp2T1R3c0JUVDBkdlNublo2QWVhS2Raajd0MkVXbWpGTDR6RzNWRG12WHc3T2NZWVNwaEw3MjJyTWIzak1EMDVoYnNKTk1HemNqVmt6dXFCL2ZYWE5hNVpYTnZabGd5WStjbGpGMVNPNmpzaUh5c3U3KzNTUFZtdzYzcmZ6SUFRTFUzb0h2ZjhpdkxMejBaNlNobFo0YS9Ycy9UUFRaTUJ2LytMekU2cFNLRlFYdjV2L2FTV1V6NW9SVkxrelUzZDJVUFZuSS9WYklUYWkxVy85dVNaZ3l0ZWNYcG1hQWJJY1dXZ3Qwd0pqajdaSGFxYnFZRTVSdlg2Qlh6Qzg0M1gvMlVzcjUwTHVHM3ZFUVhlT1E4bWIyUi9uWFcySFhROG1WL2ZrM29iTTlkbUY0L2xUOUx4NlZTTktUSzgxSktCOGV1cFNFSHRyMEhPbGY2cHVJdVl3bExnK2NCNzZXOUM3bWZGeitIc3p5aDg2eDRVZ3UxY3hXcTlYVit4QTlycytxT0x3SUJ6N1J5U2p2d3A5d1AzMWlINVYzb2hNekNHOGZ5YmFGeTRmUmpkQ256aDZRa0cvK2tKSHhhRlpLZHhlNkc2MkprYWtESWF1cEp0SHRuOFZBRDNURHZRVTVVK0gyejhsZW01NXp3cmRQb3d5c0R3Qk9ndGp1M3BYZHNQMWM4Y0ttcHNFdUg3aThvaTBtWC9BclJtVjU4UGJTcUV6ZU83VXIyWHo0V2IrbzNseDk3dWdZMGZleUJmYTVIREx4LzBoLzJveGRCZnJkQnJQQ3JoaGFoaGJuSDhLT3MzNUl6ZWF3NkFqSktWOTk0YjkwTG41NG9YUVF5cTRrN1Q2dWVEQUZ1Z0tmS20xZnFPL2EyUEpzMHM0MmxqNkVxUE1TSHRLUlM3SFd1aWxTd1JlektLS2djMU5wODJ0Unc3SExaWU1kSkhCM3JZUlY0Wmc0MFVMZGNtdDNETDZ0cFhFOU95RnRQMWdNN24wVEl0Z014T0R0OFB3OTBVK292MlZuRzRXckViUnVKUnU0WmRoc1JtNGRJdTBxYXZMR3k4d2NLeVlSZC9ydnYwdWQzS1E2RHlYeVQ0bXVzUGxYRU5QaTVBVFFldG8vL21RMlI4TTZhWGM5WmkrMWtzcUVCdXgwQ0l0WVZCMzZ4VE9RekNMUm9HWGdzbnNmODlLbDhWdUZoZkRFQnR2Mzl3UW5wRmw0eGVIeDlvM1FHNDhCaFBadjUvc2k3ZFUwSU1wNlQzaCtFd2o3K2g2VE93Q3prU3JJeVdKY293d1c0eThTRE9Sck5ZSVZEaHF5UkJNMUlJNzk5Ni9BQ0pqY2lZMUVBQUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["month"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["day_n"],"name":[4],"type":["int"],"align":["right"]},{"label":["weekday"],"name":[5],"type":["ord"],"align":["right"]},{"label":["date"],"name":[6],"type":["date"],"align":["right"]},{"label":["country"],"name":[7],"type":["chr"],"align":["left"]},{"label":["sex"],"name":[8],"type":["chr"],"align":["left"]},{"label":["sex_qf"],"name":[9],"type":["chr"],"align":["left"]},{"label":["age_group"],"name":[10],"type":["chr"],"align":["left"]},{"label":["age_group_qf"],"name":[11],"type":["chr"],"align":["left"]},{"label":["total_positive"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["crude_rate_positive"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["total_deaths"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["crude_rate_deaths"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["total_negative"],"name":[16],"type":["dbl"],"align":["right"]},{"label":["crude_rate_negative"],"name":[17],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Female","9":"NA","10":"0 to 14","11":"NA","12":"96640","13":"23058.441","14":"2","15":"0.4772028","16":"203577","17":"48573.76"},{"1":"2","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Female","9":"NA","10":"0 to 59","11":"NA","12":"523165","13":"25662.439","14":"352","15":"17.2664044","16":"1205318","17":"59123.60"},{"1":"3","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Female","9":"NA","10":"15 to 19","11":"NA","12":"49671","13":"36016.184","14":"1","15":"0.7250948","16":"77109","17":"55911.34"},{"1":"4","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Female","9":"NA","10":"20 to 24","11":"NA","12":"57569","13":"34175.111","14":"3","15":"1.7809122","16":"126022","17":"74811.37"},{"1":"5","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Female","9":"NA","10":"25 to 44","11":"NA","12":"201226","13":"27837.325","14":"55","15":"7.6086235","16":"455883","17":"63066.22"},{"1":"6","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Female","9":"NA","10":"45 to 64","11":"NA","12":"142919","13":"18508.748","14":"489","15":"63.3280236","16":"443658","17":"57456.00"},{"1":"7","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Female","9":"NA","10":"60+","11":"NA","12":"75273","13":"9876.441","14":"4517","15":"592.6678187","16":"382855","17":"50233.75"},{"1":"8","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Female","9":"NA","10":"65 to 74","11":"NA","12":"24939","13":"8154.690","14":"750","15":"245.2390918","16":"142875","17":"46718.05"},{"1":"9","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Female","9":"NA","10":"75 to 84","11":"NA","12":"14843","13":"7729.521","14":"1425","15":"742.0715513","16":"89576","17":"46646.88"},{"1":"10","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Female","9":"NA","10":"85plus","11":"NA","12":"10631","13":"12897.786","14":"2144","15":"2601.1525629","16":"49473","17":"60021.84"},{"1":"11","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Male","9":"NA","10":"0 to 14","11":"NA","12":"97406","13":"22103.517","14":"1","15":"0.2269215","16":"217674","17":"49394.91"},{"1":"12","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Male","9":"NA","10":"0 to 59","11":"NA","12":"478209","13":"23688.841","14":"468","15":"23.1831219","16":"1095592","17":"54271.89"},{"1":"13","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Male","9":"NA","10":"15 to 19","11":"NA","12":"44159","13":"30621.953","14":"3","15":"2.0803428","16":"69871","17":"48451.88"},{"1":"14","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Male","9":"NA","10":"20 to 24","11":"NA","12":"51853","13":"29920.601","14":"4","15":"2.3081095","16":"103122","17":"59504.22"},{"1":"15","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Male","9":"NA","10":"25 to 44","11":"NA","12":"178779","13":"25235.552","14":"77","15":"10.8689362","16":"414537","17":"58513.98"},{"1":"16","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Male","9":"NA","10":"45 to 64","11":"NA","12":"130761","13":"18091.397","14":"710","15":"98.2318271","16":"376357","17":"52070.75"},{"1":"17","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Male","9":"NA","10":"60+","11":"NA","12":"70214","13":"10860.601","14":"4974","15":"769.3711698","16":"323587","17":"50051.97"},{"1":"18","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Male","9":"NA","10":"65 to 74","11":"NA","12":"26372","13":"9403.828","14":"1138","15":"405.7923470","16":"132823","17":"47362.53"},{"1":"19","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Male","9":"NA","10":"75 to 84","11":"NA","12":"13524","13":"9047.606","14":"1866","15":"1248.3609409","16":"75382","17":"50430.84"},{"1":"20","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Male","9":"NA","10":"85plus","11":"NA","12":"5569","13":"12136.599","14":"1643","15":"3580.6128231","16":"29413","17":"64100.16"},{"1":"21","2":"2022","3":"1","4":"31","5":"Mon","6":"2022-01-31","7":"S92000003","8":"Total","9":"d","10":"Total","11":"d","12":"1148772","13":"21016.685","14":"10311","15":"188.6388584","16":"3032663","17":"55482.31"}],"options":{"columns":{"min":{},"max":[10],"total":[17]},"rows":{"min":[10],"max":[10],"total":[21]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTkFcbmBgYCJ9 -->
+<pre class="r"><code>NA</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlJldmlldyBEYXRhc2V0IC0gSG93IGRvZXMgQ292aWQgYWZmZWN0IGhvc3BpdGFsIGFjdGl2aXR5Ig0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KVGhpcyBub3RlYm9vayBpcyBleHBsb3JpbmcgZWFjaCBkYXRhZnJhbWUgdG8gZXhwbG9yZSB3aGV0aGVyIGl0IGlzIHJlbGV2YW50IHRvIGFuc3dlciB0aGUgcXVlc3Rpb246DQoNCiMgSG93IGRvZXMgQ292aWQgYWZmZWN0IGhvc3BpdGFsIGFjdGl2aXR5DQoNCmBgYHtyfQ0KbGlicmFyeShqYW5pdG9yKQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpsaWJyYXJ5KGdncGxvdDIpDQpgYGANCg0KDQpgYGB7ciBUb3RhbCBkYWlseSBDT1ZJRCBjYXNlc30NCnRvdGFsX2NvdmlkX2FnZV9zZXggPC0gY2xlYW5fbmFtZXMocmVhZF9jc3YoInJhd19kYXRhL2RmX3RvdGFsX2Nvdl9hZ2Vfc2V4LmNzdiIpKQ0KICANCnRvdGFsX2NvdmlkX2RlcHJpdmF0aW9uIDwtIGNsZWFuX25hbWVzKHJlYWRfY3N2KCJyYXdfZGF0YS9kZl90b3RhbF9jb3ZfZGVwcml2YXRpb24uY3N2IikpDQogIA0KdG90YWxfY292aWRfaGVhbHRoX2JvYXJkIDwtIGNsZWFuX25hbWVzKHJlYWRfY3N2KCJyYXdfZGF0YS9kZl90b3RhbF9jb3ZfaGVhbHRoX2JvYXJkLmNzdiIpKQ0KICANCnRvdGFsX2NvdmlkX2xvY2FsX2F1dGhvcml0eSA8LSBjbGVhbl9uYW1lcyhyZWFkX2NzdigicmF3X2RhdGEvZGZfdG90YWxfY292X2xvY2FsX2F1dGhvcml0eS5jc3YiKSkNCmBgYA0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlJldmlldyBEYXRhc2V0IC0gSG93IGRvZXMgQ292aWQgYWZmZWN0IGhvc3BpdGFsIGFjdGl2aXR5Ig0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KVGhpcyBub3RlYm9vayBpcyBleHBsb3JpbmcgZWFjaCBkYXRhZnJhbWUgdG8gZXhwbG9yZSB3aGV0aGVyIGl0IGlzIHJlbGV2YW50IHRvIGFuc3dlciB0aGUgcXVlc3Rpb246DQoNCiMgSG93IGRvZXMgQ292aWQgYWZmZWN0IGhvc3BpdGFsIGFjdGl2aXR5DQoNCmBgYHtyfQ0KbGlicmFyeShqYW5pdG9yKQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpsaWJyYXJ5KGdncGxvdDIpDQpsaWJyYXJ5KGhlcmUpDQoNCmhlcmU6OmhlcmUoKQ0KYGBgDQoNCg0KYGBge3IgVG90YWwgZGFpbHkgQ09WSUQgY2FzZXN9DQp0b3RhbF9jb3ZpZF9hZ2Vfc2V4IDwtIGNsZWFuX25hbWVzKHJlYWRfY3N2KGhlcmUoInJhd19kYXRhL2RmX3RvdGFsX2Nvdl9hZ2Vfc2V4LmNzdiIpKSkNCiAgDQp0b3RhbF9jb3ZpZF9kZXByaXZhdGlvbiA8LSBjbGVhbl9uYW1lcyhyZWFkX2NzdihoZXJlKCJyYXdfZGF0YS9kZl90b3RhbF9jb3ZfZGVwcml2YXRpb24uY3N2IikpKQ0KICANCnRvdGFsX2NvdmlkX2hlYWx0aF9ib2FyZCA8LSBjbGVhbl9uYW1lcyhyZWFkX2NzdihoZXJlKCJyYXdfZGF0YS9kZl90b3RhbF9jb3ZfaGVhbHRoX2JvYXJkLmNzdiIpKSkNCiAgDQp0b3RhbF9jb3ZpZF9sb2NhbF9hdXRob3JpdHkgPC0gY2xlYW5fbmFtZXMocmVhZF9jc3YoaGVyZSgicmF3X2RhdGEvZGZfdG90YWxfY292X2xvY2FsX2F1dGhvcml0eS5jc3YiKSkpDQpgYGANCg0KYGBge3J9DQp0b3RhbF9jb3ZpZF9hZ2Vfc2V4ICU+JSANCiAgbXV0YXRlKGRhdGUgPSB5bWQoZGF0ZSksDQogICAgICAgICB5ZWFyID0geWVhcihkYXRlKSwNCiAgICAgICAgIG1vbnRoID0gbW9udGgoZGF0ZSksDQogICAgICAgICBkYXlfbiA9IGRheShkYXRlKSwNCiAgICAgICAgIHdlZWtkYXkgPSB3ZGF5KGRhdGUsIGxhYmVsID0gVFJVRSksDQogICAgICAgICAuYmVmb3JlID0gZGF0ZSkgJT4lIA0KICANCg0KYGBgDQoNCg==</div>
 
 
 
