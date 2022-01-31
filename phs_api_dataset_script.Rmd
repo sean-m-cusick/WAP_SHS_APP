@@ -135,7 +135,7 @@ api_sas_hscp_deprivation = "1329dfdb-0dd7-428b-9afb-b8fb3e438518"
 ####
 ####
 ####
-# Data Group 06 - Daily COVID-19 Cases in Scotland ----
+# Data Group 06 - COVID-19 Cases in Scotland ----
 # Total Cases By Health Board
 api_total_cov_health_board = "7fad90e5-6f19-455b-bc07-694a22f8d5dc"
 # Total Cases By Local Authority
@@ -144,39 +144,30 @@ api_total_cov_local_authority = "e8454cf0-1152-4bcb-b9da-4343f625dfef"
 api_total_cov_age_sex = "19646dce-d830-4ee0-a0a9-fcec79b5ac71"
 # Total Cases By Deprivation
 api_total_cov_deprivation = "a965ee86-0974-4c93-bbea-e839e27d7085"
+
 # Daily and Cumulative Cases
 api_daily_cumulative_cov = "287fc645-4352-4477-9c8c-55bc054b7e76"
 # Daily Case Trends By Health Board
 api_daily_trends_health_board = "2dd8534b-0a6f-4744-9253-9565d62f96c2"
 # Daily Case Trends By Local Authority
 api_daily_trends_local_authority = "427f9a25-db22-4014-a3bc-893b68243055"
-# Seven day trends by Neighbourhood
-api_seven_day_trends_neighbourhood = "8906de12-f413-4b3f-95a0-11ed15e61773"
 # Daily Case Trends By Age and Sex
 api_daily_trend_age_sex = "9393bd66-5012-4f01-9bc5-e7a10accacf4"
 # Daily Case Trends By Deprivation
 api_daily_trend_deprivation = "a38a4c21-7c75-4ecd-a511-3f83e0e8f0c3"
-####
-####
-####
-# Total Cases By Deprivation ----
-api_sco_cov_total_deprivation = "a965ee86-0974-4c93-bbea-e839e27d7085"
-####
-####
-####
-# Daily Case Trends By Deprivation -----
-api_sco_dov_daily_deprivation = "a38a4c21-7c75-4ecd-a511-3f83e0e8f0c3"
-####
-####
-####
-#Sample DF Reader (Press Ctrl+Shift+C to uncomment) ----
-# sample_DF <- phs_df_func(api_bed_info)
-# view(sample_DF)
+
+# Seven day trends by Neighbourhood
+api_seven_day_trends_neighbourhood = "8906de12-f413-4b3f-95a0-11ed15e61773"
+
+
+
+
+
 ```
 
 # Load in API Dataframe (Backup)
 #--------------------------------------------------------------------------#
-```{r}
+```{r, echo=FALSE, message=FALSE, results='hide'}
 # Data Group 00 - Hospital Location Info
 backup_hospital_location = phs_df_func(api_hospital_location)
 backup_health_board = phs_dictionary_func(api_health_board)
@@ -220,16 +211,15 @@ backup_ane_hscp_dep =  phs_df_func(api_ane_hscp_dep)
 # Data Group 04 - Bed Capacity
 # Beds by Board of Treatment and Specialty
 backup_bed_info = phs_df_func(api_bed_info)
-#
+
 
 # Data Group 05 - COVID-19 Wider Impacts - Scottish Ambulance Services ----
 backup_sas_health_board_age_sex = phs_df_func(api_sas_health_board_age_sex)
 backup_sas_health_deprivation = phs_df_func(api_sas_health_deprivation)
 backup_sas_hscp_age_sex = phs_df_func(api_sas_hscp_age_sex)
 backup_sas_hscp_deprivation = phs_df_func(api_sas_hscp_deprivation)
-####
-####
-####
+
+
 # Data Group 06 - Daily COVID-19 Cases in Scotland ----
 backup_total_cov_health_board  = phs_df_func(api_total_cov_health_board)
 backup_total_cov_local_authority = phs_df_func(api_total_cov_local_authority)
@@ -241,17 +231,30 @@ backup_daily_trends_local_authority = phs_df_func(api_daily_trends_local_authori
 backup_seven_day_trends_neighbourhood = phs_df_func(api_seven_day_trends_neighbourhood)
 backup_daily_trend_age_sex = phs_df_func(api_daily_trend_age_sex)
 backup_daily_trend_deprivation = phs_df_func(api_daily_trend_deprivation)
-####
-####
-####
-# Total Cases By Deprivation ----
-backup_sco_cov_total_deprivation = phs_df_func(api_sco_cov_total_deprivation)
-####
-####
-####
-# Daily Case Trends By Deprivation -----
-backup_sco_dov_daily_deprivation = phs_df_func(api_sco_dov_daily_deprivation)
+
 
 
 
 ```
+
+```{r, echo=FALSE, message=FALSE, results='hide'}
+make_file_names <- function(x) paste0(target_directory,x,".csv")
+save_csv <- function(x) write_csv(obj_list[[x]],file_name[[x]])
+
+target_directory <- here("raw_data//")
+
+
+name_pattern <- grep("backup_",names(.GlobalEnv),value=TRUE)
+obj_list     <- do.call("list",mget(name_pattern))
+file_name      <- make_file_names(names(obj_list))
+
+for (i in seq_along(names(obj_list))) save_csv(i)
+
+# Create Dataframe List
+name_list <- as_tibble(name_pattern) %>% arrange(value)
+namelist_path <- paste0(target_directory,"00_Backup_Dataframe_List.csv")
+
+write.csv(name_list, namelist_path, row.names = FALSE)
+
+```
+
