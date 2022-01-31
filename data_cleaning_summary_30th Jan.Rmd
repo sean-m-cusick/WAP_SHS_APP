@@ -7,17 +7,19 @@ output: html_document
 
 
 
-## Acronym
 
-api - Application Programming Interface
+### Parameter Name Explaination
+api_ - Application Programming Interface values
 
-backup_ - Backup Dataframe (Stored the loaded API df as a backup)
+backup_ - Backup Dataframe (Stored any loaded API dfs as backup)
 
 df_ - dataframe
 
 sample_ - sample / test dataframe
 
 age_group_ - Dataframe with categorized age group (filtered out "all age" & "gender/sex" parameters)
+
+## Acronym
 
 ane - A&E (Group 03)
 
