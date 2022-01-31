@@ -1,0 +1,59 @@
+---
+title: "Covid Hospital Activity Analysis"
+output: html_notebook
+---
+
+
+```{r, echo=FALSE, message=FALSE, results='hide'}
+library(tidyverse)
+library(sf)
+library(janitor)
+library(jsonlite)
+library(lubridate)
+library(rgdal)
+library(broom)
+require(readr)
+require(here)
+```
+```{r}
+day_cum_case <- read_csv("clean_data/df_day_cum_cov.csv")
+day_trend <- read_csv("clean_data/df_day_trend_ans.csv")
+day_trend <- read_csv("clean_data/df_day_trend_hb.csv")
+day_trend <- read_csv("clean_data/df_day_trend_loc.csv")
+
+```
+```{r}
+day_case <- day_cum_case %>% 
+  mutate(year = year(date),
+         month = month(date),
+           week = week(date))
+
+cov_case_rate <- day_case %>% 
+  group_by(year,month) %>% 
+  mutate(rate = daily_cases - lag(daily_cases)) %>% 
+  slice(-1)
+
+
+cov_case_rate %>% 
+  mutate(month = factor(month)) %>% 
+  ggplot()+
+  aes(x = date, y = daily_cases )+
+  geom_bar(stat = "identity")+
+  labs(
+    title = "Daily Covid Cases Per month"
+  )
+
+
+cov_case_season <- day_case %>% 
+  mutate(season = case_when(
+    month = 1 & month = 2 & month = 12 ~ "winter",
+    month = 3 & month = 4 & month = 5 ~ "spring",    
+    month = 6 & month = 7 & month = 8 ~ "summer",
+    month = 9 & month = 10 & month = 11 ~ "autumn",
+    ))
+
+
+
+
+```
+
