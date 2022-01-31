@@ -215,142 +215,279 @@ pre code {
 
 
 <!-- rnb-text-begin -->
-<p>#————— Packages —————#</p>
+<div id="packages" class="section level1">
+<h1>Packages</h1>
+<p>#————————————————————————–#</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGAifQ== -->
-<pre class="r"><code>library(tidyverse)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICdkYnBseXInOlxuICBtZXRob2QgICAgICAgICBmcm9tXG4gIHByaW50LnRibF9sYXp5ICAgICBcbiAgcHJpbnQudGJsX3NxbCAgICAgIFxuLS0gQXR0YWNoaW5nIHBhY2thZ2VzIC0tLS0tLS0tLS0tLS0tLS0tXG52IGdncGxvdDIgMy4zLjUgICAgIHYgcHVycnIgICAwLjMuNFxudiB0aWJibGUgIDMuMS42ICAgICB2IGRwbHlyICAgMS4wLjdcbnYgdGlkeXIgICAxLjEuNCAgICAgdiBzdHJpbmdyIDEuNC4wXG52IHJlYWRyICAgMi4xLjEgICAgIHYgZm9yY2F0cyAwLjUuMVxuLS0gQ29uZmxpY3RzIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG54IGRwbHlyOjpmaWx0ZXIoKSBtYXNrcyBzdGF0czo6ZmlsdGVyKClcbnggZHBseXI6OmxhZygpICAgIG1hc2tzIHN0YXRzOjpsYWcoKVxuIn0= -->
-<pre><code>Registered S3 methods overwritten by &#39;dbplyr&#39;:
-  method         from
-  print.tbl_lazy     
-  print.tbl_sql      
--- Attaching packages -----------------
-v ggplot2 3.3.5     v purrr   0.3.4
-v tibble  3.1.6     v dplyr   1.0.7
-v tidyr   1.1.4     v stringr 1.4.0
-v readr   2.1.1     v forcats 0.5.1
--- Conflicts --------------------------
-x dplyr::filter() masks stats::filter()
-x dplyr::lag()    masks stats::lag()</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShqYW5pdG9yKVxuYGBgIn0= -->
-<pre class="r"><code>library(janitor)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYamFuaXRvcuKAmVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6c3RhdHPigJk6XG5cbiAgICBjaGlzcS50ZXN0LCBmaXNoZXIudGVzdFxuIn0= -->
-<pre><code>
-Attaching package: ‘janitor’
-
-The following objects are masked from ‘package:stats’:
-
-    chisq.test, fisher.test</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShqc29ubGl0ZSlcbmBgYCJ9 -->
-<pre class="r"><code>library(jsonlite)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYanNvbmxpdGXigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTpwdXJycuKAmTpcblxuICAgIGZsYXR0ZW5cbiJ9 -->
-<pre><code>
-Attaching package: ‘jsonlite’
-
-The following object is masked from ‘package:purrr’:
-
-    flatten</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>#————— API Function —————#</p>
+</div>
+<div id="api-function" class="section level1">
+<h1>API Function</h1>
+<p>#————————————————————————–#</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBGdW5jdGlvbiBmb3IgZmV0Y2hpbmcgcGhzIGRhdGFmcmFtZXNcbnBoc19kZl9mdW5jIDwtIGZ1bmN0aW9uKGlkKXtcbiAgXG4gICMgTGluayB0ZW1wbGF0ZXMgZm9yIHNpbXBsaWNpdHlcbiAgcGhzX3VybCA9IFwiaHR0cHM6Ly93d3cub3BlbmRhdGEubmhzLnNjb3QvYXBpLzMvYWN0aW9uL2RhdGFzdG9yZV9zZWFyY2g/cmVzb3VyY2VfaWQ9XCJcbiAgIyBmZXRjaCBtYXhpbXVtIDk5OSc5OTkgcmVzdWx0cyBmb3Igc2ltcGxpY2l0eVxuICBsaW1pdF91cmwgPSBcIiZsaW1pdD05OTk5OTlcIlxuICBcbiAgIyBjb25zdHJ1Y3QgVVJMIGZvciBmZXRjaGluZyBwcm9jZXNzXG4gIHVybF9saW5rIDwtIHBhc3RlMChwaHNfdXJsLCBpZCwgbGltaXRfdXJsKSAlPiVcbiAgICBmcm9tSlNPTigpXG4gIFxuICAjIGNvbnN0cnVjdCBkYXRhZnJhbWUgZnJvbSB1cmxcbiAgcGhzX2RmIDwtICB1cmxfbGlua1tbXCJyZXN1bHRcIl1dW1tcInJlY29yZHNcIl1dXG4gIHJldHVybihwaHNfZGYpXG59XG5cblxucGhzX2RpY3Rpb25hcnlfZnVuYyA8LSBmdW5jdGlvbihpZCl7XG4gIFxuICAjIExpbmsgdGVtcGxhdGVzIGZvciBzaW1wbGljaXR5XG4gIHBoc191cmwgPSBcImh0dHBzOi8vd3d3Lm9wZW5kYXRhLm5ocy5zY290L2FwaS8zL2FjdGlvbi9kYXRhc3RvcmVfc2VhcmNoP3Jlc291cmNlX2lkPVwiXG4gICMgZmV0Y2ggbWF4aW11bSA5OTknOTk5IHJlc3VsdHMgZm9yIHNpbXBsaWNpdHlcbiAgbGltaXRfdXJsID0gXCImbGltaXQ9MTBcIlxuICBcbiAgIyBjb25zdHJ1Y3QgVVJMIGZvciBmZXRjaGluZyBwcm9jZXNzXG4gIHVybF9saW5rIDwtIHBhc3RlMChwaHNfdXJsLCBpZCwgbGltaXRfdXJsKSAlPiVcbiAgICBmcm9tSlNPTigpXG4gIFxuICAjIGNvbnN0cnVjdCBkYXRhZnJhbWUgZnJvbSB1cmxcbiAgcGhzX2RpY3Rpb25hcnkgPC0gIHVybF9saW5rW1tcInJlc3VsdFwiXV1bW1wiZmllbGRzXCJdXSAlPiUgXG4gICAganNvbmxpdGU6OmZsYXR0ZW4ocmVjdXJzaXZlID0gVFJVRSkgJT4lIFxuICAgIHNlbGVjdChpZCwgaW5mby5sYWJlbCwgdHlwZSlcbiAgIyAgICBqc29ubGl0ZTo6ZmxhdHRlbihyZWN1cnNpdmUgPSBUUlVFLCB1c2UubmFtZXMgPSBUUlVFKVxuXG4gIHJldHVybihwaHNfZGljdGlvbmFyeSlcbn1cblxuYGBgIn0= -->
-<pre class="r"><code># Function for fetching phs dataframes
-phs_df_func &lt;- function(id){
-  
-  # Link templates for simplicity
-  phs_url = &quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=&quot;
-  # fetch maximum 999&#39;999 results for simplicity
-  limit_url = &quot;&amp;limit=999999&quot;
-  
-  # construct URL for fetching process
-  url_link &lt;- paste0(phs_url, id, limit_url) %&gt;%
-    fromJSON()
-  
-  # construct dataframe from url
-  phs_df &lt;-  url_link[[&quot;result&quot;]][[&quot;records&quot;]]
-  return(phs_df)
-}
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="phs-api-id" class="section level1">
+<h1>PHS API (ID)</h1>
+<p>#————————————————————————–#</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="load-in-api-dataframe-backup" class="section level1">
+<h1>Load in API Dataframe (Backup)</h1>
+<p>#————————————————————————–#</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBEYXRhIEdyb3VwIDAxXG4jIERhdGFzZXQgMUEgLSBIb3NwaXRhbCBBY3Rpdml0eSBieSBTcGVjaWFsaXR5XG5iYWNrdXBfaGFfc3BlID0gcGhzX2RmX2Z1bmMoaGFfc3BlX2FwaSlcbiMgRGF0YXNldCAxQiAtIEhvc3BpdGFsIEFjdGl2aXR5IGFuZCBQYXRpZW50IERlbW9ncmFwaGljc1xuYmFja3VwX2hhX2FucyA9IHBoc19kZl9mdW5jKGhhX2Fuc19hcGkpXG4jIERhdGFzZXQgMUMgLSBIb3NwaXRhbCBBY3Rpdml0eSBhbmQgRGVwcml2YXRpb25cbmJhY2t1cF9oYV9kZXAgPSBwaHNfZGZfZnVuYyhoYV9kZXBfYXBpKVxuXG5cbiMgRGF0YSBHcm91cCAwMlxuIyBIb3NwaXRhbGlzYXRpb25zIGR1ZSB0byBDb3ZpZCAxOVxuIyBEYXRhc2V0IDJBIC0gQWRtaXNzaW9ucyBCeSBIZWFsdGggQm9hcmQgYW5kIFNwZWNpYWx0eVxuYmFja3VwX2Nvdl9oYl9zcGUgPSBwaHNfZGZfZnVuYyhjb3ZfaGJfc3BlX2FwaSlcbiMgRGF0YXNldCAyQiAtIEFkbWlzc2lvbnMgQnkgSGVhbHRoIEJvYXJkIGFuZCBQYXRpZW50IERlbW9ncmFwaGljc1xuYmFja3VwX2Nvdl9oYl9hbnMgPSBwaHNfZGZfZnVuYyhjb3ZfaGJfYW5zX2FwaSlcbiMgRGF0YXNldCAyQyAtIEFkbWlzc2lvbnMgQnkgSGVhbHRoIEJvYXJkIGFuZCBEZXByaXZhdGlvblxuYmFja3VwX2Nvdl9oYl9kZXAgPSBwaHNfZGZfZnVuYyhjb3ZfaGJfZGVwX2FwaSlcbiMgRGF0YXNldCAyRCAtIEFkbWlzc2lvbnMgQnkgSFNDUCBhbmQgU3BlY2lhbHR5XG5iYWNrdXBfY292X2hzY3Bfc3BlID0gcGhzX2RmX2Z1bmMoY292X2hzY3Bfc3BlX2FwaSlcbiMgRGF0YXNldCAyRSAtIEFkbWlzc2lvbnMgQnkgSFNDUCBhbmQgUGF0aWVudCBEZW1vZ3JhcGhpY3NcbmJhY2t1cF9jb3ZfaHNjcF9hbnMgPSBwaHNfZGZfZnVuYyhjb3ZfaHNjcF9hbnNfYXBpKVxuIyBEYXRhc2V0IDJGIC0gQWRtaXNzaW9ucyBCeSBIU0NQIGFuZCBEZXByaXZhdGlvblxuYmFja3VwX2Nvdl9oc2NwX2RlcCA9IHBoc19kZl9mdW5jKGNvdl9oc2NwX2RlcF9hcGkpXG5cblxuIyBEYXRhIEdyb3VwIDAzIFxuIyBBJkUgQWN0aXZpdHkgYnkgSGVhbHRoIEJvYXJkLCBBZ2UgYW5kIFNleFxuYmFja3VwX2FuZV9oYl9hbnMgPC0gcGhzX2RmX2Z1bmMoYW5lX2hiX2Fuc19hcGkpXG4jIEEmRSBBY3Rpdml0eSBieSBIZWFsdGggQm9hcmQgYW5kIERlcHJpdmF0aW9uXG5iYWNrdXBfYW5lX2hiX2RlcCA8LSBwaHNfZGZfZnVuYyhhbmVfaGJfZGVwX2FwaSlcbiMgQSZFIEFjdGl2aXR5IGJ5IEhTQ1AsIEFnZSBhbmQgU2V4XG5iYWNrdXBfYW5lX2hzY3BfYW5zID0gIHBoc19kZl9mdW5jKGFuZV9oc2NwX2Fuc19hcGkpXG4jIEEmRSBBY3Rpdml0eSBieSBIU0NQIGFuZCBEZXByaXZhdGlvblxuYmFja3VwX2FuZV9oc2NwX2RlcCA9ICBwaHNfZGZfZnVuYyhhbmVfaHNjcF9kZXBfYXBpKVxuXG5cbiMgRGF0YSBHcm91cCAwNCAtIEJlZCBDYXBhY2l0eVxuIyBCZWRzIGJ5IEJvYXJkIG9mIFRyZWF0bWVudCBhbmQgU3BlY2lhbHR5XG5iYWNrdXBfYmVkX2luZm8gPSBwaHNfZGZfZnVuYyhiZWRfaW5mb19hcGkpXG5cbiMgRGF0YSBHcm91cCAwMCAtIEhvc3BpdGFsIExvY2F0aW9uIEluZm9cbmJhY2t1cF9ob3NwaXRhbF9sb2NhdGlvbiA9IHBoc19kZl9mdW5jKGhvc3BpdGFsX2xvY2F0aW9uX2FwaSlcbmBgYCJ9 -->
+<pre class="r"><code># Data Group 01
+# Dataset 1A - Hospital Activity by Speciality
+backup_ha_spe = phs_df_func(ha_spe_api)
+# Dataset 1B - Hospital Activity and Patient Demographics
+backup_ha_ans = phs_df_func(ha_ans_api)
+# Dataset 1C - Hospital Activity and Deprivation
+backup_ha_dep = phs_df_func(ha_dep_api)
 
 
-phs_dictionary_func &lt;- function(id){
-  
-  # Link templates for simplicity
-  phs_url = &quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=&quot;
-  # fetch maximum 999&#39;999 results for simplicity
-  limit_url = &quot;&amp;limit=10&quot;
-  
-  # construct URL for fetching process
-  url_link &lt;- paste0(phs_url, id, limit_url) %&gt;%
-    fromJSON()
-  
-  # construct dataframe from url
-  phs_dictionary &lt;-  url_link[[&quot;result&quot;]][[&quot;fields&quot;]] %&gt;% 
-    jsonlite::flatten(recursive = TRUE) %&gt;% 
-    select(id, info.label, type)
-  #    jsonlite::flatten(recursive = TRUE, use.names = TRUE)
+# Data Group 02
+# Hospitalisations due to Covid 19
+# Dataset 2A - Admissions By Health Board and Specialty
+backup_cov_hb_spe = phs_df_func(cov_hb_spe_api)
+# Dataset 2B - Admissions By Health Board and Patient Demographics
+backup_cov_hb_ans = phs_df_func(cov_hb_ans_api)
+# Dataset 2C - Admissions By Health Board and Deprivation
+backup_cov_hb_dep = phs_df_func(cov_hb_dep_api)
+# Dataset 2D - Admissions By HSCP and Specialty
+backup_cov_hscp_spe = phs_df_func(cov_hscp_spe_api)
+# Dataset 2E - Admissions By HSCP and Patient Demographics
+backup_cov_hscp_ans = phs_df_func(cov_hscp_ans_api)
+# Dataset 2F - Admissions By HSCP and Deprivation
+backup_cov_hscp_dep = phs_df_func(cov_hscp_dep_api)
 
-  return(phs_dictionary)
+
+# Data Group 03 
+# A&amp;E Activity by Health Board, Age and Sex
+backup_ane_hb_ans &lt;- phs_df_func(ane_hb_ans_api)
+# A&amp;E Activity by Health Board and Deprivation
+backup_ane_hb_dep &lt;- phs_df_func(ane_hb_dep_api)
+# A&amp;E Activity by HSCP, Age and Sex
+backup_ane_hscp_ans =  phs_df_func(ane_hscp_ans_api)
+# A&amp;E Activity by HSCP and Deprivation
+backup_ane_hscp_dep =  phs_df_func(ane_hscp_dep_api)
+
+
+# Data Group 04 - Bed Capacity
+# Beds by Board of Treatment and Specialty
+backup_bed_info = phs_df_func(bed_info_api)
+
+# Data Group 00 - Hospital Location Info
+backup_hospital_location = phs_df_func(hospital_location_api)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="cleaning-merging-dataset" class="section level1">
+<h1>Cleaning &amp; Merging Dataset</h1>
+<p>#————————————————————————–#</p>
+<div id="data-group-00---hospital-location" class="section level2">
+<h2>Data Group 00 - Hospital Location</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBIb3NwaXRhbCBMb2NhdGlvblxuZGZfaG9zcGl0YWxfbG9jYXRpb24gPC0gIGJhY2t1cF9ob3NwaXRhbF9sb2NhdGlvbiAlPiVcbiAgc2VsZWN0KC1lbmRzX3dpdGgoXCJxZlwiKSwgLWlkKSAlPiUgXG4gIHJlbmFtZShsb25nID0geF9jb29yZGluYXRlLFxuICAgICAgICAgbGF0ID0geV9jb29yZGluYXRlKVxuXG4jIGZ1bmN0aW9uIHRvIGFzc2lnbiBob3NwaXRhbCBuYW1lLCBsb25naXR1ZGUgJiBsYXRpdHVkZSB0byBkYXRhZnJhbWVcbiMgaG9zcGl0YWxfbG9jYXRpb25fZnVuYyhkYXRhZnJhbSwgXCJrZXkgY29sdW1uXCIpXG5ob3NwaXRhbF9sb2NhdGlvbl9mdW5jIDwtIGZ1bmN0aW9uKGRmLCBrZXlfY29sKXtcbiAgICAgICAgICAgIGRmIDwtIGRmICU+JSBcbiAgICAgICAgICAgICMgU2VsZWN0IGxvY2F0aW9uICYgaGIgYXMgZm9yZ2VpbiBrZXlzXG4gICAgICAgICAgICAjIEpvaW4gbG9jYXRpb25fbmFtZSwgbG9uZ2l0dWRlICYgbGF0aXR1ZGUgdG8gdGhlIG1haW4gZGF0YWZyYW1lXG4gICAgICAgICAgICBsZWZ0X2pvaW4oZGZfaG9zcGl0YWxfbG9jYXRpb24gJT4lIHNlbGVjdChrZXlfY29sLCBsb2NhdGlvbl9uYW1lLCBsb25nLCBsYXQpLFxuICAgICAgICAgICAgYnkgPSBjKGtleV9jb2wpLFxuICAgICAgICAgICAgYWxsLnggPSBUUlVFKVxuICAgICAgICAgICAgXG4gICAgICAgICAgICByZXR1cm4oZGYpXG59XG5cblxuYGBgIn0= -->
+<pre class="r"><code># Hospital Location
+df_hospital_location &lt;-  backup_hospital_location %&gt;%
+  select(-ends_with(&quot;qf&quot;), -id) %&gt;% 
+  rename(long = x_coordinate,
+         lat = y_coordinate)
+
+# function to assign hospital name, longitude &amp; latitude to dataframe
+# hospital_location_func(datafram, &quot;key column&quot;)
+hospital_location_func &lt;- function(df, key_col){
+            df &lt;- df %&gt;% 
+            # Select location &amp; hb as forgein keys
+            # Join location_name, longitude &amp; latitude to the main dataframe
+            left_join(df_hospital_location %&gt;% select(key_col, location_name, long, lat),
+            by = c(key_col),
+            all.x = TRUE)
+            
+            return(df)
 }
 </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>#————— PHS API ID —————#</p>
+</div>
+<div id="data-group-01---hospital-activity" class="section level2">
+<h2>Data Group 01 - Hospital Activity</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBIb3NwaXRhbCBBY3Rpdml0eVxuXG4jIGJ0IC0gQWN0aXZpdHkgYnkgQm9hcmQgb2YgVHJlYXRtZW50XG5idF9hbnNfaWQgPSBcIjAwYzAwZWNjLWI1MzMtNDI2ZS1hNDMzLTQyZDc5YmRlYTVkNFwiXG5idF9kZXBfaWQgPSBcIjRmYzY0MGFhLWJkZDQtNGZiZS04MDViLTFkYTFjOGVkNjM4M1wiXG5idF9zcGVfaWQgPSBcImMzYjRiZTY0LTVmYjQtNGEyZi1hZjQxLWIwMDEyZjBhMjc2YVwiIFxuXG4jIEhvc3BpdGFsaXNhdGlvbnMgZHVlIHRvIENvdmlkIDE5XG4jIGhiIC0gSGVhbHRoIEJvYXJkIEFkbWlzc2lvbnNcbmhiX2Fuc19pZCA9IFwiZjhmM2E0MzUtMTkyNS00YzVhLWIyZTgtZTU4ZmRhY2YwNGJiXCJcbmhiX2RlcF9pZCA9IFwiNzQ2ZjliYWMtNzdmMS00M2ZlLWI2OWYtNWNhMmNkZTIyMDFiXCJcbmhiX3NwZV9pZCA9IFwiYjhhZWI1MzktZmNmOC00ZjY2LWFhZTgtMjAyMTM1MDhhMWI3XCJcblxuaHNjcF9hZ2Vfbl9zZXhfaWQgPSBcImFlYzVjYzAwLTNhZDYtNDFmYi05MTAxLTM3YzY2YmFkMjlkNFwiXG5oc2NwX2RlcHJpdmF0aW9uX2lkID0gXCI5NWEzMjRiMy03NjEwLTQxNTEtOTI4Ny1jY2Q5Y2IxOTE2ODZcIlxuaHNjcF9zcGVjaWFsdHlfaWQgPSAgXCIwMjY5Njc3My03YWFmLTQ4Y2UtYjNkNS00NzlkODZmYzgzMzRcIlxuXG5cbiMgQSZFIGF0dGVuZGFuY2VzIGFuZCBwZXJmb3JtYW5jZSBkYXRhXG5BbkVfQWN0X2lkID0gXCIyYTRhZGMwYS1lOGUzLTQ2MDUtOWFkZS02MWUxM2E4NWIzYjlcIlxuXG4gXG4jIFF1YXJ0ZXJseSBIb3NwaXRhbCBCZWRzIEluZm9ybWF0aW9uIC0gRGF0YXNldHMgLSBTY290dGlzaCBIZWFsdGggYW5kIFNvY2lhbCBDYXJlIE9wZW4gRGF0YSAtIG5ocy5zY290XG4jIERlbGF5ZWQgZGlzY2hhcmdlIGRhdGFcbmJlZF9pbmZvX2lkID0gXCIyNWJkYzM3Yi00YTc3LTRmZjgtOWIzYS1lZGFiYTZlMWM2MTNcIlxuYmVkX3B1Ym5vdGVfaWQgPSBcIjI1YmRjMzdiLTRhNzctNGZmOC05YjNhLWVkYWJhNmUxYzYxM1wiXG5gYGAifQ== -->
-<pre class="r"><code># Hospital Activity
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjbGVhbl9xdWFydF9kZl9mdW5jKGRhdGFmcmFtZSlcbmNsZWFuX3F1YXJ0X2RmX2Z1bmMgPC0gZnVuY3Rpb24oZGYpe1xuICAgICAgICAgICAgICAgIGRmIDwtIGRmICU+JSBcbiAgICAgICAgICAgICAgICBzZWxlY3QoLWVuZHNfd2l0aChcInFmXCIpLCAtaWQpICU+JSBcbiAgICAgICAgICAgICAgICBtdXRhdGUoeWVhciA9IHN1YnN0cihxdWFydGVyLCAxLDQpLFxuICAgICAgICAgICAgICAgIHF1YXJ0ZXIgPSBzdWJzdHIocXVhcnRlcixuY2hhcihxdWFydGVyKSwgbmNoYXIocXVhcnRlcikpKSAlPiUgXG4gICAgICAgICAgICAgICAgIyBSZWxvY2F0ZSB0aGUgeWVhciBhbmQgcXVhcnRlciBjb2x1bW5zIHRvIHRoZSBzdGFydFxuICAgICAgICAgICAgICAgIHJlbG9jYXRlKGMoXCJ5ZWFyXCIgLFwicXVhcnRlclwiKSwgLmJlZm9yZSA9IDEpXG4gICAgICAgICAgICAgICAgIyBSZXR1cm4gY2xlYW5lZCBkYXRhZnJhbWVcbiAgICAgICAgICAgICAgICByZXR1cm4oZGYpXG59XG5cbiMgRGF0YXNldCAxQSAtIEhvc3BpdGFsIEFjdGl2aXR5IGJ5IFNwZWNpYWxpdHlcbmRmX2hhX3NwZSA8LSBjbGVhbl9xdWFydF9kZl9mdW5jKGJhY2t1cF9oYV9zcGUpXG4jIERhdGFzZXQgMUIgLSBIb3NwaXRhbCBBY3Rpdml0eSBhbmQgUGF0aWVudCBEZW1vZ3JhcGhpY3NcbiMgY2hhbmdlIGNvbHVtbiBcImFnZVwiIHRvIFwiYWdlX2dyb3VwXCIgZm9yIGNvbnNpc2l0ZW5jeVxuZGZfaGFfYW5zIDwtIGNsZWFuX3F1YXJ0X2RmX2Z1bmMoYmFja3VwX2hhX2FucykgJT4lIFxuICAgIHJlbmFtZShhZ2VfZ3JvdXAgPSBhZ2UpXG4jIERhdGFzZXQgMUMgLSBIb3NwaXRhbCBBY3Rpdml0eSBhbmQgRGVwcml2YXRpb25cbmRmX2hhX2RlcCA8LSBjbGVhbl9xdWFydF9kZl9mdW5jKGJhY2t1cF9oYV9kZXApIFxuXG5cbmBgYCJ9 -->
+<pre class="r"><code># clean_quart_df_func(dataframe)
+clean_quart_df_func &lt;- function(df){
+                df &lt;- df %&gt;% 
+                select(-ends_with(&quot;qf&quot;), -id) %&gt;% 
+                mutate(year = substr(quarter, 1,4),
+                quarter = substr(quarter,nchar(quarter), nchar(quarter))) %&gt;% 
+                # Relocate the year and quarter columns to the start
+                relocate(c(&quot;year&quot; ,&quot;quarter&quot;), .before = 1)
+                # Return cleaned dataframe
+                return(df)
+}
 
-# bt - Activity by Board of Treatment
-bt_ans_id = &quot;00c00ecc-b533-426e-a433-42d79bdea5d4&quot;
-bt_dep_id = &quot;4fc640aa-bdd4-4fbe-805b-1da1c8ed6383&quot;
-bt_spe_id = &quot;c3b4be64-5fb4-4a2f-af41-b0012f0a276a&quot; 
-
-# Hospitalisations due to Covid 19
-# hb - Health Board Admissions
-hb_ans_id = &quot;f8f3a435-1925-4c5a-b2e8-e58fdacf04bb&quot;
-hb_dep_id = &quot;746f9bac-77f1-43fe-b69f-5ca2cde2201b&quot;
-hb_spe_id = &quot;b8aeb539-fcf8-4f66-aae8-20213508a1b7&quot;
-
-hscp_age_n_sex_id = &quot;aec5cc00-3ad6-41fb-9101-37c66bad29d4&quot;
-hscp_deprivation_id = &quot;95a324b3-7610-4151-9287-ccd9cb191686&quot;
-hscp_specialty_id =  &quot;02696773-7aaf-48ce-b3d5-479d86fc8334&quot;
-
-
-# A&amp;E attendances and performance data
-AnE_Act_id = &quot;2a4adc0a-e8e3-4605-9ade-61e13a85b3b9&quot;
-
- 
-# Quarterly Hospital Beds Information - Datasets - Scottish Health and Social Care Open Data - nhs.scot
-# Delayed discharge data
-bed_info_id = &quot;25bdc37b-4a77-4ff8-9b3a-edaba6e1c613&quot;
-bed_pubnote_id = &quot;25bdc37b-4a77-4ff8-9b3a-edaba6e1c613&quot;</code></pre>
+# Dataset 1A - Hospital Activity by Speciality
+df_ha_spe &lt;- clean_quart_df_func(backup_ha_spe)
+# Dataset 1B - Hospital Activity and Patient Demographics
+# change column &quot;age&quot; to &quot;age_group&quot; for consisitency
+df_ha_ans &lt;- clean_quart_df_func(backup_ha_ans) %&gt;% 
+    rename(age_group = age)
+# Dataset 1C - Hospital Activity and Deprivation
+df_ha_dep &lt;- clean_quart_df_func(backup_ha_dep) 
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>#————— PHS Function Examples —————#</p>
+</div>
+<div id="data-group-02---hospitalisations-due-to-covid-19" class="section level2">
+<h2>Data Group 02 - Hospitalisations due to Covid 19</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBFeHRyYWN0IERhdGFmcmFtZSB2aWEgQVBJXG5ib2FyZF9vZl90cmVhdG1lbnRfYWdlX3NleCA8LSBwaHNfZGZfZnVuYyhidF9hbnNfaWQpXG5gYGAifQ== -->
-<pre class="r"><code># Extract Dataframe via API
-board_of_treatment_age_sex &lt;- phs_df_func(bt_ans_id)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBDbGVhbiBIb3NwaXRhbGlzYXRpb25zIERhdGFzZXQgZnVuY3Rpb25cbmNsZWFuX3drZW5kX2RmX2Z1bmMgPC0gZnVuY3Rpb24oZGYpe1xuICAgICAgICAgICAgICAgICAgZGYgPC0gZGYgJT4lIFxuICAgICAgICAgICAgICAgICAgIyBSZW1vdmUgYW55IGNvbHVtbnMgZW5kcyB3aXRoIHFmIChRdWFsaWZpZXIpXG4gICAgICAgICAgICAgICAgICBzZWxlY3QoLWVuZHNfd2l0aChcInFmXCIpLCAtaWQpICU+JSBcbiAgICAgICAgICAgICAgICAgICMgRXh0cmFjdCBoZSBxdWFydGVyLCB5ZWFyIGluZm8gZnJvbSB3ZWVrX2VuZGluZ1xuICAgICAgICAgICAgICAgICAgbXV0YXRlKHdlZWtfZW5kaW5nID0gYXMuRGF0ZSh5bWQod2Vla19lbmRpbmcpKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICBxdWFydGVyICAgICA9IHF1YXJ0ZXIod2Vla19lbmRpbmcpLFxuICAgICAgICAgICAgICAgICAgICAgICAgIHllYXIgICAgICAgID0geWVhcih3ZWVrX2VuZGluZykpICU+JSBcbiAgICAgICAgICAgICAgICAgICMgUmVsb2NhdGUgdGhlIHllYXIgYW5kIHF1YXJ0ZXIgY29sdW1ucyB0byB0aGUgc3RhcnRcbiAgICAgICAgICAgICAgICAgIHJlbG9jYXRlKGMoXCJ5ZWFyXCIgLFwicXVhcnRlclwiKSwgLmJlZm9yZSA9IDEpXG4gICAgICAgICAgICAgICAgICAjIFJldHVybiBjbGVhbmVkIGRhdGFmcmFtZVxuICAgICAgICAgICAgICAgICAgcmV0dXJuKGRmKVxufVxuXG4jIERhdGFzZXQgMkEgLSBBZG1pc3Npb25zIEJ5IEhlYWx0aCBCb2FyZCBhbmQgU3BlY2lhbHR5XG5kZl9jb3ZfaGJfc3BlICA8LSBjbGVhbl93a2VuZF9kZl9mdW5jKGJhY2t1cF9jb3ZfaGJfc3BlKVxuIyBEYXRhc2V0IDJCIC0gQWRtaXNzaW9ucyBCeSBIZWFsdGggQm9hcmQgYW5kIFBhdGllbnQgRGVtb2dyYXBoaWNzXG5kZl9jb3ZfaGJfYW5zIDwtIGNsZWFuX3drZW5kX2RmX2Z1bmMoYmFja3VwX2Nvdl9oYl9hbnMpXG4jIERhdGFzZXQgMkMgLSBBZG1pc3Npb25zIEJ5IEhlYWx0aCBCb2FyZCBhbmQgRGVwcml2YXRpb25cbmRmX2Nvdl9oYl9kZXAgPC0gY2xlYW5fd2tlbmRfZGZfZnVuYyhiYWNrdXBfY292X2hiX2RlcClcbiMgRGF0YXNldCAyRCAtIEFkbWlzc2lvbnMgQnkgSFNDUCBhbmQgU3BlY2lhbHR5XG5kZl9jb3ZfaHNjcF9zcGUgPC0gY2xlYW5fd2tlbmRfZGZfZnVuYyhiYWNrdXBfY292X2hzY3Bfc3BlKVxuIyBEYXRhc2V0IDJFIC0gQWRtaXNzaW9ucyBCeSBIU0NQIGFuZCBQYXRpZW50IERlbW9ncmFwaGljc1xuZGZfY292X2hzY3BfYW5zIDwtIGNsZWFuX3drZW5kX2RmX2Z1bmMoYmFja3VwX2Nvdl9oc2NwX2FucylcbiMgRGF0YXNldCAyRiAtIEFkbWlzc2lvbnMgQnkgSFNDUCBhbmQgRGVwcml2YXRpb25cbmRmX2Nvdl9oc2NwX2RlcCA8LSBjbGVhbl93a2VuZF9kZl9mdW5jKGJhY2t1cF9jb3ZfaHNjcF9kZXApXG5cbmBgYCJ9 -->
+<pre class="r"><code># Clean Hospitalisations Dataset function
+clean_wkend_df_func &lt;- function(df){
+                  df &lt;- df %&gt;% 
+                  # Remove any columns ends with qf (Qualifier)
+                  select(-ends_with(&quot;qf&quot;), -id) %&gt;% 
+                  # Extract he quarter, year info from week_ending
+                  mutate(week_ending = as.Date(ymd(week_ending)),
+                         quarter     = quarter(week_ending),
+                         year        = year(week_ending)) %&gt;% 
+                  # Relocate the year and quarter columns to the start
+                  relocate(c(&quot;year&quot; ,&quot;quarter&quot;), .before = 1)
+                  # Return cleaned dataframe
+                  return(df)
+}
+
+# Dataset 2A - Admissions By Health Board and Specialty
+df_cov_hb_spe  &lt;- clean_wkend_df_func(backup_cov_hb_spe)
+# Dataset 2B - Admissions By Health Board and Patient Demographics
+df_cov_hb_ans &lt;- clean_wkend_df_func(backup_cov_hb_ans)
+# Dataset 2C - Admissions By Health Board and Deprivation
+df_cov_hb_dep &lt;- clean_wkend_df_func(backup_cov_hb_dep)
+# Dataset 2D - Admissions By HSCP and Specialty
+df_cov_hscp_spe &lt;- clean_wkend_df_func(backup_cov_hscp_spe)
+# Dataset 2E - Admissions By HSCP and Patient Demographics
+df_cov_hscp_ans &lt;- clean_wkend_df_func(backup_cov_hscp_ans)
+# Dataset 2F - Admissions By HSCP and Deprivation
+df_cov_hscp_dep &lt;- clean_wkend_df_func(backup_cov_hscp_dep)
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>##Data Group 03 - A&amp;E Activity</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBEYXRhIEdyb3VwIDAzIC0gIEEmRSBBY3Rpdml0eVxuXG4jIEEmRSBBY3Rpdml0eSBieSBIZWFsdGggQm9hcmQsIEFnZSBhbmQgU2V4XG5kZl9hbmVfaGJfYW5zIDwtIGNsZWFuX3drZW5kX2RmX2Z1bmMoYmFja3VwX2FuZV9oYl9hbnMpXG5cbiMgQSZFIEFjdGl2aXR5IGJ5IEhlYWx0aCBCb2FyZCBhbmQgRGVwcml2YXRpb25cbmRmX2FuZV9oYl9kZXAgPC0gY2xlYW5fd2tlbmRfZGZfZnVuYyhiYWNrdXBfYW5lX2hiX2RlcClcbiMgQSZFIEFjdGl2aXR5IGJ5IEhTQ1AsIEFnZSBhbmQgU2V4XG5kZl9hbmVfaHNjcF9hbnMgPC0gIGNsZWFuX3drZW5kX2RmX2Z1bmMoYmFja3VwX2FuZV9oc2NwX2FucylcbiMgQSZFIEFjdGl2aXR5IGJ5IEhTQ1AgYW5kIERlcHJpdmF0aW9uXG5kZl9hbmVfaHNjcF9kZXAgPC0gIGNsZWFuX3drZW5kX2RmX2Z1bmMoYmFja3VwX2FuZV9oc2NwX2RlcClcblxuXG5gYGAifQ== -->
+<pre class="r"><code># Data Group 03 -  A&amp;E Activity
+
+# A&amp;E Activity by Health Board, Age and Sex
+df_ane_hb_ans &lt;- clean_wkend_df_func(backup_ane_hb_ans)
+
+# A&amp;E Activity by Health Board and Deprivation
+df_ane_hb_dep &lt;- clean_wkend_df_func(backup_ane_hb_dep)
+# A&amp;E Activity by HSCP, Age and Sex
+df_ane_hscp_ans &lt;-  clean_wkend_df_func(backup_ane_hscp_ans)
+# A&amp;E Activity by HSCP and Deprivation
+df_ane_hscp_dep &lt;-  clean_wkend_df_func(backup_ane_hscp_dep)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="data-group-04---hospital-bed-information" class="section level2">
+<h2>Data Group 04 - Hospital Bed Information</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmVkX2luZm8gPC0gY2xlYW5fcXVhcnRfZGZfZnVuYyhiYWNrdXBfYmVkX2luZm8pXG5gYGAifQ== -->
+<pre class="r"><code>bed_info &lt;- clean_quart_df_func(backup_bed_info)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="age-sex-data-frame-related" class="section level2">
+<h2>Age &amp; Sex Data Frame related</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWdlX2dyb3VwX2hhX2FucyA8LSBkZl9oYV9hbnMgJT4lIFxuICAgIG11dGF0ZShhZ2VfZ3JvdXAgPSBmYWN0b3IoYWdlX2dyb3VwLCBsZXZlbHMgPSBjKFwiMC05IHllYXJzXCIsXCIxMC0xOSB5ZWFyc1wiICxcIjIwLTI5IHllYXJcIiwgXCIzMC0zOSB5ZWFyc1wiLCBcIjQwLTQ5IHllYXJzXCIsIFwiNTAtNTkgeWVhcnNcIiwgXCI2MC02OSB5ZWFyc1wiLCBcIjcwLTc5IHllYXJzXCIsIFwiODAtODkgeWVhcnNcIiwgXCI5MCB5ZWFycyBhbmQgb3ZlclwiKSkpICU+JVxuICBhcnJhbmdlKGFnZV9ncm91cClcblxuYWdlX2dyb3VwX2Nvdl9oYl9hbnMgPC0gZGZfY292X2hiX2FucyAlPiUgXG4gIGZpbHRlcihhZ2VfZ3JvdXAgIT0gXCJBbGwgYWdlc1wiKSAlPiUgXG4gIG11dGF0ZShhZ2VfZ3JvdXAgPSBmYWN0b3IoYWdlX2dyb3VwLCBsZXZlbHMgPSBjKFwiVW5kZXIgNVwiLFwiNSAtIDE0XCIgLFwiMTUgLSA0NFwiLCBcIjQ1IC0gNjRcIiwgXCI2NSAtIDc0XCIsIFwiNzUgLSA4NFwiLCBcIjg1IGFuZCBvdmVyXCIpXG4gICkpICU+JVxuICBhcnJhbmdlKGFnZV9ncm91cClcblxuXG5cbmFnZV9ncm91cF9jb3ZfaHNjcF9hbnMgPC0gZGZfY292X2hzY3BfYW5zICU+JSBcbiAgZmlsdGVyKGFnZV9ncm91cCAhPSBcIkFsbCBhZ2VzXCIpICU+JSBcbiAgbXV0YXRlKGFnZV9ncm91cCA9IGZhY3RvcihhZ2VfZ3JvdXAsIGxldmVscyA9IGMoXCJVbmRlciA1XCIsXCI1IC0gMTRcIiAsXCIxNSAtIDQ0XCIsIFwiNDUgLSA2NFwiLCBcIjY1IC0gNzRcIiwgXCI3NSAtIDg0XCIsIFwiODUgYW5kIG92ZXJcIilcbiAgKSkgJT4lXG4gIGFycmFuZ2UoYWdlX2dyb3VwKVxuXG5hZ2VfYW5lX2hzY3BfYW5zIDwtIGRmX2FuZV9oc2NwX2FucyAlPiUgXG4gIGZpbHRlcihhZ2VfZ3JvdXAgIT0gXCJBbGwgYWdlc1wiKSAlPiUgXG4gIG11dGF0ZShhZ2VfZ3JvdXAgPSBmYWN0b3IoYWdlX2dyb3VwLCBsZXZlbHMgPSBjKFwiVW5kZXIgNVwiLFwiNSAtIDE0XCIgLFwiMTUgLSA0NFwiLCBcIjQ1IC0gNjRcIiwgXCI2NSAtIDc0XCIsIFwiNzUgLSA4NFwiLCBcIjg1IGFuZCBvdmVyXCIpXG4gICkpICU+JVxuICBhcnJhbmdlKGFnZV9ncm91cClcblxuYGBgIn0= -->
+<pre class="r"><code>age_group_ha_ans &lt;- df_ha_ans %&gt;% 
+    mutate(age_group = factor(age_group, levels = c(&quot;0-9 years&quot;,&quot;10-19 years&quot; ,&quot;20-29 year&quot;, &quot;30-39 years&quot;, &quot;40-49 years&quot;, &quot;50-59 years&quot;, &quot;60-69 years&quot;, &quot;70-79 years&quot;, &quot;80-89 years&quot;, &quot;90 years and over&quot;))) %&gt;%
+  arrange(age_group)
+
+age_group_cov_hb_ans &lt;- df_cov_hb_ans %&gt;% 
+  filter(age_group != &quot;All ages&quot;) %&gt;% 
+  mutate(age_group = factor(age_group, levels = c(&quot;Under 5&quot;,&quot;5 - 14&quot; ,&quot;15 - 44&quot;, &quot;45 - 64&quot;, &quot;65 - 74&quot;, &quot;75 - 84&quot;, &quot;85 and over&quot;)
+  )) %&gt;%
+  arrange(age_group)
+
+
+
+age_group_cov_hscp_ans &lt;- df_cov_hscp_ans %&gt;% 
+  filter(age_group != &quot;All ages&quot;) %&gt;% 
+  mutate(age_group = factor(age_group, levels = c(&quot;Under 5&quot;,&quot;5 - 14&quot; ,&quot;15 - 44&quot;, &quot;45 - 64&quot;, &quot;65 - 74&quot;, &quot;75 - 84&quot;, &quot;85 and over&quot;)
+  )) %&gt;%
+  arrange(age_group)
+
+age_ane_hscp_ans &lt;- df_ane_hscp_ans %&gt;% 
+  filter(age_group != &quot;All ages&quot;) %&gt;% 
+  mutate(age_group = factor(age_group, levels = c(&quot;Under 5&quot;,&quot;5 - 14&quot; ,&quot;15 - 44&quot;, &quot;45 - 64&quot;, &quot;65 - 74&quot;, &quot;75 - 84&quot;, &quot;85 and over&quot;)
+  )) %&gt;%
+  arrange(age_group)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
+<div id="graph-sample" class="section level1">
+<h1>Graph Sample</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBHcmFwaCBTYW1wbGVcbmFnZV9ncm91cF9jb3ZfaGJfYW5zICU+JSBcbiAgZ3JvdXBfYnkoYWdlX2dyb3VwKSAlPiUgXG4gIHN1bW1hcmlzZShjb3VudCA9IG4oKSkgJT4lIFxuICBnZ3Bsb3QoKStcbiAgYWVzKHggPSBhZ2VfZ3JvdXAsIHkgPSBjb3VudCwgZmlsbCA9IGFnZV9ncm91cCkrXG4gIGdlb21fYmFyKHN0YXQgPSBcImlkZW50aXR5XCIpK1xuICBsYWJzKFxuICAgIHRpdGxlID0gXCJUaGlzIGlzIGEgVGl0bGVcIixcbiAgICBzdWJ0aXRpbGUgPSBcIlRoaXMgaXMgYSBzdWJ0aXRsZVwiXG4gICAgKSArXG4gIHhsYWIoXCJYIGxhYmVsXCIpICtcbiAgeWxhYihcIlkgbGFiZWxcIilcblxuYGBgIn0= -->
+<pre class="r"><code># Graph Sample
+age_group_cov_hb_ans %&gt;% 
+  group_by(age_group) %&gt;% 
+  summarise(count = n()) %&gt;% 
+  ggplot()+
+  aes(x = age_group, y = count, fill = age_group)+
+  geom_bar(stat = &quot;identity&quot;)+
+  labs(
+    title = &quot;This is a Title&quot;,
+    subtitile = &quot;This is a subtitle&quot;
+    ) +
+  xlab(&quot;X label&quot;) +
+  ylab(&quot;Y label&quot;)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-plot-begin eyJoZWlnaHQiOjQzMi42MzI5LCJ3aWR0aCI6NzAwLCJzaXplX2JlaGF2aW9yIjowLCJjb25kaXRpb25zIjpbXX0= -->
+<p><img src="data:image/png;base64,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" /></p>
+<!-- rnb-plot-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="redundant-code-dumping-ground" class="section level1">
+<h1>Redundant Code Dumping Ground</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+</div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogInBoc19yc2hpbnlfZGFzaGJvYXJkX3Byb2plY3RfbWFpbiINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCiMtLS0tLS0tLS0tLS0tLS0gUGFja2FnZXMgLS0tLS0tLS0tLS0tLS0tIw0KYGBge3J9DQpsaWJyYXJ5KHRpZHl2ZXJzZSkNCmxpYnJhcnkoamFuaXRvcikNCmxpYnJhcnkoanNvbmxpdGUpDQpgYGANCg0KIy0tLS0tLS0tLS0tLS0tLSBBUEkgRnVuY3Rpb24gLS0tLS0tLS0tLS0tLS0tIw0KDQpgYGB7cn0NCiMgRnVuY3Rpb24gZm9yIGZldGNoaW5nIHBocyBkYXRhZnJhbWVzDQpwaHNfZGZfZnVuYyA8LSBmdW5jdGlvbihpZCl7DQogIA0KICAjIExpbmsgdGVtcGxhdGVzIGZvciBzaW1wbGljaXR5DQogIHBoc191cmwgPSAiaHR0cHM6Ly93d3cub3BlbmRhdGEubmhzLnNjb3QvYXBpLzMvYWN0aW9uL2RhdGFzdG9yZV9zZWFyY2g/cmVzb3VyY2VfaWQ9Ig0KICAjIGZldGNoIG1heGltdW0gOTk5Jzk5OSByZXN1bHRzIGZvciBzaW1wbGljaXR5DQogIGxpbWl0X3VybCA9ICImbGltaXQ9OTk5OTk5Ig0KICANCiAgIyBjb25zdHJ1Y3QgVVJMIGZvciBmZXRjaGluZyBwcm9jZXNzDQogIHVybF9saW5rIDwtIHBhc3RlMChwaHNfdXJsLCBpZCwgbGltaXRfdXJsKSAlPiUNCiAgICBmcm9tSlNPTigpDQogIA0KICAjIGNvbnN0cnVjdCBkYXRhZnJhbWUgZnJvbSB1cmwNCiAgcGhzX2RmIDwtICB1cmxfbGlua1tbInJlc3VsdCJdXVtbInJlY29yZHMiXV0NCiAgcmV0dXJuKHBoc19kZikNCn0NCg0KDQpwaHNfZGljdGlvbmFyeV9mdW5jIDwtIGZ1bmN0aW9uKGlkKXsNCiAgDQogICMgTGluayB0ZW1wbGF0ZXMgZm9yIHNpbXBsaWNpdHkNCiAgcGhzX3VybCA9ICJodHRwczovL3d3dy5vcGVuZGF0YS5uaHMuc2NvdC9hcGkvMy9hY3Rpb24vZGF0YXN0b3JlX3NlYXJjaD9yZXNvdXJjZV9pZD0iDQogICMgZmV0Y2ggbWF4aW11bSA5OTknOTk5IHJlc3VsdHMgZm9yIHNpbXBsaWNpdHkNCiAgbGltaXRfdXJsID0gIiZsaW1pdD0xMCINCiAgDQogICMgY29uc3RydWN0IFVSTCBmb3IgZmV0Y2hpbmcgcHJvY2Vzcw0KICB1cmxfbGluayA8LSBwYXN0ZTAocGhzX3VybCwgaWQsIGxpbWl0X3VybCkgJT4lDQogICAgZnJvbUpTT04oKQ0KICANCiAgIyBjb25zdHJ1Y3QgZGF0YWZyYW1lIGZyb20gdXJsDQogIHBoc19kaWN0aW9uYXJ5IDwtICB1cmxfbGlua1tbInJlc3VsdCJdXVtbImZpZWxkcyJdXSAlPiUgDQogICAganNvbmxpdGU6OmZsYXR0ZW4ocmVjdXJzaXZlID0gVFJVRSkgJT4lIA0KICAgIHNlbGVjdChpZCwgaW5mby5sYWJlbCwgdHlwZSkNCiAgIyAgICBqc29ubGl0ZTo6ZmxhdHRlbihyZWN1cnNpdmUgPSBUUlVFLCB1c2UubmFtZXMgPSBUUlVFKQ0KDQogIHJldHVybihwaHNfZGljdGlvbmFyeSkNCn0NCg0KYGBgDQoNCiMtLS0tLS0tLS0tLS0tLS0gUEhTIEFQSSBJRCAtLS0tLS0tLS0tLS0tLS0jDQpgYGB7cn0NCiMgSG9zcGl0YWwgQWN0aXZpdHkNCg0KIyBidCAtIEFjdGl2aXR5IGJ5IEJvYXJkIG9mIFRyZWF0bWVudA0KYnRfYW5zX2lkID0gIjAwYzAwZWNjLWI1MzMtNDI2ZS1hNDMzLTQyZDc5YmRlYTVkNCINCmJ0X2RlcF9pZCA9ICI0ZmM2NDBhYS1iZGQ0LTRmYmUtODA1Yi0xZGExYzhlZDYzODMiDQpidF9zcGVfaWQgPSAiYzNiNGJlNjQtNWZiNC00YTJmLWFmNDEtYjAwMTJmMGEyNzZhIiANCg0KIyBIb3NwaXRhbGlzYXRpb25zIGR1ZSB0byBDb3ZpZCAxOQ0KIyBoYiAtIEhlYWx0aCBCb2FyZCBBZG1pc3Npb25zDQpoYl9hbnNfaWQgPSAiZjhmM2E0MzUtMTkyNS00YzVhLWIyZTgtZTU4ZmRhY2YwNGJiIg0KaGJfZGVwX2lkID0gIjc0NmY5YmFjLTc3ZjEtNDNmZS1iNjlmLTVjYTJjZGUyMjAxYiINCmhiX3NwZV9pZCA9ICJiOGFlYjUzOS1mY2Y4LTRmNjYtYWFlOC0yMDIxMzUwOGExYjciDQoNCmhzY3BfYWdlX25fc2V4X2lkID0gImFlYzVjYzAwLTNhZDYtNDFmYi05MTAxLTM3YzY2YmFkMjlkNCINCmhzY3BfZGVwcml2YXRpb25faWQgPSAiOTVhMzI0YjMtNzYxMC00MTUxLTkyODctY2NkOWNiMTkxNjg2Ig0KaHNjcF9zcGVjaWFsdHlfaWQgPSAgIjAyNjk2NzczLTdhYWYtNDhjZS1iM2Q1LTQ3OWQ4NmZjODMzNCINCg0KDQojIEEmRSBhdHRlbmRhbmNlcyBhbmQgcGVyZm9ybWFuY2UgZGF0YQ0KQW5FX0FjdF9pZCA9ICIyYTRhZGMwYS1lOGUzLTQ2MDUtOWFkZS02MWUxM2E4NWIzYjkiDQoNCiANCiMgUXVhcnRlcmx5IEhvc3BpdGFsIEJlZHMgSW5mb3JtYXRpb24gLSBEYXRhc2V0cyAtIFNjb3R0aXNoIEhlYWx0aCBhbmQgU29jaWFsIENhcmUgT3BlbiBEYXRhIC0gbmhzLnNjb3QNCiMgRGVsYXllZCBkaXNjaGFyZ2UgZGF0YQ0KYmVkX2luZm9faWQgPSAiMjViZGMzN2ItNGE3Ny00ZmY4LTliM2EtZWRhYmE2ZTFjNjEzIg0KYmVkX3B1Ym5vdGVfaWQgPSAiMjViZGMzN2ItNGE3Ny00ZmY4LTliM2EtZWRhYmE2ZTFjNjEzIg0KYGBgDQoNCiMtLS0tLS0tLS0tLS0tLS0gUEhTIEZ1bmN0aW9uIEV4YW1wbGVzIC0tLS0tLS0tLS0tLS0tLSMNCg0KYGBge3J9DQojIEV4dHJhY3QgRGF0YWZyYW1lIHZpYSBBUEkNCmJvYXJkX29mX3RyZWF0bWVudF9hZ2Vfc2V4IDwtIHBoc19kZl9mdW5jKGJ0X2Fuc19pZCkNCg0KIyBBY29yeW5tIERpY3Rpb25hcnkNCnBoc19kaWN0aW9uYXJ5X2V4YW1wbGUgPC0gcGhzX2RpY3Rpb25hcnlfZnVuYyhidF9hbnNfaWQpDQpgYGANCg0KYGBge3J9DQojIEV4dHJhY3QgRGF0YWZyYW1lIHZpYSBBUEkNCmJvYXJkX29mX3RyZWF0bWVudF9uX3NwZWNpYWx0eSA8LSBwaHNfZGZfZnVuYyhidF9zcGVfaWQpDQoNCiMgQWNvcnlubSBEaWN0aW9uYXJ5DQpgYGA=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogInBoc19yc2hpbnlfZGFzaGJvYXJkX3Byb2plY3RfbWFpbiINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCiMgUGFja2FnZXMNCiMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSMNCmBgYHtyLCBlY2hvPUZBTFNFLCBtZXNzYWdlPUZBTFNFLCByZXN1bHRzPSdoaWRlJ30NCmxpYnJhcnkodGlkeXZlcnNlKQ0KbGlicmFyeShqYW5pdG9yKQ0KbGlicmFyeShqc29ubGl0ZSkNCmxpYnJhcnkobHVicmlkYXRlKQ0KYGBgDQoNCiMgQVBJIEZ1bmN0aW9uDQojLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0jDQoNCmBgYHtyLCBlY2hvPUZBTFNFLCBtZXNzYWdlPUZBTFNFLCByZXN1bHRzPSdoaWRlJ30NCiMgRnVuY3Rpb24gZm9yIGZldGNoaW5nIHBocyBkYXRhZnJhbWVzDQpwaHNfZGZfZnVuYyA8LSBmdW5jdGlvbihpZCl7DQogIA0KICAjIExpbmsgdGVtcGxhdGVzIGZvciBzaW1wbGljaXR5DQogIHBoc191cmwgPSAiaHR0cHM6Ly93d3cub3BlbmRhdGEubmhzLnNjb3QvYXBpLzMvYWN0aW9uL2RhdGFzdG9yZV9zZWFyY2g/cmVzb3VyY2VfaWQ9Ig0KICAjIGZldGNoIG1heGltdW0gOTk5Jzk5OSByZXN1bHRzIGZvciBzaW1wbGljaXR5DQogIGxpbWl0X3VybCA9ICImbGltaXQ9OTk5OTk5Ig0KICANCiAgIyBjb25zdHJ1Y3QgVVJMIGZvciBmZXRjaGluZyBwcm9jZXNzDQogIHVybF9saW5rIDwtIHBhc3RlMChwaHNfdXJsLCBpZCwgbGltaXRfdXJsKSAlPiUNCiAgICBmcm9tSlNPTigpDQogIA0KICAjIGNvbnN0cnVjdCBkYXRhZnJhbWUgZnJvbSB1cmwNCiAgcGhzX2RmIDwtICB1cmxfbGlua1tbInJlc3VsdCJdXVtbInJlY29yZHMiXV0gJT4lIA0KICAgIGNsZWFuX25hbWVzKCkNCiAgDQogIHJldHVybihwaHNfZGYpDQoNCn0NCg0KDQpwaHNfZGljdGlvbmFyeV9mdW5jIDwtIGZ1bmN0aW9uKGlkKXsNCiAgDQogICMgTGluayB0ZW1wbGF0ZXMgZm9yIHNpbXBsaWNpdHkNCiAgcGhzX3VybCA9ICJodHRwczovL3d3dy5vcGVuZGF0YS5uaHMuc2NvdC9hcGkvMy9hY3Rpb24vZGF0YXN0b3JlX3NlYXJjaD9yZXNvdXJjZV9pZD0iDQogICMgZmV0Y2ggbWF4aW11bSA5OTknOTk5IHJlc3VsdHMgZm9yIHNpbXBsaWNpdHkNCiAgbGltaXRfdXJsID0gIiZsaW1pdD0xMCINCiAgDQogICMgY29uc3RydWN0IFVSTCBmb3IgZmV0Y2hpbmcgcHJvY2Vzcw0KICB1cmxfbGluayA8LSBwYXN0ZTAocGhzX3VybCwgaWQsIGxpbWl0X3VybCkgJT4lDQogICAgZnJvbUpTT04oKQ0KICANCiAgIyBjb25zdHJ1Y3QgZGF0YWZyYW1lIGZyb20gdXJsDQogIHBoc19kaWN0aW9uYXJ5IDwtICB1cmxfbGlua1tbInJlc3VsdCJdXVtbImZpZWxkcyJdXSAlPiUgDQogICAganNvbmxpdGU6OmZsYXR0ZW4ocmVjdXJzaXZlID0gVFJVRSkgJT4lIA0KICAgIHNlbGVjdChpZCwgaW5mby5sYWJlbCwgdHlwZSkNCiAgIyAgICBqc29ubGl0ZTo6ZmxhdHRlbihyZWN1cnNpdmUgPSBUUlVFLCB1c2UubmFtZXMgPSBUUlVFKQ0KDQogIHJldHVybihwaHNfZGljdGlvbmFyeSkNCn0NCg0KYGBgDQoNCiMgUEhTIEFQSSAoSUQpDQojLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0jDQpgYGB7ciwgZWNobz1GQUxTRSwgbWVzc2FnZT1GQUxTRSwgcmVzdWx0cz0naGlkZSd9DQojIERhdGEgR3JvdXAgMDEgLSBIb3NwaXRhbCBBY3Rpdml0eQ0KIyBEYXRhc2V0IDFBIC0gSG9zcGl0YWwgQWN0aXZpdHkgYnkgU3BlY2lhbGl0eQ0KaGFfc3BlX2FwaSA9ICJjM2I0YmU2NC01ZmI0LTRhMmYtYWY0MS1iMDAxMmYwYTI3NmEiIA0KIyBEYXRhc2V0IDFCIC0gSG9zcGl0YWwgQWN0aXZpdHkgYW5kIFBhdGllbnQgRGVtb2dyYXBoaWNzDQpoYV9hbnNfYXBpID0gIjAwYzAwZWNjLWI1MzMtNDI2ZS1hNDMzLTQyZDc5YmRlYTVkNCINCiMgRGF0YXNldCAxQyAtIEhvc3BpdGFsIEFjdGl2aXR5IGFuZCBEZXByaXZhdGlvbg0KaGFfZGVwX2FwaSA9ICI0ZmM2NDBhYS1iZGQ0LTRmYmUtODA1Yi0xZGExYzhlZDYzODMiDQoNCg0KIyBEYXRhIEdyb3VwIDAyIC0gSG9zcGl0YWxpc2F0aW9ucyBkdWUgdG8gQ292aWQgMTkNCiMgRGF0YXNldCAyQSAtIEFkbWlzc2lvbnMgQnkgSGVhbHRoIEJvYXJkIGFuZCBTcGVjaWFsdHkNCmNvdl9oYl9zcGVfYXBpID0gImI4YWViNTM5LWZjZjgtNGY2Ni1hYWU4LTIwMjEzNTA4YTFiNyINCiMgRGF0YXNldCAyQiAtIEFkbWlzc2lvbnMgQnkgSGVhbHRoIEJvYXJkIGFuZCBQYXRpZW50IERlbW9ncmFwaGljcw0KY292X2hiX2Fuc19hcGkgPSAiZjhmM2E0MzUtMTkyNS00YzVhLWIyZTgtZTU4ZmRhY2YwNGJiIg0KIyBEYXRhc2V0IDJDIC0gQWRtaXNzaW9ucyBCeSBIZWFsdGggQm9hcmQgYW5kIERlcHJpdmF0aW9uDQpjb3ZfaGJfZGVwX2FwaSA9ICI3NDZmOWJhYy03N2YxLTQzZmUtYjY5Zi01Y2EyY2RlMjIwMWIiDQojIERhdGFzZXQgMkQgLSBBZG1pc3Npb25zIEJ5IEhTQ1AgYW5kIFNwZWNpYWx0eQ0KY292X2hzY3Bfc3BlX2FwaSA9ICAiMDI2OTY3NzMtN2FhZi00OGNlLWIzZDUtNDc5ZDg2ZmM4MzM0Ig0KIyBEYXRhc2V0IDJFIC0gQWRtaXNzaW9ucyBCeSBIU0NQIGFuZCBQYXRpZW50IERlbW9ncmFwaGljcw0KY292X2hzY3BfYW5zX2FwaSA9ICJhZWM1Y2MwMC0zYWQ2LTQxZmItOTEwMS0zN2M2NmJhZDI5ZDQiDQojIERhdGFzZXQgMkYgLSBBZG1pc3Npb25zIEJ5IEhTQ1AgYW5kIERlcHJpdmF0aW9uDQpjb3ZfaHNjcF9kZXBfYXBpID0gIjk1YTMyNGIzLTc2MTAtNDE1MS05Mjg3LWNjZDljYjE5MTY4NiINCg0KIyBEYXRhIEdyb3VwIDAzIC0gIEEmRSBBY3Rpdml0eQ0KIyBBJkUgQWN0aXZpdHkgYnkgSGVhbHRoIEJvYXJkLCBBZ2UgYW5kIFNleA0KYW5lX2hiX2Fuc19hcGkgPSAiMzg4ZmQ4NmMtZGMwYi00NjU1LWI0YjEtZjEzNjQ0YmZkOGQyIg0KIyBBJkUgQWN0aXZpdHkgYnkgSGVhbHRoIEJvYXJkIGFuZCBEZXByaXZhdGlvbg0KYW5lX2hiX2RlcF9hcGkgPSAiZWM3MGRlZDYtOWY0NS00MzQ4LWFhYTktYjFiNDBkZGFlNmE0Ig0KIyBBJkUgQWN0aXZpdHkgYnkgSFNDUCwgQWdlIGFuZCBTZXgNCmFuZV9oc2NwX2Fuc19hcGkgPSAgImE1Njc3NjcyLWNjNTctNGIzNi1hODg0LTg0ZDZiZWZkNTcwZiINCiMgQSZFIEFjdGl2aXR5IGJ5IEhTQ1AgYW5kIERlcHJpdmF0aW9uDQphbmVfaHNjcF9kZXBfYXBpID0gICIzOWRhN2U4ZC0wZWNmLTQxYjctYWVmMS1jZDg5OGJhOGI0ZmEiDQoNCiMgRGF0YSBHcm91cCAwNCAtIEJlZCBDYXBhY2l0eQ0KIyBCZWRzIGJ5IEJvYXJkIG9mIFRyZWF0bWVudCBhbmQgU3BlY2lhbHR5DQpiZWRfaW5mb19hcGkgPSAiZjI3MmJiN2QtNTMyMC00NDkxLTg0YzEtNjE0YTJjMDY0MDA3Ig0KDQoNCiMgRGF0YSBHcm91cCAwMCAtICBMb2NhdGlvbiAvIElEIElkZW50aWZpZXINCiMgSG9zcGl0YWwgTE9DQVRJT04gTGlzdA0KaG9zcGl0YWxfbG9jYXRpb25fYXBpID0gImM2OThmNDUwLWVlZWQtNDFhMC04OGY3LWMxZTQwYTU2OGFjYyINCiMgSGVhbHRoIEJvYXJkIExpc3QgKEhlYWx0aCBCb2FyZCkNCmhlYWx0aF9ib2FyZF9hcGkgPSAiNjUyZmY3MjYtZTY3Ni00YTIwLWFiZGEtNDM1Yjk4ZGQ3YmRjIg0Kc3BlY2lhbF9oZWFsdGhfYm9hcmRfYXBpID0gIjA0NTBhNWEyLWY2MDAtNDU2OS1hOWFlLTVkNjMxNzE0MTg5OSINCiMgSFNDUCBMaXN0IA0KaHNjcF9hcGkgPSAiOTQ0NzY1ZDctZDBkOS00NmEwLWIzNzctYWJiM2RlNTFkMDhlIg0KDQoNCiNTYW1wbGUgREYgUmVhZGVyIChQcmVzcyBDdHJsK1NoaWZ0K0MgdG8gdW5jb21tZW50KQ0Kc2FtcGxlX0RGIDwtIHBoc19kZl9mdW5jKGJlZF9pbmZvX2FwaSkNCnZpZXcoc2FtcGxlX0RGKQ0KYGBgDQoNCiMgTG9hZCBpbiBBUEkgRGF0YWZyYW1lIChCYWNrdXApDQojLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0jDQpgYGB7cn0NCiMgRGF0YSBHcm91cCAwMQ0KIyBEYXRhc2V0IDFBIC0gSG9zcGl0YWwgQWN0aXZpdHkgYnkgU3BlY2lhbGl0eQ0KYmFja3VwX2hhX3NwZSA9IHBoc19kZl9mdW5jKGhhX3NwZV9hcGkpDQojIERhdGFzZXQgMUIgLSBIb3NwaXRhbCBBY3Rpdml0eSBhbmQgUGF0aWVudCBEZW1vZ3JhcGhpY3MNCmJhY2t1cF9oYV9hbnMgPSBwaHNfZGZfZnVuYyhoYV9hbnNfYXBpKQ0KIyBEYXRhc2V0IDFDIC0gSG9zcGl0YWwgQWN0aXZpdHkgYW5kIERlcHJpdmF0aW9uDQpiYWNrdXBfaGFfZGVwID0gcGhzX2RmX2Z1bmMoaGFfZGVwX2FwaSkNCg0KDQojIERhdGEgR3JvdXAgMDINCiMgSG9zcGl0YWxpc2F0aW9ucyBkdWUgdG8gQ292aWQgMTkNCiMgRGF0YXNldCAyQSAtIEFkbWlzc2lvbnMgQnkgSGVhbHRoIEJvYXJkIGFuZCBTcGVjaWFsdHkNCmJhY2t1cF9jb3ZfaGJfc3BlID0gcGhzX2RmX2Z1bmMoY292X2hiX3NwZV9hcGkpDQojIERhdGFzZXQgMkIgLSBBZG1pc3Npb25zIEJ5IEhlYWx0aCBCb2FyZCBhbmQgUGF0aWVudCBEZW1vZ3JhcGhpY3MNCmJhY2t1cF9jb3ZfaGJfYW5zID0gcGhzX2RmX2Z1bmMoY292X2hiX2Fuc19hcGkpDQojIERhdGFzZXQgMkMgLSBBZG1pc3Npb25zIEJ5IEhlYWx0aCBCb2FyZCBhbmQgRGVwcml2YXRpb24NCmJhY2t1cF9jb3ZfaGJfZGVwID0gcGhzX2RmX2Z1bmMoY292X2hiX2RlcF9hcGkpDQojIERhdGFzZXQgMkQgLSBBZG1pc3Npb25zIEJ5IEhTQ1AgYW5kIFNwZWNpYWx0eQ0KYmFja3VwX2Nvdl9oc2NwX3NwZSA9IHBoc19kZl9mdW5jKGNvdl9oc2NwX3NwZV9hcGkpDQojIERhdGFzZXQgMkUgLSBBZG1pc3Npb25zIEJ5IEhTQ1AgYW5kIFBhdGllbnQgRGVtb2dyYXBoaWNzDQpiYWNrdXBfY292X2hzY3BfYW5zID0gcGhzX2RmX2Z1bmMoY292X2hzY3BfYW5zX2FwaSkNCiMgRGF0YXNldCAyRiAtIEFkbWlzc2lvbnMgQnkgSFNDUCBhbmQgRGVwcml2YXRpb24NCmJhY2t1cF9jb3ZfaHNjcF9kZXAgPSBwaHNfZGZfZnVuYyhjb3ZfaHNjcF9kZXBfYXBpKQ0KDQoNCiMgRGF0YSBHcm91cCAwMyANCiMgQSZFIEFjdGl2aXR5IGJ5IEhlYWx0aCBCb2FyZCwgQWdlIGFuZCBTZXgNCmJhY2t1cF9hbmVfaGJfYW5zIDwtIHBoc19kZl9mdW5jKGFuZV9oYl9hbnNfYXBpKQ0KIyBBJkUgQWN0aXZpdHkgYnkgSGVhbHRoIEJvYXJkIGFuZCBEZXByaXZhdGlvbg0KYmFja3VwX2FuZV9oYl9kZXAgPC0gcGhzX2RmX2Z1bmMoYW5lX2hiX2RlcF9hcGkpDQojIEEmRSBBY3Rpdml0eSBieSBIU0NQLCBBZ2UgYW5kIFNleA0KYmFja3VwX2FuZV9oc2NwX2FucyA9ICBwaHNfZGZfZnVuYyhhbmVfaHNjcF9hbnNfYXBpKQ0KIyBBJkUgQWN0aXZpdHkgYnkgSFNDUCBhbmQgRGVwcml2YXRpb24NCmJhY2t1cF9hbmVfaHNjcF9kZXAgPSAgcGhzX2RmX2Z1bmMoYW5lX2hzY3BfZGVwX2FwaSkNCg0KDQojIERhdGEgR3JvdXAgMDQgLSBCZWQgQ2FwYWNpdHkNCiMgQmVkcyBieSBCb2FyZCBvZiBUcmVhdG1lbnQgYW5kIFNwZWNpYWx0eQ0KYmFja3VwX2JlZF9pbmZvID0gcGhzX2RmX2Z1bmMoYmVkX2luZm9fYXBpKQ0KDQojIERhdGEgR3JvdXAgMDAgLSBIb3NwaXRhbCBMb2NhdGlvbiBJbmZvDQpiYWNrdXBfaG9zcGl0YWxfbG9jYXRpb24gPSBwaHNfZGZfZnVuYyhob3NwaXRhbF9sb2NhdGlvbl9hcGkpDQpgYGANCg0KDQojIENsZWFuaW5nICYgTWVyZ2luZyBEYXRhc2V0DQojLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0jDQoNCiMjIERhdGEgR3JvdXAgMDAgLSBIb3NwaXRhbCBMb2NhdGlvbg0KYGBge3J9DQojIEhvc3BpdGFsIExvY2F0aW9uDQpkZl9ob3NwaXRhbF9sb2NhdGlvbiA8LSAgYmFja3VwX2hvc3BpdGFsX2xvY2F0aW9uICU+JQ0KICBzZWxlY3QoLWVuZHNfd2l0aCgicWYiKSwgLWlkKSAlPiUgDQogIHJlbmFtZShsb25nID0geF9jb29yZGluYXRlLA0KICAgICAgICAgbGF0ID0geV9jb29yZGluYXRlKQ0KDQojIGZ1bmN0aW9uIHRvIGFzc2lnbiBob3NwaXRhbCBuYW1lLCBsb25naXR1ZGUgJiBsYXRpdHVkZSB0byBkYXRhZnJhbWUNCiMgaG9zcGl0YWxfbG9jYXRpb25fZnVuYyhkYXRhZnJhbSwgImtleSBjb2x1bW4iKQ0KaG9zcGl0YWxfbG9jYXRpb25fZnVuYyA8LSBmdW5jdGlvbihkZiwga2V5X2NvbCl7DQogICAgICAgICAgICBkZiA8LSBkZiAlPiUgDQogICAgICAgICAgICAjIFNlbGVjdCBsb2NhdGlvbiAmIGhiIGFzIGZvcmdlaW4ga2V5cw0KICAgICAgICAgICAgIyBKb2luIGxvY2F0aW9uX25hbWUsIGxvbmdpdHVkZSAmIGxhdGl0dWRlIHRvIHRoZSBtYWluIGRhdGFmcmFtZQ0KICAgICAgICAgICAgbGVmdF9qb2luKGRmX2hvc3BpdGFsX2xvY2F0aW9uICU+JSBzZWxlY3Qoa2V5X2NvbCwgbG9jYXRpb25fbmFtZSwgbG9uZywgbGF0KSwNCiAgICAgICAgICAgIGJ5ID0gYyhrZXlfY29sKSwNCiAgICAgICAgICAgIGFsbC54ID0gVFJVRSkNCiAgICAgICAgICAgIA0KICAgICAgICAgICAgcmV0dXJuKGRmKQ0KfQ0KDQoNCmBgYA0KDQojIyBEYXRhIEdyb3VwIDAxIC0gSG9zcGl0YWwgQWN0aXZpdHkNCmBgYHtyfQ0KIyBjbGVhbl9xdWFydF9kZl9mdW5jKGRhdGFmcmFtZSkNCmNsZWFuX3F1YXJ0X2RmX2Z1bmMgPC0gZnVuY3Rpb24oZGYpew0KICAgICAgICAgICAgICAgIGRmIDwtIGRmICU+JSANCiAgICAgICAgICAgICAgICBzZWxlY3QoLWVuZHNfd2l0aCgicWYiKSwgLWlkKSAlPiUgDQogICAgICAgICAgICAgICAgbXV0YXRlKHllYXIgPSBzdWJzdHIocXVhcnRlciwgMSw0KSwNCiAgICAgICAgICAgICAgICBxdWFydGVyID0gc3Vic3RyKHF1YXJ0ZXIsbmNoYXIocXVhcnRlciksIG5jaGFyKHF1YXJ0ZXIpKSkgJT4lIA0KICAgICAgICAgICAgICAgICMgUmVsb2NhdGUgdGhlIHllYXIgYW5kIHF1YXJ0ZXIgY29sdW1ucyB0byB0aGUgc3RhcnQNCiAgICAgICAgICAgICAgICByZWxvY2F0ZShjKCJ5ZWFyIiAsInF1YXJ0ZXIiKSwgLmJlZm9yZSA9IDEpDQogICAgICAgICAgICAgICAgIyBSZXR1cm4gY2xlYW5lZCBkYXRhZnJhbWUNCiAgICAgICAgICAgICAgICByZXR1cm4oZGYpDQp9DQoNCiMgRGF0YXNldCAxQSAtIEhvc3BpdGFsIEFjdGl2aXR5IGJ5IFNwZWNpYWxpdHkNCmRmX2hhX3NwZSA8LSBjbGVhbl9xdWFydF9kZl9mdW5jKGJhY2t1cF9oYV9zcGUpDQojIERhdGFzZXQgMUIgLSBIb3NwaXRhbCBBY3Rpdml0eSBhbmQgUGF0aWVudCBEZW1vZ3JhcGhpY3MNCiMgY2hhbmdlIGNvbHVtbiAiYWdlIiB0byAiYWdlX2dyb3VwIiBmb3IgY29uc2lzaXRlbmN5DQpkZl9oYV9hbnMgPC0gY2xlYW5fcXVhcnRfZGZfZnVuYyhiYWNrdXBfaGFfYW5zKSAlPiUgDQogICAgcmVuYW1lKGFnZV9ncm91cCA9IGFnZSkNCiMgRGF0YXNldCAxQyAtIEhvc3BpdGFsIEFjdGl2aXR5IGFuZCBEZXByaXZhdGlvbg0KZGZfaGFfZGVwIDwtIGNsZWFuX3F1YXJ0X2RmX2Z1bmMoYmFja3VwX2hhX2RlcCkgDQoNCg0KYGBgDQoNCiMjIERhdGEgR3JvdXAgMDIgLSBIb3NwaXRhbGlzYXRpb25zIGR1ZSB0byBDb3ZpZCAxOQ0KYGBge3J9DQojIENsZWFuIEhvc3BpdGFsaXNhdGlvbnMgRGF0YXNldCBmdW5jdGlvbg0KY2xlYW5fd2tlbmRfZGZfZnVuYyA8LSBmdW5jdGlvbihkZil7DQogICAgICAgICAgICAgICAgICBkZiA8LSBkZiAlPiUgDQogICAgICAgICAgICAgICAgICAjIFJlbW92ZSBhbnkgY29sdW1ucyBlbmRzIHdpdGggcWYgKFF1YWxpZmllcikNCiAgICAgICAgICAgICAgICAgIHNlbGVjdCgtZW5kc193aXRoKCJxZiIpLCAtaWQpICU+JSANCiAgICAgICAgICAgICAgICAgICMgRXh0cmFjdCBoZSBxdWFydGVyLCB5ZWFyIGluZm8gZnJvbSB3ZWVrX2VuZGluZw0KICAgICAgICAgICAgICAgICAgbXV0YXRlKHdlZWtfZW5kaW5nID0gYXMuRGF0ZSh5bWQod2Vla19lbmRpbmcpKSwNCiAgICAgICAgICAgICAgICAgICAgICAgICBxdWFydGVyICAgICA9IHF1YXJ0ZXIod2Vla19lbmRpbmcpLA0KICAgICAgICAgICAgICAgICAgICAgICAgIHllYXIgICAgICAgID0geWVhcih3ZWVrX2VuZGluZykpICU+JSANCiAgICAgICAgICAgICAgICAgICMgUmVsb2NhdGUgdGhlIHllYXIgYW5kIHF1YXJ0ZXIgY29sdW1ucyB0byB0aGUgc3RhcnQNCiAgICAgICAgICAgICAgICAgIHJlbG9jYXRlKGMoInllYXIiICwicXVhcnRlciIpLCAuYmVmb3JlID0gMSkNCiAgICAgICAgICAgICAgICAgICMgUmV0dXJuIGNsZWFuZWQgZGF0YWZyYW1lDQogICAgICAgICAgICAgICAgICByZXR1cm4oZGYpDQp9DQoNCiMgRGF0YXNldCAyQSAtIEFkbWlzc2lvbnMgQnkgSGVhbHRoIEJvYXJkIGFuZCBTcGVjaWFsdHkNCmRmX2Nvdl9oYl9zcGUgIDwtIGNsZWFuX3drZW5kX2RmX2Z1bmMoYmFja3VwX2Nvdl9oYl9zcGUpDQojIERhdGFzZXQgMkIgLSBBZG1pc3Npb25zIEJ5IEhlYWx0aCBCb2FyZCBhbmQgUGF0aWVudCBEZW1vZ3JhcGhpY3MNCmRmX2Nvdl9oYl9hbnMgPC0gY2xlYW5fd2tlbmRfZGZfZnVuYyhiYWNrdXBfY292X2hiX2FucykNCiMgRGF0YXNldCAyQyAtIEFkbWlzc2lvbnMgQnkgSGVhbHRoIEJvYXJkIGFuZCBEZXByaXZhdGlvbg0KZGZfY292X2hiX2RlcCA8LSBjbGVhbl93a2VuZF9kZl9mdW5jKGJhY2t1cF9jb3ZfaGJfZGVwKQ0KIyBEYXRhc2V0IDJEIC0gQWRtaXNzaW9ucyBCeSBIU0NQIGFuZCBTcGVjaWFsdHkNCmRmX2Nvdl9oc2NwX3NwZSA8LSBjbGVhbl93a2VuZF9kZl9mdW5jKGJhY2t1cF9jb3ZfaHNjcF9zcGUpDQojIERhdGFzZXQgMkUgLSBBZG1pc3Npb25zIEJ5IEhTQ1AgYW5kIFBhdGllbnQgRGVtb2dyYXBoaWNzDQpkZl9jb3ZfaHNjcF9hbnMgPC0gY2xlYW5fd2tlbmRfZGZfZnVuYyhiYWNrdXBfY292X2hzY3BfYW5zKQ0KIyBEYXRhc2V0IDJGIC0gQWRtaXNzaW9ucyBCeSBIU0NQIGFuZCBEZXByaXZhdGlvbg0KZGZfY292X2hzY3BfZGVwIDwtIGNsZWFuX3drZW5kX2RmX2Z1bmMoYmFja3VwX2Nvdl9oc2NwX2RlcCkNCg0KYGBgDQoNCiMjRGF0YSBHcm91cCAwMyAtIEEmRSBBY3Rpdml0eQ0KYGBge3J9DQojIERhdGEgR3JvdXAgMDMgLSAgQSZFIEFjdGl2aXR5DQoNCiMgQSZFIEFjdGl2aXR5IGJ5IEhlYWx0aCBCb2FyZCwgQWdlIGFuZCBTZXgNCmRmX2FuZV9oYl9hbnMgPC0gY2xlYW5fd2tlbmRfZGZfZnVuYyhiYWNrdXBfYW5lX2hiX2FucykNCg0KIyBBJkUgQWN0aXZpdHkgYnkgSGVhbHRoIEJvYXJkIGFuZCBEZXByaXZhdGlvbg0KZGZfYW5lX2hiX2RlcCA8LSBjbGVhbl93a2VuZF9kZl9mdW5jKGJhY2t1cF9hbmVfaGJfZGVwKQ0KIyBBJkUgQWN0aXZpdHkgYnkgSFNDUCwgQWdlIGFuZCBTZXgNCmRmX2FuZV9oc2NwX2FucyA8LSAgY2xlYW5fd2tlbmRfZGZfZnVuYyhiYWNrdXBfYW5lX2hzY3BfYW5zKQ0KIyBBJkUgQWN0aXZpdHkgYnkgSFNDUCBhbmQgRGVwcml2YXRpb24NCmRmX2FuZV9oc2NwX2RlcCA8LSAgY2xlYW5fd2tlbmRfZGZfZnVuYyhiYWNrdXBfYW5lX2hzY3BfZGVwKQ0KDQoNCmBgYA0KDQoNCiMjIERhdGEgR3JvdXAgMDQgLSBIb3NwaXRhbCBCZWQgSW5mb3JtYXRpb24NCmBgYHtyfQ0KYmVkX2luZm8gPC0gY2xlYW5fcXVhcnRfZGZfZnVuYyhiYWNrdXBfYmVkX2luZm8pDQpgYGANCg0KDQojIyBBZ2UgJiBTZXggRGF0YSBGcmFtZSByZWxhdGVkDQpgYGB7cn0NCmFnZV9ncm91cF9oYV9hbnMgPC0gZGZfaGFfYW5zICU+JSANCiAgICBtdXRhdGUoYWdlX2dyb3VwID0gZmFjdG9yKGFnZV9ncm91cCwgbGV2ZWxzID0gYygiMC05IHllYXJzIiwiMTAtMTkgeWVhcnMiICwiMjAtMjkgeWVhciIsICIzMC0zOSB5ZWFycyIsICI0MC00OSB5ZWFycyIsICI1MC01OSB5ZWFycyIsICI2MC02OSB5ZWFycyIsICI3MC03OSB5ZWFycyIsICI4MC04OSB5ZWFycyIsICI5MCB5ZWFycyBhbmQgb3ZlciIpKSkgJT4lDQogIGFycmFuZ2UoYWdlX2dyb3VwKQ0KDQphZ2VfZ3JvdXBfY292X2hiX2FucyA8LSBkZl9jb3ZfaGJfYW5zICU+JSANCiAgZmlsdGVyKGFnZV9ncm91cCAhPSAiQWxsIGFnZXMiKSAlPiUgDQogIG11dGF0ZShhZ2VfZ3JvdXAgPSBmYWN0b3IoYWdlX2dyb3VwLCBsZXZlbHMgPSBjKCJVbmRlciA1IiwiNSAtIDE0IiAsIjE1IC0gNDQiLCAiNDUgLSA2NCIsICI2NSAtIDc0IiwgIjc1IC0gODQiLCAiODUgYW5kIG92ZXIiKQ0KICApKSAlPiUNCiAgYXJyYW5nZShhZ2VfZ3JvdXApDQoNCmFnZV9ncm91cF9jb3ZfaHNjcF9hbnMgPC0gZGZfY292X2hzY3BfYW5zICU+JSANCiAgZmlsdGVyKGFnZV9ncm91cCAhPSAiQWxsIGFnZXMiKSAlPiUgDQogIG11dGF0ZShhZ2VfZ3JvdXAgPSBmYWN0b3IoYWdlX2dyb3VwLCBsZXZlbHMgPSBjKCJVbmRlciA1IiwiNSAtIDE0IiAsIjE1IC0gNDQiLCAiNDUgLSA2NCIsICI2NSAtIDc0IiwgIjc1IC0gODQiLCAiODUgYW5kIG92ZXIiKQ0KICApKSAlPiUNCiAgYXJyYW5nZShhZ2VfZ3JvdXApDQoNCmFnZV9hbmVfaHNjcF9hbnMgPC0gZGZfYW5lX2hzY3BfYW5zICU+JSANCiAgZmlsdGVyKGFnZV9ncm91cCAhPSAiQWxsIGFnZXMiKSAlPiUgDQogIG11dGF0ZShhZ2VfZ3JvdXAgPSBmYWN0b3IoYWdlX2dyb3VwLCBsZXZlbHMgPSBjKCJVbmRlciA1IiwiNSAtIDE0IiAsIjE1IC0gNDQiLCAiNDUgLSA2NCIsICI2NSAtIDc0IiwgIjc1IC0gODQiLCAiODUgYW5kIG92ZXIiKQ0KICApKSAlPiUNCiAgYXJyYW5nZShhZ2VfZ3JvdXApDQoNCmBgYA0KDQojIEdyYXBoIFNhbXBsZQ0KYGBge3J9DQojIEdyYXBoIFNhbXBsZQ0KYWdlX2dyb3VwX2Nvdl9oYl9hbnMgJT4lIA0KICBncm91cF9ieShhZ2VfZ3JvdXApICU+JSANCiAgc3VtbWFyaXNlKGNvdW50ID0gbigpKSAlPiUgDQogIGdncGxvdCgpKw0KICBhZXMoeCA9IGFnZV9ncm91cCwgeSA9IGNvdW50LCBmaWxsID0gYWdlX2dyb3VwKSsNCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpKw0KICBsYWJzKA0KICAgIHRpdGxlID0gIlRoaXMgaXMgYSBUaXRsZSIsDQogICAgc3VidGl0aWxlID0gIlRoaXMgaXMgYSBzdWJ0aXRsZSINCiAgICApICsNCiAgeGxhYigiWCBsYWJlbCIpICsNCiAgeWxhYigiWSBsYWJlbCIpDQoNCmBgYA0KDQojIFJlZHVuZGFudCBDb2RlIER1bXBpbmcgR3JvdW5kDQpgYGB7cn0NCg0KYGBgDQoNCg0KDQoNCg0KDQoNCg0KDQo=</div>
 
 
 
