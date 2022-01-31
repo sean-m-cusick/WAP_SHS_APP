@@ -193,7 +193,7 @@ hospital_location_func <- function(df, key_col){
             df <- df %>% 
             # Select location & hb as forgein keys
             # Join location_name, longitude & latitude to the main dataframe
-            left_join(df_hospital_location %>% select(key_col, location_name, long, lat),
+            left_join(df_hospital_location %>% select(key_col, location_name, longitude, latitude),
             by = c(key_col),
             all.x = TRUE)
             
