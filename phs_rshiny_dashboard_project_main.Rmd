@@ -14,7 +14,8 @@ library(lubridate)
 library(rgdal)
 library(here)
 library(broom)
-
+require(readr)
+require(here)
 ```
 
 # API Function
@@ -295,9 +296,9 @@ hospital_location_func <- function(df, key_col){
 
 
 df_health_board <- backup_health_board
-
-NHSBoards <- readOGR(dsn = "SG_NHS_HealthBoards_2019.shp", 
-                     layer = "SG_NHS_HealthBoards_2019")
+# 
+# NHSBoards <- readOGR(dsn = "SG_NHS_HealthBoards_2019.shp", 
+#                      layer = "SG_NHS_HealthBoards_2019")
 
 ```
 
@@ -470,57 +471,43 @@ age_group_cov_hb_ans %>%
 
 
 ```{r}
-
-
-# autosave
+# make_file_names <- function(x) paste0(save_path,x,".csv")
+# save_csv <- function(x) write_csv(obj_list[[x]],file_name[[x]])
+# 
+# target_directory <- here("raw_data/test/")
 # 
 # 
-#   save_path = paste0("..\\phs_rshiny_dashboard_grp1\\raw_data\\")
+# save_path = paste0("..\\phs_rshiny_dashboard_grp1\\raw_data\\test\\")
+# name_pattern <- grep("df_",names(.GlobalEnv),value=TRUE)
+# obj_list     <- do.call("list",mget(name_pattern))
+# file_name      <- make_file_names(names(obj_list))
+# 
+# for (i in seq_along(names(obj_list))) save_csv(i)
+# 
+# 
+# 
 #   dataframes_list <- as.list( ls.str(mode = "list"))
 #   dataframes_list_csv <- paste0(dataframes_list, ".csv")
 #   file_path = paste0(save_path, dataframes_list_csv)
-#   
+# 
 # for (x in 1: length(dataframes_list)){
 #   data_frame_name <- paste0(dataframes_list[x], ".csv")
 #   data_frame_file_path <- paste0(save_path,data_frame_name)
 #   write.csv(as.character(data_frame_name), as.character(data_frame_file_path), row.names = FALSE)
-#   
+# 
 # }
 # 
-# 
-# 
-write.csv(df_sco_dov_daily_deprivation,"..\\phs_rshiny_dashboard_grp1\\raw_data\\df_sco_dov_daily_deprivation.csv", row.names = FALSE)
-# 
-#   
-#   
-#   
-# file_path = paste0(save_path,file_name)  
-# 
-# 
+# write.csv(df_sco_dov_daily_deprivation,"..\\phs_rshiny_dashboard_grp1\\raw_data\\df_sco_dov_daily_deprivation.csv", row.names = FALSE)
+# #
+# #
+# #
+# #
+# file_path = paste0(save_path,file_name)
+# #
+# #
 # write.csv(age_ane_hscp_ans,save_path + file_name+".csv", row.names = FALSE)
 
 ```
-
-```{r}
-df_daily_cumulative_cov <- backup_daily_cumulative_cov
-df_daily_trends_health_board <- backup_daily_trends_health_board
-df_daily_trends_local_authority <- backup_daily_trends_local_authority
-df_seven_day_trends_neighbourhood <- backup_seven_day_trends_neighbourhood
-df_daily_trend_age_sex <- backup_daily_trend_age_sex
-df_daily_trend_deprivation <- backup_daily_trend_deprivation
-####
-####
-####
-# Total Cases By Deprivation ----
-df_sco_cov_total_deprivation <- backup_sco_cov_total_deprivation
-####
-####
-####
-# Daily Case Trends By Deprivation -----
-df_sco_dov_daily_deprivation <- backup_sco_dov_daily_deprivation
-```
-
-
 
 
 
