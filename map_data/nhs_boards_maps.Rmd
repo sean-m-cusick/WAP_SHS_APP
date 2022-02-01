@@ -26,9 +26,9 @@ NHSBoards <- readOGR(dsn = "SG_NHS_HealthBoards_2019.shp",
 ```{r, eval = FALSE}
 # tidy() comes from the package library(broom)
 # This produces a simple outline map of the NHS Boards
-NHSBoards_tidy <- tidy(NHSBoards)
+ NHSBoards_tidy <- tidy(NHSBoards)
 ggplot(NHSBoards_tidy, aes(x = long, y = lat, group = group)) +
-  geom_polygon(color = "black", size = 0.1, fill = "seagreen") +
+  geom_polygon(color = "black", size = 0.1, fill = "aquamarine1") +
   coord_equal() +
   theme_minimal()
 ```
