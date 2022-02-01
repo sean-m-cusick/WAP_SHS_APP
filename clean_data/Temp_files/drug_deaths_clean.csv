@@ -1,0 +1,4489 @@
+council_area,drug_name,num_deaths,year
+Scotland,All drug-related deaths,545,2009
+Scotland,Heroin/Morphine,338,2009
+Scotland,Methadone,188,2009
+Scotland,Any Benzodiazepine,386,2009
+Scotland,Diazepam,329,2009
+Scotland,Temazepam,20,2009
+Scotland,Cocaine,57,2009
+Scotland,Ecstasy,2,2009
+Scotland,Amphetamines,16,2009
+Scotland,Alcohol,277,2009
+Aberdeen City,All drug-related deaths,27,2009
+Aberdeen City,Heroin/Morphine,21,2009
+Aberdeen City,Methadone,4,2009
+Aberdeen City,Any Benzodiazepine,13,2009
+Aberdeen City,Diazepam,1,2009
+Aberdeen City,Temazepam,0,2009
+Aberdeen City,Cocaine,7,2009
+Aberdeen City,Ecstasy,0,2009
+Aberdeen City,Amphetamines,2,2009
+Aberdeen City,Alcohol,15,2009
+Aberdeenshire,All drug-related deaths,18,2009
+Aberdeenshire,Heroin/Morphine,10,2009
+Aberdeenshire,Methadone,5,2009
+Aberdeenshire,Any Benzodiazepine,12,2009
+Aberdeenshire,Diazepam,0,2009
+Aberdeenshire,Temazepam,0,2009
+Aberdeenshire,Cocaine,5,2009
+Aberdeenshire,Ecstasy,0,2009
+Aberdeenshire,Amphetamines,1,2009
+Aberdeenshire,Alcohol,10,2009
+Angus,All drug-related deaths,9,2009
+Angus,Heroin/Morphine,9,2009
+Angus,Methadone,1,2009
+Angus,Any Benzodiazepine,7,2009
+Angus,Diazepam,7,2009
+Angus,Temazepam,0,2009
+Angus,Cocaine,0,2009
+Angus,Ecstasy,0,2009
+Angus,Amphetamines,0,2009
+Angus,Alcohol,6,2009
+Argyll and Bute,All drug-related deaths,7,2009
+Argyll and Bute,Heroin/Morphine,4,2009
+Argyll and Bute,Methadone,3,2009
+Argyll and Bute,Any Benzodiazepine,6,2009
+Argyll and Bute,Diazepam,6,2009
+Argyll and Bute,Temazepam,0,2009
+Argyll and Bute,Cocaine,0,2009
+Argyll and Bute,Ecstasy,0,2009
+Argyll and Bute,Amphetamines,0,2009
+Argyll and Bute,Alcohol,4,2009
+Clackmannanshire,All drug-related deaths,3,2009
+Clackmannanshire,Heroin/Morphine,3,2009
+Clackmannanshire,Methadone,1,2009
+Clackmannanshire,Any Benzodiazepine,2,2009
+Clackmannanshire,Diazepam,2,2009
+Clackmannanshire,Temazepam,0,2009
+Clackmannanshire,Cocaine,0,2009
+Clackmannanshire,Ecstasy,0,2009
+Clackmannanshire,Amphetamines,0,2009
+Clackmannanshire,Alcohol,0,2009
+Dumfries and Galloway,All drug-related deaths,8,2009
+Dumfries and Galloway,Heroin/Morphine,6,2009
+Dumfries and Galloway,Methadone,3,2009
+Dumfries and Galloway,Any Benzodiazepine,4,2009
+Dumfries and Galloway,Diazepam,4,2009
+Dumfries and Galloway,Temazepam,1,2009
+Dumfries and Galloway,Cocaine,1,2009
+Dumfries and Galloway,Ecstasy,0,2009
+Dumfries and Galloway,Amphetamines,0,2009
+Dumfries and Galloway,Alcohol,3,2009
+Dundee City,All drug-related deaths,30,2009
+Dundee City,Heroin/Morphine,19,2009
+Dundee City,Methadone,12,2009
+Dundee City,Any Benzodiazepine,20,2009
+Dundee City,Diazepam,18,2009
+Dundee City,Temazepam,1,2009
+Dundee City,Cocaine,1,2009
+Dundee City,Ecstasy,0,2009
+Dundee City,Amphetamines,0,2009
+Dundee City,Alcohol,8,2009
+East Ayrshire,All drug-related deaths,12,2009
+East Ayrshire,Heroin/Morphine,12,2009
+East Ayrshire,Methadone,3,2009
+East Ayrshire,Any Benzodiazepine,8,2009
+East Ayrshire,Diazepam,8,2009
+East Ayrshire,Temazepam,0,2009
+East Ayrshire,Cocaine,1,2009
+East Ayrshire,Ecstasy,0,2009
+East Ayrshire,Amphetamines,0,2009
+East Ayrshire,Alcohol,6,2009
+East Dunbartonshire,All drug-related deaths,5,2009
+East Dunbartonshire,Heroin/Morphine,2,2009
+East Dunbartonshire,Methadone,4,2009
+East Dunbartonshire,Any Benzodiazepine,4,2009
+East Dunbartonshire,Diazepam,4,2009
+East Dunbartonshire,Temazepam,0,2009
+East Dunbartonshire,Cocaine,1,2009
+East Dunbartonshire,Ecstasy,0,2009
+East Dunbartonshire,Amphetamines,0,2009
+East Dunbartonshire,Alcohol,3,2009
+East Lothian,All drug-related deaths,6,2009
+East Lothian,Heroin/Morphine,3,2009
+East Lothian,Methadone,3,2009
+East Lothian,Any Benzodiazepine,5,2009
+East Lothian,Diazepam,4,2009
+East Lothian,Temazepam,3,2009
+East Lothian,Cocaine,0,2009
+East Lothian,Ecstasy,0,2009
+East Lothian,Amphetamines,0,2009
+East Lothian,Alcohol,3,2009
+East Renfrewshire,All drug-related deaths,7,2009
+East Renfrewshire,Heroin/Morphine,4,2009
+East Renfrewshire,Methadone,1,2009
+East Renfrewshire,Any Benzodiazepine,6,2009
+East Renfrewshire,Diazepam,6,2009
+East Renfrewshire,Temazepam,0,2009
+East Renfrewshire,Cocaine,1,2009
+East Renfrewshire,Ecstasy,0,2009
+East Renfrewshire,Amphetamines,1,2009
+East Renfrewshire,Alcohol,6,2009
+City of Edinburgh,All drug-related deaths,45,2009
+City of Edinburgh,Heroin/Morphine,18,2009
+City of Edinburgh,Methadone,22,2009
+City of Edinburgh,Any Benzodiazepine,36,2009
+City of Edinburgh,Diazepam,33,2009
+City of Edinburgh,Temazepam,5,2009
+City of Edinburgh,Cocaine,1,2009
+City of Edinburgh,Ecstasy,1,2009
+City of Edinburgh,Amphetamines,1,2009
+City of Edinburgh,Alcohol,21,2009
+Eilean Siar,All drug-related deaths,2,2009
+Eilean Siar,Heroin/Morphine,1,2009
+Eilean Siar,Methadone,0,2009
+Eilean Siar,Any Benzodiazepine,1,2009
+Eilean Siar,Diazepam,0,2009
+Eilean Siar,Temazepam,0,2009
+Eilean Siar,Cocaine,0,2009
+Eilean Siar,Ecstasy,0,2009
+Eilean Siar,Amphetamines,0,2009
+Eilean Siar,Alcohol,1,2009
+Falkirk,All drug-related deaths,5,2009
+Falkirk,Heroin/Morphine,3,2009
+Falkirk,Methadone,2,2009
+Falkirk,Any Benzodiazepine,4,2009
+Falkirk,Diazepam,4,2009
+Falkirk,Temazepam,0,2009
+Falkirk,Cocaine,1,2009
+Falkirk,Ecstasy,0,2009
+Falkirk,Amphetamines,0,2009
+Falkirk,Alcohol,2,2009
+Fife,All drug-related deaths,32,2009
+Fife,Heroin/Morphine,19,2009
+Fife,Methadone,8,2009
+Fife,Any Benzodiazepine,17,2009
+Fife,Diazepam,17,2009
+Fife,Temazepam,1,2009
+Fife,Cocaine,0,2009
+Fife,Ecstasy,0,2009
+Fife,Amphetamines,2,2009
+Fife,Alcohol,6,2009
+Glasgow City,All drug-related deaths,135,2009
+Glasgow City,Heroin/Morphine,78,2009
+Glasgow City,Methadone,50,2009
+Glasgow City,Any Benzodiazepine,94,2009
+Glasgow City,Diazepam,88,2009
+Glasgow City,Temazepam,2,2009
+Glasgow City,Cocaine,18,2009
+Glasgow City,Ecstasy,0,2009
+Glasgow City,Amphetamines,6,2009
+Glasgow City,Alcohol,78,2009
+Highland,All drug-related deaths,14,2009
+Highland,Heroin/Morphine,10,2009
+Highland,Methadone,5,2009
+Highland,Any Benzodiazepine,12,2009
+Highland,Diazepam,7,2009
+Highland,Temazepam,1,2009
+Highland,Cocaine,0,2009
+Highland,Ecstasy,0,2009
+Highland,Amphetamines,0,2009
+Highland,Alcohol,9,2009
+Inverclyde,All drug-related deaths,7,2009
+Inverclyde,Heroin/Morphine,5,2009
+Inverclyde,Methadone,2,2009
+Inverclyde,Any Benzodiazepine,5,2009
+Inverclyde,Diazepam,5,2009
+Inverclyde,Temazepam,0,2009
+Inverclyde,Cocaine,1,2009
+Inverclyde,Ecstasy,0,2009
+Inverclyde,Amphetamines,0,2009
+Inverclyde,Alcohol,2,2009
+Midlothian,All drug-related deaths,9,2009
+Midlothian,Heroin/Morphine,3,2009
+Midlothian,Methadone,3,2009
+Midlothian,Any Benzodiazepine,5,2009
+Midlothian,Diazepam,5,2009
+Midlothian,Temazepam,0,2009
+Midlothian,Cocaine,3,2009
+Midlothian,Ecstasy,0,2009
+Midlothian,Amphetamines,0,2009
+Midlothian,Alcohol,2,2009
+Moray,All drug-related deaths,7,2009
+Moray,Heroin/Morphine,3,2009
+Moray,Methadone,3,2009
+Moray,Any Benzodiazepine,7,2009
+Moray,Diazepam,0,2009
+Moray,Temazepam,0,2009
+Moray,Cocaine,1,2009
+Moray,Ecstasy,0,2009
+Moray,Amphetamines,0,2009
+Moray,Alcohol,5,2009
+North Ayrshire,All drug-related deaths,19,2009
+North Ayrshire,Heroin/Morphine,13,2009
+North Ayrshire,Methadone,7,2009
+North Ayrshire,Any Benzodiazepine,14,2009
+North Ayrshire,Diazepam,12,2009
+North Ayrshire,Temazepam,1,2009
+North Ayrshire,Cocaine,1,2009
+North Ayrshire,Ecstasy,1,2009
+North Ayrshire,Amphetamines,0,2009
+North Ayrshire,Alcohol,12,2009
+North Lanarkshire,All drug-related deaths,35,2009
+North Lanarkshire,Heroin/Morphine,27,2009
+North Lanarkshire,Methadone,10,2009
+North Lanarkshire,Any Benzodiazepine,26,2009
+North Lanarkshire,Diazepam,23,2009
+North Lanarkshire,Temazepam,0,2009
+North Lanarkshire,Cocaine,4,2009
+North Lanarkshire,Ecstasy,0,2009
+North Lanarkshire,Amphetamines,2,2009
+North Lanarkshire,Alcohol,20,2009
+Orkney Islands,All drug-related deaths,0,2009
+Orkney Islands,Heroin/Morphine,0,2009
+Orkney Islands,Methadone,0,2009
+Orkney Islands,Any Benzodiazepine,0,2009
+Orkney Islands,Diazepam,0,2009
+Orkney Islands,Temazepam,0,2009
+Orkney Islands,Cocaine,0,2009
+Orkney Islands,Ecstasy,0,2009
+Orkney Islands,Amphetamines,0,2009
+Orkney Islands,Alcohol,0,2009
+Perth and Kinross,All drug-related deaths,5,2009
+Perth and Kinross,Heroin/Morphine,3,2009
+Perth and Kinross,Methadone,1,2009
+Perth and Kinross,Any Benzodiazepine,5,2009
+Perth and Kinross,Diazepam,4,2009
+Perth and Kinross,Temazepam,1,2009
+Perth and Kinross,Cocaine,0,2009
+Perth and Kinross,Ecstasy,0,2009
+Perth and Kinross,Amphetamines,0,2009
+Perth and Kinross,Alcohol,3,2009
+Renfrewshire,All drug-related deaths,26,2009
+Renfrewshire,Heroin/Morphine,19,2009
+Renfrewshire,Methadone,9,2009
+Renfrewshire,Any Benzodiazepine,18,2009
+Renfrewshire,Diazepam,18,2009
+Renfrewshire,Temazepam,0,2009
+Renfrewshire,Cocaine,5,2009
+Renfrewshire,Ecstasy,0,2009
+Renfrewshire,Amphetamines,0,2009
+Renfrewshire,Alcohol,12,2009
+Scottish Borders,All drug-related deaths,5,2009
+Scottish Borders,Heroin/Morphine,2,2009
+Scottish Borders,Methadone,0,2009
+Scottish Borders,Any Benzodiazepine,4,2009
+Scottish Borders,Diazepam,3,2009
+Scottish Borders,Temazepam,0,2009
+Scottish Borders,Cocaine,0,2009
+Scottish Borders,Ecstasy,0,2009
+Scottish Borders,Amphetamines,0,2009
+Scottish Borders,Alcohol,4,2009
+Shetland Islands,All drug-related deaths,0,2009
+Shetland Islands,Heroin/Morphine,0,2009
+Shetland Islands,Methadone,0,2009
+Shetland Islands,Any Benzodiazepine,0,2009
+Shetland Islands,Diazepam,0,2009
+Shetland Islands,Temazepam,0,2009
+Shetland Islands,Cocaine,0,2009
+Shetland Islands,Ecstasy,0,2009
+Shetland Islands,Amphetamines,0,2009
+Shetland Islands,Alcohol,0,2009
+South Ayrshire,All drug-related deaths,8,2009
+South Ayrshire,Heroin/Morphine,4,2009
+South Ayrshire,Methadone,4,2009
+South Ayrshire,Any Benzodiazepine,6,2009
+South Ayrshire,Diazepam,5,2009
+South Ayrshire,Temazepam,0,2009
+South Ayrshire,Cocaine,0,2009
+South Ayrshire,Ecstasy,0,2009
+South Ayrshire,Amphetamines,1,2009
+South Ayrshire,Alcohol,5,2009
+South Lanarkshire,All drug-related deaths,19,2009
+South Lanarkshire,Heroin/Morphine,10,2009
+South Lanarkshire,Methadone,6,2009
+South Lanarkshire,Any Benzodiazepine,14,2009
+South Lanarkshire,Diazepam,14,2009
+South Lanarkshire,Temazepam,0,2009
+South Lanarkshire,Cocaine,3,2009
+South Lanarkshire,Ecstasy,0,2009
+South Lanarkshire,Amphetamines,0,2009
+South Lanarkshire,Alcohol,12,2009
+Stirling,All drug-related deaths,6,2009
+Stirling,Heroin/Morphine,4,2009
+Stirling,Methadone,0,2009
+Stirling,Any Benzodiazepine,4,2009
+Stirling,Diazepam,4,2009
+Stirling,Temazepam,0,2009
+Stirling,Cocaine,0,2009
+Stirling,Ecstasy,0,2009
+Stirling,Amphetamines,0,2009
+Stirling,Alcohol,4,2009
+West Dunbartonshire,All drug-related deaths,13,2009
+West Dunbartonshire,Heroin/Morphine,10,2009
+West Dunbartonshire,Methadone,7,2009
+West Dunbartonshire,Any Benzodiazepine,11,2009
+West Dunbartonshire,Diazepam,11,2009
+West Dunbartonshire,Temazepam,0,2009
+West Dunbartonshire,Cocaine,1,2009
+West Dunbartonshire,Ecstasy,0,2009
+West Dunbartonshire,Amphetamines,0,2009
+West Dunbartonshire,Alcohol,9,2009
+West Lothian,All drug-related deaths,21,2009
+West Lothian,Heroin/Morphine,13,2009
+West Lothian,Methadone,9,2009
+West Lothian,Any Benzodiazepine,16,2009
+West Lothian,Diazepam,16,2009
+West Lothian,Temazepam,4,2009
+West Lothian,Cocaine,1,2009
+West Lothian,Ecstasy,0,2009
+West Lothian,Amphetamines,0,2009
+West Lothian,Alcohol,6,2009
+Scotland,All drug-related deaths,485,2010
+Scotland,Heroin/Morphine,269,2010
+Scotland,Methadone,182,2010
+Scotland,Any Benzodiazepine,324,2010
+Scotland,Diazepam,288,2010
+Scotland,Temazepam,14,2010
+Scotland,Cocaine,50,2010
+Scotland,Ecstasy,1,2010
+Scotland,Amphetamines,9,2010
+Scotland,Alcohol,219,2010
+Aberdeen City,All drug-related deaths,31,2010
+Aberdeen City,Heroin/Morphine,13,2010
+Aberdeen City,Methadone,14,2010
+Aberdeen City,Any Benzodiazepine,26,2010
+Aberdeen City,Diazepam,3,2010
+Aberdeen City,Temazepam,0,2010
+Aberdeen City,Cocaine,9,2010
+Aberdeen City,Ecstasy,0,2010
+Aberdeen City,Amphetamines,0,2010
+Aberdeen City,Alcohol,19,2010
+Aberdeenshire,All drug-related deaths,10,2010
+Aberdeenshire,Heroin/Morphine,1,2010
+Aberdeenshire,Methadone,5,2010
+Aberdeenshire,Any Benzodiazepine,7,2010
+Aberdeenshire,Diazepam,3,2010
+Aberdeenshire,Temazepam,1,2010
+Aberdeenshire,Cocaine,2,2010
+Aberdeenshire,Ecstasy,0,2010
+Aberdeenshire,Amphetamines,0,2010
+Aberdeenshire,Alcohol,7,2010
+Angus,All drug-related deaths,9,2010
+Angus,Heroin/Morphine,6,2010
+Angus,Methadone,0,2010
+Angus,Any Benzodiazepine,1,2010
+Angus,Diazepam,1,2010
+Angus,Temazepam,0,2010
+Angus,Cocaine,0,2010
+Angus,Ecstasy,0,2010
+Angus,Amphetamines,0,2010
+Angus,Alcohol,2,2010
+Argyll and Bute,All drug-related deaths,4,2010
+Argyll and Bute,Heroin/Morphine,2,2010
+Argyll and Bute,Methadone,1,2010
+Argyll and Bute,Any Benzodiazepine,4,2010
+Argyll and Bute,Diazepam,4,2010
+Argyll and Bute,Temazepam,0,2010
+Argyll and Bute,Cocaine,1,2010
+Argyll and Bute,Ecstasy,0,2010
+Argyll and Bute,Amphetamines,0,2010
+Argyll and Bute,Alcohol,3,2010
+Clackmannanshire,All drug-related deaths,1,2010
+Clackmannanshire,Heroin/Morphine,1,2010
+Clackmannanshire,Methadone,0,2010
+Clackmannanshire,Any Benzodiazepine,0,2010
+Clackmannanshire,Diazepam,0,2010
+Clackmannanshire,Temazepam,0,2010
+Clackmannanshire,Cocaine,0,2010
+Clackmannanshire,Ecstasy,0,2010
+Clackmannanshire,Amphetamines,0,2010
+Clackmannanshire,Alcohol,1,2010
+Dumfries and Galloway,All drug-related deaths,6,2010
+Dumfries and Galloway,Heroin/Morphine,3,2010
+Dumfries and Galloway,Methadone,2,2010
+Dumfries and Galloway,Any Benzodiazepine,3,2010
+Dumfries and Galloway,Diazepam,3,2010
+Dumfries and Galloway,Temazepam,0,2010
+Dumfries and Galloway,Cocaine,0,2010
+Dumfries and Galloway,Ecstasy,0,2010
+Dumfries and Galloway,Amphetamines,0,2010
+Dumfries and Galloway,Alcohol,2,2010
+Dundee City,All drug-related deaths,22,2010
+Dundee City,Heroin/Morphine,10,2010
+Dundee City,Methadone,10,2010
+Dundee City,Any Benzodiazepine,9,2010
+Dundee City,Diazepam,9,2010
+Dundee City,Temazepam,0,2010
+Dundee City,Cocaine,0,2010
+Dundee City,Ecstasy,0,2010
+Dundee City,Amphetamines,0,2010
+Dundee City,Alcohol,2,2010
+East Ayrshire,All drug-related deaths,11,2010
+East Ayrshire,Heroin/Morphine,6,2010
+East Ayrshire,Methadone,4,2010
+East Ayrshire,Any Benzodiazepine,10,2010
+East Ayrshire,Diazepam,10,2010
+East Ayrshire,Temazepam,0,2010
+East Ayrshire,Cocaine,1,2010
+East Ayrshire,Ecstasy,0,2010
+East Ayrshire,Amphetamines,1,2010
+East Ayrshire,Alcohol,7,2010
+East Dunbartonshire,All drug-related deaths,6,2010
+East Dunbartonshire,Heroin/Morphine,4,2010
+East Dunbartonshire,Methadone,1,2010
+East Dunbartonshire,Any Benzodiazepine,5,2010
+East Dunbartonshire,Diazepam,5,2010
+East Dunbartonshire,Temazepam,0,2010
+East Dunbartonshire,Cocaine,0,2010
+East Dunbartonshire,Ecstasy,0,2010
+East Dunbartonshire,Amphetamines,0,2010
+East Dunbartonshire,Alcohol,3,2010
+East Lothian,All drug-related deaths,7,2010
+East Lothian,Heroin/Morphine,5,2010
+East Lothian,Methadone,3,2010
+East Lothian,Any Benzodiazepine,5,2010
+East Lothian,Diazepam,5,2010
+East Lothian,Temazepam,1,2010
+East Lothian,Cocaine,0,2010
+East Lothian,Ecstasy,0,2010
+East Lothian,Amphetamines,0,2010
+East Lothian,Alcohol,3,2010
+East Renfrewshire,All drug-related deaths,4,2010
+East Renfrewshire,Heroin/Morphine,4,2010
+East Renfrewshire,Methadone,0,2010
+East Renfrewshire,Any Benzodiazepine,3,2010
+East Renfrewshire,Diazepam,3,2010
+East Renfrewshire,Temazepam,0,2010
+East Renfrewshire,Cocaine,0,2010
+East Renfrewshire,Ecstasy,0,2010
+East Renfrewshire,Amphetamines,0,2010
+East Renfrewshire,Alcohol,3,2010
+City of Edinburgh,All drug-related deaths,47,2010
+City of Edinburgh,Heroin/Morphine,19,2010
+City of Edinburgh,Methadone,23,2010
+City of Edinburgh,Any Benzodiazepine,31,2010
+City of Edinburgh,Diazepam,30,2010
+City of Edinburgh,Temazepam,9,2010
+City of Edinburgh,Cocaine,2,2010
+City of Edinburgh,Ecstasy,0,2010
+City of Edinburgh,Amphetamines,0,2010
+City of Edinburgh,Alcohol,19,2010
+Eilean Siar,All drug-related deaths,1,2010
+Eilean Siar,Heroin/Morphine,0,2010
+Eilean Siar,Methadone,0,2010
+Eilean Siar,Any Benzodiazepine,1,2010
+Eilean Siar,Diazepam,0,2010
+Eilean Siar,Temazepam,0,2010
+Eilean Siar,Cocaine,0,2010
+Eilean Siar,Ecstasy,0,2010
+Eilean Siar,Amphetamines,0,2010
+Eilean Siar,Alcohol,0,2010
+Falkirk,All drug-related deaths,10,2010
+Falkirk,Heroin/Morphine,7,2010
+Falkirk,Methadone,2,2010
+Falkirk,Any Benzodiazepine,6,2010
+Falkirk,Diazepam,6,2010
+Falkirk,Temazepam,0,2010
+Falkirk,Cocaine,1,2010
+Falkirk,Ecstasy,0,2010
+Falkirk,Amphetamines,0,2010
+Falkirk,Alcohol,2,2010
+Fife,All drug-related deaths,35,2010
+Fife,Heroin/Morphine,21,2010
+Fife,Methadone,19,2010
+Fife,Any Benzodiazepine,12,2010
+Fife,Diazepam,12,2010
+Fife,Temazepam,0,2010
+Fife,Cocaine,0,2010
+Fife,Ecstasy,0,2010
+Fife,Amphetamines,1,2010
+Fife,Alcohol,9,2010
+Glasgow City,All drug-related deaths,94,2010
+Glasgow City,Heroin/Morphine,52,2010
+Glasgow City,Methadone,39,2010
+Glasgow City,Any Benzodiazepine,76,2010
+Glasgow City,Diazepam,74,2010
+Glasgow City,Temazepam,0,2010
+Glasgow City,Cocaine,10,2010
+Glasgow City,Ecstasy,0,2010
+Glasgow City,Amphetamines,3,2010
+Glasgow City,Alcohol,50,2010
+Highland,All drug-related deaths,6,2010
+Highland,Heroin/Morphine,5,2010
+Highland,Methadone,0,2010
+Highland,Any Benzodiazepine,4,2010
+Highland,Diazepam,3,2010
+Highland,Temazepam,0,2010
+Highland,Cocaine,2,2010
+Highland,Ecstasy,1,2010
+Highland,Amphetamines,2,2010
+Highland,Alcohol,5,2010
+Inverclyde,All drug-related deaths,17,2010
+Inverclyde,Heroin/Morphine,11,2010
+Inverclyde,Methadone,6,2010
+Inverclyde,Any Benzodiazepine,12,2010
+Inverclyde,Diazepam,12,2010
+Inverclyde,Temazepam,0,2010
+Inverclyde,Cocaine,0,2010
+Inverclyde,Ecstasy,0,2010
+Inverclyde,Amphetamines,0,2010
+Inverclyde,Alcohol,9,2010
+Midlothian,All drug-related deaths,7,2010
+Midlothian,Heroin/Morphine,2,2010
+Midlothian,Methadone,6,2010
+Midlothian,Any Benzodiazepine,4,2010
+Midlothian,Diazepam,4,2010
+Midlothian,Temazepam,0,2010
+Midlothian,Cocaine,0,2010
+Midlothian,Ecstasy,0,2010
+Midlothian,Amphetamines,0,2010
+Midlothian,Alcohol,3,2010
+Moray,All drug-related deaths,3,2010
+Moray,Heroin/Morphine,0,2010
+Moray,Methadone,1,2010
+Moray,Any Benzodiazepine,3,2010
+Moray,Diazepam,1,2010
+Moray,Temazepam,0,2010
+Moray,Cocaine,1,2010
+Moray,Ecstasy,0,2010
+Moray,Amphetamines,0,2010
+Moray,Alcohol,3,2010
+North Ayrshire,All drug-related deaths,12,2010
+North Ayrshire,Heroin/Morphine,10,2010
+North Ayrshire,Methadone,2,2010
+North Ayrshire,Any Benzodiazepine,5,2010
+North Ayrshire,Diazepam,5,2010
+North Ayrshire,Temazepam,0,2010
+North Ayrshire,Cocaine,1,2010
+North Ayrshire,Ecstasy,0,2010
+North Ayrshire,Amphetamines,0,2010
+North Ayrshire,Alcohol,6,2010
+North Lanarkshire,All drug-related deaths,36,2010
+North Lanarkshire,Heroin/Morphine,24,2010
+North Lanarkshire,Methadone,12,2010
+North Lanarkshire,Any Benzodiazepine,22,2010
+North Lanarkshire,Diazepam,22,2010
+North Lanarkshire,Temazepam,0,2010
+North Lanarkshire,Cocaine,6,2010
+North Lanarkshire,Ecstasy,0,2010
+North Lanarkshire,Amphetamines,1,2010
+North Lanarkshire,Alcohol,15,2010
+Orkney Islands,All drug-related deaths,2,2010
+Orkney Islands,Heroin/Morphine,0,2010
+Orkney Islands,Methadone,0,2010
+Orkney Islands,Any Benzodiazepine,0,2010
+Orkney Islands,Diazepam,0,2010
+Orkney Islands,Temazepam,0,2010
+Orkney Islands,Cocaine,0,2010
+Orkney Islands,Ecstasy,0,2010
+Orkney Islands,Amphetamines,0,2010
+Orkney Islands,Alcohol,0,2010
+Perth and Kinross,All drug-related deaths,3,2010
+Perth and Kinross,Heroin/Morphine,2,2010
+Perth and Kinross,Methadone,0,2010
+Perth and Kinross,Any Benzodiazepine,1,2010
+Perth and Kinross,Diazepam,1,2010
+Perth and Kinross,Temazepam,0,2010
+Perth and Kinross,Cocaine,0,2010
+Perth and Kinross,Ecstasy,0,2010
+Perth and Kinross,Amphetamines,0,2010
+Perth and Kinross,Alcohol,0,2010
+Renfrewshire,All drug-related deaths,19,2010
+Renfrewshire,Heroin/Morphine,15,2010
+Renfrewshire,Methadone,6,2010
+Renfrewshire,Any Benzodiazepine,19,2010
+Renfrewshire,Diazepam,19,2010
+Renfrewshire,Temazepam,1,2010
+Renfrewshire,Cocaine,3,2010
+Renfrewshire,Ecstasy,0,2010
+Renfrewshire,Amphetamines,0,2010
+Renfrewshire,Alcohol,6,2010
+Scottish Borders,All drug-related deaths,9,2010
+Scottish Borders,Heroin/Morphine,7,2010
+Scottish Borders,Methadone,1,2010
+Scottish Borders,Any Benzodiazepine,8,2010
+Scottish Borders,Diazepam,8,2010
+Scottish Borders,Temazepam,0,2010
+Scottish Borders,Cocaine,0,2010
+Scottish Borders,Ecstasy,0,2010
+Scottish Borders,Amphetamines,0,2010
+Scottish Borders,Alcohol,5,2010
+Shetland Islands,All drug-related deaths,2,2010
+Shetland Islands,Heroin/Morphine,2,2010
+Shetland Islands,Methadone,0,2010
+Shetland Islands,Any Benzodiazepine,1,2010
+Shetland Islands,Diazepam,0,2010
+Shetland Islands,Temazepam,0,2010
+Shetland Islands,Cocaine,0,2010
+Shetland Islands,Ecstasy,0,2010
+Shetland Islands,Amphetamines,0,2010
+Shetland Islands,Alcohol,1,2010
+South Ayrshire,All drug-related deaths,8,2010
+South Ayrshire,Heroin/Morphine,3,2010
+South Ayrshire,Methadone,5,2010
+South Ayrshire,Any Benzodiazepine,8,2010
+South Ayrshire,Diazepam,8,2010
+South Ayrshire,Temazepam,0,2010
+South Ayrshire,Cocaine,1,2010
+South Ayrshire,Ecstasy,0,2010
+South Ayrshire,Amphetamines,0,2010
+South Ayrshire,Alcohol,2,2010
+South Lanarkshire,All drug-related deaths,26,2010
+South Lanarkshire,Heroin/Morphine,17,2010
+South Lanarkshire,Methadone,8,2010
+South Lanarkshire,Any Benzodiazepine,18,2010
+South Lanarkshire,Diazepam,18,2010
+South Lanarkshire,Temazepam,0,2010
+South Lanarkshire,Cocaine,5,2010
+South Lanarkshire,Ecstasy,0,2010
+South Lanarkshire,Amphetamines,1,2010
+South Lanarkshire,Alcohol,11,2010
+Stirling,All drug-related deaths,7,2010
+Stirling,Heroin/Morphine,5,2010
+Stirling,Methadone,2,2010
+Stirling,Any Benzodiazepine,5,2010
+Stirling,Diazepam,5,2010
+Stirling,Temazepam,0,2010
+Stirling,Cocaine,0,2010
+Stirling,Ecstasy,0,2010
+Stirling,Amphetamines,0,2010
+Stirling,Alcohol,4,2010
+West Dunbartonshire,All drug-related deaths,18,2010
+West Dunbartonshire,Heroin/Morphine,6,2010
+West Dunbartonshire,Methadone,8,2010
+West Dunbartonshire,Any Benzodiazepine,10,2010
+West Dunbartonshire,Diazepam,9,2010
+West Dunbartonshire,Temazepam,1,2010
+West Dunbartonshire,Cocaine,4,2010
+West Dunbartonshire,Ecstasy,0,2010
+West Dunbartonshire,Amphetamines,0,2010
+West Dunbartonshire,Alcohol,10,2010
+West Lothian,All drug-related deaths,12,2010
+West Lothian,Heroin/Morphine,6,2010
+West Lothian,Methadone,2,2010
+West Lothian,Any Benzodiazepine,5,2010
+West Lothian,Diazepam,5,2010
+West Lothian,Temazepam,1,2010
+West Lothian,Cocaine,1,2010
+West Lothian,Ecstasy,0,2010
+West Lothian,Amphetamines,0,2010
+West Lothian,Alcohol,7,2010
+Scotland,All drug-related deaths,584,2011
+Scotland,Heroin/Morphine,225,2011
+Scotland,Methadone,290,2011
+Scotland,Any Benzodiazepine,423,2011
+Scotland,Diazepam,357,2011
+Scotland,Temazepam,30,2011
+Scotland,Cocaine,55,2011
+Scotland,Ecstasy,8,2011
+Scotland,Amphetamines,35,2011
+Scotland,Alcohol,241,2011
+Aberdeen City,All drug-related deaths,29,2011
+Aberdeen City,Heroin/Morphine,7,2011
+Aberdeen City,Methadone,16,2011
+Aberdeen City,Any Benzodiazepine,28,2011
+Aberdeen City,Diazepam,2,2011
+Aberdeen City,Temazepam,0,2011
+Aberdeen City,Cocaine,6,2011
+Aberdeen City,Ecstasy,0,2011
+Aberdeen City,Amphetamines,1,2011
+Aberdeen City,Alcohol,12,2011
+Aberdeenshire,All drug-related deaths,19,2011
+Aberdeenshire,Heroin/Morphine,3,2011
+Aberdeenshire,Methadone,13,2011
+Aberdeenshire,Any Benzodiazepine,13,2011
+Aberdeenshire,Diazepam,4,2011
+Aberdeenshire,Temazepam,0,2011
+Aberdeenshire,Cocaine,4,2011
+Aberdeenshire,Ecstasy,0,2011
+Aberdeenshire,Amphetamines,3,2011
+Aberdeenshire,Alcohol,11,2011
+Angus,All drug-related deaths,8,2011
+Angus,Heroin/Morphine,5,2011
+Angus,Methadone,2,2011
+Angus,Any Benzodiazepine,3,2011
+Angus,Diazepam,3,2011
+Angus,Temazepam,0,2011
+Angus,Cocaine,0,2011
+Angus,Ecstasy,0,2011
+Angus,Amphetamines,0,2011
+Angus,Alcohol,4,2011
+Argyll and Bute,All drug-related deaths,12,2011
+Argyll and Bute,Heroin/Morphine,4,2011
+Argyll and Bute,Methadone,5,2011
+Argyll and Bute,Any Benzodiazepine,6,2011
+Argyll and Bute,Diazepam,6,2011
+Argyll and Bute,Temazepam,0,2011
+Argyll and Bute,Cocaine,0,2011
+Argyll and Bute,Ecstasy,0,2011
+Argyll and Bute,Amphetamines,0,2011
+Argyll and Bute,Alcohol,9,2011
+Clackmannanshire,All drug-related deaths,6,2011
+Clackmannanshire,Heroin/Morphine,0,2011
+Clackmannanshire,Methadone,5,2011
+Clackmannanshire,Any Benzodiazepine,4,2011
+Clackmannanshire,Diazepam,4,2011
+Clackmannanshire,Temazepam,0,2011
+Clackmannanshire,Cocaine,0,2011
+Clackmannanshire,Ecstasy,0,2011
+Clackmannanshire,Amphetamines,2,2011
+Clackmannanshire,Alcohol,1,2011
+Dumfries and Galloway,All drug-related deaths,12,2011
+Dumfries and Galloway,Heroin/Morphine,5,2011
+Dumfries and Galloway,Methadone,7,2011
+Dumfries and Galloway,Any Benzodiazepine,10,2011
+Dumfries and Galloway,Diazepam,8,2011
+Dumfries and Galloway,Temazepam,1,2011
+Dumfries and Galloway,Cocaine,0,2011
+Dumfries and Galloway,Ecstasy,0,2011
+Dumfries and Galloway,Amphetamines,0,2011
+Dumfries and Galloway,Alcohol,2,2011
+Dundee City,All drug-related deaths,32,2011
+Dundee City,Heroin/Morphine,18,2011
+Dundee City,Methadone,19,2011
+Dundee City,Any Benzodiazepine,22,2011
+Dundee City,Diazepam,22,2011
+Dundee City,Temazepam,4,2011
+Dundee City,Cocaine,0,2011
+Dundee City,Ecstasy,0,2011
+Dundee City,Amphetamines,0,2011
+Dundee City,Alcohol,7,2011
+East Ayrshire,All drug-related deaths,17,2011
+East Ayrshire,Heroin/Morphine,9,2011
+East Ayrshire,Methadone,8,2011
+East Ayrshire,Any Benzodiazepine,14,2011
+East Ayrshire,Diazepam,13,2011
+East Ayrshire,Temazepam,0,2011
+East Ayrshire,Cocaine,0,2011
+East Ayrshire,Ecstasy,1,2011
+East Ayrshire,Amphetamines,1,2011
+East Ayrshire,Alcohol,7,2011
+East Dunbartonshire,All drug-related deaths,2,2011
+East Dunbartonshire,Heroin/Morphine,0,2011
+East Dunbartonshire,Methadone,0,2011
+East Dunbartonshire,Any Benzodiazepine,1,2011
+East Dunbartonshire,Diazepam,1,2011
+East Dunbartonshire,Temazepam,0,2011
+East Dunbartonshire,Cocaine,0,2011
+East Dunbartonshire,Ecstasy,0,2011
+East Dunbartonshire,Amphetamines,0,2011
+East Dunbartonshire,Alcohol,1,2011
+East Lothian,All drug-related deaths,8,2011
+East Lothian,Heroin/Morphine,0,2011
+East Lothian,Methadone,5,2011
+East Lothian,Any Benzodiazepine,6,2011
+East Lothian,Diazepam,5,2011
+East Lothian,Temazepam,1,2011
+East Lothian,Cocaine,0,2011
+East Lothian,Ecstasy,0,2011
+East Lothian,Amphetamines,0,2011
+East Lothian,Alcohol,2,2011
+East Renfrewshire,All drug-related deaths,3,2011
+East Renfrewshire,Heroin/Morphine,2,2011
+East Renfrewshire,Methadone,1,2011
+East Renfrewshire,Any Benzodiazepine,2,2011
+East Renfrewshire,Diazepam,2,2011
+East Renfrewshire,Temazepam,0,2011
+East Renfrewshire,Cocaine,0,2011
+East Renfrewshire,Ecstasy,0,2011
+East Renfrewshire,Amphetamines,0,2011
+East Renfrewshire,Alcohol,1,2011
+City of Edinburgh,All drug-related deaths,48,2011
+City of Edinburgh,Heroin/Morphine,10,2011
+City of Edinburgh,Methadone,29,2011
+City of Edinburgh,Any Benzodiazepine,32,2011
+City of Edinburgh,Diazepam,32,2011
+City of Edinburgh,Temazepam,3,2011
+City of Edinburgh,Cocaine,3,2011
+City of Edinburgh,Ecstasy,2,2011
+City of Edinburgh,Amphetamines,3,2011
+City of Edinburgh,Alcohol,20,2011
+Eilean Siar,All drug-related deaths,1,2011
+Eilean Siar,Heroin/Morphine,0,2011
+Eilean Siar,Methadone,0,2011
+Eilean Siar,Any Benzodiazepine,0,2011
+Eilean Siar,Diazepam,0,2011
+Eilean Siar,Temazepam,0,2011
+Eilean Siar,Cocaine,0,2011
+Eilean Siar,Ecstasy,0,2011
+Eilean Siar,Amphetamines,0,2011
+Eilean Siar,Alcohol,0,2011
+Falkirk,All drug-related deaths,11,2011
+Falkirk,Heroin/Morphine,7,2011
+Falkirk,Methadone,3,2011
+Falkirk,Any Benzodiazepine,5,2011
+Falkirk,Diazepam,5,2011
+Falkirk,Temazepam,1,2011
+Falkirk,Cocaine,1,2011
+Falkirk,Ecstasy,0,2011
+Falkirk,Amphetamines,0,2011
+Falkirk,Alcohol,5,2011
+Fife,All drug-related deaths,34,2011
+Fife,Heroin/Morphine,16,2011
+Fife,Methadone,16,2011
+Fife,Any Benzodiazepine,21,2011
+Fife,Diazepam,20,2011
+Fife,Temazepam,7,2011
+Fife,Cocaine,0,2011
+Fife,Ecstasy,0,2011
+Fife,Amphetamines,2,2011
+Fife,Alcohol,11,2011
+Glasgow City,All drug-related deaths,117,2011
+Glasgow City,Heroin/Morphine,54,2011
+Glasgow City,Methadone,61,2011
+Glasgow City,Any Benzodiazepine,91,2011
+Glasgow City,Diazepam,87,2011
+Glasgow City,Temazepam,1,2011
+Glasgow City,Cocaine,19,2011
+Glasgow City,Ecstasy,0,2011
+Glasgow City,Amphetamines,2,2011
+Glasgow City,Alcohol,60,2011
+Highland,All drug-related deaths,21,2011
+Highland,Heroin/Morphine,7,2011
+Highland,Methadone,8,2011
+Highland,Any Benzodiazepine,16,2011
+Highland,Diazepam,13,2011
+Highland,Temazepam,5,2011
+Highland,Cocaine,0,2011
+Highland,Ecstasy,3,2011
+Highland,Amphetamines,6,2011
+Highland,Alcohol,9,2011
+Inverclyde,All drug-related deaths,20,2011
+Inverclyde,Heroin/Morphine,9,2011
+Inverclyde,Methadone,12,2011
+Inverclyde,Any Benzodiazepine,16,2011
+Inverclyde,Diazepam,15,2011
+Inverclyde,Temazepam,0,2011
+Inverclyde,Cocaine,2,2011
+Inverclyde,Ecstasy,0,2011
+Inverclyde,Amphetamines,1,2011
+Inverclyde,Alcohol,7,2011
+Midlothian,All drug-related deaths,4,2011
+Midlothian,Heroin/Morphine,1,2011
+Midlothian,Methadone,2,2011
+Midlothian,Any Benzodiazepine,3,2011
+Midlothian,Diazepam,3,2011
+Midlothian,Temazepam,1,2011
+Midlothian,Cocaine,0,2011
+Midlothian,Ecstasy,0,2011
+Midlothian,Amphetamines,0,2011
+Midlothian,Alcohol,1,2011
+Moray,All drug-related deaths,10,2011
+Moray,Heroin/Morphine,4,2011
+Moray,Methadone,0,2011
+Moray,Any Benzodiazepine,10,2011
+Moray,Diazepam,5,2011
+Moray,Temazepam,1,2011
+Moray,Cocaine,2,2011
+Moray,Ecstasy,0,2011
+Moray,Amphetamines,0,2011
+Moray,Alcohol,5,2011
+North Ayrshire,All drug-related deaths,16,2011
+North Ayrshire,Heroin/Morphine,6,2011
+North Ayrshire,Methadone,13,2011
+North Ayrshire,Any Benzodiazepine,12,2011
+North Ayrshire,Diazepam,12,2011
+North Ayrshire,Temazepam,0,2011
+North Ayrshire,Cocaine,0,2011
+North Ayrshire,Ecstasy,0,2011
+North Ayrshire,Amphetamines,0,2011
+North Ayrshire,Alcohol,5,2011
+North Lanarkshire,All drug-related deaths,27,2011
+North Lanarkshire,Heroin/Morphine,11,2011
+North Lanarkshire,Methadone,9,2011
+North Lanarkshire,Any Benzodiazepine,19,2011
+North Lanarkshire,Diazepam,16,2011
+North Lanarkshire,Temazepam,0,2011
+North Lanarkshire,Cocaine,2,2011
+North Lanarkshire,Ecstasy,0,2011
+North Lanarkshire,Amphetamines,3,2011
+North Lanarkshire,Alcohol,13,2011
+Orkney Islands,All drug-related deaths,0,2011
+Orkney Islands,Heroin/Morphine,0,2011
+Orkney Islands,Methadone,0,2011
+Orkney Islands,Any Benzodiazepine,0,2011
+Orkney Islands,Diazepam,0,2011
+Orkney Islands,Temazepam,0,2011
+Orkney Islands,Cocaine,0,2011
+Orkney Islands,Ecstasy,0,2011
+Orkney Islands,Amphetamines,0,2011
+Orkney Islands,Alcohol,0,2011
+Perth and Kinross,All drug-related deaths,5,2011
+Perth and Kinross,Heroin/Morphine,2,2011
+Perth and Kinross,Methadone,1,2011
+Perth and Kinross,Any Benzodiazepine,3,2011
+Perth and Kinross,Diazepam,3,2011
+Perth and Kinross,Temazepam,0,2011
+Perth and Kinross,Cocaine,1,2011
+Perth and Kinross,Ecstasy,0,2011
+Perth and Kinross,Amphetamines,0,2011
+Perth and Kinross,Alcohol,0,2011
+Renfrewshire,All drug-related deaths,24,2011
+Renfrewshire,Heroin/Morphine,13,2011
+Renfrewshire,Methadone,12,2011
+Renfrewshire,Any Benzodiazepine,21,2011
+Renfrewshire,Diazepam,20,2011
+Renfrewshire,Temazepam,0,2011
+Renfrewshire,Cocaine,5,2011
+Renfrewshire,Ecstasy,0,2011
+Renfrewshire,Amphetamines,0,2011
+Renfrewshire,Alcohol,10,2011
+Scottish Borders,All drug-related deaths,8,2011
+Scottish Borders,Heroin/Morphine,3,2011
+Scottish Borders,Methadone,4,2011
+Scottish Borders,Any Benzodiazepine,5,2011
+Scottish Borders,Diazepam,4,2011
+Scottish Borders,Temazepam,0,2011
+Scottish Borders,Cocaine,2,2011
+Scottish Borders,Ecstasy,0,2011
+Scottish Borders,Amphetamines,1,2011
+Scottish Borders,Alcohol,4,2011
+Shetland Islands,All drug-related deaths,3,2011
+Shetland Islands,Heroin/Morphine,0,2011
+Shetland Islands,Methadone,1,2011
+Shetland Islands,Any Benzodiazepine,2,2011
+Shetland Islands,Diazepam,0,2011
+Shetland Islands,Temazepam,0,2011
+Shetland Islands,Cocaine,1,2011
+Shetland Islands,Ecstasy,0,2011
+Shetland Islands,Amphetamines,0,2011
+Shetland Islands,Alcohol,0,2011
+South Ayrshire,All drug-related deaths,14,2011
+South Ayrshire,Heroin/Morphine,4,2011
+South Ayrshire,Methadone,8,2011
+South Ayrshire,Any Benzodiazepine,12,2011
+South Ayrshire,Diazepam,9,2011
+South Ayrshire,Temazepam,0,2011
+South Ayrshire,Cocaine,2,2011
+South Ayrshire,Ecstasy,1,2011
+South Ayrshire,Amphetamines,4,2011
+South Ayrshire,Alcohol,3,2011
+South Lanarkshire,All drug-related deaths,34,2011
+South Lanarkshire,Heroin/Morphine,11,2011
+South Lanarkshire,Methadone,16,2011
+South Lanarkshire,Any Benzodiazepine,23,2011
+South Lanarkshire,Diazepam,20,2011
+South Lanarkshire,Temazepam,3,2011
+South Lanarkshire,Cocaine,4,2011
+South Lanarkshire,Ecstasy,1,2011
+South Lanarkshire,Amphetamines,2,2011
+South Lanarkshire,Alcohol,14,2011
+Stirling,All drug-related deaths,9,2011
+Stirling,Heroin/Morphine,3,2011
+Stirling,Methadone,2,2011
+Stirling,Any Benzodiazepine,3,2011
+Stirling,Diazepam,3,2011
+Stirling,Temazepam,0,2011
+Stirling,Cocaine,0,2011
+Stirling,Ecstasy,0,2011
+Stirling,Amphetamines,2,2011
+Stirling,Alcohol,1,2011
+West Dunbartonshire,All drug-related deaths,17,2011
+West Dunbartonshire,Heroin/Morphine,8,2011
+West Dunbartonshire,Methadone,6,2011
+West Dunbartonshire,Any Benzodiazepine,13,2011
+West Dunbartonshire,Diazepam,13,2011
+West Dunbartonshire,Temazepam,1,2011
+West Dunbartonshire,Cocaine,1,2011
+West Dunbartonshire,Ecstasy,0,2011
+West Dunbartonshire,Amphetamines,1,2011
+West Dunbartonshire,Alcohol,9,2011
+West Lothian,All drug-related deaths,13,2011
+West Lothian,Heroin/Morphine,3,2011
+West Lothian,Methadone,6,2011
+West Lothian,Any Benzodiazepine,7,2011
+West Lothian,Diazepam,7,2011
+West Lothian,Temazepam,1,2011
+West Lothian,Cocaine,0,2011
+West Lothian,Ecstasy,0,2011
+West Lothian,Amphetamines,1,2011
+West Lothian,Alcohol,7,2011
+Scotland,All drug-related deaths,581,2012
+Scotland,Heroin/Morphine,243,2012
+Scotland,Methadone,253,2012
+Scotland,Any Benzodiazepine,419,2012
+Scotland,Diazepam,386,2012
+Scotland,Temazepam,15,2012
+Scotland,Cocaine,48,2012
+Scotland,Ecstasy,9,2012
+Scotland,Amphetamines,25,2012
+Scotland,Alcohol,241,2012
+Aberdeen City,All drug-related deaths,16,2012
+Aberdeen City,Heroin/Morphine,4,2012
+Aberdeen City,Methadone,8,2012
+Aberdeen City,Any Benzodiazepine,13,2012
+Aberdeen City,Diazepam,11,2012
+Aberdeen City,Temazepam,0,2012
+Aberdeen City,Cocaine,4,2012
+Aberdeen City,Ecstasy,1,2012
+Aberdeen City,Amphetamines,0,2012
+Aberdeen City,Alcohol,11,2012
+Aberdeenshire,All drug-related deaths,9,2012
+Aberdeenshire,Heroin/Morphine,4,2012
+Aberdeenshire,Methadone,4,2012
+Aberdeenshire,Any Benzodiazepine,7,2012
+Aberdeenshire,Diazepam,6,2012
+Aberdeenshire,Temazepam,0,2012
+Aberdeenshire,Cocaine,2,2012
+Aberdeenshire,Ecstasy,1,2012
+Aberdeenshire,Amphetamines,0,2012
+Aberdeenshire,Alcohol,2,2012
+Angus,All drug-related deaths,8,2012
+Angus,Heroin/Morphine,5,2012
+Angus,Methadone,2,2012
+Angus,Any Benzodiazepine,6,2012
+Angus,Diazepam,6,2012
+Angus,Temazepam,0,2012
+Angus,Cocaine,0,2012
+Angus,Ecstasy,0,2012
+Angus,Amphetamines,1,2012
+Angus,Alcohol,4,2012
+Argyll and Bute,All drug-related deaths,7,2012
+Argyll and Bute,Heroin/Morphine,4,2012
+Argyll and Bute,Methadone,1,2012
+Argyll and Bute,Any Benzodiazepine,6,2012
+Argyll and Bute,Diazepam,6,2012
+Argyll and Bute,Temazepam,0,2012
+Argyll and Bute,Cocaine,0,2012
+Argyll and Bute,Ecstasy,0,2012
+Argyll and Bute,Amphetamines,0,2012
+Argyll and Bute,Alcohol,2,2012
+Clackmannanshire,All drug-related deaths,11,2012
+Clackmannanshire,Heroin/Morphine,5,2012
+Clackmannanshire,Methadone,4,2012
+Clackmannanshire,Any Benzodiazepine,7,2012
+Clackmannanshire,Diazepam,7,2012
+Clackmannanshire,Temazepam,0,2012
+Clackmannanshire,Cocaine,0,2012
+Clackmannanshire,Ecstasy,0,2012
+Clackmannanshire,Amphetamines,1,2012
+Clackmannanshire,Alcohol,4,2012
+Dumfries and Galloway,All drug-related deaths,6,2012
+Dumfries and Galloway,Heroin/Morphine,4,2012
+Dumfries and Galloway,Methadone,4,2012
+Dumfries and Galloway,Any Benzodiazepine,5,2012
+Dumfries and Galloway,Diazepam,5,2012
+Dumfries and Galloway,Temazepam,0,2012
+Dumfries and Galloway,Cocaine,0,2012
+Dumfries and Galloway,Ecstasy,1,2012
+Dumfries and Galloway,Amphetamines,0,2012
+Dumfries and Galloway,Alcohol,2,2012
+Dundee City,All drug-related deaths,39,2012
+Dundee City,Heroin/Morphine,20,2012
+Dundee City,Methadone,20,2012
+Dundee City,Any Benzodiazepine,31,2012
+Dundee City,Diazepam,30,2012
+Dundee City,Temazepam,0,2012
+Dundee City,Cocaine,1,2012
+Dundee City,Ecstasy,1,2012
+Dundee City,Amphetamines,1,2012
+Dundee City,Alcohol,6,2012
+East Ayrshire,All drug-related deaths,15,2012
+East Ayrshire,Heroin/Morphine,6,2012
+East Ayrshire,Methadone,9,2012
+East Ayrshire,Any Benzodiazepine,13,2012
+East Ayrshire,Diazepam,11,2012
+East Ayrshire,Temazepam,0,2012
+East Ayrshire,Cocaine,2,2012
+East Ayrshire,Ecstasy,0,2012
+East Ayrshire,Amphetamines,1,2012
+East Ayrshire,Alcohol,6,2012
+East Dunbartonshire,All drug-related deaths,4,2012
+East Dunbartonshire,Heroin/Morphine,1,2012
+East Dunbartonshire,Methadone,1,2012
+East Dunbartonshire,Any Benzodiazepine,3,2012
+East Dunbartonshire,Diazepam,2,2012
+East Dunbartonshire,Temazepam,1,2012
+East Dunbartonshire,Cocaine,1,2012
+East Dunbartonshire,Ecstasy,0,2012
+East Dunbartonshire,Amphetamines,0,2012
+East Dunbartonshire,Alcohol,1,2012
+East Lothian,All drug-related deaths,6,2012
+East Lothian,Heroin/Morphine,2,2012
+East Lothian,Methadone,3,2012
+East Lothian,Any Benzodiazepine,4,2012
+East Lothian,Diazepam,4,2012
+East Lothian,Temazepam,1,2012
+East Lothian,Cocaine,0,2012
+East Lothian,Ecstasy,0,2012
+East Lothian,Amphetamines,1,2012
+East Lothian,Alcohol,4,2012
+East Renfrewshire,All drug-related deaths,4,2012
+East Renfrewshire,Heroin/Morphine,2,2012
+East Renfrewshire,Methadone,1,2012
+East Renfrewshire,Any Benzodiazepine,3,2012
+East Renfrewshire,Diazepam,3,2012
+East Renfrewshire,Temazepam,0,2012
+East Renfrewshire,Cocaine,0,2012
+East Renfrewshire,Ecstasy,0,2012
+East Renfrewshire,Amphetamines,1,2012
+East Renfrewshire,Alcohol,3,2012
+City of Edinburgh,All drug-related deaths,57,2012
+City of Edinburgh,Heroin/Morphine,12,2012
+City of Edinburgh,Methadone,27,2012
+City of Edinburgh,Any Benzodiazepine,37,2012
+City of Edinburgh,Diazepam,34,2012
+City of Edinburgh,Temazepam,4,2012
+City of Edinburgh,Cocaine,1,2012
+City of Edinburgh,Ecstasy,1,2012
+City of Edinburgh,Amphetamines,1,2012
+City of Edinburgh,Alcohol,27,2012
+Eilean Siar,All drug-related deaths,1,2012
+Eilean Siar,Heroin/Morphine,0,2012
+Eilean Siar,Methadone,0,2012
+Eilean Siar,Any Benzodiazepine,0,2012
+Eilean Siar,Diazepam,0,2012
+Eilean Siar,Temazepam,0,2012
+Eilean Siar,Cocaine,0,2012
+Eilean Siar,Ecstasy,0,2012
+Eilean Siar,Amphetamines,0,2012
+Eilean Siar,Alcohol,0,2012
+Falkirk,All drug-related deaths,14,2012
+Falkirk,Heroin/Morphine,8,2012
+Falkirk,Methadone,4,2012
+Falkirk,Any Benzodiazepine,9,2012
+Falkirk,Diazepam,8,2012
+Falkirk,Temazepam,1,2012
+Falkirk,Cocaine,2,2012
+Falkirk,Ecstasy,1,2012
+Falkirk,Amphetamines,0,2012
+Falkirk,Alcohol,6,2012
+Fife,All drug-related deaths,38,2012
+Fife,Heroin/Morphine,14,2012
+Fife,Methadone,16,2012
+Fife,Any Benzodiazepine,28,2012
+Fife,Diazepam,27,2012
+Fife,Temazepam,1,2012
+Fife,Cocaine,3,2012
+Fife,Ecstasy,1,2012
+Fife,Amphetamines,2,2012
+Fife,Alcohol,6,2012
+Glasgow City,All drug-related deaths,121,2012
+Glasgow City,Heroin/Morphine,57,2012
+Glasgow City,Methadone,52,2012
+Glasgow City,Any Benzodiazepine,83,2012
+Glasgow City,Diazepam,74,2012
+Glasgow City,Temazepam,1,2012
+Glasgow City,Cocaine,14,2012
+Glasgow City,Ecstasy,1,2012
+Glasgow City,Amphetamines,6,2012
+Glasgow City,Alcohol,55,2012
+Highland,All drug-related deaths,15,2012
+Highland,Heroin/Morphine,6,2012
+Highland,Methadone,3,2012
+Highland,Any Benzodiazepine,10,2012
+Highland,Diazepam,4,2012
+Highland,Temazepam,1,2012
+Highland,Cocaine,0,2012
+Highland,Ecstasy,0,2012
+Highland,Amphetamines,0,2012
+Highland,Alcohol,6,2012
+Inverclyde,All drug-related deaths,13,2012
+Inverclyde,Heroin/Morphine,8,2012
+Inverclyde,Methadone,6,2012
+Inverclyde,Any Benzodiazepine,11,2012
+Inverclyde,Diazepam,11,2012
+Inverclyde,Temazepam,0,2012
+Inverclyde,Cocaine,1,2012
+Inverclyde,Ecstasy,0,2012
+Inverclyde,Amphetamines,0,2012
+Inverclyde,Alcohol,5,2012
+Midlothian,All drug-related deaths,8,2012
+Midlothian,Heroin/Morphine,0,2012
+Midlothian,Methadone,7,2012
+Midlothian,Any Benzodiazepine,8,2012
+Midlothian,Diazepam,8,2012
+Midlothian,Temazepam,1,2012
+Midlothian,Cocaine,0,2012
+Midlothian,Ecstasy,0,2012
+Midlothian,Amphetamines,3,2012
+Midlothian,Alcohol,5,2012
+Moray,All drug-related deaths,6,2012
+Moray,Heroin/Morphine,4,2012
+Moray,Methadone,3,2012
+Moray,Any Benzodiazepine,5,2012
+Moray,Diazepam,5,2012
+Moray,Temazepam,0,2012
+Moray,Cocaine,0,2012
+Moray,Ecstasy,0,2012
+Moray,Amphetamines,0,2012
+Moray,Alcohol,2,2012
+North Ayrshire,All drug-related deaths,19,2012
+North Ayrshire,Heroin/Morphine,10,2012
+North Ayrshire,Methadone,11,2012
+North Ayrshire,Any Benzodiazepine,13,2012
+North Ayrshire,Diazepam,12,2012
+North Ayrshire,Temazepam,0,2012
+North Ayrshire,Cocaine,2,2012
+North Ayrshire,Ecstasy,0,2012
+North Ayrshire,Amphetamines,1,2012
+North Ayrshire,Alcohol,10,2012
+North Lanarkshire,All drug-related deaths,38,2012
+North Lanarkshire,Heroin/Morphine,13,2012
+North Lanarkshire,Methadone,9,2012
+North Lanarkshire,Any Benzodiazepine,29,2012
+North Lanarkshire,Diazepam,26,2012
+North Lanarkshire,Temazepam,1,2012
+North Lanarkshire,Cocaine,7,2012
+North Lanarkshire,Ecstasy,0,2012
+North Lanarkshire,Amphetamines,0,2012
+North Lanarkshire,Alcohol,19,2012
+Orkney Islands,All drug-related deaths,1,2012
+Orkney Islands,Heroin/Morphine,0,2012
+Orkney Islands,Methadone,0,2012
+Orkney Islands,Any Benzodiazepine,0,2012
+Orkney Islands,Diazepam,0,2012
+Orkney Islands,Temazepam,0,2012
+Orkney Islands,Cocaine,0,2012
+Orkney Islands,Ecstasy,0,2012
+Orkney Islands,Amphetamines,0,2012
+Orkney Islands,Alcohol,0,2012
+Perth and Kinross,All drug-related deaths,8,2012
+Perth and Kinross,Heroin/Morphine,4,2012
+Perth and Kinross,Methadone,2,2012
+Perth and Kinross,Any Benzodiazepine,7,2012
+Perth and Kinross,Diazepam,7,2012
+Perth and Kinross,Temazepam,0,2012
+Perth and Kinross,Cocaine,0,2012
+Perth and Kinross,Ecstasy,0,2012
+Perth and Kinross,Amphetamines,0,2012
+Perth and Kinross,Alcohol,3,2012
+Renfrewshire,All drug-related deaths,26,2012
+Renfrewshire,Heroin/Morphine,14,2012
+Renfrewshire,Methadone,14,2012
+Renfrewshire,Any Benzodiazepine,18,2012
+Renfrewshire,Diazepam,18,2012
+Renfrewshire,Temazepam,0,2012
+Renfrewshire,Cocaine,1,2012
+Renfrewshire,Ecstasy,0,2012
+Renfrewshire,Amphetamines,0,2012
+Renfrewshire,Alcohol,12,2012
+Scottish Borders,All drug-related deaths,7,2012
+Scottish Borders,Heroin/Morphine,2,2012
+Scottish Borders,Methadone,0,2012
+Scottish Borders,Any Benzodiazepine,3,2012
+Scottish Borders,Diazepam,3,2012
+Scottish Borders,Temazepam,1,2012
+Scottish Borders,Cocaine,1,2012
+Scottish Borders,Ecstasy,0,2012
+Scottish Borders,Amphetamines,2,2012
+Scottish Borders,Alcohol,3,2012
+Shetland Islands,All drug-related deaths,2,2012
+Shetland Islands,Heroin/Morphine,0,2012
+Shetland Islands,Methadone,1,2012
+Shetland Islands,Any Benzodiazepine,1,2012
+Shetland Islands,Diazepam,1,2012
+Shetland Islands,Temazepam,0,2012
+Shetland Islands,Cocaine,0,2012
+Shetland Islands,Ecstasy,0,2012
+Shetland Islands,Amphetamines,0,2012
+Shetland Islands,Alcohol,1,2012
+South Ayrshire,All drug-related deaths,9,2012
+South Ayrshire,Heroin/Morphine,4,2012
+South Ayrshire,Methadone,6,2012
+South Ayrshire,Any Benzodiazepine,7,2012
+South Ayrshire,Diazepam,7,2012
+South Ayrshire,Temazepam,0,2012
+South Ayrshire,Cocaine,1,2012
+South Ayrshire,Ecstasy,0,2012
+South Ayrshire,Amphetamines,1,2012
+South Ayrshire,Alcohol,3,2012
+South Lanarkshire,All drug-related deaths,29,2012
+South Lanarkshire,Heroin/Morphine,12,2012
+South Lanarkshire,Methadone,11,2012
+South Lanarkshire,Any Benzodiazepine,18,2012
+South Lanarkshire,Diazepam,17,2012
+South Lanarkshire,Temazepam,0,2012
+South Lanarkshire,Cocaine,4,2012
+South Lanarkshire,Ecstasy,1,2012
+South Lanarkshire,Amphetamines,0,2012
+South Lanarkshire,Alcohol,16,2012
+Stirling,All drug-related deaths,6,2012
+Stirling,Heroin/Morphine,5,2012
+Stirling,Methadone,2,2012
+Stirling,Any Benzodiazepine,5,2012
+Stirling,Diazepam,5,2012
+Stirling,Temazepam,0,2012
+Stirling,Cocaine,0,2012
+Stirling,Ecstasy,0,2012
+Stirling,Amphetamines,0,2012
+Stirling,Alcohol,2,2012
+West Dunbartonshire,All drug-related deaths,19,2012
+West Dunbartonshire,Heroin/Morphine,8,2012
+West Dunbartonshire,Methadone,11,2012
+West Dunbartonshire,Any Benzodiazepine,16,2012
+West Dunbartonshire,Diazepam,16,2012
+West Dunbartonshire,Temazepam,0,2012
+West Dunbartonshire,Cocaine,0,2012
+West Dunbartonshire,Ecstasy,0,2012
+West Dunbartonshire,Amphetamines,0,2012
+West Dunbartonshire,Alcohol,8,2012
+West Lothian,All drug-related deaths,19,2012
+West Lothian,Heroin/Morphine,5,2012
+West Lothian,Methadone,11,2012
+West Lothian,Any Benzodiazepine,13,2012
+West Lothian,Diazepam,12,2012
+West Lothian,Temazepam,2,2012
+West Lothian,Cocaine,1,2012
+West Lothian,Ecstasy,0,2012
+West Lothian,Amphetamines,3,2012
+West Lothian,Alcohol,7,2012
+Scotland,All drug-related deaths,526,2013
+Scotland,Heroin/Morphine,234,2013
+Scotland,Methadone,236,2013
+Scotland,Any Benzodiazepine,377,2013
+Scotland,Diazepam,316,2013
+Scotland,Temazepam,8,2013
+Scotland,Cocaine,65,2013
+Scotland,Ecstasy,19,2013
+Scotland,Amphetamines,37,2013
+Scotland,Alcohol,220,2013
+Aberdeen City,All drug-related deaths,24,2013
+Aberdeen City,Heroin/Morphine,6,2013
+Aberdeen City,Methadone,15,2013
+Aberdeen City,Any Benzodiazepine,20,2013
+Aberdeen City,Diazepam,11,2013
+Aberdeen City,Temazepam,1,2013
+Aberdeen City,Cocaine,7,2013
+Aberdeen City,Ecstasy,0,2013
+Aberdeen City,Amphetamines,0,2013
+Aberdeen City,Alcohol,9,2013
+Aberdeenshire,All drug-related deaths,21,2013
+Aberdeenshire,Heroin/Morphine,10,2013
+Aberdeenshire,Methadone,10,2013
+Aberdeenshire,Any Benzodiazepine,15,2013
+Aberdeenshire,Diazepam,9,2013
+Aberdeenshire,Temazepam,0,2013
+Aberdeenshire,Cocaine,4,2013
+Aberdeenshire,Ecstasy,0,2013
+Aberdeenshire,Amphetamines,2,2013
+Aberdeenshire,Alcohol,5,2013
+Angus,All drug-related deaths,10,2013
+Angus,Heroin/Morphine,9,2013
+Angus,Methadone,4,2013
+Angus,Any Benzodiazepine,8,2013
+Angus,Diazepam,4,2013
+Angus,Temazepam,0,2013
+Angus,Cocaine,0,2013
+Angus,Ecstasy,0,2013
+Angus,Amphetamines,0,2013
+Angus,Alcohol,3,2013
+Argyll and Bute,All drug-related deaths,5,2013
+Argyll and Bute,Heroin/Morphine,2,2013
+Argyll and Bute,Methadone,1,2013
+Argyll and Bute,Any Benzodiazepine,2,2013
+Argyll and Bute,Diazepam,2,2013
+Argyll and Bute,Temazepam,0,2013
+Argyll and Bute,Cocaine,0,2013
+Argyll and Bute,Ecstasy,1,2013
+Argyll and Bute,Amphetamines,1,2013
+Argyll and Bute,Alcohol,1,2013
+Clackmannanshire,All drug-related deaths,7,2013
+Clackmannanshire,Heroin/Morphine,4,2013
+Clackmannanshire,Methadone,3,2013
+Clackmannanshire,Any Benzodiazepine,5,2013
+Clackmannanshire,Diazepam,5,2013
+Clackmannanshire,Temazepam,0,2013
+Clackmannanshire,Cocaine,0,2013
+Clackmannanshire,Ecstasy,0,2013
+Clackmannanshire,Amphetamines,0,2013
+Clackmannanshire,Alcohol,3,2013
+Dumfries and Galloway,All drug-related deaths,9,2013
+Dumfries and Galloway,Heroin/Morphine,6,2013
+Dumfries and Galloway,Methadone,4,2013
+Dumfries and Galloway,Any Benzodiazepine,7,2013
+Dumfries and Galloway,Diazepam,6,2013
+Dumfries and Galloway,Temazepam,0,2013
+Dumfries and Galloway,Cocaine,2,2013
+Dumfries and Galloway,Ecstasy,0,2013
+Dumfries and Galloway,Amphetamines,1,2013
+Dumfries and Galloway,Alcohol,5,2013
+Dundee City,All drug-related deaths,23,2013
+Dundee City,Heroin/Morphine,9,2013
+Dundee City,Methadone,15,2013
+Dundee City,Any Benzodiazepine,19,2013
+Dundee City,Diazepam,15,2013
+Dundee City,Temazepam,0,2013
+Dundee City,Cocaine,2,2013
+Dundee City,Ecstasy,0,2013
+Dundee City,Amphetamines,1,2013
+Dundee City,Alcohol,5,2013
+East Ayrshire,All drug-related deaths,12,2013
+East Ayrshire,Heroin/Morphine,4,2013
+East Ayrshire,Methadone,9,2013
+East Ayrshire,Any Benzodiazepine,7,2013
+East Ayrshire,Diazepam,5,2013
+East Ayrshire,Temazepam,1,2013
+East Ayrshire,Cocaine,3,2013
+East Ayrshire,Ecstasy,1,2013
+East Ayrshire,Amphetamines,2,2013
+East Ayrshire,Alcohol,2,2013
+East Dunbartonshire,All drug-related deaths,1,2013
+East Dunbartonshire,Heroin/Morphine,0,2013
+East Dunbartonshire,Methadone,0,2013
+East Dunbartonshire,Any Benzodiazepine,0,2013
+East Dunbartonshire,Diazepam,0,2013
+East Dunbartonshire,Temazepam,0,2013
+East Dunbartonshire,Cocaine,0,2013
+East Dunbartonshire,Ecstasy,0,2013
+East Dunbartonshire,Amphetamines,0,2013
+East Dunbartonshire,Alcohol,1,2013
+East Lothian,All drug-related deaths,8,2013
+East Lothian,Heroin/Morphine,2,2013
+East Lothian,Methadone,5,2013
+East Lothian,Any Benzodiazepine,5,2013
+East Lothian,Diazepam,5,2013
+East Lothian,Temazepam,1,2013
+East Lothian,Cocaine,0,2013
+East Lothian,Ecstasy,0,2013
+East Lothian,Amphetamines,2,2013
+East Lothian,Alcohol,2,2013
+East Renfrewshire,All drug-related deaths,3,2013
+East Renfrewshire,Heroin/Morphine,2,2013
+East Renfrewshire,Methadone,2,2013
+East Renfrewshire,Any Benzodiazepine,2,2013
+East Renfrewshire,Diazepam,2,2013
+East Renfrewshire,Temazepam,0,2013
+East Renfrewshire,Cocaine,0,2013
+East Renfrewshire,Ecstasy,0,2013
+East Renfrewshire,Amphetamines,0,2013
+East Renfrewshire,Alcohol,1,2013
+City of Edinburgh,All drug-related deaths,64,2013
+City of Edinburgh,Heroin/Morphine,25,2013
+City of Edinburgh,Methadone,33,2013
+City of Edinburgh,Any Benzodiazepine,53,2013
+City of Edinburgh,Diazepam,53,2013
+City of Edinburgh,Temazepam,3,2013
+City of Edinburgh,Cocaine,5,2013
+City of Edinburgh,Ecstasy,3,2013
+City of Edinburgh,Amphetamines,6,2013
+City of Edinburgh,Alcohol,33,2013
+Eilean Siar,All drug-related deaths,2,2013
+Eilean Siar,Heroin/Morphine,1,2013
+Eilean Siar,Methadone,1,2013
+Eilean Siar,Any Benzodiazepine,2,2013
+Eilean Siar,Diazepam,2,2013
+Eilean Siar,Temazepam,0,2013
+Eilean Siar,Cocaine,0,2013
+Eilean Siar,Ecstasy,0,2013
+Eilean Siar,Amphetamines,0,2013
+Eilean Siar,Alcohol,0,2013
+Falkirk,All drug-related deaths,11,2013
+Falkirk,Heroin/Morphine,5,2013
+Falkirk,Methadone,4,2013
+Falkirk,Any Benzodiazepine,8,2013
+Falkirk,Diazepam,7,2013
+Falkirk,Temazepam,1,2013
+Falkirk,Cocaine,3,2013
+Falkirk,Ecstasy,1,2013
+Falkirk,Amphetamines,1,2013
+Falkirk,Alcohol,6,2013
+Fife,All drug-related deaths,39,2013
+Fife,Heroin/Morphine,26,2013
+Fife,Methadone,13,2013
+Fife,Any Benzodiazepine,30,2013
+Fife,Diazepam,28,2013
+Fife,Temazepam,0,2013
+Fife,Cocaine,1,2013
+Fife,Ecstasy,2,2013
+Fife,Amphetamines,2,2013
+Fife,Alcohol,18,2013
+Glasgow City,All drug-related deaths,103,2013
+Glasgow City,Heroin/Morphine,42,2013
+Glasgow City,Methadone,43,2013
+Glasgow City,Any Benzodiazepine,67,2013
+Glasgow City,Diazepam,59,2013
+Glasgow City,Temazepam,0,2013
+Glasgow City,Cocaine,20,2013
+Glasgow City,Ecstasy,5,2013
+Glasgow City,Amphetamines,10,2013
+Glasgow City,Alcohol,46,2013
+Highland,All drug-related deaths,13,2013
+Highland,Heroin/Morphine,6,2013
+Highland,Methadone,6,2013
+Highland,Any Benzodiazepine,11,2013
+Highland,Diazepam,9,2013
+Highland,Temazepam,0,2013
+Highland,Cocaine,0,2013
+Highland,Ecstasy,0,2013
+Highland,Amphetamines,0,2013
+Highland,Alcohol,8,2013
+Inverclyde,All drug-related deaths,10,2013
+Inverclyde,Heroin/Morphine,5,2013
+Inverclyde,Methadone,5,2013
+Inverclyde,Any Benzodiazepine,6,2013
+Inverclyde,Diazepam,4,2013
+Inverclyde,Temazepam,0,2013
+Inverclyde,Cocaine,2,2013
+Inverclyde,Ecstasy,0,2013
+Inverclyde,Amphetamines,0,2013
+Inverclyde,Alcohol,4,2013
+Midlothian,All drug-related deaths,8,2013
+Midlothian,Heroin/Morphine,2,2013
+Midlothian,Methadone,4,2013
+Midlothian,Any Benzodiazepine,4,2013
+Midlothian,Diazepam,4,2013
+Midlothian,Temazepam,0,2013
+Midlothian,Cocaine,2,2013
+Midlothian,Ecstasy,0,2013
+Midlothian,Amphetamines,0,2013
+Midlothian,Alcohol,2,2013
+Moray,All drug-related deaths,5,2013
+Moray,Heroin/Morphine,2,2013
+Moray,Methadone,1,2013
+Moray,Any Benzodiazepine,3,2013
+Moray,Diazepam,2,2013
+Moray,Temazepam,0,2013
+Moray,Cocaine,0,2013
+Moray,Ecstasy,0,2013
+Moray,Amphetamines,0,2013
+Moray,Alcohol,3,2013
+North Ayrshire,All drug-related deaths,11,2013
+North Ayrshire,Heroin/Morphine,3,2013
+North Ayrshire,Methadone,6,2013
+North Ayrshire,Any Benzodiazepine,8,2013
+North Ayrshire,Diazepam,7,2013
+North Ayrshire,Temazepam,0,2013
+North Ayrshire,Cocaine,3,2013
+North Ayrshire,Ecstasy,1,2013
+North Ayrshire,Amphetamines,0,2013
+North Ayrshire,Alcohol,5,2013
+North Lanarkshire,All drug-related deaths,38,2013
+North Lanarkshire,Heroin/Morphine,23,2013
+North Lanarkshire,Methadone,11,2013
+North Lanarkshire,Any Benzodiazepine,25,2013
+North Lanarkshire,Diazepam,22,2013
+North Lanarkshire,Temazepam,0,2013
+North Lanarkshire,Cocaine,5,2013
+North Lanarkshire,Ecstasy,0,2013
+North Lanarkshire,Amphetamines,2,2013
+North Lanarkshire,Alcohol,17,2013
+Orkney Islands,All drug-related deaths,1,2013
+Orkney Islands,Heroin/Morphine,1,2013
+Orkney Islands,Methadone,0,2013
+Orkney Islands,Any Benzodiazepine,1,2013
+Orkney Islands,Diazepam,1,2013
+Orkney Islands,Temazepam,0,2013
+Orkney Islands,Cocaine,0,2013
+Orkney Islands,Ecstasy,0,2013
+Orkney Islands,Amphetamines,0,2013
+Orkney Islands,Alcohol,0,2013
+Perth and Kinross,All drug-related deaths,3,2013
+Perth and Kinross,Heroin/Morphine,2,2013
+Perth and Kinross,Methadone,1,2013
+Perth and Kinross,Any Benzodiazepine,2,2013
+Perth and Kinross,Diazepam,2,2013
+Perth and Kinross,Temazepam,0,2013
+Perth and Kinross,Cocaine,0,2013
+Perth and Kinross,Ecstasy,0,2013
+Perth and Kinross,Amphetamines,0,2013
+Perth and Kinross,Alcohol,2,2013
+Renfrewshire,All drug-related deaths,13,2013
+Renfrewshire,Heroin/Morphine,3,2013
+Renfrewshire,Methadone,7,2013
+Renfrewshire,Any Benzodiazepine,10,2013
+Renfrewshire,Diazepam,8,2013
+Renfrewshire,Temazepam,0,2013
+Renfrewshire,Cocaine,3,2013
+Renfrewshire,Ecstasy,3,2013
+Renfrewshire,Amphetamines,1,2013
+Renfrewshire,Alcohol,5,2013
+Scottish Borders,All drug-related deaths,8,2013
+Scottish Borders,Heroin/Morphine,2,2013
+Scottish Borders,Methadone,1,2013
+Scottish Borders,Any Benzodiazepine,5,2013
+Scottish Borders,Diazepam,5,2013
+Scottish Borders,Temazepam,0,2013
+Scottish Borders,Cocaine,0,2013
+Scottish Borders,Ecstasy,0,2013
+Scottish Borders,Amphetamines,0,2013
+Scottish Borders,Alcohol,4,2013
+Shetland Islands,All drug-related deaths,0,2013
+Shetland Islands,Heroin/Morphine,0,2013
+Shetland Islands,Methadone,0,2013
+Shetland Islands,Any Benzodiazepine,0,2013
+Shetland Islands,Diazepam,0,2013
+Shetland Islands,Temazepam,0,2013
+Shetland Islands,Cocaine,0,2013
+Shetland Islands,Ecstasy,0,2013
+Shetland Islands,Amphetamines,0,2013
+Shetland Islands,Alcohol,0,2013
+South Ayrshire,All drug-related deaths,13,2013
+South Ayrshire,Heroin/Morphine,8,2013
+South Ayrshire,Methadone,9,2013
+South Ayrshire,Any Benzodiazepine,10,2013
+South Ayrshire,Diazepam,9,2013
+South Ayrshire,Temazepam,0,2013
+South Ayrshire,Cocaine,0,2013
+South Ayrshire,Ecstasy,0,2013
+South Ayrshire,Amphetamines,1,2013
+South Ayrshire,Alcohol,6,2013
+South Lanarkshire,All drug-related deaths,37,2013
+South Lanarkshire,Heroin/Morphine,17,2013
+South Lanarkshire,Methadone,13,2013
+South Lanarkshire,Any Benzodiazepine,24,2013
+South Lanarkshire,Diazepam,15,2013
+South Lanarkshire,Temazepam,0,2013
+South Lanarkshire,Cocaine,3,2013
+South Lanarkshire,Ecstasy,1,2013
+South Lanarkshire,Amphetamines,4,2013
+South Lanarkshire,Alcohol,13,2013
+Stirling,All drug-related deaths,6,2013
+Stirling,Heroin/Morphine,1,2013
+Stirling,Methadone,5,2013
+Stirling,Any Benzodiazepine,6,2013
+Stirling,Diazepam,6,2013
+Stirling,Temazepam,0,2013
+Stirling,Cocaine,0,2013
+Stirling,Ecstasy,0,2013
+Stirling,Amphetamines,1,2013
+Stirling,Alcohol,2,2013
+West Dunbartonshire,All drug-related deaths,8,2013
+West Dunbartonshire,Heroin/Morphine,4,2013
+West Dunbartonshire,Methadone,2,2013
+West Dunbartonshire,Any Benzodiazepine,5,2013
+West Dunbartonshire,Diazepam,3,2013
+West Dunbartonshire,Temazepam,0,2013
+West Dunbartonshire,Cocaine,0,2013
+West Dunbartonshire,Ecstasy,1,2013
+West Dunbartonshire,Amphetamines,0,2013
+West Dunbartonshire,Alcohol,2,2013
+West Lothian,All drug-related deaths,10,2013
+West Lothian,Heroin/Morphine,2,2013
+West Lothian,Methadone,3,2013
+West Lothian,Any Benzodiazepine,7,2013
+West Lothian,Diazepam,6,2013
+West Lothian,Temazepam,1,2013
+West Lothian,Cocaine,0,2013
+West Lothian,Ecstasy,0,2013
+West Lothian,Amphetamines,0,2013
+West Lothian,Alcohol,7,2013
+Scotland,All drug-related deaths,613,2014
+Scotland,Heroin/Morphine,322,2014
+Scotland,Methadone,227,2014
+Scotland,"Heroin/morphine, methadone or bupren-orphine",470,2014
+Scotland,Codeine,77,2014
+Scotland,Dihydro-codeine,84,2014
+Scotland,Any opiate or opioid,559,2014
+Scotland,Any Benzodiazepine,426,2014
+Scotland,Diazepam,377,2014
+Scotland,Cocaine,62,2014
+Scotland,Ecstasy,15,2014
+Scotland,Amphetamines,34,2014
+Scotland,Alcohol,236,2014
+Aberdeen City,All drug-related deaths,26,2014
+Aberdeen City,Heroin/Morphine,9,2014
+Aberdeen City,Methadone,15,2014
+Aberdeen City,"Heroin/morphine, methadone or bupren-orphine",23,2014
+Aberdeen City,Codeine,2,2014
+Aberdeen City,Dihydro-codeine,2,2014
+Aberdeen City,Any opiate or opioid,24,2014
+Aberdeen City,Any Benzodiazepine,20,2014
+Aberdeen City,Diazepam,13,2014
+Aberdeen City,Cocaine,4,2014
+Aberdeen City,Ecstasy,1,2014
+Aberdeen City,Amphetamines,1,2014
+Aberdeen City,Alcohol,8,2014
+Aberdeenshire,All drug-related deaths,8,2014
+Aberdeenshire,Heroin/Morphine,6,2014
+Aberdeenshire,Methadone,1,2014
+Aberdeenshire,"Heroin/morphine, methadone or bupren-orphine",6,2014
+Aberdeenshire,Codeine,1,2014
+Aberdeenshire,Dihydro-codeine,0,2014
+Aberdeenshire,Any opiate or opioid,6,2014
+Aberdeenshire,Any Benzodiazepine,2,2014
+Aberdeenshire,Diazepam,1,2014
+Aberdeenshire,Cocaine,2,2014
+Aberdeenshire,Ecstasy,0,2014
+Aberdeenshire,Amphetamines,0,2014
+Aberdeenshire,Alcohol,2,2014
+Angus,All drug-related deaths,8,2014
+Angus,Heroin/Morphine,5,2014
+Angus,Methadone,4,2014
+Angus,"Heroin/morphine, methadone or bupren-orphine",7,2014
+Angus,Codeine,1,2014
+Angus,Dihydro-codeine,1,2014
+Angus,Any opiate or opioid,8,2014
+Angus,Any Benzodiazepine,6,2014
+Angus,Diazepam,6,2014
+Angus,Cocaine,0,2014
+Angus,Ecstasy,0,2014
+Angus,Amphetamines,0,2014
+Angus,Alcohol,1,2014
+Argyll and Bute,All drug-related deaths,8,2014
+Argyll and Bute,Heroin/Morphine,4,2014
+Argyll and Bute,Methadone,1,2014
+Argyll and Bute,"Heroin/morphine, methadone or bupren-orphine",5,2014
+Argyll and Bute,Codeine,3,2014
+Argyll and Bute,Dihydro-codeine,3,2014
+Argyll and Bute,Any opiate or opioid,8,2014
+Argyll and Bute,Any Benzodiazepine,4,2014
+Argyll and Bute,Diazepam,3,2014
+Argyll and Bute,Cocaine,1,2014
+Argyll and Bute,Ecstasy,0,2014
+Argyll and Bute,Amphetamines,0,2014
+Argyll and Bute,Alcohol,1,2014
+Clackmannanshire,All drug-related deaths,6,2014
+Clackmannanshire,Heroin/Morphine,4,2014
+Clackmannanshire,Methadone,2,2014
+Clackmannanshire,"Heroin/morphine, methadone or bupren-orphine",6,2014
+Clackmannanshire,Codeine,0,2014
+Clackmannanshire,Dihydro-codeine,1,2014
+Clackmannanshire,Any opiate or opioid,6,2014
+Clackmannanshire,Any Benzodiazepine,5,2014
+Clackmannanshire,Diazepam,5,2014
+Clackmannanshire,Cocaine,0,2014
+Clackmannanshire,Ecstasy,0,2014
+Clackmannanshire,Amphetamines,0,2014
+Clackmannanshire,Alcohol,3,2014
+Dumfries and Galloway,All drug-related deaths,13,2014
+Dumfries and Galloway,Heroin/Morphine,11,2014
+Dumfries and Galloway,Methadone,6,2014
+Dumfries and Galloway,"Heroin/morphine, methadone or bupren-orphine",12,2014
+Dumfries and Galloway,Codeine,2,2014
+Dumfries and Galloway,Dihydro-codeine,0,2014
+Dumfries and Galloway,Any opiate or opioid,13,2014
+Dumfries and Galloway,Any Benzodiazepine,6,2014
+Dumfries and Galloway,Diazepam,6,2014
+Dumfries and Galloway,Cocaine,1,2014
+Dumfries and Galloway,Ecstasy,0,2014
+Dumfries and Galloway,Amphetamines,1,2014
+Dumfries and Galloway,Alcohol,4,2014
+Dundee City,All drug-related deaths,31,2014
+Dundee City,Heroin/Morphine,15,2014
+Dundee City,Methadone,14,2014
+Dundee City,"Heroin/morphine, methadone or bupren-orphine",24,2014
+Dundee City,Codeine,2,2014
+Dundee City,Dihydro-codeine,0,2014
+Dundee City,Any opiate or opioid,25,2014
+Dundee City,Any Benzodiazepine,18,2014
+Dundee City,Diazepam,13,2014
+Dundee City,Cocaine,1,2014
+Dundee City,Ecstasy,0,2014
+Dundee City,Amphetamines,3,2014
+Dundee City,Alcohol,7,2014
+East Ayrshire,All drug-related deaths,17,2014
+East Ayrshire,Heroin/Morphine,10,2014
+East Ayrshire,Methadone,8,2014
+East Ayrshire,"Heroin/morphine, methadone or bupren-orphine",14,2014
+East Ayrshire,Codeine,1,2014
+East Ayrshire,Dihydro-codeine,2,2014
+East Ayrshire,Any opiate or opioid,17,2014
+East Ayrshire,Any Benzodiazepine,16,2014
+East Ayrshire,Diazepam,13,2014
+East Ayrshire,Cocaine,0,2014
+East Ayrshire,Ecstasy,0,2014
+East Ayrshire,Amphetamines,2,2014
+East Ayrshire,Alcohol,6,2014
+East Dunbartonshire,All drug-related deaths,4,2014
+East Dunbartonshire,Heroin/Morphine,3,2014
+East Dunbartonshire,Methadone,0,2014
+East Dunbartonshire,"Heroin/morphine, methadone or bupren-orphine",3,2014
+East Dunbartonshire,Codeine,0,2014
+East Dunbartonshire,Dihydro-codeine,1,2014
+East Dunbartonshire,Any opiate or opioid,4,2014
+East Dunbartonshire,Any Benzodiazepine,4,2014
+East Dunbartonshire,Diazepam,4,2014
+East Dunbartonshire,Cocaine,0,2014
+East Dunbartonshire,Ecstasy,0,2014
+East Dunbartonshire,Amphetamines,0,2014
+East Dunbartonshire,Alcohol,3,2014
+East Lothian,All drug-related deaths,11,2014
+East Lothian,Heroin/Morphine,5,2014
+East Lothian,Methadone,3,2014
+East Lothian,"Heroin/morphine, methadone or bupren-orphine",6,2014
+East Lothian,Codeine,1,2014
+East Lothian,Dihydro-codeine,2,2014
+East Lothian,Any opiate or opioid,9,2014
+East Lothian,Any Benzodiazepine,10,2014
+East Lothian,Diazepam,10,2014
+East Lothian,Cocaine,0,2014
+East Lothian,Ecstasy,1,2014
+East Lothian,Amphetamines,1,2014
+East Lothian,Alcohol,7,2014
+East Renfrewshire,All drug-related deaths,5,2014
+East Renfrewshire,Heroin/Morphine,4,2014
+East Renfrewshire,Methadone,2,2014
+East Renfrewshire,"Heroin/morphine, methadone or bupren-orphine",4,2014
+East Renfrewshire,Codeine,1,2014
+East Renfrewshire,Dihydro-codeine,0,2014
+East Renfrewshire,Any opiate or opioid,5,2014
+East Renfrewshire,Any Benzodiazepine,5,2014
+East Renfrewshire,Diazepam,4,2014
+East Renfrewshire,Cocaine,0,2014
+East Renfrewshire,Ecstasy,0,2014
+East Renfrewshire,Amphetamines,0,2014
+East Renfrewshire,Alcohol,1,2014
+City of Edinburgh,All drug-related deaths,71,2014
+City of Edinburgh,Heroin/Morphine,29,2014
+City of Edinburgh,Methadone,43,2014
+City of Edinburgh,"Heroin/morphine, methadone or bupren-orphine",60,2014
+City of Edinburgh,Codeine,7,2014
+City of Edinburgh,Dihydro-codeine,7,2014
+City of Edinburgh,Any opiate or opioid,67,2014
+City of Edinburgh,Any Benzodiazepine,59,2014
+City of Edinburgh,Diazepam,57,2014
+City of Edinburgh,Cocaine,5,2014
+City of Edinburgh,Ecstasy,1,2014
+City of Edinburgh,Amphetamines,6,2014
+City of Edinburgh,Alcohol,34,2014
+Eilean Siar,All drug-related deaths,1,2014
+Eilean Siar,Heroin/Morphine,0,2014
+Eilean Siar,Methadone,0,2014
+Eilean Siar,"Heroin/morphine, methadone or bupren-orphine",0,2014
+Eilean Siar,Codeine,0,2014
+Eilean Siar,Dihydro-codeine,0,2014
+Eilean Siar,Any opiate or opioid,0,2014
+Eilean Siar,Any Benzodiazepine,0,2014
+Eilean Siar,Diazepam,0,2014
+Eilean Siar,Cocaine,0,2014
+Eilean Siar,Ecstasy,1,2014
+Eilean Siar,Amphetamines,0,2014
+Eilean Siar,Alcohol,1,2014
+Falkirk,All drug-related deaths,9,2014
+Falkirk,Heroin/Morphine,3,2014
+Falkirk,Methadone,1,2014
+Falkirk,"Heroin/morphine, methadone or bupren-orphine",4,2014
+Falkirk,Codeine,2,2014
+Falkirk,Dihydro-codeine,2,2014
+Falkirk,Any opiate or opioid,8,2014
+Falkirk,Any Benzodiazepine,5,2014
+Falkirk,Diazepam,4,2014
+Falkirk,Cocaine,1,2014
+Falkirk,Ecstasy,1,2014
+Falkirk,Amphetamines,0,2014
+Falkirk,Alcohol,5,2014
+Fife,All drug-related deaths,46,2014
+Fife,Heroin/Morphine,27,2014
+Fife,Methadone,13,2014
+Fife,"Heroin/morphine, methadone or bupren-orphine",33,2014
+Fife,Codeine,3,2014
+Fife,Dihydro-codeine,6,2014
+Fife,Any opiate or opioid,41,2014
+Fife,Any Benzodiazepine,26,2014
+Fife,Diazepam,25,2014
+Fife,Cocaine,1,2014
+Fife,Ecstasy,0,2014
+Fife,Amphetamines,4,2014
+Fife,Alcohol,22,2014
+Glasgow City,All drug-related deaths,114,2014
+Glasgow City,Heroin/Morphine,64,2014
+Glasgow City,Methadone,33,2014
+Glasgow City,"Heroin/morphine, methadone or bupren-orphine",88,2014
+Glasgow City,Codeine,14,2014
+Glasgow City,Dihydro-codeine,17,2014
+Glasgow City,Any opiate or opioid,103,2014
+Glasgow City,Any Benzodiazepine,74,2014
+Glasgow City,Diazepam,72,2014
+Glasgow City,Cocaine,16,2014
+Glasgow City,Ecstasy,3,2014
+Glasgow City,Amphetamines,3,2014
+Glasgow City,Alcohol,49,2014
+Highland,All drug-related deaths,17,2014
+Highland,Heroin/Morphine,11,2014
+Highland,Methadone,2,2014
+Highland,"Heroin/morphine, methadone or bupren-orphine",13,2014
+Highland,Codeine,7,2014
+Highland,Dihydro-codeine,2,2014
+Highland,Any opiate or opioid,16,2014
+Highland,Any Benzodiazepine,11,2014
+Highland,Diazepam,8,2014
+Highland,Cocaine,1,2014
+Highland,Ecstasy,0,2014
+Highland,Amphetamines,0,2014
+Highland,Alcohol,8,2014
+Inverclyde,All drug-related deaths,17,2014
+Inverclyde,Heroin/Morphine,4,2014
+Inverclyde,Methadone,9,2014
+Inverclyde,"Heroin/morphine, methadone or bupren-orphine",12,2014
+Inverclyde,Codeine,1,2014
+Inverclyde,Dihydro-codeine,2,2014
+Inverclyde,Any opiate or opioid,15,2014
+Inverclyde,Any Benzodiazepine,14,2014
+Inverclyde,Diazepam,9,2014
+Inverclyde,Cocaine,1,2014
+Inverclyde,Ecstasy,1,2014
+Inverclyde,Amphetamines,0,2014
+Inverclyde,Alcohol,3,2014
+Midlothian,All drug-related deaths,7,2014
+Midlothian,Heroin/Morphine,4,2014
+Midlothian,Methadone,0,2014
+Midlothian,"Heroin/morphine, methadone or bupren-orphine",4,2014
+Midlothian,Codeine,1,2014
+Midlothian,Dihydro-codeine,2,2014
+Midlothian,Any opiate or opioid,6,2014
+Midlothian,Any Benzodiazepine,6,2014
+Midlothian,Diazepam,5,2014
+Midlothian,Cocaine,0,2014
+Midlothian,Ecstasy,0,2014
+Midlothian,Amphetamines,1,2014
+Midlothian,Alcohol,4,2014
+Moray,All drug-related deaths,2,2014
+Moray,Heroin/Morphine,1,2014
+Moray,Methadone,0,2014
+Moray,"Heroin/morphine, methadone or bupren-orphine",1,2014
+Moray,Codeine,0,2014
+Moray,Dihydro-codeine,1,2014
+Moray,Any opiate or opioid,2,2014
+Moray,Any Benzodiazepine,1,2014
+Moray,Diazepam,1,2014
+Moray,Cocaine,0,2014
+Moray,Ecstasy,0,2014
+Moray,Amphetamines,0,2014
+Moray,Alcohol,1,2014
+North Ayrshire,All drug-related deaths,15,2014
+North Ayrshire,Heroin/Morphine,8,2014
+North Ayrshire,Methadone,9,2014
+North Ayrshire,"Heroin/morphine, methadone or bupren-orphine",14,2014
+North Ayrshire,Codeine,0,2014
+North Ayrshire,Dihydro-codeine,4,2014
+North Ayrshire,Any opiate or opioid,14,2014
+North Ayrshire,Any Benzodiazepine,11,2014
+North Ayrshire,Diazepam,10,2014
+North Ayrshire,Cocaine,3,2014
+North Ayrshire,Ecstasy,0,2014
+North Ayrshire,Amphetamines,1,2014
+North Ayrshire,Alcohol,5,2014
+North Lanarkshire,All drug-related deaths,33,2014
+North Lanarkshire,Heroin/Morphine,16,2014
+North Lanarkshire,Methadone,6,2014
+North Lanarkshire,"Heroin/morphine, methadone or bupren-orphine",25,2014
+North Lanarkshire,Codeine,4,2014
+North Lanarkshire,Dihydro-codeine,5,2014
+North Lanarkshire,Any opiate or opioid,32,2014
+North Lanarkshire,Any Benzodiazepine,21,2014
+North Lanarkshire,Diazepam,17,2014
+North Lanarkshire,Cocaine,4,2014
+North Lanarkshire,Ecstasy,1,2014
+North Lanarkshire,Amphetamines,0,2014
+North Lanarkshire,Alcohol,14,2014
+Orkney Islands,All drug-related deaths,0,2014
+Orkney Islands,Heroin/Morphine,0,2014
+Orkney Islands,Methadone,0,2014
+Orkney Islands,"Heroin/morphine, methadone or bupren-orphine",0,2014
+Orkney Islands,Codeine,0,2014
+Orkney Islands,Dihydro-codeine,0,2014
+Orkney Islands,Any opiate or opioid,0,2014
+Orkney Islands,Any Benzodiazepine,0,2014
+Orkney Islands,Diazepam,0,2014
+Orkney Islands,Cocaine,0,2014
+Orkney Islands,Ecstasy,0,2014
+Orkney Islands,Amphetamines,0,2014
+Orkney Islands,Alcohol,0,2014
+Perth and Kinross,All drug-related deaths,9,2014
+Perth and Kinross,Heroin/Morphine,3,2014
+Perth and Kinross,Methadone,2,2014
+Perth and Kinross,"Heroin/morphine, methadone or bupren-orphine",4,2014
+Perth and Kinross,Codeine,0,2014
+Perth and Kinross,Dihydro-codeine,2,2014
+Perth and Kinross,Any opiate or opioid,6,2014
+Perth and Kinross,Any Benzodiazepine,4,2014
+Perth and Kinross,Diazepam,4,2014
+Perth and Kinross,Cocaine,0,2014
+Perth and Kinross,Ecstasy,0,2014
+Perth and Kinross,Amphetamines,0,2014
+Perth and Kinross,Alcohol,4,2014
+Renfrewshire,All drug-related deaths,30,2014
+Renfrewshire,Heroin/Morphine,16,2014
+Renfrewshire,Methadone,12,2014
+Renfrewshire,"Heroin/morphine, methadone or bupren-orphine",21,2014
+Renfrewshire,Codeine,6,2014
+Renfrewshire,Dihydro-codeine,6,2014
+Renfrewshire,Any opiate or opioid,27,2014
+Renfrewshire,Any Benzodiazepine,21,2014
+Renfrewshire,Diazepam,16,2014
+Renfrewshire,Cocaine,7,2014
+Renfrewshire,Ecstasy,0,2014
+Renfrewshire,Amphetamines,2,2014
+Renfrewshire,Alcohol,7,2014
+Scottish Borders,All drug-related deaths,11,2014
+Scottish Borders,Heroin/Morphine,8,2014
+Scottish Borders,Methadone,3,2014
+Scottish Borders,"Heroin/morphine, methadone or bupren-orphine",10,2014
+Scottish Borders,Codeine,2,2014
+Scottish Borders,Dihydro-codeine,2,2014
+Scottish Borders,Any opiate or opioid,11,2014
+Scottish Borders,Any Benzodiazepine,10,2014
+Scottish Borders,Diazepam,9,2014
+Scottish Borders,Cocaine,2,2014
+Scottish Borders,Ecstasy,1,2014
+Scottish Borders,Amphetamines,1,2014
+Scottish Borders,Alcohol,5,2014
+Shetland Islands,All drug-related deaths,4,2014
+Shetland Islands,Heroin/Morphine,2,2014
+Shetland Islands,Methadone,1,2014
+Shetland Islands,"Heroin/morphine, methadone or bupren-orphine",3,2014
+Shetland Islands,Codeine,0,2014
+Shetland Islands,Dihydro-codeine,2,2014
+Shetland Islands,Any opiate or opioid,4,2014
+Shetland Islands,Any Benzodiazepine,3,2014
+Shetland Islands,Diazepam,2,2014
+Shetland Islands,Cocaine,1,2014
+Shetland Islands,Ecstasy,0,2014
+Shetland Islands,Amphetamines,0,2014
+Shetland Islands,Alcohol,0,2014
+South Ayrshire,All drug-related deaths,11,2014
+South Ayrshire,Heroin/Morphine,8,2014
+South Ayrshire,Methadone,8,2014
+South Ayrshire,"Heroin/morphine, methadone or bupren-orphine",9,2014
+South Ayrshire,Codeine,1,2014
+South Ayrshire,Dihydro-codeine,2,2014
+South Ayrshire,Any opiate or opioid,11,2014
+South Ayrshire,Any Benzodiazepine,7,2014
+South Ayrshire,Diazepam,7,2014
+South Ayrshire,Cocaine,1,2014
+South Ayrshire,Ecstasy,0,2014
+South Ayrshire,Amphetamines,1,2014
+South Ayrshire,Alcohol,0,2014
+South Lanarkshire,All drug-related deaths,34,2014
+South Lanarkshire,Heroin/Morphine,19,2014
+South Lanarkshire,Methadone,12,2014
+South Lanarkshire,"Heroin/morphine, methadone or bupren-orphine",23,2014
+South Lanarkshire,Codeine,6,2014
+South Lanarkshire,Dihydro-codeine,5,2014
+South Lanarkshire,Any opiate or opioid,31,2014
+South Lanarkshire,Any Benzodiazepine,23,2014
+South Lanarkshire,Diazepam,22,2014
+South Lanarkshire,Cocaine,6,2014
+South Lanarkshire,Ecstasy,3,2014
+South Lanarkshire,Amphetamines,2,2014
+South Lanarkshire,Alcohol,11,2014
+Stirling,All drug-related deaths,10,2014
+Stirling,Heroin/Morphine,8,2014
+Stirling,Methadone,2,2014
+Stirling,"Heroin/morphine, methadone or bupren-orphine",9,2014
+Stirling,Codeine,4,2014
+Stirling,Dihydro-codeine,3,2014
+Stirling,Any opiate or opioid,10,2014
+Stirling,Any Benzodiazepine,8,2014
+Stirling,Diazepam,7,2014
+Stirling,Cocaine,1,2014
+Stirling,Ecstasy,0,2014
+Stirling,Amphetamines,0,2014
+Stirling,Alcohol,3,2014
+West Dunbartonshire,All drug-related deaths,19,2014
+West Dunbartonshire,Heroin/Morphine,8,2014
+West Dunbartonshire,Methadone,8,2014
+West Dunbartonshire,"Heroin/morphine, methadone or bupren-orphine",15,2014
+West Dunbartonshire,Codeine,3,2014
+West Dunbartonshire,Dihydro-codeine,0,2014
+West Dunbartonshire,Any opiate or opioid,16,2014
+West Dunbartonshire,Any Benzodiazepine,14,2014
+West Dunbartonshire,Diazepam,13,2014
+West Dunbartonshire,Cocaine,3,2014
+West Dunbartonshire,Ecstasy,1,2014
+West Dunbartonshire,Amphetamines,2,2014
+West Dunbartonshire,Alcohol,6,2014
+West Lothian,All drug-related deaths,16,2014
+West Lothian,Heroin/Morphine,7,2014
+West Lothian,Methadone,7,2014
+West Lothian,"Heroin/morphine, methadone or bupren-orphine",12,2014
+West Lothian,Codeine,2,2014
+West Lothian,Dihydro-codeine,2,2014
+West Lothian,Any opiate or opioid,14,2014
+West Lothian,Any Benzodiazepine,12,2014
+West Lothian,Diazepam,11,2014
+West Lothian,Cocaine,0,2014
+West Lothian,Ecstasy,0,2014
+West Lothian,Amphetamines,3,2014
+West Lothian,Alcohol,11,2014
+Scotland,All drug-related deaths,706,2015
+Scotland,Heroin/Morphine,356,2015
+Scotland,Methadone,272,2015
+Scotland,"Heroin/morphine, methadone or bupren-orphine",509,2015
+Scotland,Codeine,63,2015
+Scotland,Dihydro-codeine,126,2015
+Scotland,Any opiate or opioid,629,2015
+Scotland,Any Benzodiazepine,501,2015
+Scotland,Diazepam,434,2015
+Scotland,Cocaine,105,2015
+Scotland,Ecstasy,15,2015
+Scotland,Amphetamines,25,2015
+Scotland,Alcohol,258,2015
+Aberdeen City,All drug-related deaths,45,2015
+Aberdeen City,Heroin/Morphine,18,2015
+Aberdeen City,Methadone,22,2015
+Aberdeen City,"Heroin/morphine, methadone or bupren-orphine",32,2015
+Aberdeen City,Codeine,5,2015
+Aberdeen City,Dihydro-codeine,9,2015
+Aberdeen City,Any opiate or opioid,42,2015
+Aberdeen City,Any Benzodiazepine,36,2015
+Aberdeen City,Diazepam,25,2015
+Aberdeen City,Cocaine,13,2015
+Aberdeen City,Ecstasy,2,2015
+Aberdeen City,Amphetamines,0,2015
+Aberdeen City,Alcohol,17,2015
+Aberdeenshire,All drug-related deaths,14,2015
+Aberdeenshire,Heroin/Morphine,6,2015
+Aberdeenshire,Methadone,7,2015
+Aberdeenshire,"Heroin/morphine, methadone or bupren-orphine",9,2015
+Aberdeenshire,Codeine,1,2015
+Aberdeenshire,Dihydro-codeine,3,2015
+Aberdeenshire,Any opiate or opioid,12,2015
+Aberdeenshire,Any Benzodiazepine,10,2015
+Aberdeenshire,Diazepam,5,2015
+Aberdeenshire,Cocaine,3,2015
+Aberdeenshire,Ecstasy,0,2015
+Aberdeenshire,Amphetamines,0,2015
+Aberdeenshire,Alcohol,6,2015
+Angus,All drug-related deaths,17,2015
+Angus,Heroin/Morphine,12,2015
+Angus,Methadone,7,2015
+Angus,"Heroin/morphine, methadone or bupren-orphine",13,2015
+Angus,Codeine,2,2015
+Angus,Dihydro-codeine,4,2015
+Angus,Any opiate or opioid,14,2015
+Angus,Any Benzodiazepine,11,2015
+Angus,Diazepam,11,2015
+Angus,Cocaine,1,2015
+Angus,Ecstasy,1,2015
+Angus,Amphetamines,1,2015
+Angus,Alcohol,4,2015
+Argyll and Bute,All drug-related deaths,11,2015
+Argyll and Bute,Heroin/Morphine,7,2015
+Argyll and Bute,Methadone,1,2015
+Argyll and Bute,"Heroin/morphine, methadone or bupren-orphine",8,2015
+Argyll and Bute,Codeine,2,2015
+Argyll and Bute,Dihydro-codeine,1,2015
+Argyll and Bute,Any opiate or opioid,10,2015
+Argyll and Bute,Any Benzodiazepine,6,2015
+Argyll and Bute,Diazepam,5,2015
+Argyll and Bute,Cocaine,1,2015
+Argyll and Bute,Ecstasy,0,2015
+Argyll and Bute,Amphetamines,0,2015
+Argyll and Bute,Alcohol,5,2015
+Clackmannanshire,All drug-related deaths,7,2015
+Clackmannanshire,Heroin/Morphine,6,2015
+Clackmannanshire,Methadone,3,2015
+Clackmannanshire,"Heroin/morphine, methadone or bupren-orphine",6,2015
+Clackmannanshire,Codeine,1,2015
+Clackmannanshire,Dihydro-codeine,0,2015
+Clackmannanshire,Any opiate or opioid,6,2015
+Clackmannanshire,Any Benzodiazepine,5,2015
+Clackmannanshire,Diazepam,5,2015
+Clackmannanshire,Cocaine,0,2015
+Clackmannanshire,Ecstasy,0,2015
+Clackmannanshire,Amphetamines,2,2015
+Clackmannanshire,Alcohol,4,2015
+Dumfries and Galloway,All drug-related deaths,11,2015
+Dumfries and Galloway,Heroin/Morphine,6,2015
+Dumfries and Galloway,Methadone,3,2015
+Dumfries and Galloway,"Heroin/morphine, methadone or bupren-orphine",7,2015
+Dumfries and Galloway,Codeine,0,2015
+Dumfries and Galloway,Dihydro-codeine,1,2015
+Dumfries and Galloway,Any opiate or opioid,8,2015
+Dumfries and Galloway,Any Benzodiazepine,5,2015
+Dumfries and Galloway,Diazepam,5,2015
+Dumfries and Galloway,Cocaine,0,2015
+Dumfries and Galloway,Ecstasy,2,2015
+Dumfries and Galloway,Amphetamines,0,2015
+Dumfries and Galloway,Alcohol,4,2015
+Dundee City,All drug-related deaths,36,2015
+Dundee City,Heroin/Morphine,25,2015
+Dundee City,Methadone,16,2015
+Dundee City,"Heroin/morphine, methadone or bupren-orphine",31,2015
+Dundee City,Codeine,3,2015
+Dundee City,Dihydro-codeine,4,2015
+Dundee City,Any opiate or opioid,36,2015
+Dundee City,Any Benzodiazepine,31,2015
+Dundee City,Diazepam,24,2015
+Dundee City,Cocaine,2,2015
+Dundee City,Ecstasy,0,2015
+Dundee City,Amphetamines,0,2015
+Dundee City,Alcohol,10,2015
+East Ayrshire,All drug-related deaths,14,2015
+East Ayrshire,Heroin/Morphine,9,2015
+East Ayrshire,Methadone,6,2015
+East Ayrshire,"Heroin/morphine, methadone or bupren-orphine",13,2015
+East Ayrshire,Codeine,1,2015
+East Ayrshire,Dihydro-codeine,0,2015
+East Ayrshire,Any opiate or opioid,14,2015
+East Ayrshire,Any Benzodiazepine,12,2015
+East Ayrshire,Diazepam,6,2015
+East Ayrshire,Cocaine,4,2015
+East Ayrshire,Ecstasy,0,2015
+East Ayrshire,Amphetamines,0,2015
+East Ayrshire,Alcohol,6,2015
+East Dunbartonshire,All drug-related deaths,9,2015
+East Dunbartonshire,Heroin/Morphine,4,2015
+East Dunbartonshire,Methadone,3,2015
+East Dunbartonshire,"Heroin/morphine, methadone or bupren-orphine",7,2015
+East Dunbartonshire,Codeine,1,2015
+East Dunbartonshire,Dihydro-codeine,2,2015
+East Dunbartonshire,Any opiate or opioid,8,2015
+East Dunbartonshire,Any Benzodiazepine,7,2015
+East Dunbartonshire,Diazepam,6,2015
+East Dunbartonshire,Cocaine,3,2015
+East Dunbartonshire,Ecstasy,1,2015
+East Dunbartonshire,Amphetamines,0,2015
+East Dunbartonshire,Alcohol,3,2015
+East Lothian,All drug-related deaths,10,2015
+East Lothian,Heroin/Morphine,4,2015
+East Lothian,Methadone,3,2015
+East Lothian,"Heroin/morphine, methadone or bupren-orphine",6,2015
+East Lothian,Codeine,0,2015
+East Lothian,Dihydro-codeine,2,2015
+East Lothian,Any opiate or opioid,9,2015
+East Lothian,Any Benzodiazepine,7,2015
+East Lothian,Diazepam,7,2015
+East Lothian,Cocaine,2,2015
+East Lothian,Ecstasy,1,2015
+East Lothian,Amphetamines,0,2015
+East Lothian,Alcohol,2,2015
+East Renfrewshire,All drug-related deaths,8,2015
+East Renfrewshire,Heroin/Morphine,3,2015
+East Renfrewshire,Methadone,4,2015
+East Renfrewshire,"Heroin/morphine, methadone or bupren-orphine",5,2015
+East Renfrewshire,Codeine,1,2015
+East Renfrewshire,Dihydro-codeine,3,2015
+East Renfrewshire,Any opiate or opioid,8,2015
+East Renfrewshire,Any Benzodiazepine,4,2015
+East Renfrewshire,Diazepam,4,2015
+East Renfrewshire,Cocaine,1,2015
+East Renfrewshire,Ecstasy,0,2015
+East Renfrewshire,Amphetamines,0,2015
+East Renfrewshire,Alcohol,0,2015
+City of Edinburgh,All drug-related deaths,69,2015
+City of Edinburgh,Heroin/Morphine,23,2015
+City of Edinburgh,Methadone,35,2015
+City of Edinburgh,"Heroin/morphine, methadone or bupren-orphine",49,2015
+City of Edinburgh,Codeine,4,2015
+City of Edinburgh,Dihydro-codeine,22,2015
+City of Edinburgh,Any opiate or opioid,62,2015
+City of Edinburgh,Any Benzodiazepine,47,2015
+City of Edinburgh,Diazepam,45,2015
+City of Edinburgh,Cocaine,4,2015
+City of Edinburgh,Ecstasy,1,2015
+City of Edinburgh,Amphetamines,1,2015
+City of Edinburgh,Alcohol,28,2015
+Eilean Siar,All drug-related deaths,1,2015
+Eilean Siar,Heroin/Morphine,0,2015
+Eilean Siar,Methadone,0,2015
+Eilean Siar,"Heroin/morphine, methadone or bupren-orphine",0,2015
+Eilean Siar,Codeine,0,2015
+Eilean Siar,Dihydro-codeine,1,2015
+Eilean Siar,Any opiate or opioid,1,2015
+Eilean Siar,Any Benzodiazepine,0,2015
+Eilean Siar,Diazepam,0,2015
+Eilean Siar,Cocaine,0,2015
+Eilean Siar,Ecstasy,0,2015
+Eilean Siar,Amphetamines,0,2015
+Eilean Siar,Alcohol,0,2015
+Falkirk,All drug-related deaths,14,2015
+Falkirk,Heroin/Morphine,7,2015
+Falkirk,Methadone,6,2015
+Falkirk,"Heroin/morphine, methadone or bupren-orphine",10,2015
+Falkirk,Codeine,1,2015
+Falkirk,Dihydro-codeine,3,2015
+Falkirk,Any opiate or opioid,12,2015
+Falkirk,Any Benzodiazepine,9,2015
+Falkirk,Diazepam,9,2015
+Falkirk,Cocaine,4,2015
+Falkirk,Ecstasy,0,2015
+Falkirk,Amphetamines,0,2015
+Falkirk,Alcohol,6,2015
+Fife,All drug-related deaths,44,2015
+Fife,Heroin/Morphine,29,2015
+Fife,Methadone,20,2015
+Fife,"Heroin/morphine, methadone or bupren-orphine",36,2015
+Fife,Codeine,6,2015
+Fife,Dihydro-codeine,4,2015
+Fife,Any opiate or opioid,40,2015
+Fife,Any Benzodiazepine,34,2015
+Fife,Diazepam,32,2015
+Fife,Cocaine,1,2015
+Fife,Ecstasy,1,2015
+Fife,Amphetamines,3,2015
+Fife,Alcohol,23,2015
+Glasgow City,All drug-related deaths,157,2015
+Glasgow City,Heroin/Morphine,74,2015
+Glasgow City,Methadone,58,2015
+Glasgow City,"Heroin/morphine, methadone or bupren-orphine",113,2015
+Glasgow City,Codeine,10,2015
+Glasgow City,Dihydro-codeine,25,2015
+Glasgow City,Any opiate or opioid,139,2015
+Glasgow City,Any Benzodiazepine,115,2015
+Glasgow City,Diazepam,106,2015
+Glasgow City,Cocaine,37,2015
+Glasgow City,Ecstasy,0,2015
+Glasgow City,Amphetamines,12,2015
+Glasgow City,Alcohol,55,2015
+Highland,All drug-related deaths,24,2015
+Highland,Heroin/Morphine,8,2015
+Highland,Methadone,10,2015
+Highland,"Heroin/morphine, methadone or bupren-orphine",13,2015
+Highland,Codeine,4,2015
+Highland,Dihydro-codeine,4,2015
+Highland,Any opiate or opioid,19,2015
+Highland,Any Benzodiazepine,20,2015
+Highland,Diazepam,15,2015
+Highland,Cocaine,2,2015
+Highland,Ecstasy,1,2015
+Highland,Amphetamines,0,2015
+Highland,Alcohol,5,2015
+Inverclyde,All drug-related deaths,16,2015
+Inverclyde,Heroin/Morphine,2,2015
+Inverclyde,Methadone,9,2015
+Inverclyde,"Heroin/morphine, methadone or bupren-orphine",11,2015
+Inverclyde,Codeine,2,2015
+Inverclyde,Dihydro-codeine,0,2015
+Inverclyde,Any opiate or opioid,13,2015
+Inverclyde,Any Benzodiazepine,11,2015
+Inverclyde,Diazepam,8,2015
+Inverclyde,Cocaine,3,2015
+Inverclyde,Ecstasy,0,2015
+Inverclyde,Amphetamines,0,2015
+Inverclyde,Alcohol,5,2015
+Midlothian,All drug-related deaths,6,2015
+Midlothian,Heroin/Morphine,1,2015
+Midlothian,Methadone,1,2015
+Midlothian,"Heroin/morphine, methadone or bupren-orphine",2,2015
+Midlothian,Codeine,0,2015
+Midlothian,Dihydro-codeine,1,2015
+Midlothian,Any opiate or opioid,3,2015
+Midlothian,Any Benzodiazepine,4,2015
+Midlothian,Diazepam,4,2015
+Midlothian,Cocaine,2,2015
+Midlothian,Ecstasy,0,2015
+Midlothian,Amphetamines,0,2015
+Midlothian,Alcohol,1,2015
+Moray,All drug-related deaths,10,2015
+Moray,Heroin/Morphine,5,2015
+Moray,Methadone,5,2015
+Moray,"Heroin/morphine, methadone or bupren-orphine",8,2015
+Moray,Codeine,1,2015
+Moray,Dihydro-codeine,2,2015
+Moray,Any opiate or opioid,9,2015
+Moray,Any Benzodiazepine,6,2015
+Moray,Diazepam,6,2015
+Moray,Cocaine,1,2015
+Moray,Ecstasy,0,2015
+Moray,Amphetamines,0,2015
+Moray,Alcohol,3,2015
+North Ayrshire,All drug-related deaths,15,2015
+North Ayrshire,Heroin/Morphine,11,2015
+North Ayrshire,Methadone,8,2015
+North Ayrshire,"Heroin/morphine, methadone or bupren-orphine",12,2015
+North Ayrshire,Codeine,1,2015
+North Ayrshire,Dihydro-codeine,4,2015
+North Ayrshire,Any opiate or opioid,14,2015
+North Ayrshire,Any Benzodiazepine,12,2015
+North Ayrshire,Diazepam,11,2015
+North Ayrshire,Cocaine,2,2015
+North Ayrshire,Ecstasy,0,2015
+North Ayrshire,Amphetamines,2,2015
+North Ayrshire,Alcohol,9,2015
+North Lanarkshire,All drug-related deaths,42,2015
+North Lanarkshire,Heroin/Morphine,21,2015
+North Lanarkshire,Methadone,7,2015
+North Lanarkshire,"Heroin/morphine, methadone or bupren-orphine",26,2015
+North Lanarkshire,Codeine,5,2015
+North Lanarkshire,Dihydro-codeine,9,2015
+North Lanarkshire,Any opiate or opioid,36,2015
+North Lanarkshire,Any Benzodiazepine,25,2015
+North Lanarkshire,Diazepam,22,2015
+North Lanarkshire,Cocaine,7,2015
+North Lanarkshire,Ecstasy,3,2015
+North Lanarkshire,Amphetamines,2,2015
+North Lanarkshire,Alcohol,17,2015
+Orkney Islands,All drug-related deaths,1,2015
+Orkney Islands,Heroin/Morphine,0,2015
+Orkney Islands,Methadone,1,2015
+Orkney Islands,"Heroin/morphine, methadone or bupren-orphine",1,2015
+Orkney Islands,Codeine,0,2015
+Orkney Islands,Dihydro-codeine,1,2015
+Orkney Islands,Any opiate or opioid,1,2015
+Orkney Islands,Any Benzodiazepine,1,2015
+Orkney Islands,Diazepam,1,2015
+Orkney Islands,Cocaine,0,2015
+Orkney Islands,Ecstasy,0,2015
+Orkney Islands,Amphetamines,0,2015
+Orkney Islands,Alcohol,0,2015
+Perth and Kinross,All drug-related deaths,10,2015
+Perth and Kinross,Heroin/Morphine,5,2015
+Perth and Kinross,Methadone,2,2015
+Perth and Kinross,"Heroin/morphine, methadone or bupren-orphine",6,2015
+Perth and Kinross,Codeine,0,2015
+Perth and Kinross,Dihydro-codeine,4,2015
+Perth and Kinross,Any opiate or opioid,9,2015
+Perth and Kinross,Any Benzodiazepine,6,2015
+Perth and Kinross,Diazepam,5,2015
+Perth and Kinross,Cocaine,0,2015
+Perth and Kinross,Ecstasy,0,2015
+Perth and Kinross,Amphetamines,0,2015
+Perth and Kinross,Alcohol,3,2015
+Renfrewshire,All drug-related deaths,19,2015
+Renfrewshire,Heroin/Morphine,11,2015
+Renfrewshire,Methadone,5,2015
+Renfrewshire,"Heroin/morphine, methadone or bupren-orphine",14,2015
+Renfrewshire,Codeine,2,2015
+Renfrewshire,Dihydro-codeine,1,2015
+Renfrewshire,Any opiate or opioid,16,2015
+Renfrewshire,Any Benzodiazepine,13,2015
+Renfrewshire,Diazepam,11,2015
+Renfrewshire,Cocaine,4,2015
+Renfrewshire,Ecstasy,0,2015
+Renfrewshire,Amphetamines,1,2015
+Renfrewshire,Alcohol,6,2015
+Scottish Borders,All drug-related deaths,13,2015
+Scottish Borders,Heroin/Morphine,8,2015
+Scottish Borders,Methadone,0,2015
+Scottish Borders,"Heroin/morphine, methadone or bupren-orphine",8,2015
+Scottish Borders,Codeine,3,2015
+Scottish Borders,Dihydro-codeine,2,2015
+Scottish Borders,Any opiate or opioid,12,2015
+Scottish Borders,Any Benzodiazepine,8,2015
+Scottish Borders,Diazepam,6,2015
+Scottish Borders,Cocaine,0,2015
+Scottish Borders,Ecstasy,0,2015
+Scottish Borders,Amphetamines,0,2015
+Scottish Borders,Alcohol,5,2015
+Shetland Islands,All drug-related deaths,1,2015
+Shetland Islands,Heroin/Morphine,1,2015
+Shetland Islands,Methadone,0,2015
+Shetland Islands,"Heroin/morphine, methadone or bupren-orphine",1,2015
+Shetland Islands,Codeine,0,2015
+Shetland Islands,Dihydro-codeine,0,2015
+Shetland Islands,Any opiate or opioid,1,2015
+Shetland Islands,Any Benzodiazepine,0,2015
+Shetland Islands,Diazepam,0,2015
+Shetland Islands,Cocaine,0,2015
+Shetland Islands,Ecstasy,0,2015
+Shetland Islands,Amphetamines,0,2015
+Shetland Islands,Alcohol,0,2015
+South Ayrshire,All drug-related deaths,14,2015
+South Ayrshire,Heroin/Morphine,10,2015
+South Ayrshire,Methadone,10,2015
+South Ayrshire,"Heroin/morphine, methadone or bupren-orphine",13,2015
+South Ayrshire,Codeine,1,2015
+South Ayrshire,Dihydro-codeine,3,2015
+South Ayrshire,Any opiate or opioid,14,2015
+South Ayrshire,Any Benzodiazepine,13,2015
+South Ayrshire,Diazepam,12,2015
+South Ayrshire,Cocaine,3,2015
+South Ayrshire,Ecstasy,0,2015
+South Ayrshire,Amphetamines,0,2015
+South Ayrshire,Alcohol,6,2015
+South Lanarkshire,All drug-related deaths,31,2015
+South Lanarkshire,Heroin/Morphine,18,2015
+South Lanarkshire,Methadone,9,2015
+South Lanarkshire,"Heroin/morphine, methadone or bupren-orphine",22,2015
+South Lanarkshire,Codeine,2,2015
+South Lanarkshire,Dihydro-codeine,4,2015
+South Lanarkshire,Any opiate or opioid,27,2015
+South Lanarkshire,Any Benzodiazepine,17,2015
+South Lanarkshire,Diazepam,15,2015
+South Lanarkshire,Cocaine,2,2015
+South Lanarkshire,Ecstasy,1,2015
+South Lanarkshire,Amphetamines,0,2015
+South Lanarkshire,Alcohol,11,2015
+Stirling,All drug-related deaths,10,2015
+Stirling,Heroin/Morphine,6,2015
+Stirling,Methadone,2,2015
+Stirling,"Heroin/morphine, methadone or bupren-orphine",6,2015
+Stirling,Codeine,3,2015
+Stirling,Dihydro-codeine,2,2015
+Stirling,Any opiate or opioid,9,2015
+Stirling,Any Benzodiazepine,8,2015
+Stirling,Diazepam,6,2015
+Stirling,Cocaine,0,2015
+Stirling,Ecstasy,0,2015
+Stirling,Amphetamines,1,2015
+Stirling,Alcohol,5,2015
+West Dunbartonshire,All drug-related deaths,12,2015
+West Dunbartonshire,Heroin/Morphine,7,2015
+West Dunbartonshire,Methadone,2,2015
+West Dunbartonshire,"Heroin/morphine, methadone or bupren-orphine",9,2015
+West Dunbartonshire,Codeine,0,2015
+West Dunbartonshire,Dihydro-codeine,2,2015
+West Dunbartonshire,Any opiate or opioid,11,2015
+West Dunbartonshire,Any Benzodiazepine,8,2015
+West Dunbartonshire,Diazepam,7,2015
+West Dunbartonshire,Cocaine,2,2015
+West Dunbartonshire,Ecstasy,0,2015
+West Dunbartonshire,Amphetamines,0,2015
+West Dunbartonshire,Alcohol,4,2015
+West Lothian,All drug-related deaths,15,2015
+West Lothian,Heroin/Morphine,9,2015
+West Lothian,Methadone,7,2015
+West Lothian,"Heroin/morphine, methadone or bupren-orphine",12,2015
+West Lothian,Codeine,1,2015
+West Lothian,Dihydro-codeine,3,2015
+West Lothian,Any opiate or opioid,14,2015
+West Lothian,Any Benzodiazepine,10,2015
+West Lothian,Diazepam,10,2015
+West Lothian,Cocaine,1,2015
+West Lothian,Ecstasy,1,2015
+West Lothian,Amphetamines,0,2015
+West Lothian,Alcohol,5,2015
+Scotland,All drug-related deaths,867,2016
+Scotland,Heroin/Morphine,483,2016
+Scotland,Methadone,375,2016
+Scotland,"Heroin/morphine, methadone or bupren-orphine",662,2016
+Scotland,Codeine,80,2016
+Scotland,Dihydro-codeine,150,2016
+Scotland,Any opiate or opioid,779,2016
+Scotland,Any Benzodiazepine,632,2016
+Scotland,Diazepam,365,2016
+Scotland,Cocaine,145,2016
+Scotland,Ecstasy,30,2016
+Scotland,Amphetamines,30,2016
+Scotland,Alcohol,330,2016
+Aberdeen City,All drug-related deaths,46,2016
+Aberdeen City,Heroin/Morphine,23,2016
+Aberdeen City,Methadone,27,2016
+Aberdeen City,"Heroin/morphine, methadone or bupren-orphine",39,2016
+Aberdeen City,Codeine,3,2016
+Aberdeen City,Dihydro-codeine,12,2016
+Aberdeen City,Any opiate or opioid,43,2016
+Aberdeen City,Any Benzodiazepine,38,2016
+Aberdeen City,Diazepam,32,2016
+Aberdeen City,Cocaine,17,2016
+Aberdeen City,Ecstasy,0,2016
+Aberdeen City,Amphetamines,2,2016
+Aberdeen City,Alcohol,14,2016
+Aberdeenshire,All drug-related deaths,12,2016
+Aberdeenshire,Heroin/Morphine,8,2016
+Aberdeenshire,Methadone,3,2016
+Aberdeenshire,"Heroin/morphine, methadone or bupren-orphine",8,2016
+Aberdeenshire,Codeine,0,2016
+Aberdeenshire,Dihydro-codeine,4,2016
+Aberdeenshire,Any opiate or opioid,11,2016
+Aberdeenshire,Any Benzodiazepine,6,2016
+Aberdeenshire,Diazepam,5,2016
+Aberdeenshire,Cocaine,2,2016
+Aberdeenshire,Ecstasy,0,2016
+Aberdeenshire,Amphetamines,0,2016
+Aberdeenshire,Alcohol,5,2016
+Angus,All drug-related deaths,13,2016
+Angus,Heroin/Morphine,11,2016
+Angus,Methadone,4,2016
+Angus,"Heroin/morphine, methadone or bupren-orphine",11,2016
+Angus,Codeine,4,2016
+Angus,Dihydro-codeine,2,2016
+Angus,Any opiate or opioid,13,2016
+Angus,Any Benzodiazepine,9,2016
+Angus,Diazepam,7,2016
+Angus,Cocaine,0,2016
+Angus,Ecstasy,0,2016
+Angus,Amphetamines,0,2016
+Angus,Alcohol,3,2016
+Argyll and Bute,All drug-related deaths,10,2016
+Argyll and Bute,Heroin/Morphine,4,2016
+Argyll and Bute,Methadone,2,2016
+Argyll and Bute,"Heroin/morphine, methadone or bupren-orphine",6,2016
+Argyll and Bute,Codeine,0,2016
+Argyll and Bute,Dihydro-codeine,1,2016
+Argyll and Bute,Any opiate or opioid,7,2016
+Argyll and Bute,Any Benzodiazepine,6,2016
+Argyll and Bute,Diazepam,5,2016
+Argyll and Bute,Cocaine,2,2016
+Argyll and Bute,Ecstasy,3,2016
+Argyll and Bute,Amphetamines,1,2016
+Argyll and Bute,Alcohol,1,2016
+City of Edinburgh,All drug-related deaths,90,2016
+City of Edinburgh,Heroin/Morphine,46,2016
+City of Edinburgh,Methadone,40,2016
+City of Edinburgh,"Heroin/morphine, methadone or bupren-orphine",70,2016
+City of Edinburgh,Codeine,14,2016
+City of Edinburgh,Dihydro-codeine,16,2016
+City of Edinburgh,Any opiate or opioid,83,2016
+City of Edinburgh,Any Benzodiazepine,65,2016
+City of Edinburgh,Diazepam,59,2016
+City of Edinburgh,Cocaine,11,2016
+City of Edinburgh,Ecstasy,2,2016
+City of Edinburgh,Amphetamines,3,2016
+City of Edinburgh,Alcohol,57,2016
+Clackmannanshire,All drug-related deaths,12,2016
+Clackmannanshire,Heroin/Morphine,8,2016
+Clackmannanshire,Methadone,5,2016
+Clackmannanshire,"Heroin/morphine, methadone or bupren-orphine",10,2016
+Clackmannanshire,Codeine,0,2016
+Clackmannanshire,Dihydro-codeine,4,2016
+Clackmannanshire,Any opiate or opioid,11,2016
+Clackmannanshire,Any Benzodiazepine,8,2016
+Clackmannanshire,Diazepam,4,2016
+Clackmannanshire,Cocaine,1,2016
+Clackmannanshire,Ecstasy,0,2016
+Clackmannanshire,Amphetamines,2,2016
+Clackmannanshire,Alcohol,6,2016
+Dumfries and Galloway,All drug-related deaths,17,2016
+Dumfries and Galloway,Heroin/Morphine,9,2016
+Dumfries and Galloway,Methadone,6,2016
+Dumfries and Galloway,"Heroin/morphine, methadone or bupren-orphine",11,2016
+Dumfries and Galloway,Codeine,3,2016
+Dumfries and Galloway,Dihydro-codeine,3,2016
+Dumfries and Galloway,Any opiate or opioid,15,2016
+Dumfries and Galloway,Any Benzodiazepine,8,2016
+Dumfries and Galloway,Diazepam,8,2016
+Dumfries and Galloway,Cocaine,0,2016
+Dumfries and Galloway,Ecstasy,2,2016
+Dumfries and Galloway,Amphetamines,0,2016
+Dumfries and Galloway,Alcohol,8,2016
+Dundee City,All drug-related deaths,38,2016
+Dundee City,Heroin/Morphine,21,2016
+Dundee City,Methadone,24,2016
+Dundee City,"Heroin/morphine, methadone or bupren-orphine",35,2016
+Dundee City,Codeine,5,2016
+Dundee City,Dihydro-codeine,6,2016
+Dundee City,Any opiate or opioid,37,2016
+Dundee City,Any Benzodiazepine,32,2016
+Dundee City,Diazepam,17,2016
+Dundee City,Cocaine,1,2016
+Dundee City,Ecstasy,0,2016
+Dundee City,Amphetamines,0,2016
+Dundee City,Alcohol,4,2016
+East Ayrshire,All drug-related deaths,29,2016
+East Ayrshire,Heroin/Morphine,19,2016
+East Ayrshire,Methadone,17,2016
+East Ayrshire,"Heroin/morphine, methadone or bupren-orphine",24,2016
+East Ayrshire,Codeine,1,2016
+East Ayrshire,Dihydro-codeine,7,2016
+East Ayrshire,Any opiate or opioid,25,2016
+East Ayrshire,Any Benzodiazepine,23,2016
+East Ayrshire,Diazepam,9,2016
+East Ayrshire,Cocaine,5,2016
+East Ayrshire,Ecstasy,0,2016
+East Ayrshire,Amphetamines,2,2016
+East Ayrshire,Alcohol,9,2016
+East Dunbartonshire,All drug-related deaths,7,2016
+East Dunbartonshire,Heroin/Morphine,5,2016
+East Dunbartonshire,Methadone,1,2016
+East Dunbartonshire,"Heroin/morphine, methadone or bupren-orphine",5,2016
+East Dunbartonshire,Codeine,1,2016
+East Dunbartonshire,Dihydro-codeine,1,2016
+East Dunbartonshire,Any opiate or opioid,7,2016
+East Dunbartonshire,Any Benzodiazepine,5,2016
+East Dunbartonshire,Diazepam,4,2016
+East Dunbartonshire,Cocaine,1,2016
+East Dunbartonshire,Ecstasy,0,2016
+East Dunbartonshire,Amphetamines,0,2016
+East Dunbartonshire,Alcohol,2,2016
+East Lothian,All drug-related deaths,11,2016
+East Lothian,Heroin/Morphine,6,2016
+East Lothian,Methadone,9,2016
+East Lothian,"Heroin/morphine, methadone or bupren-orphine",10,2016
+East Lothian,Codeine,1,2016
+East Lothian,Dihydro-codeine,3,2016
+East Lothian,Any opiate or opioid,10,2016
+East Lothian,Any Benzodiazepine,11,2016
+East Lothian,Diazepam,11,2016
+East Lothian,Cocaine,2,2016
+East Lothian,Ecstasy,0,2016
+East Lothian,Amphetamines,0,2016
+East Lothian,Alcohol,5,2016
+East Renfrewshire,All drug-related deaths,5,2016
+East Renfrewshire,Heroin/Morphine,2,2016
+East Renfrewshire,Methadone,2,2016
+East Renfrewshire,"Heroin/morphine, methadone or bupren-orphine",4,2016
+East Renfrewshire,Codeine,1,2016
+East Renfrewshire,Dihydro-codeine,1,2016
+East Renfrewshire,Any opiate or opioid,5,2016
+East Renfrewshire,Any Benzodiazepine,4,2016
+East Renfrewshire,Diazepam,0,2016
+East Renfrewshire,Cocaine,1,2016
+East Renfrewshire,Ecstasy,0,2016
+East Renfrewshire,Amphetamines,0,2016
+East Renfrewshire,Alcohol,2,2016
+Falkirk,All drug-related deaths,29,2016
+Falkirk,Heroin/Morphine,15,2016
+Falkirk,Methadone,8,2016
+Falkirk,"Heroin/morphine, methadone or bupren-orphine",21,2016
+Falkirk,Codeine,4,2016
+Falkirk,Dihydro-codeine,8,2016
+Falkirk,Any opiate or opioid,27,2016
+Falkirk,Any Benzodiazepine,19,2016
+Falkirk,Diazepam,12,2016
+Falkirk,Cocaine,6,2016
+Falkirk,Ecstasy,1,2016
+Falkirk,Amphetamines,0,2016
+Falkirk,Alcohol,16,2016
+Fife,All drug-related deaths,45,2016
+Fife,Heroin/Morphine,30,2016
+Fife,Methadone,19,2016
+Fife,"Heroin/morphine, methadone or bupren-orphine",33,2016
+Fife,Codeine,2,2016
+Fife,Dihydro-codeine,7,2016
+Fife,Any opiate or opioid,41,2016
+Fife,Any Benzodiazepine,34,2016
+Fife,Diazepam,27,2016
+Fife,Cocaine,2,2016
+Fife,Ecstasy,0,2016
+Fife,Amphetamines,4,2016
+Fife,Alcohol,18,2016
+Glasgow City,All drug-related deaths,170,2016
+Glasgow City,Heroin/Morphine,85,2016
+Glasgow City,Methadone,83,2016
+Glasgow City,"Heroin/morphine, methadone or bupren-orphine",131,2016
+Glasgow City,Codeine,12,2016
+Glasgow City,Dihydro-codeine,22,2016
+Glasgow City,Any opiate or opioid,150,2016
+Glasgow City,Any Benzodiazepine,126,2016
+Glasgow City,Diazepam,43,2016
+Glasgow City,Cocaine,38,2016
+Glasgow City,Ecstasy,5,2016
+Glasgow City,Amphetamines,6,2016
+Glasgow City,Alcohol,64,2016
+Highland,All drug-related deaths,19,2016
+Highland,Heroin/Morphine,4,2016
+Highland,Methadone,3,2016
+Highland,"Heroin/morphine, methadone or bupren-orphine",7,2016
+Highland,Codeine,0,2016
+Highland,Dihydro-codeine,2,2016
+Highland,Any opiate or opioid,14,2016
+Highland,Any Benzodiazepine,8,2016
+Highland,Diazepam,6,2016
+Highland,Cocaine,5,2016
+Highland,Ecstasy,1,2016
+Highland,Amphetamines,1,2016
+Highland,Alcohol,5,2016
+Inverclyde,All drug-related deaths,20,2016
+Inverclyde,Heroin/Morphine,8,2016
+Inverclyde,Methadone,14,2016
+Inverclyde,"Heroin/morphine, methadone or bupren-orphine",16,2016
+Inverclyde,Codeine,2,2016
+Inverclyde,Dihydro-codeine,1,2016
+Inverclyde,Any opiate or opioid,18,2016
+Inverclyde,Any Benzodiazepine,19,2016
+Inverclyde,Diazepam,7,2016
+Inverclyde,Cocaine,4,2016
+Inverclyde,Ecstasy,2,2016
+Inverclyde,Amphetamines,0,2016
+Inverclyde,Alcohol,4,2016
+Midlothian,All drug-related deaths,8,2016
+Midlothian,Heroin/Morphine,2,2016
+Midlothian,Methadone,1,2016
+Midlothian,"Heroin/morphine, methadone or bupren-orphine",3,2016
+Midlothian,Codeine,3,2016
+Midlothian,Dihydro-codeine,3,2016
+Midlothian,Any opiate or opioid,7,2016
+Midlothian,Any Benzodiazepine,5,2016
+Midlothian,Diazepam,3,2016
+Midlothian,Cocaine,0,2016
+Midlothian,Ecstasy,1,2016
+Midlothian,Amphetamines,0,2016
+Midlothian,Alcohol,2,2016
+Moray,All drug-related deaths,10,2016
+Moray,Heroin/Morphine,4,2016
+Moray,Methadone,1,2016
+Moray,"Heroin/morphine, methadone or bupren-orphine",5,2016
+Moray,Codeine,0,2016
+Moray,Dihydro-codeine,3,2016
+Moray,Any opiate or opioid,7,2016
+Moray,Any Benzodiazepine,5,2016
+Moray,Diazepam,4,2016
+Moray,Cocaine,3,2016
+Moray,Ecstasy,1,2016
+Moray,Amphetamines,0,2016
+Moray,Alcohol,5,2016
+Eilean Siar,All drug-related deaths,1,2016
+Eilean Siar,Heroin/Morphine,0,2016
+Eilean Siar,Methadone,0,2016
+Eilean Siar,"Heroin/morphine, methadone or bupren-orphine",0,2016
+Eilean Siar,Codeine,0,2016
+Eilean Siar,Dihydro-codeine,1,2016
+Eilean Siar,Any opiate or opioid,1,2016
+Eilean Siar,Any Benzodiazepine,1,2016
+Eilean Siar,Diazepam,1,2016
+Eilean Siar,Cocaine,1,2016
+Eilean Siar,Ecstasy,0,2016
+Eilean Siar,Amphetamines,0,2016
+Eilean Siar,Alcohol,1,2016
+North Ayrshire,All drug-related deaths,32,2016
+North Ayrshire,Heroin/Morphine,21,2016
+North Ayrshire,Methadone,19,2016
+North Ayrshire,"Heroin/morphine, methadone or bupren-orphine",27,2016
+North Ayrshire,Codeine,2,2016
+North Ayrshire,Dihydro-codeine,7,2016
+North Ayrshire,Any opiate or opioid,30,2016
+North Ayrshire,Any Benzodiazepine,27,2016
+North Ayrshire,Diazepam,14,2016
+North Ayrshire,Cocaine,6,2016
+North Ayrshire,Ecstasy,0,2016
+North Ayrshire,Amphetamines,1,2016
+North Ayrshire,Alcohol,10,2016
+North Lanarkshire,All drug-related deaths,49,2016
+North Lanarkshire,Heroin/Morphine,32,2016
+North Lanarkshire,Methadone,18,2016
+North Lanarkshire,"Heroin/morphine, methadone or bupren-orphine",36,2016
+North Lanarkshire,Codeine,4,2016
+North Lanarkshire,Dihydro-codeine,5,2016
+North Lanarkshire,Any opiate or opioid,41,2016
+North Lanarkshire,Any Benzodiazepine,30,2016
+North Lanarkshire,Diazepam,17,2016
+North Lanarkshire,Cocaine,13,2016
+North Lanarkshire,Ecstasy,2,2016
+North Lanarkshire,Amphetamines,0,2016
+North Lanarkshire,Alcohol,17,2016
+Orkney Islands,All drug-related deaths,1,2016
+Orkney Islands,Heroin/Morphine,1,2016
+Orkney Islands,Methadone,0,2016
+Orkney Islands,"Heroin/morphine, methadone or bupren-orphine",1,2016
+Orkney Islands,Codeine,0,2016
+Orkney Islands,Dihydro-codeine,0,2016
+Orkney Islands,Any opiate or opioid,1,2016
+Orkney Islands,Any Benzodiazepine,0,2016
+Orkney Islands,Diazepam,0,2016
+Orkney Islands,Cocaine,0,2016
+Orkney Islands,Ecstasy,0,2016
+Orkney Islands,Amphetamines,0,2016
+Orkney Islands,Alcohol,0,2016
+Perth and Kinross,All drug-related deaths,11,2016
+Perth and Kinross,Heroin/Morphine,8,2016
+Perth and Kinross,Methadone,3,2016
+Perth and Kinross,"Heroin/morphine, methadone or bupren-orphine",8,2016
+Perth and Kinross,Codeine,2,2016
+Perth and Kinross,Dihydro-codeine,1,2016
+Perth and Kinross,Any opiate or opioid,9,2016
+Perth and Kinross,Any Benzodiazepine,4,2016
+Perth and Kinross,Diazepam,2,2016
+Perth and Kinross,Cocaine,0,2016
+Perth and Kinross,Ecstasy,1,2016
+Perth and Kinross,Amphetamines,0,2016
+Perth and Kinross,Alcohol,3,2016
+Renfrewshire,All drug-related deaths,42,2016
+Renfrewshire,Heroin/Morphine,26,2016
+Renfrewshire,Methadone,17,2016
+Renfrewshire,"Heroin/morphine, methadone or bupren-orphine",31,2016
+Renfrewshire,Codeine,2,2016
+Renfrewshire,Dihydro-codeine,4,2016
+Renfrewshire,Any opiate or opioid,37,2016
+Renfrewshire,Any Benzodiazepine,37,2016
+Renfrewshire,Diazepam,16,2016
+Renfrewshire,Cocaine,5,2016
+Renfrewshire,Ecstasy,3,2016
+Renfrewshire,Amphetamines,1,2016
+Renfrewshire,Alcohol,15,2016
+Scottish Borders,All drug-related deaths,10,2016
+Scottish Borders,Heroin/Morphine,6,2016
+Scottish Borders,Methadone,2,2016
+Scottish Borders,"Heroin/morphine, methadone or bupren-orphine",7,2016
+Scottish Borders,Codeine,0,2016
+Scottish Borders,Dihydro-codeine,2,2016
+Scottish Borders,Any opiate or opioid,9,2016
+Scottish Borders,Any Benzodiazepine,8,2016
+Scottish Borders,Diazepam,7,2016
+Scottish Borders,Cocaine,1,2016
+Scottish Borders,Ecstasy,1,2016
+Scottish Borders,Amphetamines,1,2016
+Scottish Borders,Alcohol,4,2016
+Shetland Islands,All drug-related deaths,1,2016
+Shetland Islands,Heroin/Morphine,1,2016
+Shetland Islands,Methadone,0,2016
+Shetland Islands,"Heroin/morphine, methadone or bupren-orphine",1,2016
+Shetland Islands,Codeine,0,2016
+Shetland Islands,Dihydro-codeine,0,2016
+Shetland Islands,Any opiate or opioid,1,2016
+Shetland Islands,Any Benzodiazepine,1,2016
+Shetland Islands,Diazepam,1,2016
+Shetland Islands,Cocaine,0,2016
+Shetland Islands,Ecstasy,0,2016
+Shetland Islands,Amphetamines,0,2016
+Shetland Islands,Alcohol,1,2016
+South Ayrshire,All drug-related deaths,24,2016
+South Ayrshire,Heroin/Morphine,14,2016
+South Ayrshire,Methadone,15,2016
+South Ayrshire,"Heroin/morphine, methadone or bupren-orphine",22,2016
+South Ayrshire,Codeine,3,2016
+South Ayrshire,Dihydro-codeine,3,2016
+South Ayrshire,Any opiate or opioid,23,2016
+South Ayrshire,Any Benzodiazepine,20,2016
+South Ayrshire,Diazepam,9,2016
+South Ayrshire,Cocaine,3,2016
+South Ayrshire,Ecstasy,0,2016
+South Ayrshire,Amphetamines,0,2016
+South Ayrshire,Alcohol,6,2016
+South Lanarkshire,All drug-related deaths,64,2016
+South Lanarkshire,Heroin/Morphine,37,2016
+South Lanarkshire,Methadone,24,2016
+South Lanarkshire,"Heroin/morphine, methadone or bupren-orphine",50,2016
+South Lanarkshire,Codeine,5,2016
+South Lanarkshire,Dihydro-codeine,12,2016
+South Lanarkshire,Any opiate or opioid,60,2016
+South Lanarkshire,Any Benzodiazepine,47,2016
+South Lanarkshire,Diazepam,19,2016
+South Lanarkshire,Cocaine,12,2016
+South Lanarkshire,Ecstasy,1,2016
+South Lanarkshire,Amphetamines,3,2016
+South Lanarkshire,Alcohol,24,2016
+Stirling,All drug-related deaths,9,2016
+Stirling,Heroin/Morphine,6,2016
+Stirling,Methadone,2,2016
+Stirling,"Heroin/morphine, methadone or bupren-orphine",6,2016
+Stirling,Codeine,1,2016
+Stirling,Dihydro-codeine,1,2016
+Stirling,Any opiate or opioid,9,2016
+Stirling,Any Benzodiazepine,7,2016
+Stirling,Diazepam,4,2016
+Stirling,Cocaine,0,2016
+Stirling,Ecstasy,0,2016
+Stirling,Amphetamines,0,2016
+Stirling,Alcohol,7,2016
+West Dunbartonshire,All drug-related deaths,13,2016
+West Dunbartonshire,Heroin/Morphine,9,2016
+West Dunbartonshire,Methadone,1,2016
+West Dunbartonshire,"Heroin/morphine, methadone or bupren-orphine",10,2016
+West Dunbartonshire,Codeine,1,2016
+West Dunbartonshire,Dihydro-codeine,4,2016
+West Dunbartonshire,Any opiate or opioid,11,2016
+West Dunbartonshire,Any Benzodiazepine,8,2016
+West Dunbartonshire,Diazepam,3,2016
+West Dunbartonshire,Cocaine,1,2016
+West Dunbartonshire,Ecstasy,1,2016
+West Dunbartonshire,Amphetamines,0,2016
+West Dunbartonshire,Alcohol,3,2016
+West Lothian,All drug-related deaths,19,2016
+West Lothian,Heroin/Morphine,12,2016
+West Lothian,Methadone,5,2016
+West Lothian,"Heroin/morphine, methadone or bupren-orphine",14,2016
+West Lothian,Codeine,4,2016
+West Lothian,Dihydro-codeine,4,2016
+West Lothian,Any opiate or opioid,16,2016
+West Lothian,Any Benzodiazepine,11,2016
+West Lothian,Diazepam,9,2016
+West Lothian,Cocaine,2,2016
+West Lothian,Ecstasy,3,2016
+West Lothian,Amphetamines,3,2016
+West Lothian,Alcohol,9,2016
+Scotland,All drug-related deaths,934,2017
+Scotland,Heroin/Morphine,470,2017
+Scotland,Methadone,439,2017
+Scotland,"Heroin/morphine, methadone or bupren-orphine",709,2017
+Scotland,Codeine,27,2017
+Scotland,Dihydro-codeine,97,2017
+Scotland,Any opiate or opioid,815,2017
+Scotland,Any Benzodiazepine,552,2017
+Scotland,Diazepam,205,2017
+Scotland,Cocaine,176,2017
+Scotland,Ecstasy,27,2017
+Scotland,Amphetamines,32,2017
+Scotland,Alcohol,90,2017
+Aberdeen City,All drug-related deaths,54,2017
+Aberdeen City,Heroin/Morphine,28,2017
+Aberdeen City,Methadone,38,2017
+Aberdeen City,"Heroin/morphine, methadone or bupren-orphine",45,2017
+Aberdeen City,Codeine,1,2017
+Aberdeen City,Dihydro-codeine,6,2017
+Aberdeen City,Any opiate or opioid,49,2017
+Aberdeen City,Any Benzodiazepine,41,2017
+Aberdeen City,Diazepam,36,2017
+Aberdeen City,Cocaine,16,2017
+Aberdeen City,Ecstasy,0,2017
+Aberdeen City,Amphetamines,1,2017
+Aberdeen City,Alcohol,6,2017
+Aberdeenshire,All drug-related deaths,24,2017
+Aberdeenshire,Heroin/Morphine,10,2017
+Aberdeenshire,Methadone,11,2017
+Aberdeenshire,"Heroin/morphine, methadone or bupren-orphine",15,2017
+Aberdeenshire,Codeine,2,2017
+Aberdeenshire,Dihydro-codeine,4,2017
+Aberdeenshire,Any opiate or opioid,20,2017
+Aberdeenshire,Any Benzodiazepine,11,2017
+Aberdeenshire,Diazepam,7,2017
+Aberdeenshire,Cocaine,9,2017
+Aberdeenshire,Ecstasy,1,2017
+Aberdeenshire,Amphetamines,1,2017
+Aberdeenshire,Alcohol,2,2017
+Angus,All drug-related deaths,18,2017
+Angus,Heroin/Morphine,9,2017
+Angus,Methadone,9,2017
+Angus,"Heroin/morphine, methadone or bupren-orphine",15,2017
+Angus,Codeine,1,2017
+Angus,Dihydro-codeine,3,2017
+Angus,Any opiate or opioid,16,2017
+Angus,Any Benzodiazepine,11,2017
+Angus,Diazepam,7,2017
+Angus,Cocaine,0,2017
+Angus,Ecstasy,1,2017
+Angus,Amphetamines,0,2017
+Angus,Alcohol,3,2017
+Argyll and Bute,All drug-related deaths,8,2017
+Argyll and Bute,Heroin/Morphine,3,2017
+Argyll and Bute,Methadone,0,2017
+Argyll and Bute,"Heroin/morphine, methadone or bupren-orphine",4,2017
+Argyll and Bute,Codeine,1,2017
+Argyll and Bute,Dihydro-codeine,0,2017
+Argyll and Bute,Any opiate or opioid,7,2017
+Argyll and Bute,Any Benzodiazepine,2,2017
+Argyll and Bute,Diazepam,0,2017
+Argyll and Bute,Cocaine,1,2017
+Argyll and Bute,Ecstasy,1,2017
+Argyll and Bute,Amphetamines,0,2017
+Argyll and Bute,Alcohol,1,2017
+City of Edinburgh,All drug-related deaths,84,2017
+City of Edinburgh,Heroin/Morphine,32,2017
+City of Edinburgh,Methadone,48,2017
+City of Edinburgh,"Heroin/morphine, methadone or bupren-orphine",63,2017
+City of Edinburgh,Codeine,2,2017
+City of Edinburgh,Dihydro-codeine,10,2017
+City of Edinburgh,Any opiate or opioid,70,2017
+City of Edinburgh,Any Benzodiazepine,47,2017
+City of Edinburgh,Diazepam,30,2017
+City of Edinburgh,Cocaine,23,2017
+City of Edinburgh,Ecstasy,5,2017
+City of Edinburgh,Amphetamines,2,2017
+City of Edinburgh,Alcohol,10,2017
+Clackmannanshire,All drug-related deaths,5,2017
+Clackmannanshire,Heroin/Morphine,2,2017
+Clackmannanshire,Methadone,2,2017
+Clackmannanshire,"Heroin/morphine, methadone or bupren-orphine",3,2017
+Clackmannanshire,Codeine,0,2017
+Clackmannanshire,Dihydro-codeine,1,2017
+Clackmannanshire,Any opiate or opioid,5,2017
+Clackmannanshire,Any Benzodiazepine,3,2017
+Clackmannanshire,Diazepam,0,2017
+Clackmannanshire,Cocaine,0,2017
+Clackmannanshire,Ecstasy,0,2017
+Clackmannanshire,Amphetamines,0,2017
+Clackmannanshire,Alcohol,0,2017
+Dumfries and Galloway,All drug-related deaths,22,2017
+Dumfries and Galloway,Heroin/Morphine,14,2017
+Dumfries and Galloway,Methadone,11,2017
+Dumfries and Galloway,"Heroin/morphine, methadone or bupren-orphine",20,2017
+Dumfries and Galloway,Codeine,1,2017
+Dumfries and Galloway,Dihydro-codeine,1,2017
+Dumfries and Galloway,Any opiate or opioid,22,2017
+Dumfries and Galloway,Any Benzodiazepine,6,2017
+Dumfries and Galloway,Diazepam,4,2017
+Dumfries and Galloway,Cocaine,2,2017
+Dumfries and Galloway,Ecstasy,1,2017
+Dumfries and Galloway,Amphetamines,0,2017
+Dumfries and Galloway,Alcohol,4,2017
+Dundee City,All drug-related deaths,57,2017
+Dundee City,Heroin/Morphine,42,2017
+Dundee City,Methadone,27,2017
+Dundee City,"Heroin/morphine, methadone or bupren-orphine",51,2017
+Dundee City,Codeine,1,2017
+Dundee City,Dihydro-codeine,4,2017
+Dundee City,Any opiate or opioid,53,2017
+Dundee City,Any Benzodiazepine,44,2017
+Dundee City,Diazepam,17,2017
+Dundee City,Cocaine,7,2017
+Dundee City,Ecstasy,0,2017
+Dundee City,Amphetamines,0,2017
+Dundee City,Alcohol,5,2017
+East Ayrshire,All drug-related deaths,24,2017
+East Ayrshire,Heroin/Morphine,14,2017
+East Ayrshire,Methadone,15,2017
+East Ayrshire,"Heroin/morphine, methadone or bupren-orphine",22,2017
+East Ayrshire,Codeine,0,2017
+East Ayrshire,Dihydro-codeine,0,2017
+East Ayrshire,Any opiate or opioid,22,2017
+East Ayrshire,Any Benzodiazepine,16,2017
+East Ayrshire,Diazepam,0,2017
+East Ayrshire,Cocaine,5,2017
+East Ayrshire,Ecstasy,0,2017
+East Ayrshire,Amphetamines,0,2017
+East Ayrshire,Alcohol,0,2017
+East Dunbartonshire,All drug-related deaths,8,2017
+East Dunbartonshire,Heroin/Morphine,3,2017
+East Dunbartonshire,Methadone,2,2017
+East Dunbartonshire,"Heroin/morphine, methadone or bupren-orphine",4,2017
+East Dunbartonshire,Codeine,0,2017
+East Dunbartonshire,Dihydro-codeine,0,2017
+East Dunbartonshire,Any opiate or opioid,5,2017
+East Dunbartonshire,Any Benzodiazepine,3,2017
+East Dunbartonshire,Diazepam,0,2017
+East Dunbartonshire,Cocaine,3,2017
+East Dunbartonshire,Ecstasy,0,2017
+East Dunbartonshire,Amphetamines,1,2017
+East Dunbartonshire,Alcohol,2,2017
+East Lothian,All drug-related deaths,12,2017
+East Lothian,Heroin/Morphine,6,2017
+East Lothian,Methadone,2,2017
+East Lothian,"Heroin/morphine, methadone or bupren-orphine",9,2017
+East Lothian,Codeine,2,2017
+East Lothian,Dihydro-codeine,2,2017
+East Lothian,Any opiate or opioid,11,2017
+East Lothian,Any Benzodiazepine,3,2017
+East Lothian,Diazepam,2,2017
+East Lothian,Cocaine,2,2017
+East Lothian,Ecstasy,2,2017
+East Lothian,Amphetamines,1,2017
+East Lothian,Alcohol,2,2017
+East Renfrewshire,All drug-related deaths,4,2017
+East Renfrewshire,Heroin/Morphine,0,2017
+East Renfrewshire,Methadone,2,2017
+East Renfrewshire,"Heroin/morphine, methadone or bupren-orphine",2,2017
+East Renfrewshire,Codeine,1,2017
+East Renfrewshire,Dihydro-codeine,0,2017
+East Renfrewshire,Any opiate or opioid,3,2017
+East Renfrewshire,Any Benzodiazepine,2,2017
+East Renfrewshire,Diazepam,0,2017
+East Renfrewshire,Cocaine,1,2017
+East Renfrewshire,Ecstasy,0,2017
+East Renfrewshire,Amphetamines,1,2017
+East Renfrewshire,Alcohol,0,2017
+Falkirk,All drug-related deaths,16,2017
+Falkirk,Heroin/Morphine,9,2017
+Falkirk,Methadone,11,2017
+Falkirk,"Heroin/morphine, methadone or bupren-orphine",13,2017
+Falkirk,Codeine,0,2017
+Falkirk,Dihydro-codeine,4,2017
+Falkirk,Any opiate or opioid,15,2017
+Falkirk,Any Benzodiazepine,9,2017
+Falkirk,Diazepam,3,2017
+Falkirk,Cocaine,5,2017
+Falkirk,Ecstasy,0,2017
+Falkirk,Amphetamines,0,2017
+Falkirk,Alcohol,1,2017
+Fife,All drug-related deaths,66,2017
+Fife,Heroin/Morphine,41,2017
+Fife,Methadone,30,2017
+Fife,"Heroin/morphine, methadone or bupren-orphine",53,2017
+Fife,Codeine,2,2017
+Fife,Dihydro-codeine,6,2017
+Fife,Any opiate or opioid,62,2017
+Fife,Any Benzodiazepine,39,2017
+Fife,Diazepam,28,2017
+Fife,Cocaine,8,2017
+Fife,Ecstasy,4,2017
+Fife,Amphetamines,2,2017
+Fife,Alcohol,2,2017
+Glasgow City,All drug-related deaths,192,2017
+Glasgow City,Heroin/Morphine,91,2017
+Glasgow City,Methadone,95,2017
+Glasgow City,"Heroin/morphine, methadone or bupren-orphine",150,2017
+Glasgow City,Codeine,6,2017
+Glasgow City,Dihydro-codeine,12,2017
+Glasgow City,Any opiate or opioid,168,2017
+Glasgow City,Any Benzodiazepine,121,2017
+Glasgow City,Diazepam,8,2017
+Glasgow City,Cocaine,25,2017
+Glasgow City,Ecstasy,2,2017
+Glasgow City,Amphetamines,8,2017
+Glasgow City,Alcohol,21,2017
+Highland,All drug-related deaths,24,2017
+Highland,Heroin/Morphine,10,2017
+Highland,Methadone,10,2017
+Highland,"Heroin/morphine, methadone or bupren-orphine",17,2017
+Highland,Codeine,0,2017
+Highland,Dihydro-codeine,7,2017
+Highland,Any opiate or opioid,22,2017
+Highland,Any Benzodiazepine,17,2017
+Highland,Diazepam,10,2017
+Highland,Cocaine,3,2017
+Highland,Ecstasy,1,2017
+Highland,Amphetamines,1,2017
+Highland,Alcohol,1,2017
+Inverclyde,All drug-related deaths,23,2017
+Inverclyde,Heroin/Morphine,9,2017
+Inverclyde,Methadone,13,2017
+Inverclyde,"Heroin/morphine, methadone or bupren-orphine",16,2017
+Inverclyde,Codeine,1,2017
+Inverclyde,Dihydro-codeine,1,2017
+Inverclyde,Any opiate or opioid,19,2017
+Inverclyde,Any Benzodiazepine,13,2017
+Inverclyde,Diazepam,1,2017
+Inverclyde,Cocaine,4,2017
+Inverclyde,Ecstasy,1,2017
+Inverclyde,Amphetamines,1,2017
+Inverclyde,Alcohol,3,2017
+Midlothian,All drug-related deaths,19,2017
+Midlothian,Heroin/Morphine,6,2017
+Midlothian,Methadone,8,2017
+Midlothian,"Heroin/morphine, methadone or bupren-orphine",12,2017
+Midlothian,Codeine,0,2017
+Midlothian,Dihydro-codeine,6,2017
+Midlothian,Any opiate or opioid,15,2017
+Midlothian,Any Benzodiazepine,9,2017
+Midlothian,Diazepam,6,2017
+Midlothian,Cocaine,5,2017
+Midlothian,Ecstasy,1,2017
+Midlothian,Amphetamines,2,2017
+Midlothian,Alcohol,0,2017
+Moray,All drug-related deaths,7,2017
+Moray,Heroin/Morphine,3,2017
+Moray,Methadone,4,2017
+Moray,"Heroin/morphine, methadone or bupren-orphine",5,2017
+Moray,Codeine,0,2017
+Moray,Dihydro-codeine,1,2017
+Moray,Any opiate or opioid,6,2017
+Moray,Any Benzodiazepine,6,2017
+Moray,Diazepam,5,2017
+Moray,Cocaine,1,2017
+Moray,Ecstasy,0,2017
+Moray,Amphetamines,0,2017
+Moray,Alcohol,3,2017
+Eilean Siar,All drug-related deaths,3,2017
+Eilean Siar,Heroin/Morphine,0,2017
+Eilean Siar,Methadone,0,2017
+Eilean Siar,"Heroin/morphine, methadone or bupren-orphine",0,2017
+Eilean Siar,Codeine,0,2017
+Eilean Siar,Dihydro-codeine,0,2017
+Eilean Siar,Any opiate or opioid,0,2017
+Eilean Siar,Any Benzodiazepine,1,2017
+Eilean Siar,Diazepam,1,2017
+Eilean Siar,Cocaine,0,2017
+Eilean Siar,Ecstasy,0,2017
+Eilean Siar,Amphetamines,0,2017
+Eilean Siar,Alcohol,1,2017
+North Ayrshire,All drug-related deaths,25,2017
+North Ayrshire,Heroin/Morphine,15,2017
+North Ayrshire,Methadone,15,2017
+North Ayrshire,"Heroin/morphine, methadone or bupren-orphine",19,2017
+North Ayrshire,Codeine,1,2017
+North Ayrshire,Dihydro-codeine,3,2017
+North Ayrshire,Any opiate or opioid,22,2017
+North Ayrshire,Any Benzodiazepine,14,2017
+North Ayrshire,Diazepam,3,2017
+North Ayrshire,Cocaine,4,2017
+North Ayrshire,Ecstasy,0,2017
+North Ayrshire,Amphetamines,2,2017
+North Ayrshire,Alcohol,2,2017
+North Lanarkshire,All drug-related deaths,53,2017
+North Lanarkshire,Heroin/Morphine,26,2017
+North Lanarkshire,Methadone,12,2017
+North Lanarkshire,"Heroin/morphine, methadone or bupren-orphine",31,2017
+North Lanarkshire,Codeine,3,2017
+North Lanarkshire,Dihydro-codeine,5,2017
+North Lanarkshire,Any opiate or opioid,44,2017
+North Lanarkshire,Any Benzodiazepine,18,2017
+North Lanarkshire,Diazepam,5,2017
+North Lanarkshire,Cocaine,16,2017
+North Lanarkshire,Ecstasy,3,2017
+North Lanarkshire,Amphetamines,1,2017
+North Lanarkshire,Alcohol,4,2017
+Orkney Islands,All drug-related deaths,1,2017
+Orkney Islands,Heroin/Morphine,1,2017
+Orkney Islands,Methadone,0,2017
+Orkney Islands,"Heroin/morphine, methadone or bupren-orphine",1,2017
+Orkney Islands,Codeine,0,2017
+Orkney Islands,Dihydro-codeine,0,2017
+Orkney Islands,Any opiate or opioid,1,2017
+Orkney Islands,Any Benzodiazepine,1,2017
+Orkney Islands,Diazepam,1,2017
+Orkney Islands,Cocaine,1,2017
+Orkney Islands,Ecstasy,1,2017
+Orkney Islands,Amphetamines,0,2017
+Orkney Islands,Alcohol,0,2017
+Perth and Kinross,All drug-related deaths,19,2017
+Perth and Kinross,Heroin/Morphine,11,2017
+Perth and Kinross,Methadone,6,2017
+Perth and Kinross,"Heroin/morphine, methadone or bupren-orphine",13,2017
+Perth and Kinross,Codeine,0,2017
+Perth and Kinross,Dihydro-codeine,2,2017
+Perth and Kinross,Any opiate or opioid,14,2017
+Perth and Kinross,Any Benzodiazepine,10,2017
+Perth and Kinross,Diazepam,8,2017
+Perth and Kinross,Cocaine,2,2017
+Perth and Kinross,Ecstasy,0,2017
+Perth and Kinross,Amphetamines,0,2017
+Perth and Kinross,Alcohol,2,2017
+Renfrewshire,All drug-related deaths,38,2017
+Renfrewshire,Heroin/Morphine,18,2017
+Renfrewshire,Methadone,19,2017
+Renfrewshire,"Heroin/morphine, methadone or bupren-orphine",30,2017
+Renfrewshire,Codeine,0,2017
+Renfrewshire,Dihydro-codeine,3,2017
+Renfrewshire,Any opiate or opioid,33,2017
+Renfrewshire,Any Benzodiazepine,29,2017
+Renfrewshire,Diazepam,4,2017
+Renfrewshire,Cocaine,12,2017
+Renfrewshire,Ecstasy,1,2017
+Renfrewshire,Amphetamines,3,2017
+Renfrewshire,Alcohol,5,2017
+Scottish Borders,All drug-related deaths,13,2017
+Scottish Borders,Heroin/Morphine,9,2017
+Scottish Borders,Methadone,6,2017
+Scottish Borders,"Heroin/morphine, methadone or bupren-orphine",10,2017
+Scottish Borders,Codeine,0,2017
+Scottish Borders,Dihydro-codeine,3,2017
+Scottish Borders,Any opiate or opioid,11,2017
+Scottish Borders,Any Benzodiazepine,7,2017
+Scottish Borders,Diazepam,5,2017
+Scottish Borders,Cocaine,3,2017
+Scottish Borders,Ecstasy,0,2017
+Scottish Borders,Amphetamines,0,2017
+Scottish Borders,Alcohol,1,2017
+Shetland Islands,All drug-related deaths,2,2017
+Shetland Islands,Heroin/Morphine,1,2017
+Shetland Islands,Methadone,1,2017
+Shetland Islands,"Heroin/morphine, methadone or bupren-orphine",2,2017
+Shetland Islands,Codeine,0,2017
+Shetland Islands,Dihydro-codeine,0,2017
+Shetland Islands,Any opiate or opioid,2,2017
+Shetland Islands,Any Benzodiazepine,1,2017
+Shetland Islands,Diazepam,1,2017
+Shetland Islands,Cocaine,0,2017
+Shetland Islands,Ecstasy,0,2017
+Shetland Islands,Amphetamines,0,2017
+Shetland Islands,Alcohol,1,2017
+South Ayrshire,All drug-related deaths,12,2017
+South Ayrshire,Heroin/Morphine,4,2017
+South Ayrshire,Methadone,5,2017
+South Ayrshire,"Heroin/morphine, methadone or bupren-orphine",9,2017
+South Ayrshire,Codeine,0,2017
+South Ayrshire,Dihydro-codeine,0,2017
+South Ayrshire,Any opiate or opioid,9,2017
+South Ayrshire,Any Benzodiazepine,6,2017
+South Ayrshire,Diazepam,0,2017
+South Ayrshire,Cocaine,3,2017
+South Ayrshire,Ecstasy,0,2017
+South Ayrshire,Amphetamines,1,2017
+South Ayrshire,Alcohol,2,2017
+South Lanarkshire,All drug-related deaths,49,2017
+South Lanarkshire,Heroin/Morphine,23,2017
+South Lanarkshire,Methadone,19,2017
+South Lanarkshire,"Heroin/morphine, methadone or bupren-orphine",35,2017
+South Lanarkshire,Codeine,1,2017
+South Lanarkshire,Dihydro-codeine,6,2017
+South Lanarkshire,Any opiate or opioid,43,2017
+South Lanarkshire,Any Benzodiazepine,33,2017
+South Lanarkshire,Diazepam,0,2017
+South Lanarkshire,Cocaine,5,2017
+South Lanarkshire,Ecstasy,1,2017
+South Lanarkshire,Amphetamines,1,2017
+South Lanarkshire,Alcohol,3,2017
+Stirling,All drug-related deaths,15,2017
+Stirling,Heroin/Morphine,8,2017
+Stirling,Methadone,8,2017
+Stirling,"Heroin/morphine, methadone or bupren-orphine",12,2017
+Stirling,Codeine,0,2017
+Stirling,Dihydro-codeine,6,2017
+Stirling,Any opiate or opioid,15,2017
+Stirling,Any Benzodiazepine,10,2017
+Stirling,Diazepam,6,2017
+Stirling,Cocaine,2,2017
+Stirling,Ecstasy,0,2017
+Stirling,Amphetamines,0,2017
+Stirling,Alcohol,0,2017
+West Dunbartonshire,All drug-related deaths,15,2017
+West Dunbartonshire,Heroin/Morphine,12,2017
+West Dunbartonshire,Methadone,6,2017
+West Dunbartonshire,"Heroin/morphine, methadone or bupren-orphine",14,2017
+West Dunbartonshire,Codeine,0,2017
+West Dunbartonshire,Dihydro-codeine,0,2017
+West Dunbartonshire,Any opiate or opioid,14,2017
+West Dunbartonshire,Any Benzodiazepine,12,2017
+West Dunbartonshire,Diazepam,3,2017
+West Dunbartonshire,Cocaine,3,2017
+West Dunbartonshire,Ecstasy,1,2017
+West Dunbartonshire,Amphetamines,1,2017
+West Dunbartonshire,Alcohol,1,2017
+West Lothian,All drug-related deaths,22,2017
+West Lothian,Heroin/Morphine,10,2017
+West Lothian,Methadone,4,2017
+West Lothian,"Heroin/morphine, methadone or bupren-orphine",14,2017
+West Lothian,Codeine,1,2017
+West Lothian,Dihydro-codeine,1,2017
+West Lothian,Any opiate or opioid,17,2017
+West Lothian,Any Benzodiazepine,7,2017
+West Lothian,Diazepam,4,2017
+West Lothian,Cocaine,5,2017
+West Lothian,Ecstasy,0,2017
+West Lothian,Amphetamines,2,2017
+West Lothian,Alcohol,2,2017
+Scotland,All drug-related deaths,1187,2018
+Scotland,Heroin/Morphine,537,2018
+Scotland,Methadone,560,2018
+Scotland,"Heroin/morphine, methadone or bupren-orphine",896,2018
+Scotland,Codeine,57,2018
+Scotland,Dihydro-codeine,133,2018
+Scotland,Any opiate or opioid,1021,2018
+Scotland,Any Benzodiazepine,792,2018
+Scotland,Any Prescribable Benzodiazepine,238,2018
+Scotland,Diazepam,211,2018
+Scotland,Any Street Benzodiazepine,675,2018
+Scotland,Etizolam,548,2018
+Scotland,Gabapentin and/or Pregabalin,367,2018
+Scotland,Cocaine,273,2018
+Scotland,Ecstasy,35,2018
+Scotland,Amphetamines,46,2018
+Scotland,Alcohol,156,2018
+Aberdeen City,All drug-related deaths,52,2018
+Aberdeen City,Heroin/Morphine,23,2018
+Aberdeen City,Methadone,31,2018
+Aberdeen City,"Heroin/morphine, methadone or bupren-orphine",40,2018
+Aberdeen City,Codeine,2,2018
+Aberdeen City,Dihydro-codeine,8,2018
+Aberdeen City,Any opiate or opioid,46,2018
+Aberdeen City,Any Benzodiazepine,31,2018
+Aberdeen City,Any Prescribable Benzodiazepine,24,2018
+Aberdeen City,Diazepam,21,2018
+Aberdeen City,Any Street Benzodiazepine,20,2018
+Aberdeen City,Etizolam,3,2018
+Aberdeen City,Gabapentin and/or Pregabalin,18,2018
+Aberdeen City,Cocaine,25,2018
+Aberdeen City,Ecstasy,1,2018
+Aberdeen City,Amphetamines,0,2018
+Aberdeen City,Alcohol,3,2018
+Aberdeenshire,All drug-related deaths,23,2018
+Aberdeenshire,Heroin/Morphine,8,2018
+Aberdeenshire,Methadone,11,2018
+Aberdeenshire,"Heroin/morphine, methadone or bupren-orphine",15,2018
+Aberdeenshire,Codeine,2,2018
+Aberdeenshire,Dihydro-codeine,3,2018
+Aberdeenshire,Any opiate or opioid,18,2018
+Aberdeenshire,Any Benzodiazepine,14,2018
+Aberdeenshire,Any Prescribable Benzodiazepine,13,2018
+Aberdeenshire,Diazepam,12,2018
+Aberdeenshire,Any Street Benzodiazepine,7,2018
+Aberdeenshire,Etizolam,1,2018
+Aberdeenshire,Gabapentin and/or Pregabalin,5,2018
+Aberdeenshire,Cocaine,12,2018
+Aberdeenshire,Ecstasy,5,2018
+Aberdeenshire,Amphetamines,0,2018
+Aberdeenshire,Alcohol,3,2018
+Angus,All drug-related deaths,13,2018
+Angus,Heroin/Morphine,7,2018
+Angus,Methadone,4,2018
+Angus,"Heroin/morphine, methadone or bupren-orphine",10,2018
+Angus,Codeine,2,2018
+Angus,Dihydro-codeine,1,2018
+Angus,Any opiate or opioid,11,2018
+Angus,Any Benzodiazepine,7,2018
+Angus,Any Prescribable Benzodiazepine,3,2018
+Angus,Diazepam,3,2018
+Angus,Any Street Benzodiazepine,5,2018
+Angus,Etizolam,5,2018
+Angus,Gabapentin and/or Pregabalin,5,2018
+Angus,Cocaine,1,2018
+Angus,Ecstasy,0,2018
+Angus,Amphetamines,0,2018
+Angus,Alcohol,0,2018
+Argyll and Bute,All drug-related deaths,9,2018
+Argyll and Bute,Heroin/Morphine,4,2018
+Argyll and Bute,Methadone,2,2018
+Argyll and Bute,"Heroin/morphine, methadone or bupren-orphine",6,2018
+Argyll and Bute,Codeine,0,2018
+Argyll and Bute,Dihydro-codeine,0,2018
+Argyll and Bute,Any opiate or opioid,6,2018
+Argyll and Bute,Any Benzodiazepine,3,2018
+Argyll and Bute,Any Prescribable Benzodiazepine,1,2018
+Argyll and Bute,Diazepam,0,2018
+Argyll and Bute,Any Street Benzodiazepine,3,2018
+Argyll and Bute,Etizolam,3,2018
+Argyll and Bute,Gabapentin and/or Pregabalin,1,2018
+Argyll and Bute,Cocaine,1,2018
+Argyll and Bute,Ecstasy,1,2018
+Argyll and Bute,Amphetamines,0,2018
+Argyll and Bute,Alcohol,0,2018
+City of Edinburgh,All drug-related deaths,95,2018
+City of Edinburgh,Heroin/Morphine,35,2018
+City of Edinburgh,Methadone,53,2018
+City of Edinburgh,"Heroin/morphine, methadone or bupren-orphine",73,2018
+City of Edinburgh,Codeine,4,2018
+City of Edinburgh,Dihydro-codeine,12,2018
+City of Edinburgh,Any opiate or opioid,78,2018
+City of Edinburgh,Any Benzodiazepine,62,2018
+City of Edinburgh,Any Prescribable Benzodiazepine,39,2018
+City of Edinburgh,Diazepam,38,2018
+City of Edinburgh,Any Street Benzodiazepine,47,2018
+City of Edinburgh,Etizolam,29,2018
+City of Edinburgh,Gabapentin and/or Pregabalin,42,2018
+City of Edinburgh,Cocaine,33,2018
+City of Edinburgh,Ecstasy,4,2018
+City of Edinburgh,Amphetamines,6,2018
+City of Edinburgh,Alcohol,16,2018
+Clackmannanshire,All drug-related deaths,10,2018
+Clackmannanshire,Heroin/Morphine,4,2018
+Clackmannanshire,Methadone,6,2018
+Clackmannanshire,"Heroin/morphine, methadone or bupren-orphine",7,2018
+Clackmannanshire,Codeine,0,2018
+Clackmannanshire,Dihydro-codeine,0,2018
+Clackmannanshire,Any opiate or opioid,8,2018
+Clackmannanshire,Any Benzodiazepine,9,2018
+Clackmannanshire,Any Prescribable Benzodiazepine,1,2018
+Clackmannanshire,Diazepam,1,2018
+Clackmannanshire,Any Street Benzodiazepine,9,2018
+Clackmannanshire,Etizolam,8,2018
+Clackmannanshire,Gabapentin and/or Pregabalin,4,2018
+Clackmannanshire,Cocaine,2,2018
+Clackmannanshire,Ecstasy,0,2018
+Clackmannanshire,Amphetamines,1,2018
+Clackmannanshire,Alcohol,1,2018
+Dumfries and Galloway,All drug-related deaths,20,2018
+Dumfries and Galloway,Heroin/Morphine,13,2018
+Dumfries and Galloway,Methadone,13,2018
+Dumfries and Galloway,"Heroin/morphine, methadone or bupren-orphine",19,2018
+Dumfries and Galloway,Codeine,0,2018
+Dumfries and Galloway,Dihydro-codeine,1,2018
+Dumfries and Galloway,Any opiate or opioid,19,2018
+Dumfries and Galloway,Any Benzodiazepine,16,2018
+Dumfries and Galloway,Any Prescribable Benzodiazepine,7,2018
+Dumfries and Galloway,Diazepam,6,2018
+Dumfries and Galloway,Any Street Benzodiazepine,12,2018
+Dumfries and Galloway,Etizolam,5,2018
+Dumfries and Galloway,Gabapentin and/or Pregabalin,5,2018
+Dumfries and Galloway,Cocaine,1,2018
+Dumfries and Galloway,Ecstasy,1,2018
+Dumfries and Galloway,Amphetamines,0,2018
+Dumfries and Galloway,Alcohol,2,2018
+Dundee City,All drug-related deaths,66,2018
+Dundee City,Heroin/Morphine,34,2018
+Dundee City,Methadone,27,2018
+Dundee City,"Heroin/morphine, methadone or bupren-orphine",55,2018
+Dundee City,Codeine,2,2018
+Dundee City,Dihydro-codeine,4,2018
+Dundee City,Any opiate or opioid,58,2018
+Dundee City,Any Benzodiazepine,49,2018
+Dundee City,Any Prescribable Benzodiazepine,16,2018
+Dundee City,Diazepam,11,2018
+Dundee City,Any Street Benzodiazepine,45,2018
+Dundee City,Etizolam,41,2018
+Dundee City,Gabapentin and/or Pregabalin,27,2018
+Dundee City,Cocaine,9,2018
+Dundee City,Ecstasy,0,2018
+Dundee City,Amphetamines,2,2018
+Dundee City,Alcohol,7,2018
+East Ayrshire,All drug-related deaths,29,2018
+East Ayrshire,Heroin/Morphine,19,2018
+East Ayrshire,Methadone,14,2018
+East Ayrshire,"Heroin/morphine, methadone or bupren-orphine",22,2018
+East Ayrshire,Codeine,0,2018
+East Ayrshire,Dihydro-codeine,0,2018
+East Ayrshire,Any opiate or opioid,26,2018
+East Ayrshire,Any Benzodiazepine,21,2018
+East Ayrshire,Any Prescribable Benzodiazepine,0,2018
+East Ayrshire,Diazepam,0,2018
+East Ayrshire,Any Street Benzodiazepine,21,2018
+East Ayrshire,Etizolam,21,2018
+East Ayrshire,Gabapentin and/or Pregabalin,8,2018
+East Ayrshire,Cocaine,4,2018
+East Ayrshire,Ecstasy,1,2018
+East Ayrshire,Amphetamines,1,2018
+East Ayrshire,Alcohol,2,2018
+East Dunbartonshire,All drug-related deaths,9,2018
+East Dunbartonshire,Heroin/Morphine,4,2018
+East Dunbartonshire,Methadone,1,2018
+East Dunbartonshire,"Heroin/morphine, methadone or bupren-orphine",5,2018
+East Dunbartonshire,Codeine,0,2018
+East Dunbartonshire,Dihydro-codeine,1,2018
+East Dunbartonshire,Any opiate or opioid,5,2018
+East Dunbartonshire,Any Benzodiazepine,4,2018
+East Dunbartonshire,Any Prescribable Benzodiazepine,2,2018
+East Dunbartonshire,Diazepam,2,2018
+East Dunbartonshire,Any Street Benzodiazepine,3,2018
+East Dunbartonshire,Etizolam,2,2018
+East Dunbartonshire,Gabapentin and/or Pregabalin,1,2018
+East Dunbartonshire,Cocaine,3,2018
+East Dunbartonshire,Ecstasy,1,2018
+East Dunbartonshire,Amphetamines,0,2018
+East Dunbartonshire,Alcohol,2,2018
+East Lothian,All drug-related deaths,18,2018
+East Lothian,Heroin/Morphine,7,2018
+East Lothian,Methadone,7,2018
+East Lothian,"Heroin/morphine, methadone or bupren-orphine",12,2018
+East Lothian,Codeine,4,2018
+East Lothian,Dihydro-codeine,5,2018
+East Lothian,Any opiate or opioid,16,2018
+East Lothian,Any Benzodiazepine,7,2018
+East Lothian,Any Prescribable Benzodiazepine,6,2018
+East Lothian,Diazepam,5,2018
+East Lothian,Any Street Benzodiazepine,3,2018
+East Lothian,Etizolam,2,2018
+East Lothian,Gabapentin and/or Pregabalin,8,2018
+East Lothian,Cocaine,6,2018
+East Lothian,Ecstasy,0,2018
+East Lothian,Amphetamines,1,2018
+East Lothian,Alcohol,4,2018
+East Renfrewshire,All drug-related deaths,11,2018
+East Renfrewshire,Heroin/Morphine,4,2018
+East Renfrewshire,Methadone,2,2018
+East Renfrewshire,"Heroin/morphine, methadone or bupren-orphine",8,2018
+East Renfrewshire,Codeine,1,2018
+East Renfrewshire,Dihydro-codeine,2,2018
+East Renfrewshire,Any opiate or opioid,10,2018
+East Renfrewshire,Any Benzodiazepine,8,2018
+East Renfrewshire,Any Prescribable Benzodiazepine,0,2018
+East Renfrewshire,Diazepam,0,2018
+East Renfrewshire,Any Street Benzodiazepine,8,2018
+East Renfrewshire,Etizolam,8,2018
+East Renfrewshire,Gabapentin and/or Pregabalin,1,2018
+East Renfrewshire,Cocaine,2,2018
+East Renfrewshire,Ecstasy,1,2018
+East Renfrewshire,Amphetamines,0,2018
+East Renfrewshire,Alcohol,1,2018
+Falkirk,All drug-related deaths,43,2018
+Falkirk,Heroin/Morphine,24,2018
+Falkirk,Methadone,19,2018
+Falkirk,"Heroin/morphine, methadone or bupren-orphine",33,2018
+Falkirk,Codeine,5,2018
+Falkirk,Dihydro-codeine,8,2018
+Falkirk,Any opiate or opioid,37,2018
+Falkirk,Any Benzodiazepine,29,2018
+Falkirk,Any Prescribable Benzodiazepine,7,2018
+Falkirk,Diazepam,7,2018
+Falkirk,Any Street Benzodiazepine,25,2018
+Falkirk,Etizolam,15,2018
+Falkirk,Gabapentin and/or Pregabalin,13,2018
+Falkirk,Cocaine,5,2018
+Falkirk,Ecstasy,0,2018
+Falkirk,Amphetamines,2,2018
+Falkirk,Alcohol,8,2018
+Fife,All drug-related deaths,64,2018
+Fife,Heroin/Morphine,29,2018
+Fife,Methadone,32,2018
+Fife,"Heroin/morphine, methadone or bupren-orphine",48,2018
+Fife,Codeine,5,2018
+Fife,Dihydro-codeine,6,2018
+Fife,Any opiate or opioid,53,2018
+Fife,Any Benzodiazepine,39,2018
+Fife,Any Prescribable Benzodiazepine,30,2018
+Fife,Diazepam,30,2018
+Fife,Any Street Benzodiazepine,23,2018
+Fife,Etizolam,11,2018
+Fife,Gabapentin and/or Pregabalin,33,2018
+Fife,Cocaine,16,2018
+Fife,Ecstasy,3,2018
+Fife,Amphetamines,9,2018
+Fife,Alcohol,8,2018
+Glasgow City,All drug-related deaths,280,2018
+Glasgow City,Heroin/Morphine,133,2018
+Glasgow City,Methadone,133,2018
+Glasgow City,"Heroin/morphine, methadone or bupren-orphine",220,2018
+Glasgow City,Codeine,13,2018
+Glasgow City,Dihydro-codeine,25,2018
+Glasgow City,Any opiate or opioid,250,2018
+Glasgow City,Any Benzodiazepine,194,2018
+Glasgow City,Any Prescribable Benzodiazepine,10,2018
+Glasgow City,Diazepam,8,2018
+Glasgow City,Any Street Benzodiazepine,191,2018
+Glasgow City,Etizolam,185,2018
+Glasgow City,Gabapentin and/or Pregabalin,62,2018
+Glasgow City,Cocaine,57,2018
+Glasgow City,Ecstasy,4,2018
+Glasgow City,Amphetamines,5,2018
+Glasgow City,Alcohol,31,2018
+Highland,All drug-related deaths,36,2018
+Highland,Heroin/Morphine,8,2018
+Highland,Methadone,17,2018
+Highland,"Heroin/morphine, methadone or bupren-orphine",25,2018
+Highland,Codeine,0,2018
+Highland,Dihydro-codeine,6,2018
+Highland,Any opiate or opioid,31,2018
+Highland,Any Benzodiazepine,26,2018
+Highland,Any Prescribable Benzodiazepine,22,2018
+Highland,Diazepam,16,2018
+Highland,Any Street Benzodiazepine,11,2018
+Highland,Etizolam,2,2018
+Highland,Gabapentin and/or Pregabalin,11,2018
+Highland,Cocaine,10,2018
+Highland,Ecstasy,1,2018
+Highland,Amphetamines,3,2018
+Highland,Alcohol,4,2018
+Inverclyde,All drug-related deaths,24,2018
+Inverclyde,Heroin/Morphine,8,2018
+Inverclyde,Methadone,13,2018
+Inverclyde,"Heroin/morphine, methadone or bupren-orphine",17,2018
+Inverclyde,Codeine,2,2018
+Inverclyde,Dihydro-codeine,4,2018
+Inverclyde,Any opiate or opioid,21,2018
+Inverclyde,Any Benzodiazepine,19,2018
+Inverclyde,Any Prescribable Benzodiazepine,3,2018
+Inverclyde,Diazepam,1,2018
+Inverclyde,Any Street Benzodiazepine,17,2018
+Inverclyde,Etizolam,13,2018
+Inverclyde,Gabapentin and/or Pregabalin,8,2018
+Inverclyde,Cocaine,7,2018
+Inverclyde,Ecstasy,0,2018
+Inverclyde,Amphetamines,1,2018
+Inverclyde,Alcohol,3,2018
+Midlothian,All drug-related deaths,14,2018
+Midlothian,Heroin/Morphine,5,2018
+Midlothian,Methadone,8,2018
+Midlothian,"Heroin/morphine, methadone or bupren-orphine",10,2018
+Midlothian,Codeine,0,2018
+Midlothian,Dihydro-codeine,3,2018
+Midlothian,Any opiate or opioid,12,2018
+Midlothian,Any Benzodiazepine,9,2018
+Midlothian,Any Prescribable Benzodiazepine,4,2018
+Midlothian,Diazepam,4,2018
+Midlothian,Any Street Benzodiazepine,7,2018
+Midlothian,Etizolam,5,2018
+Midlothian,Gabapentin and/or Pregabalin,7,2018
+Midlothian,Cocaine,3,2018
+Midlothian,Ecstasy,0,2018
+Midlothian,Amphetamines,0,2018
+Midlothian,Alcohol,1,2018
+Moray,All drug-related deaths,17,2018
+Moray,Heroin/Morphine,6,2018
+Moray,Methadone,8,2018
+Moray,"Heroin/morphine, methadone or bupren-orphine",12,2018
+Moray,Codeine,1,2018
+Moray,Dihydro-codeine,2,2018
+Moray,Any opiate or opioid,15,2018
+Moray,Any Benzodiazepine,10,2018
+Moray,Any Prescribable Benzodiazepine,8,2018
+Moray,Diazepam,7,2018
+Moray,Any Street Benzodiazepine,6,2018
+Moray,Etizolam,2,2018
+Moray,Gabapentin and/or Pregabalin,6,2018
+Moray,Cocaine,1,2018
+Moray,Ecstasy,1,2018
+Moray,Amphetamines,2,2018
+Moray,Alcohol,1,2018
+Eilean Siar,All drug-related deaths,2,2018
+Eilean Siar,Heroin/Morphine,0,2018
+Eilean Siar,Methadone,0,2018
+Eilean Siar,"Heroin/morphine, methadone or bupren-orphine",0,2018
+Eilean Siar,Codeine,1,2018
+Eilean Siar,Dihydro-codeine,0,2018
+Eilean Siar,Any opiate or opioid,1,2018
+Eilean Siar,Any Benzodiazepine,1,2018
+Eilean Siar,Any Prescribable Benzodiazepine,1,2018
+Eilean Siar,Diazepam,1,2018
+Eilean Siar,Any Street Benzodiazepine,0,2018
+Eilean Siar,Etizolam,0,2018
+Eilean Siar,Gabapentin and/or Pregabalin,1,2018
+Eilean Siar,Cocaine,0,2018
+Eilean Siar,Ecstasy,1,2018
+Eilean Siar,Amphetamines,0,2018
+Eilean Siar,Alcohol,0,2018
+North Ayrshire,All drug-related deaths,38,2018
+North Ayrshire,Heroin/Morphine,15,2018
+North Ayrshire,Methadone,29,2018
+North Ayrshire,"Heroin/morphine, methadone or bupren-orphine",33,2018
+North Ayrshire,Codeine,0,2018
+North Ayrshire,Dihydro-codeine,1,2018
+North Ayrshire,Any opiate or opioid,33,2018
+North Ayrshire,Any Benzodiazepine,28,2018
+North Ayrshire,Any Prescribable Benzodiazepine,0,2018
+North Ayrshire,Diazepam,0,2018
+North Ayrshire,Any Street Benzodiazepine,28,2018
+North Ayrshire,Etizolam,26,2018
+North Ayrshire,Gabapentin and/or Pregabalin,14,2018
+North Ayrshire,Cocaine,3,2018
+North Ayrshire,Ecstasy,1,2018
+North Ayrshire,Amphetamines,2,2018
+North Ayrshire,Alcohol,5,2018
+North Lanarkshire,All drug-related deaths,72,2018
+North Lanarkshire,Heroin/Morphine,35,2018
+North Lanarkshire,Methadone,27,2018
+North Lanarkshire,"Heroin/morphine, methadone or bupren-orphine",49,2018
+North Lanarkshire,Codeine,1,2018
+North Lanarkshire,Dihydro-codeine,12,2018
+North Lanarkshire,Any opiate or opioid,58,2018
+North Lanarkshire,Any Benzodiazepine,50,2018
+North Lanarkshire,Any Prescribable Benzodiazepine,3,2018
+North Lanarkshire,Diazepam,2,2018
+North Lanarkshire,Any Street Benzodiazepine,49,2018
+North Lanarkshire,Etizolam,48,2018
+North Lanarkshire,Gabapentin and/or Pregabalin,17,2018
+North Lanarkshire,Cocaine,20,2018
+North Lanarkshire,Ecstasy,1,2018
+North Lanarkshire,Amphetamines,1,2018
+North Lanarkshire,Alcohol,13,2018
+Orkney Islands,All drug-related deaths,3,2018
+Orkney Islands,Heroin/Morphine,1,2018
+Orkney Islands,Methadone,0,2018
+Orkney Islands,"Heroin/morphine, methadone or bupren-orphine",1,2018
+Orkney Islands,Codeine,0,2018
+Orkney Islands,Dihydro-codeine,2,2018
+Orkney Islands,Any opiate or opioid,2,2018
+Orkney Islands,Any Benzodiazepine,0,2018
+Orkney Islands,Any Prescribable Benzodiazepine,0,2018
+Orkney Islands,Diazepam,0,2018
+Orkney Islands,Any Street Benzodiazepine,0,2018
+Orkney Islands,Etizolam,0,2018
+Orkney Islands,Gabapentin and/or Pregabalin,0,2018
+Orkney Islands,Cocaine,0,2018
+Orkney Islands,Ecstasy,1,2018
+Orkney Islands,Amphetamines,0,2018
+Orkney Islands,Alcohol,0,2018
+Perth and Kinross,All drug-related deaths,30,2018
+Perth and Kinross,Heroin/Morphine,12,2018
+Perth and Kinross,Methadone,9,2018
+Perth and Kinross,"Heroin/morphine, methadone or bupren-orphine",20,2018
+Perth and Kinross,Codeine,1,2018
+Perth and Kinross,Dihydro-codeine,4,2018
+Perth and Kinross,Any opiate or opioid,25,2018
+Perth and Kinross,Any Benzodiazepine,16,2018
+Perth and Kinross,Any Prescribable Benzodiazepine,9,2018
+Perth and Kinross,Diazepam,9,2018
+Perth and Kinross,Any Street Benzodiazepine,8,2018
+Perth and Kinross,Etizolam,5,2018
+Perth and Kinross,Gabapentin and/or Pregabalin,10,2018
+Perth and Kinross,Cocaine,7,2018
+Perth and Kinross,Ecstasy,1,2018
+Perth and Kinross,Amphetamines,0,2018
+Perth and Kinross,Alcohol,4,2018
+Renfrewshire,All drug-related deaths,50,2018
+Renfrewshire,Heroin/Morphine,21,2018
+Renfrewshire,Methadone,27,2018
+Renfrewshire,"Heroin/morphine, methadone or bupren-orphine",43,2018
+Renfrewshire,Codeine,0,2018
+Renfrewshire,Dihydro-codeine,5,2018
+Renfrewshire,Any opiate or opioid,46,2018
+Renfrewshire,Any Benzodiazepine,34,2018
+Renfrewshire,Any Prescribable Benzodiazepine,3,2018
+Renfrewshire,Diazepam,1,2018
+Renfrewshire,Any Street Benzodiazepine,34,2018
+Renfrewshire,Etizolam,34,2018
+Renfrewshire,Gabapentin and/or Pregabalin,13,2018
+Renfrewshire,Cocaine,8,2018
+Renfrewshire,Ecstasy,0,2018
+Renfrewshire,Amphetamines,3,2018
+Renfrewshire,Alcohol,6,2018
+Scottish Borders,All drug-related deaths,22,2018
+Scottish Borders,Heroin/Morphine,10,2018
+Scottish Borders,Methadone,9,2018
+Scottish Borders,"Heroin/morphine, methadone or bupren-orphine",16,2018
+Scottish Borders,Codeine,0,2018
+Scottish Borders,Dihydro-codeine,5,2018
+Scottish Borders,Any opiate or opioid,20,2018
+Scottish Borders,Any Benzodiazepine,15,2018
+Scottish Borders,Any Prescribable Benzodiazepine,8,2018
+Scottish Borders,Diazepam,8,2018
+Scottish Borders,Any Street Benzodiazepine,8,2018
+Scottish Borders,Etizolam,4,2018
+Scottish Borders,Gabapentin and/or Pregabalin,10,2018
+Scottish Borders,Cocaine,6,2018
+Scottish Borders,Ecstasy,2,2018
+Scottish Borders,Amphetamines,2,2018
+Scottish Borders,Alcohol,5,2018
+Shetland Islands,All drug-related deaths,0,2018
+Shetland Islands,Heroin/Morphine,0,2018
+Shetland Islands,Methadone,0,2018
+Shetland Islands,"Heroin/morphine, methadone or bupren-orphine",0,2018
+Shetland Islands,Codeine,0,2018
+Shetland Islands,Dihydro-codeine,0,2018
+Shetland Islands,Any opiate or opioid,0,2018
+Shetland Islands,Any Benzodiazepine,0,2018
+Shetland Islands,Any Prescribable Benzodiazepine,0,2018
+Shetland Islands,Diazepam,0,2018
+Shetland Islands,Any Street Benzodiazepine,0,2018
+Shetland Islands,Etizolam,0,2018
+Shetland Islands,Gabapentin and/or Pregabalin,0,2018
+Shetland Islands,Cocaine,0,2018
+Shetland Islands,Ecstasy,0,2018
+Shetland Islands,Amphetamines,0,2018
+Shetland Islands,Alcohol,0,2018
+South Ayrshire,All drug-related deaths,15,2018
+South Ayrshire,Heroin/Morphine,12,2018
+South Ayrshire,Methadone,12,2018
+South Ayrshire,"Heroin/morphine, methadone or bupren-orphine",14,2018
+South Ayrshire,Codeine,1,2018
+South Ayrshire,Dihydro-codeine,3,2018
+South Ayrshire,Any opiate or opioid,14,2018
+South Ayrshire,Any Benzodiazepine,12,2018
+South Ayrshire,Any Prescribable Benzodiazepine,0,2018
+South Ayrshire,Diazepam,0,2018
+South Ayrshire,Any Street Benzodiazepine,12,2018
+South Ayrshire,Etizolam,11,2018
+South Ayrshire,Gabapentin and/or Pregabalin,3,2018
+South Ayrshire,Cocaine,1,2018
+South Ayrshire,Ecstasy,0,2018
+South Ayrshire,Amphetamines,1,2018
+South Ayrshire,Alcohol,1,2018
+South Lanarkshire,All drug-related deaths,58,2018
+South Lanarkshire,Heroin/Morphine,24,2018
+South Lanarkshire,Methadone,25,2018
+South Lanarkshire,"Heroin/morphine, methadone or bupren-orphine",36,2018
+South Lanarkshire,Codeine,6,2018
+South Lanarkshire,Dihydro-codeine,7,2018
+South Lanarkshire,Any opiate or opioid,46,2018
+South Lanarkshire,Any Benzodiazepine,37,2018
+South Lanarkshire,Any Prescribable Benzodiazepine,3,2018
+South Lanarkshire,Diazepam,3,2018
+South Lanarkshire,Any Street Benzodiazepine,37,2018
+South Lanarkshire,Etizolam,32,2018
+South Lanarkshire,Gabapentin and/or Pregabalin,14,2018
+South Lanarkshire,Cocaine,8,2018
+South Lanarkshire,Ecstasy,3,2018
+South Lanarkshire,Amphetamines,4,2018
+South Lanarkshire,Alcohol,12,2018
+Stirling,All drug-related deaths,19,2018
+Stirling,Heroin/Morphine,12,2018
+Stirling,Methadone,8,2018
+Stirling,"Heroin/morphine, methadone or bupren-orphine",14,2018
+Stirling,Codeine,2,2018
+Stirling,Dihydro-codeine,1,2018
+Stirling,Any opiate or opioid,18,2018
+Stirling,Any Benzodiazepine,14,2018
+Stirling,Any Prescribable Benzodiazepine,5,2018
+Stirling,Diazepam,5,2018
+Stirling,Any Street Benzodiazepine,12,2018
+Stirling,Etizolam,10,2018
+Stirling,Gabapentin and/or Pregabalin,4,2018
+Stirling,Cocaine,6,2018
+Stirling,Ecstasy,0,2018
+Stirling,Amphetamines,0,2018
+Stirling,Alcohol,5,2018
+West Dunbartonshire,All drug-related deaths,20,2018
+West Dunbartonshire,Heroin/Morphine,11,2018
+West Dunbartonshire,Methadone,5,2018
+West Dunbartonshire,"Heroin/morphine, methadone or bupren-orphine",15,2018
+West Dunbartonshire,Codeine,1,2018
+West Dunbartonshire,Dihydro-codeine,0,2018
+West Dunbartonshire,Any opiate or opioid,16,2018
+West Dunbartonshire,Any Benzodiazepine,12,2018
+West Dunbartonshire,Any Prescribable Benzodiazepine,1,2018
+West Dunbartonshire,Diazepam,1,2018
+West Dunbartonshire,Any Street Benzodiazepine,12,2018
+West Dunbartonshire,Etizolam,11,2018
+West Dunbartonshire,Gabapentin and/or Pregabalin,6,2018
+West Dunbartonshire,Cocaine,7,2018
+West Dunbartonshire,Ecstasy,0,2018
+West Dunbartonshire,Amphetamines,0,2018
+West Dunbartonshire,Alcohol,4,2018
+West Lothian,All drug-related deaths,25,2018
+West Lothian,Heroin/Morphine,9,2018
+West Lothian,Methadone,8,2018
+West Lothian,"Heroin/morphine, methadone or bupren-orphine",18,2018
+West Lothian,Codeine,1,2018
+West Lothian,Dihydro-codeine,2,2018
+West Lothian,Any opiate or opioid,22,2018
+West Lothian,Any Benzodiazepine,16,2018
+West Lothian,Any Prescribable Benzodiazepine,9,2018
+West Lothian,Diazepam,9,2018
+West Lothian,Any Street Benzodiazepine,12,2018
+West Lothian,Etizolam,6,2018
+West Lothian,Gabapentin and/or Pregabalin,10,2018
+West Lothian,Cocaine,9,2018
+West Lothian,Ecstasy,1,2018
+West Lothian,Amphetamines,0,2018
+West Lothian,Alcohol,4,2018
+Scotland,All drug-related deaths,1264,2019
+Scotland,Heroin/Morphine,645,2019
+Scotland,Methadone,560,2019
+Scotland,"Heroin/morphine, methadone or bupren-orphine",959,2019
+Scotland,Codeine,55,2019
+Scotland,Dihydro-codeine,116,2019
+Scotland,Any opiate or opioid,1092,2019
+Scotland,Any Benzodiazepine,888,2019
+Scotland,Any Prescribable Benzodiazepine,195,2019
+Scotland,Diazepam,179,2019
+Scotland,Any Street Benzodiazepine,814,2019
+Scotland,Etizolam,752,2019
+Scotland,Gabapentin and/or Pregabalin,438,2019
+Scotland,Cocaine,365,2019
+Scotland,Ecstasy,25,2019
+Scotland,Amphetamines,51,2019
+Scotland,Alcohol,137,2019
+Aberdeen City,All drug-related deaths,44,2019
+Aberdeen City,Heroin/Morphine,24,2019
+Aberdeen City,Methadone,20,2019
+Aberdeen City,"Heroin/morphine, methadone or bupren-orphine",32,2019
+Aberdeen City,Codeine,4,2019
+Aberdeen City,Dihydro-codeine,7,2019
+Aberdeen City,Any opiate or opioid,38,2019
+Aberdeen City,Any Benzodiazepine,27,2019
+Aberdeen City,Any Prescribable Benzodiazepine,24,2019
+Aberdeen City,Diazepam,24,2019
+Aberdeen City,Any Street Benzodiazepine,10,2019
+Aberdeen City,Etizolam,1,2019
+Aberdeen City,Gabapentin and/or Pregabalin,17,2019
+Aberdeen City,Cocaine,28,2019
+Aberdeen City,Ecstasy,0,2019
+Aberdeen City,Amphetamines,0,2019
+Aberdeen City,Alcohol,10,2019
+Aberdeenshire,All drug-related deaths,26,2019
+Aberdeenshire,Heroin/Morphine,15,2019
+Aberdeenshire,Methadone,9,2019
+Aberdeenshire,"Heroin/morphine, methadone or bupren-orphine",19,2019
+Aberdeenshire,Codeine,0,2019
+Aberdeenshire,Dihydro-codeine,4,2019
+Aberdeenshire,Any opiate or opioid,21,2019
+Aberdeenshire,Any Benzodiazepine,9,2019
+Aberdeenshire,Any Prescribable Benzodiazepine,8,2019
+Aberdeenshire,Diazepam,8,2019
+Aberdeenshire,Any Street Benzodiazepine,2,2019
+Aberdeenshire,Etizolam,1,2019
+Aberdeenshire,Gabapentin and/or Pregabalin,4,2019
+Aberdeenshire,Cocaine,13,2019
+Aberdeenshire,Ecstasy,1,2019
+Aberdeenshire,Amphetamines,1,2019
+Aberdeenshire,Alcohol,6,2019
+Angus,All drug-related deaths,21,2019
+Angus,Heroin/Morphine,13,2019
+Angus,Methadone,11,2019
+Angus,"Heroin/morphine, methadone or bupren-orphine",19,2019
+Angus,Codeine,1,2019
+Angus,Dihydro-codeine,1,2019
+Angus,Any opiate or opioid,19,2019
+Angus,Any Benzodiazepine,19,2019
+Angus,Any Prescribable Benzodiazepine,8,2019
+Angus,Diazepam,7,2019
+Angus,Any Street Benzodiazepine,18,2019
+Angus,Etizolam,14,2019
+Angus,Gabapentin and/or Pregabalin,8,2019
+Angus,Cocaine,4,2019
+Angus,Ecstasy,0,2019
+Angus,Amphetamines,0,2019
+Angus,Alcohol,4,2019
+Argyll and Bute,All drug-related deaths,13,2019
+Argyll and Bute,Heroin/Morphine,9,2019
+Argyll and Bute,Methadone,7,2019
+Argyll and Bute,"Heroin/morphine, methadone or bupren-orphine",11,2019
+Argyll and Bute,Codeine,0,2019
+Argyll and Bute,Dihydro-codeine,1,2019
+Argyll and Bute,Any opiate or opioid,13,2019
+Argyll and Bute,Any Benzodiazepine,8,2019
+Argyll and Bute,Any Prescribable Benzodiazepine,2,2019
+Argyll and Bute,Diazepam,2,2019
+Argyll and Bute,Any Street Benzodiazepine,8,2019
+Argyll and Bute,Etizolam,7,2019
+Argyll and Bute,Gabapentin and/or Pregabalin,7,2019
+Argyll and Bute,Cocaine,4,2019
+Argyll and Bute,Ecstasy,0,2019
+Argyll and Bute,Amphetamines,0,2019
+Argyll and Bute,Alcohol,0,2019
+City of Edinburgh,All drug-related deaths,96,2019
+City of Edinburgh,Heroin/Morphine,41,2019
+City of Edinburgh,Methadone,48,2019
+City of Edinburgh,"Heroin/morphine, methadone or bupren-orphine",68,2019
+City of Edinburgh,Codeine,7,2019
+City of Edinburgh,Dihydro-codeine,10,2019
+City of Edinburgh,Any opiate or opioid,78,2019
+City of Edinburgh,Any Benzodiazepine,66,2019
+City of Edinburgh,Any Prescribable Benzodiazepine,39,2019
+City of Edinburgh,Diazepam,38,2019
+City of Edinburgh,Any Street Benzodiazepine,54,2019
+City of Edinburgh,Etizolam,46,2019
+City of Edinburgh,Gabapentin and/or Pregabalin,46,2019
+City of Edinburgh,Cocaine,45,2019
+City of Edinburgh,Ecstasy,1,2019
+City of Edinburgh,Amphetamines,4,2019
+City of Edinburgh,Alcohol,15,2019
+Clackmannanshire,All drug-related deaths,15,2019
+Clackmannanshire,Heroin/Morphine,7,2019
+Clackmannanshire,Methadone,10,2019
+Clackmannanshire,"Heroin/morphine, methadone or bupren-orphine",12,2019
+Clackmannanshire,Codeine,0,2019
+Clackmannanshire,Dihydro-codeine,0,2019
+Clackmannanshire,Any opiate or opioid,13,2019
+Clackmannanshire,Any Benzodiazepine,11,2019
+Clackmannanshire,Any Prescribable Benzodiazepine,4,2019
+Clackmannanshire,Diazepam,4,2019
+Clackmannanshire,Any Street Benzodiazepine,9,2019
+Clackmannanshire,Etizolam,9,2019
+Clackmannanshire,Gabapentin and/or Pregabalin,8,2019
+Clackmannanshire,Cocaine,3,2019
+Clackmannanshire,Ecstasy,0,2019
+Clackmannanshire,Amphetamines,1,2019
+Clackmannanshire,Alcohol,2,2019
+Dumfries and Galloway,All drug-related deaths,35,2019
+Dumfries and Galloway,Heroin/Morphine,16,2019
+Dumfries and Galloway,Methadone,10,2019
+Dumfries and Galloway,"Heroin/morphine, methadone or bupren-orphine",21,2019
+Dumfries and Galloway,Codeine,3,2019
+Dumfries and Galloway,Dihydro-codeine,2,2019
+Dumfries and Galloway,Any opiate or opioid,27,2019
+Dumfries and Galloway,Any Benzodiazepine,16,2019
+Dumfries and Galloway,Any Prescribable Benzodiazepine,2,2019
+Dumfries and Galloway,Diazepam,2,2019
+Dumfries and Galloway,Any Street Benzodiazepine,16,2019
+Dumfries and Galloway,Etizolam,14,2019
+Dumfries and Galloway,Gabapentin and/or Pregabalin,9,2019
+Dumfries and Galloway,Cocaine,9,2019
+Dumfries and Galloway,Ecstasy,2,2019
+Dumfries and Galloway,Amphetamines,1,2019
+Dumfries and Galloway,Alcohol,1,2019
+Dundee City,All drug-related deaths,72,2019
+Dundee City,Heroin/Morphine,43,2019
+Dundee City,Methadone,25,2019
+Dundee City,"Heroin/morphine, methadone or bupren-orphine",58,2019
+Dundee City,Codeine,3,2019
+Dundee City,Dihydro-codeine,10,2019
+Dundee City,Any opiate or opioid,70,2019
+Dundee City,Any Benzodiazepine,58,2019
+Dundee City,Any Prescribable Benzodiazepine,10,2019
+Dundee City,Diazepam,10,2019
+Dundee City,Any Street Benzodiazepine,56,2019
+Dundee City,Etizolam,56,2019
+Dundee City,Gabapentin and/or Pregabalin,28,2019
+Dundee City,Cocaine,18,2019
+Dundee City,Ecstasy,0,2019
+Dundee City,Amphetamines,4,2019
+Dundee City,Alcohol,8,2019
+East Ayrshire,All drug-related deaths,41,2019
+East Ayrshire,Heroin/Morphine,20,2019
+East Ayrshire,Methadone,21,2019
+East Ayrshire,"Heroin/morphine, methadone or bupren-orphine",31,2019
+East Ayrshire,Codeine,1,2019
+East Ayrshire,Dihydro-codeine,2,2019
+East Ayrshire,Any opiate or opioid,37,2019
+East Ayrshire,Any Benzodiazepine,31,2019
+East Ayrshire,Any Prescribable Benzodiazepine,2,2019
+East Ayrshire,Diazepam,2,2019
+East Ayrshire,Any Street Benzodiazepine,30,2019
+East Ayrshire,Etizolam,28,2019
+East Ayrshire,Gabapentin and/or Pregabalin,15,2019
+East Ayrshire,Cocaine,9,2019
+East Ayrshire,Ecstasy,0,2019
+East Ayrshire,Amphetamines,3,2019
+East Ayrshire,Alcohol,2,2019
+East Dunbartonshire,All drug-related deaths,7,2019
+East Dunbartonshire,Heroin/Morphine,5,2019
+East Dunbartonshire,Methadone,5,2019
+East Dunbartonshire,"Heroin/morphine, methadone or bupren-orphine",6,2019
+East Dunbartonshire,Codeine,0,2019
+East Dunbartonshire,Dihydro-codeine,4,2019
+East Dunbartonshire,Any opiate or opioid,7,2019
+East Dunbartonshire,Any Benzodiazepine,4,2019
+East Dunbartonshire,Any Prescribable Benzodiazepine,0,2019
+East Dunbartonshire,Diazepam,0,2019
+East Dunbartonshire,Any Street Benzodiazepine,4,2019
+East Dunbartonshire,Etizolam,4,2019
+East Dunbartonshire,Gabapentin and/or Pregabalin,4,2019
+East Dunbartonshire,Cocaine,1,2019
+East Dunbartonshire,Ecstasy,0,2019
+East Dunbartonshire,Amphetamines,0,2019
+East Dunbartonshire,Alcohol,1,2019
+East Lothian,All drug-related deaths,18,2019
+East Lothian,Heroin/Morphine,10,2019
+East Lothian,Methadone,9,2019
+East Lothian,"Heroin/morphine, methadone or bupren-orphine",14,2019
+East Lothian,Codeine,2,2019
+East Lothian,Dihydro-codeine,3,2019
+East Lothian,Any opiate or opioid,15,2019
+East Lothian,Any Benzodiazepine,15,2019
+East Lothian,Any Prescribable Benzodiazepine,13,2019
+East Lothian,Diazepam,13,2019
+East Lothian,Any Street Benzodiazepine,7,2019
+East Lothian,Etizolam,6,2019
+East Lothian,Gabapentin and/or Pregabalin,7,2019
+East Lothian,Cocaine,3,2019
+East Lothian,Ecstasy,0,2019
+East Lothian,Amphetamines,3,2019
+East Lothian,Alcohol,4,2019
+East Renfrewshire,All drug-related deaths,8,2019
+East Renfrewshire,Heroin/Morphine,3,2019
+East Renfrewshire,Methadone,3,2019
+East Renfrewshire,"Heroin/morphine, methadone or bupren-orphine",4,2019
+East Renfrewshire,Codeine,0,2019
+East Renfrewshire,Dihydro-codeine,1,2019
+East Renfrewshire,Any opiate or opioid,6,2019
+East Renfrewshire,Any Benzodiazepine,3,2019
+East Renfrewshire,Any Prescribable Benzodiazepine,0,2019
+East Renfrewshire,Diazepam,0,2019
+East Renfrewshire,Any Street Benzodiazepine,3,2019
+East Renfrewshire,Etizolam,3,2019
+East Renfrewshire,Gabapentin and/or Pregabalin,0,2019
+East Renfrewshire,Cocaine,2,2019
+East Renfrewshire,Ecstasy,0,2019
+East Renfrewshire,Amphetamines,0,2019
+East Renfrewshire,Alcohol,2,2019
+Falkirk,All drug-related deaths,41,2019
+Falkirk,Heroin/Morphine,26,2019
+Falkirk,Methadone,21,2019
+Falkirk,"Heroin/morphine, methadone or bupren-orphine",33,2019
+Falkirk,Codeine,2,2019
+Falkirk,Dihydro-codeine,2,2019
+Falkirk,Any opiate or opioid,37,2019
+Falkirk,Any Benzodiazepine,35,2019
+Falkirk,Any Prescribable Benzodiazepine,13,2019
+Falkirk,Diazepam,13,2019
+Falkirk,Any Street Benzodiazepine,33,2019
+Falkirk,Etizolam,27,2019
+Falkirk,Gabapentin and/or Pregabalin,25,2019
+Falkirk,Cocaine,12,2019
+Falkirk,Ecstasy,0,2019
+Falkirk,Amphetamines,3,2019
+Falkirk,Alcohol,4,2019
+Fife,All drug-related deaths,81,2019
+Fife,Heroin/Morphine,38,2019
+Fife,Methadone,40,2019
+Fife,"Heroin/morphine, methadone or bupren-orphine",61,2019
+Fife,Codeine,11,2019
+Fife,Dihydro-codeine,6,2019
+Fife,Any opiate or opioid,71,2019
+Fife,Any Benzodiazepine,54,2019
+Fife,Any Prescribable Benzodiazepine,22,2019
+Fife,Diazepam,20,2019
+Fife,Any Street Benzodiazepine,47,2019
+Fife,Etizolam,40,2019
+Fife,Gabapentin and/or Pregabalin,42,2019
+Fife,Cocaine,15,2019
+Fife,Ecstasy,4,2019
+Fife,Amphetamines,9,2019
+Fife,Alcohol,9,2019
+Glasgow City,All drug-related deaths,279,2019
+Glasgow City,Heroin/Morphine,148,2019
+Glasgow City,Methadone,136,2019
+Glasgow City,"Heroin/morphine, methadone or bupren-orphine",225,2019
+Glasgow City,Codeine,4,2019
+Glasgow City,Dihydro-codeine,23,2019
+Glasgow City,Any opiate or opioid,245,2019
+Glasgow City,Any Benzodiazepine,218,2019
+Glasgow City,Any Prescribable Benzodiazepine,6,2019
+Glasgow City,Diazepam,3,2019
+Glasgow City,Any Street Benzodiazepine,217,2019
+Glasgow City,Etizolam,214,2019
+Glasgow City,Gabapentin and/or Pregabalin,72,2019
+Glasgow City,Cocaine,74,2019
+Glasgow City,Ecstasy,1,2019
+Glasgow City,Amphetamines,7,2019
+Glasgow City,Alcohol,24,2019
+Highland,All drug-related deaths,11,2019
+Highland,Heroin/Morphine,4,2019
+Highland,Methadone,3,2019
+Highland,"Heroin/morphine, methadone or bupren-orphine",7,2019
+Highland,Codeine,1,2019
+Highland,Dihydro-codeine,1,2019
+Highland,Any opiate or opioid,10,2019
+Highland,Any Benzodiazepine,1,2019
+Highland,Any Prescribable Benzodiazepine,1,2019
+Highland,Diazepam,1,2019
+Highland,Any Street Benzodiazepine,1,2019
+Highland,Etizolam,0,2019
+Highland,Gabapentin and/or Pregabalin,0,2019
+Highland,Cocaine,0,2019
+Highland,Ecstasy,0,2019
+Highland,Amphetamines,0,2019
+Highland,Alcohol,2,2019
+Inverclyde,All drug-related deaths,33,2019
+Inverclyde,Heroin/Morphine,13,2019
+Inverclyde,Methadone,16,2019
+Inverclyde,"Heroin/morphine, methadone or bupren-orphine",26,2019
+Inverclyde,Codeine,0,2019
+Inverclyde,Dihydro-codeine,3,2019
+Inverclyde,Any opiate or opioid,29,2019
+Inverclyde,Any Benzodiazepine,24,2019
+Inverclyde,Any Prescribable Benzodiazepine,2,2019
+Inverclyde,Diazepam,1,2019
+Inverclyde,Any Street Benzodiazepine,24,2019
+Inverclyde,Etizolam,23,2019
+Inverclyde,Gabapentin and/or Pregabalin,12,2019
+Inverclyde,Cocaine,11,2019
+Inverclyde,Ecstasy,0,2019
+Inverclyde,Amphetamines,1,2019
+Inverclyde,Alcohol,5,2019
+Midlothian,All drug-related deaths,18,2019
+Midlothian,Heroin/Morphine,7,2019
+Midlothian,Methadone,8,2019
+Midlothian,"Heroin/morphine, methadone or bupren-orphine",14,2019
+Midlothian,Codeine,2,2019
+Midlothian,Dihydro-codeine,0,2019
+Midlothian,Any opiate or opioid,16,2019
+Midlothian,Any Benzodiazepine,13,2019
+Midlothian,Any Prescribable Benzodiazepine,2,2019
+Midlothian,Diazepam,2,2019
+Midlothian,Any Street Benzodiazepine,12,2019
+Midlothian,Etizolam,10,2019
+Midlothian,Gabapentin and/or Pregabalin,10,2019
+Midlothian,Cocaine,5,2019
+Midlothian,Ecstasy,0,2019
+Midlothian,Amphetamines,1,2019
+Midlothian,Alcohol,1,2019
+Moray,All drug-related deaths,12,2019
+Moray,Heroin/Morphine,7,2019
+Moray,Methadone,3,2019
+Moray,"Heroin/morphine, methadone or bupren-orphine",7,2019
+Moray,Codeine,0,2019
+Moray,Dihydro-codeine,3,2019
+Moray,Any opiate or opioid,9,2019
+Moray,Any Benzodiazepine,4,2019
+Moray,Any Prescribable Benzodiazepine,4,2019
+Moray,Diazepam,4,2019
+Moray,Any Street Benzodiazepine,2,2019
+Moray,Etizolam,1,2019
+Moray,Gabapentin and/or Pregabalin,4,2019
+Moray,Cocaine,4,2019
+Moray,Ecstasy,1,2019
+Moray,Amphetamines,1,2019
+Moray,Alcohol,1,2019
+Eilean Siar,All drug-related deaths,0,2019
+Eilean Siar,Heroin/Morphine,0,2019
+Eilean Siar,Methadone,0,2019
+Eilean Siar,"Heroin/morphine, methadone or bupren-orphine",0,2019
+Eilean Siar,Codeine,0,2019
+Eilean Siar,Dihydro-codeine,0,2019
+Eilean Siar,Any opiate or opioid,0,2019
+Eilean Siar,Any Benzodiazepine,0,2019
+Eilean Siar,Any Prescribable Benzodiazepine,0,2019
+Eilean Siar,Diazepam,0,2019
+Eilean Siar,Any Street Benzodiazepine,0,2019
+Eilean Siar,Etizolam,0,2019
+Eilean Siar,Gabapentin and/or Pregabalin,0,2019
+Eilean Siar,Cocaine,0,2019
+Eilean Siar,Ecstasy,0,2019
+Eilean Siar,Amphetamines,0,2019
+Eilean Siar,Alcohol,0,2019
+North Ayrshire,All drug-related deaths,41,2019
+North Ayrshire,Heroin/Morphine,22,2019
+North Ayrshire,Methadone,21,2019
+North Ayrshire,"Heroin/morphine, methadone or bupren-orphine",37,2019
+North Ayrshire,Codeine,0,2019
+North Ayrshire,Dihydro-codeine,4,2019
+North Ayrshire,Any opiate or opioid,39,2019
+North Ayrshire,Any Benzodiazepine,31,2019
+North Ayrshire,Any Prescribable Benzodiazepine,0,2019
+North Ayrshire,Diazepam,0,2019
+North Ayrshire,Any Street Benzodiazepine,31,2019
+North Ayrshire,Etizolam,30,2019
+North Ayrshire,Gabapentin and/or Pregabalin,15,2019
+North Ayrshire,Cocaine,10,2019
+North Ayrshire,Ecstasy,0,2019
+North Ayrshire,Amphetamines,1,2019
+North Ayrshire,Alcohol,1,2019
+North Lanarkshire,All drug-related deaths,95,2019
+North Lanarkshire,Heroin/Morphine,48,2019
+North Lanarkshire,Methadone,36,2019
+North Lanarkshire,"Heroin/morphine, methadone or bupren-orphine",71,2019
+North Lanarkshire,Codeine,3,2019
+North Lanarkshire,Dihydro-codeine,6,2019
+North Lanarkshire,Any opiate or opioid,78,2019
+North Lanarkshire,Any Benzodiazepine,62,2019
+North Lanarkshire,Any Prescribable Benzodiazepine,4,2019
+North Lanarkshire,Diazepam,1,2019
+North Lanarkshire,Any Street Benzodiazepine,61,2019
+North Lanarkshire,Etizolam,59,2019
+North Lanarkshire,Gabapentin and/or Pregabalin,26,2019
+North Lanarkshire,Cocaine,27,2019
+North Lanarkshire,Ecstasy,2,2019
+North Lanarkshire,Amphetamines,0,2019
+North Lanarkshire,Alcohol,8,2019
+Orkney Islands,All drug-related deaths,1,2019
+Orkney Islands,Heroin/Morphine,0,2019
+Orkney Islands,Methadone,0,2019
+Orkney Islands,"Heroin/morphine, methadone or bupren-orphine",0,2019
+Orkney Islands,Codeine,0,2019
+Orkney Islands,Dihydro-codeine,1,2019
+Orkney Islands,Any opiate or opioid,1,2019
+Orkney Islands,Any Benzodiazepine,0,2019
+Orkney Islands,Any Prescribable Benzodiazepine,0,2019
+Orkney Islands,Diazepam,0,2019
+Orkney Islands,Any Street Benzodiazepine,0,2019
+Orkney Islands,Etizolam,0,2019
+Orkney Islands,Gabapentin and/or Pregabalin,1,2019
+Orkney Islands,Cocaine,0,2019
+Orkney Islands,Ecstasy,0,2019
+Orkney Islands,Amphetamines,0,2019
+Orkney Islands,Alcohol,0,2019
+Perth and Kinross,All drug-related deaths,25,2019
+Perth and Kinross,Heroin/Morphine,17,2019
+Perth and Kinross,Methadone,11,2019
+Perth and Kinross,"Heroin/morphine, methadone or bupren-orphine",22,2019
+Perth and Kinross,Codeine,2,2019
+Perth and Kinross,Dihydro-codeine,2,2019
+Perth and Kinross,Any opiate or opioid,24,2019
+Perth and Kinross,Any Benzodiazepine,19,2019
+Perth and Kinross,Any Prescribable Benzodiazepine,7,2019
+Perth and Kinross,Diazepam,7,2019
+Perth and Kinross,Any Street Benzodiazepine,17,2019
+Perth and Kinross,Etizolam,15,2019
+Perth and Kinross,Gabapentin and/or Pregabalin,8,2019
+Perth and Kinross,Cocaine,8,2019
+Perth and Kinross,Ecstasy,0,2019
+Perth and Kinross,Amphetamines,0,2019
+Perth and Kinross,Alcohol,7,2019
+Renfrewshire,All drug-related deaths,45,2019
+Renfrewshire,Heroin/Morphine,21,2019
+Renfrewshire,Methadone,20,2019
+Renfrewshire,"Heroin/morphine, methadone or bupren-orphine",37,2019
+Renfrewshire,Codeine,1,2019
+Renfrewshire,Dihydro-codeine,5,2019
+Renfrewshire,Any opiate or opioid,41,2019
+Renfrewshire,Any Benzodiazepine,38,2019
+Renfrewshire,Any Prescribable Benzodiazepine,2,2019
+Renfrewshire,Diazepam,1,2019
+Renfrewshire,Any Street Benzodiazepine,38,2019
+Renfrewshire,Etizolam,38,2019
+Renfrewshire,Gabapentin and/or Pregabalin,13,2019
+Renfrewshire,Cocaine,16,2019
+Renfrewshire,Ecstasy,4,2019
+Renfrewshire,Amphetamines,1,2019
+Renfrewshire,Alcohol,3,2019
+Scottish Borders,All drug-related deaths,16,2019
+Scottish Borders,Heroin/Morphine,4,2019
+Scottish Borders,Methadone,3,2019
+Scottish Borders,"Heroin/morphine, methadone or bupren-orphine",7,2019
+Scottish Borders,Codeine,0,2019
+Scottish Borders,Dihydro-codeine,3,2019
+Scottish Borders,Any opiate or opioid,10,2019
+Scottish Borders,Any Benzodiazepine,10,2019
+Scottish Borders,Any Prescribable Benzodiazepine,5,2019
+Scottish Borders,Diazepam,5,2019
+Scottish Borders,Any Street Benzodiazepine,8,2019
+Scottish Borders,Etizolam,7,2019
+Scottish Borders,Gabapentin and/or Pregabalin,6,2019
+Scottish Borders,Cocaine,1,2019
+Scottish Borders,Ecstasy,2,2019
+Scottish Borders,Amphetamines,2,2019
+Scottish Borders,Alcohol,3,2019
+Shetland Islands,All drug-related deaths,2,2019
+Shetland Islands,Heroin/Morphine,1,2019
+Shetland Islands,Methadone,1,2019
+Shetland Islands,"Heroin/morphine, methadone or bupren-orphine",2,2019
+Shetland Islands,Codeine,0,2019
+Shetland Islands,Dihydro-codeine,0,2019
+Shetland Islands,Any opiate or opioid,2,2019
+Shetland Islands,Any Benzodiazepine,1,2019
+Shetland Islands,Any Prescribable Benzodiazepine,0,2019
+Shetland Islands,Diazepam,0,2019
+Shetland Islands,Any Street Benzodiazepine,1,2019
+Shetland Islands,Etizolam,1,2019
+Shetland Islands,Gabapentin and/or Pregabalin,0,2019
+Shetland Islands,Cocaine,0,2019
+Shetland Islands,Ecstasy,0,2019
+Shetland Islands,Amphetamines,0,2019
+Shetland Islands,Alcohol,0,2019
+South Ayrshire,All drug-related deaths,26,2019
+South Ayrshire,Heroin/Morphine,16,2019
+South Ayrshire,Methadone,8,2019
+South Ayrshire,"Heroin/morphine, methadone or bupren-orphine",17,2019
+South Ayrshire,Codeine,0,2019
+South Ayrshire,Dihydro-codeine,2,2019
+South Ayrshire,Any opiate or opioid,22,2019
+South Ayrshire,Any Benzodiazepine,16,2019
+South Ayrshire,Any Prescribable Benzodiazepine,2,2019
+South Ayrshire,Diazepam,0,2019
+South Ayrshire,Any Street Benzodiazepine,15,2019
+South Ayrshire,Etizolam,12,2019
+South Ayrshire,Gabapentin and/or Pregabalin,10,2019
+South Ayrshire,Cocaine,5,2019
+South Ayrshire,Ecstasy,0,2019
+South Ayrshire,Amphetamines,0,2019
+South Ayrshire,Alcohol,2,2019
+South Lanarkshire,All drug-related deaths,68,2019
+South Lanarkshire,Heroin/Morphine,35,2019
+South Lanarkshire,Methadone,28,2019
+South Lanarkshire,"Heroin/morphine, methadone or bupren-orphine",51,2019
+South Lanarkshire,Codeine,5,2019
+South Lanarkshire,Dihydro-codeine,2,2019
+South Lanarkshire,Any opiate or opioid,59,2019
+South Lanarkshire,Any Benzodiazepine,44,2019
+South Lanarkshire,Any Prescribable Benzodiazepine,3,2019
+South Lanarkshire,Diazepam,2,2019
+South Lanarkshire,Any Street Benzodiazepine,43,2019
+South Lanarkshire,Etizolam,42,2019
+South Lanarkshire,Gabapentin and/or Pregabalin,15,2019
+South Lanarkshire,Cocaine,21,2019
+South Lanarkshire,Ecstasy,4,2019
+South Lanarkshire,Amphetamines,2,2019
+South Lanarkshire,Alcohol,5,2019
+Stirling,All drug-related deaths,19,2019
+Stirling,Heroin/Morphine,13,2019
+Stirling,Methadone,9,2019
+Stirling,"Heroin/morphine, methadone or bupren-orphine",16,2019
+Stirling,Codeine,3,2019
+Stirling,Dihydro-codeine,0,2019
+Stirling,Any opiate or opioid,17,2019
+Stirling,Any Benzodiazepine,17,2019
+Stirling,Any Prescribable Benzodiazepine,3,2019
+Stirling,Diazepam,3,2019
+Stirling,Any Street Benzodiazepine,16,2019
+Stirling,Etizolam,16,2019
+Stirling,Gabapentin and/or Pregabalin,6,2019
+Stirling,Cocaine,5,2019
+Stirling,Ecstasy,0,2019
+Stirling,Amphetamines,1,2019
+Stirling,Alcohol,1,2019
+West Dunbartonshire,All drug-related deaths,32,2019
+West Dunbartonshire,Heroin/Morphine,8,2019
+West Dunbartonshire,Methadone,11,2019
+West Dunbartonshire,"Heroin/morphine, methadone or bupren-orphine",17,2019
+West Dunbartonshire,Codeine,0,2019
+West Dunbartonshire,Dihydro-codeine,3,2019
+West Dunbartonshire,Any opiate or opioid,21,2019
+West Dunbartonshire,Any Benzodiazepine,19,2019
+West Dunbartonshire,Any Prescribable Benzodiazepine,1,2019
+West Dunbartonshire,Diazepam,0,2019
+West Dunbartonshire,Any Street Benzodiazepine,19,2019
+West Dunbartonshire,Etizolam,18,2019
+West Dunbartonshire,Gabapentin and/or Pregabalin,10,2019
+West Dunbartonshire,Cocaine,3,2019
+West Dunbartonshire,Ecstasy,1,2019
+West Dunbartonshire,Amphetamines,2,2019
+West Dunbartonshire,Alcohol,4,2019
+West Lothian,All drug-related deaths,23,2019
+West Lothian,Heroin/Morphine,11,2019
+West Lothian,Methadone,7,2019
+West Lothian,"Heroin/morphine, methadone or bupren-orphine",14,2019
+West Lothian,Codeine,0,2019
+West Lothian,Dihydro-codeine,5,2019
+West Lothian,Any opiate or opioid,17,2019
+West Lothian,Any Benzodiazepine,15,2019
+West Lothian,Any Prescribable Benzodiazepine,6,2019
+West Lothian,Diazepam,6,2019
+West Lothian,Any Street Benzodiazepine,12,2019
+West Lothian,Etizolam,10,2019
+West Lothian,Gabapentin and/or Pregabalin,10,2019
+West Lothian,Cocaine,9,2019
+West Lothian,Ecstasy,2,2019
+West Lothian,Amphetamines,3,2019
+West Lothian,Alcohol,2,2019
