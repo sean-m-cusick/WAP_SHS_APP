@@ -1,0 +1,41 @@
+---
+title: "Review Dataset - How does Covid affect hospital activity"
+output: html_notebook
+---
+
+This notebook is exploring each dataframe to explore whether it is relevant to answer the question:
+
+# How does Covid affect hospital activity
+
+```{r}
+library(janitor)
+library(tidyverse)
+library(ggplot2)
+library(here)
+
+here::here()
+```
+
+
+```{r Total daily COVID cases}
+total_covid_age_sex <- clean_names(read_csv(here("raw_data/df_total_cov_age_sex.csv")))
+  
+total_covid_deprivation <- clean_names(read_csv(here("raw_data/df_total_cov_deprivation.csv")))
+  
+total_covid_health_board <- clean_names(read_csv(here("raw_data/df_total_cov_health_board.csv")))
+  
+total_covid_local_authority <- clean_names(read_csv(here("raw_data/df_total_cov_local_authority.csv")))
+```
+
+```{r}
+total_covid_age_sex %>% 
+  mutate(date = ymd(date),
+         year = year(date),
+         month = month(date),
+         day_n = day(date),
+         weekday = wday(date, label = TRUE),
+         .before = date)
+  
+
+```
+

@@ -1,0 +1,149 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r libraries, echo=FALSE, include=FALSE}
+library(janitor)
+library(tidyverse)
+library(ggplot2)
+library(here)
+library(leaflet)
+library(stringr)
+```
+
+```{r}
+here::here()
+```
+
+```{r data}
+df_ha_dep <-read_csv(here("../phs_rshiny_dashboard_grp1/clean_data/df_ha_dep.csv"))
+
+df_hospital_location <-read_csv(here("../phs_rshiny_dashboard_grp1/clean_data//df_hospital_location.csv"))
+
+df_ha_dep <-read_csv(here("../phs_rshiny_dashboard_grp1/clean_data/df_ha_dep.csv"))
+
+df_cov_hb <- read_csv(here("../phs_rshiny_dashboard_grp1/clean_data/df_cov_hb_dep.csv"))
+
+```
+
+Deprivation breakdown for inpatient and daycase activity (episode and stays) by health board of treatment of the patients.
+
+## Definition of SIMD
+
+Scottish Index of Multiple Deprivation (SIMD) quintile; 1(Most Deprived) - 5(Least Deprived); Most appropriate SIMD release used for each year
+
+## Dataset descriptions:
+
+df_ane_hb_dep: 2020-1, weekly data, health board, attendances
+
+df_cov_hb_dep: 2020-1, covid, weekly data, health board, attendances, attendance type
+
+df_cov_hscp_dep: 2020-1, covid, weekly data, hscp, attendances, attendance type
+
+df_ha_dep: 2016-2021, quarterly, hospital level, attendances, attendance type
+
+# Hospital Admission by Deprivation ----
+```{r}
+# Remove missing simd values
+df_ha_dep <- df_ha_dep %>%
+  filter(!is.na(simd))
+```
+
+```{r}
+# add in a quarter and year variable
+df_ha_dep <- df_ha_dep %>%
+  mutate(q_year = str_c(year, " Q",quarter))
+```
+
+```{r}
+# Pivot wider to add simd as a column
+df_ha_dep_wide <- df_ha_dep %>%
+  pivot_wider(names_from = simd, values_from = episodes)
+```
+
+```{r}
+# rename columns
+df_ha_dep_wide <- df_ha_dep_wide %>%
+    `colnames<-`(c("year", "quarter", "hb", "location", "admission_type",
+                   "length_of_episode", "average_length_of_episode", "stays",
+                   "length_of_stay", "average_length_of_stay","q_year", "simd_1",
+                   "simd_2", "simd_3", "simd_4", "simd_5"))
+```
+
+```{r}
+df_ha_dep_summary <- df_ha_dep %>%
+  filter(admission_type == "Emergency Inpatients") %>%
+  filter(length_of_stay != 0) %>%
+  filter(length_of_episode != 0) %>%
+  group_by(hb, simd)
+```
+
+```{r}
+df_ha_dep_summary %>%
+  ggplot(aes(x = q_year, fill = hb)) +
+  geom_bar(position = "dodge", colour="white", alpha=0.3) +
+  facet_wrap(~hb) +
+  labs(
+    x = "\nYear",
+    y = "Count\n",
+    title = "Deprivation",
+    subtitle = "\n"
+    )
+```
+
+
+
+```{r}
+df_ha_dep %>%
+  group_by(admission_type) %>%
+  summarise(count = n())
+```
+
+
+
+
+```{r}
+df_ha_dep_wide %>%
+  ggplot(aes(x = year, fill = hb)) +
+  geom_bar(position = "dodge", colour="white", alpha=0.3) +
+  facet_wrap(~hb) +
+  labs(
+    x = "\nYear",
+    y = "Count\n",
+    title = "Deprivation",
+    subtitle = "\n"
+    )
+```
+
+```{r}
+df_ha_dep %>%
+  mutate(simd = factor(simd)) %>%
+  ggplot(aes(x = year, fill = simd)) +
+  geom_bar(position = "dodge", colour="white", alpha=0.3) +
+  facet_wrap(~simd) +
+  labs(
+    x = "\nYear",
+    y = "Count\n",
+    title = "Deprivation",
+    subtitle = "\n"
+    )
+```
+
+```{r}
+df_ha_dep %>%
+  mutate(simd = factor(simd)) %>%
+  group_by(simd) %>%
+  ggplot(aes(x = length_of_stay, y = length_of_episode, group = simd, colour = simd)) +
+  geom_point() +
+ # facet_wrap(~simd) +
+  labs(
+    x = "\nYear",
+    y = "Count\n",
+    title = "Deprivation",
+    subtitle = "\n"
+    )
+
+
+
+```
