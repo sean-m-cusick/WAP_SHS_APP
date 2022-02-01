@@ -10,13 +10,15 @@ library(plotly)
 library(lubridate)
 
 
-
 # Loading in Life expectancy data
-life_expectancy_data <- read_csv(here("clean_data/Temp_files/life_expectancy_clean.csv")) %>%
-  mutate(local_authority = if_else(local_authority == "Na h-Eileanan Siar", "Eilean Siar", local_authority),
-         value = round(value, 2)) %>%
-  rename(gender = sex) %>%
-  filter(age == "0 years")
+# life_expectancy_data <- read_csv(here("clean_data/Temp_files/life_expectancy_clean.csv")) %>%
+#   mutate(local_authority = if_else(local_authority == "Na h-Eileanan Siar", "Eilean Siar", local_authority),
+#          value = round(value, 2)) %>%
+#   rename(gender = sex) %>%
+#   filter(age == "0 years")
+life_expectancy_data  <- read_csv(here("clean_data/df_hospital_location.csv"))
+
+hospital_activty_dep <- read_csv(here("clean_data/df_ha_dep.csv"))
 
 # Loading in Scotland shape file
 scotland_shape <- st_read(here("clean_data/Temp_files/shape_data/pub_las.shp")) %>%
