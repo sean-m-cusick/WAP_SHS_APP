@@ -1,0 +1,104 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+hospital_activty_ans <- read_csv("clean_data/df_ha_ans.csv")
+hospital_activty_dep <- read_csv("clean_data/df_ha_dep.csv")
+hospital_activty_spe <- read_csv("clean_data/df_ha_spe.csv")
+```
+
+
+
+```{r}
+hospital_activty_ans %>% 
+  mutate(quarter = factor(quarter)) %>% 
+  group_by(year,quarter) %>% 
+  summarise(average_length_of_stay = mean(length_of_stay)) %>% 
+    ggplot() +
+  aes(x = year, y = average_length_of_stay, group = quarter, color = quarter) +
+     geom_point() +
+  geom_line() +
+  labs(
+    x = "Winter",
+    y = "average length of stay"
+  )
+```
+
+
+```{r}
+hospital_activty_ans %>% 
+  filter(quarter == 1) %>% 
+  group_by(admission_type) %>% 
+  summarise(average_length_of_stay = mean(length_of_stay)) %>% 
+    ggplot() +
+  aes(x = admission_type,y = average_length_of_stay) +
+geom_col() +
+theme(axis.text.x = element_text(angle = 30, vjust = 0.5, hjust = 1))
+```
+
+
+
+```{r}
+hospital_activty_dep  %>% 
+  mutate( quarter = factor(quarter)) %>% 
+  group_by(year,quarter) %>% 
+  summarise(average_length_of_stay = mean(length_of_stay)) %>% 
+    ggplot() +
+  aes(x = year, y = average_length_of_stay, group = quarter, color = quarter) +
+     geom_point() +
+  geom_line() +
+  labs(
+    x = "Winter",
+    y = "average length of stay"
+  )
+```
+
+
+
+
+```{r}
+hospital_activty_spe %>% 
+  filter(quarter == 1) %>% 
+  group_by(specialty_name) %>% 
+   summarise(average_length_of_spell = mean(length_of_spell)) %>% 
+  arrange(desc(average_length_of_spell))%>% 
+  slice(1:10) %>% 
+    ggplot() +
+  aes(x = specialty_name, y = average_length_of_spell ) +
+ geom_col() +
+theme(axis.text.x = element_text(angle = 30, vjust = 0.5, hjust = 1))
+```
+
+
+
+```{r}
+hospital_activty_spe %>% 
+  filter(quarter == 1) %>% 
+  group_by(year) %>% 
+  summarise(average_length_of_spell = mean(length_of_spell)) %>% 
+    ggplot() +
+  aes(x = year, y = average_length_of_spell) +
+     geom_point() +
+  geom_line() +
+  labs(
+    x = "Winter",
+    y = "average length of spell"
+  )
+```
+
+
+```{r}
+df_age_group_cov_hscp_ans <- df_cov_hscp_ans %>% 
+  filter(age_group != "All ages") %>% 
+  mutate(age_group = factor(age_group, levels = c("Under 5","5 - 14" ,"15 - 44", "45 - 64", "65 - 74", "75 - 84", "85 and over")
+  )) %>%
+  arrange(age_group)
+```
+
