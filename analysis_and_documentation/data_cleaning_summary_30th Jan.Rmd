@@ -1,0 +1,76 @@
+---
+title: "Data Cleaning Summary"
+author: "Kang"
+date: "30/01/2022"
+output: html_document
+---
+
+
+
+
+### Parameter Name Explaination
+api_ - Application Programming Interface values
+
+backup_ - Backup Dataframe (Stored any loaded API dfs as backup)
+
+df_ - dataframe
+
+sample_ - sample / test dataframe
+
+age_group_ - Dataframe with categorized age group (filtered out "all age" & "gender/sex" parameters)
+
+## Acronym
+
+ane - A&E (Group 03)
+
+cov - Covid (Group 02)
+
+ans - Age and Sex
+
+dep - Deprivation 
+
+spe - Specialty 
+
+ha - Hospital Activity
+
+hb - Health Board
+
+hscp - Health and Social Care Partnership
+
+
+
+## Data Group
+* Data Group 00 -  Location / ID Identifier
+* Data Group 01 - Hospital Activity (`ha`)
+* Data Group 02 - Hospitalisations due to Covid 19 (`cov`)
+* Data Group 03 -  A&E Activity (`ane`)
+* Data Group 04 - Bed Capacity
+
+## Cleaning Processes 
+* remove "id" column
+* remove any columns ends with "qf"
+* convert and extract "year" and "quarter" columns from date related column (see clean functions below)
+* relocate year and quarter to the start of df.
+
+### Cleaning Functions
+
+* `clean_quart_df_func(df)`
+is use for cleaning df with quarter Column (i.e. 2019Q2) format,
+
+* `clean_wkend_df_func(df)`
+is use for cleaning df with week_ending format (20200105)
+
+
+## Function
+
+* `phs_df_func(data_API)`
+is use for retrieving dataframe using API
+
+* `phs_dictionary_func(data_API)`
+is use for retrieving meaning for each column names using API
+
+* `hospital_location_func(df, key column name)`
+is use for joining hospital location info (hospital name, longitude, latitude) with main data frame
+(i.e. "location", "hb", "hscp")
+
+
