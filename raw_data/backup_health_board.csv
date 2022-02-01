@@ -1,0 +1,7 @@
+id,info.label,type
+_id,NA,int
+HB,Health Board 2014 Code (revised in 2018 & 2019),text
+HBName,Name of the Health Board 2014 (revised in 2018 & 2019),text
+HBDateEnacted,Date Health Board Code was enacted. ,numeric
+HBDateArchived,Date Health Board Code was archived. ,numeric
+Country,Country Code for Scotland,text

@@ -2,12 +2,29 @@
 title: "R Notebook"
 output: html_notebook
 ---
-
-```{r}
+```{r libraries, echo=FALSE, include=FALSE}
+library(janitor)
 library(tidyverse)
+library(ggplot2)
+library(here)
 library(leaflet)
 ```
 
+
+```{r}
+here::here()
+
+here()
+```
+
+
+```{r data}
+df_ha_dep <-read_csv(here("../phs_rshiny_dashboard_grp1/clean_data/df_ha_dep.csv"))
+
+df_hospital_location <-read_csv(here("../phs_rshiny_dashboard_grp1/clean_data//df_hospital_location.csv"))
+
+df_ha_dep <-read_csv(here("../phs_rshiny_dashboard_grp1/clean_data/df_ha_dep.csv"))
+```
 Deprivation breakdown for inpatient and daycase activity (episode and stays) by health board of treatment of the patients.
 
 Scottish Index of Multiple Deprivation (SIMD) quintile; 1(Most Deprived) - 5(Least Deprived); Most appropriate SIMD release used for each year
