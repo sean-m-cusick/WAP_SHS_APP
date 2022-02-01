@@ -8,13 +8,13 @@ library(tidyverse)
 library(ggplot2)
 library(here)
 library(leaflet)
+
+
 ```
 
 
 ```{r}
 here::here()
-
-here()
 ```
 
 
@@ -24,17 +24,21 @@ df_ha_dep <-read_csv(here("../phs_rshiny_dashboard_grp1/clean_data/df_ha_dep.csv
 df_hospital_location <-read_csv(here("../phs_rshiny_dashboard_grp1/clean_data//df_hospital_location.csv"))
 
 df_ha_dep <-read_csv(here("../phs_rshiny_dashboard_grp1/clean_data/df_ha_dep.csv"))
+
+df_cov_hb <- read_csv(here("../phs_rshiny_dashboard_grp1/clean_data/df_cov_hb_dep.csv"))
+
 ```
 Deprivation breakdown for inpatient and daycase activity (episode and stays) by health board of treatment of the patients.
 
 Scottish Index of Multiple Deprivation (SIMD) quintile; 1(Most Deprived) - 5(Least Deprived); Most appropriate SIMD release used for each year
 
 ## Dataset descriptions:
-df_ane_hb_dep: 2020-1, weekly data, health board, attendances
-df_cov_hb_dep: 2020-1, covid, weekly data, health board, attendances, attendance type
-df_cov_hscp_dep: 2020-1, covid, weekly data, hscp, attendances, attendance type
-df_ha_dep: 2016-2021, quarterly, hospital level, attendances, attendance type
+* df_ane_hb_dep: 2020-1, weekly data, health board, attendances
+* df_cov_hb_dep: 2020-1, covid, weekly data, health board, attendances, attendance type
+* df_cov_hscp_dep: 2020-1, covid, weekly data, hscp, attendances, attendance type
+* df_ha_dep: 2016-2021, quarterly, hospital level, attendances, attendance type
 
+# Hospital Admission by Deprivation ----
 ```{r}
 # Pivot wider to add simd as a column
 df_ha_dep_wide <- df_ha_dep %>% 
@@ -76,38 +80,32 @@ df_ha_dep_wide %>%
     ) 
 ```
 
-
-
-
-
-
-
-
-
-
-
-
 ```{r}
 df_ha_dep %>% 
   group_by(simd) %>% 
   summarise(n())
 ```
 
-```{r - Hospital Locations}
-# Produces an interactive map showing hospital locations
-df_hospital_location %>% 
-leaflet() %>% 
-    addTiles() %>% 
-addCircleMarkers(
-    data = df_hospital_location,
-    lng = ~ longitude,
-    lat = ~ latitude,
-    radius = 4,
-    stroke = FALSE,
-    weight = 0,
-    fillOpacity = 1,
-    clusterOptions = markerClusterOptions())
+
+# Weekly Covid by health Board ----
+```{r}
+df_cov_hb %>%
+  ggplot() +
+  geom_bar(aes(x = week_ending), colour="white", alpha=0.3) +
+#  scale_fill_manual(values=c("brown1", "darkgoldenrod1", "cyan2")) +
+  labs(
+    x = "\nBill length (mm)",
+    y = "Count\n",
+    title = "Comparing Bill Dimensions",
+    subtitle = "by Species\n"
+    ) 
 ```
+
+
+
+
+
+# Maps ----
 
 ```{r - Hospital Locations}
 # Produces an interactive map showing hospital locations
@@ -138,7 +136,7 @@ map_df_ha_dep = df_ha_dep %>%
   filter(!is.na(longitude))
 ```
 
-```{r - Hospital Locations}
+```{r - Hospital Locations no cluster}
 # Produces an interactive map showing hospital locations
 map_df_ha_dep %>% 
 leaflet() %>% 
