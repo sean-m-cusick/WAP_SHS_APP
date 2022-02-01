@@ -47,7 +47,13 @@ theme(axis.text.x = element_text(angle = 30, vjust = 0.5, hjust = 1))
 
 ```{r}
 hospital_activty_dep  %>% 
-  mutate( quarter = factor(quarter)) %>% 
+  mutate(quarter = case_when(
+              quarter == "1" ~ "Winter",
+              quarter == "2"  ~ "Spring",
+              quarter == "3" ~ "Summer",
+              quarter == "4"  ~ "Autumn"
+    
+  )) %>% 
   group_by(year,quarter) %>% 
   summarise(average_length_of_stay = mean(length_of_stay)) %>% 
     ggplot() +
@@ -80,15 +86,23 @@ theme(axis.text.x = element_text(angle = 30, vjust = 0.5, hjust = 1))
 
 ```{r}
 hospital_activty_spe %>% 
-  filter(quarter == 1) %>% 
-  group_by(year) %>% 
+    mutate(quarter = case_when(
+              quarter == "1" ~ "Winter",
+              quarter == "2"  ~ "Spring",
+              quarter == "3" ~ "Summer",
+              quarter == "4"  ~ "Autumn"
+    
+  )) %>% 
+ group_by(quarter,admission_type) %>%  
   summarise(average_length_of_spell = mean(length_of_spell)) %>% 
+  filter(!grepl("All",admission_type)) %>% 
     ggplot() +
-  aes(x = year, y = average_length_of_spell) +
-     geom_point() +
-  geom_line() +
+  aes(x = quarter, y = average_length_of_spell, fill = admission_type) +
+  geom_bar( stat = "identity", position = "dodge") +
+  #    geom_point() +
+  # geom_line() +
   labs(
-    x = "Winter",
+    x = "",
     y = "average length of spell"
   )
 ```
