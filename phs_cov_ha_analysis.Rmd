@@ -25,7 +25,7 @@ day_cum_case <- read_csv("clean_data/df_day_cum_cov.csv")
 
 nor_ha_ans <- read_csv("clean_data/df_ha_ans.csv")
 cov_ha_ans <- read_csv("clean_data/df_cov_hb_ans.csv")
-
+df_hospital_location <- read_csv("clean_data/df_hospital_location.csv")
 ```
 
 
@@ -58,11 +58,14 @@ total_eps %>%
   ylab("Admission count (per thousand)")
 
 
+
+
 ```
 
 
 ```{r}
 test <- cov_ha_ans %>% 
+  filter(!grepl("All",admission_type))
   
 ```
 
@@ -70,25 +73,25 @@ test <- cov_ha_ans %>%
 
 # Dump
 ```{r}
-# day_case <- day_cum_case %>% 
-#   mutate(year = year(date),
-#          month = month(date),
-#            week = week(date))
-# 
-# cov_case_rate <- day_case %>% 
-#   group_by(year,month) %>% 
-#   mutate(rate = daily_cases - lag(daily_cases)) %>% 
-#   slice(-1)
-# 
-# 
-# cov_case_rate %>% 
-#   mutate(month = factor(month)) %>% 
-#   ggplot()+
-#   aes(x = date, y = daily_cases )+
-#   geom_bar(stat = "identity")+
-#   labs(
-#     title = "Daily Covid Cases Per month"
-#   )
+day_case <- day_cum_case %>%
+  mutate(year = year(date),
+         month = month(date),
+           week = week(date))
+
+cov_case_rate <- day_case %>%
+  group_by(year,month) %>%
+  mutate(rate = daily_cases - lag(daily_cases)) %>%
+  slice(-1)
+
+
+cov_case_rate %>%
+  mutate(month = factor(month)) %>%
+  ggplot()+
+  aes(x = date, y = daily_cases )+
+  geom_bar(stat = "identity")+
+  labs(
+    title = "Daily Covid Cases Per month"
+  )
 # 
 # 
 # cov_case_season <- day_case %>% 
@@ -103,4 +106,49 @@ test <- cov_ha_ans %>%
 
 
 ```
+
+```{r}
+
+df_hospital_location <- read_csv("clean_data/df_hospital_location.csv")
+df_day_trend_hb <- read_csv("clean_data/df_day_trend_hb.csv")
+
+hospital_location_func <- function(df, key_col){
+            df <- df %>% 
+            # Select location & hb as forgein keys
+            # Join location_name, longitude & latitude to the main dataframe
+            left_join(df_hospital_location %>% select(key_col, location_name, longitude, latitude),
+            by = c(key_col),
+            all.x = TRUE)
+            
+            return(df)
+}
+
+
+
+day_trend_hb <- hospital_location_func(df_day_trend_hb, "hb") %>%
+  group_by(date, hb, hb_name) %>% 
+  summarise(daily_positive = sum(daily_positive))
+
+day_trend_hb %>% 
+  ggplot()+
+  aes(x = date, y = daily_positive)+
+  geom_bar(stat = "identity")+
+    labs(
+    title = "Daily Trend Cases"
+  )
+  
+day_trend_hb %>% 
+  filter(hb_name == "NHS Borders") %>% 
+  ggplot()+
+  aes(x = date, y = daily_positive)+
+  geom_bar(stat = "identity")+
+  labs(
+    title = "Daily Trend Cases Per Hospital"
+  )
+
+
+# Suggestion Can do a Hospital Filter
+# Do a infection(count), death count,  infection rate, death rate
+```
+
 
