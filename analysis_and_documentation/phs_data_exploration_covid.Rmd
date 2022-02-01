@@ -34,7 +34,7 @@ total_covid_age_sex %>%
          month = month(date),
          day_n = day(date),
          weekday = wday(date, label = TRUE),
-         .before = date) %>% 
+         .before = date)
   
 
 ```
