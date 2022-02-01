@@ -3,6 +3,11 @@ title: "Covid Hospital Activity Analysis"
 output: html_notebook
 ---
 
+```{r}
+# How does Covid affect hospital activity?
+# Was there a change post Q1 2020?
+```
+
 
 ```{r, echo=FALSE, message=FALSE, results='hide'}
 library(tidyverse)
@@ -17,40 +22,82 @@ require(here)
 ```
 ```{r}
 day_cum_case <- read_csv("clean_data/df_day_cum_cov.csv")
-day_trend <- read_csv("clean_data/df_day_trend_ans.csv")
-day_trend <- read_csv("clean_data/df_day_trend_hb.csv")
-day_trend <- read_csv("clean_data/df_day_trend_loc.csv")
+
+nor_ha_ans <- read_csv("clean_data/df_ha_ans.csv")
+cov_ha_ans <- read_csv("clean_data/df_cov_hb_ans.csv")
 
 ```
+
+
+
+
 ```{r}
-day_case <- day_cum_case %>% 
-  mutate(year = year(date),
-         month = month(date),
-           week = week(date))
+cov_eps <- cov_ha_ans %>% 
+  mutate(quart_year = paste0(year, "Q", quarter)) %>% 
+  arrange(quart_year) %>% 
+  group_by(quart_year) %>% 
+  summarise(cov_eps = sum(number_admissions)/1000)
 
-cov_case_rate <- day_case %>% 
-  group_by(year,month) %>% 
-  mutate(rate = daily_cases - lag(daily_cases)) %>% 
-  slice(-1)
+nor_eps <- nor_ha_ans %>% 
+    mutate(quart_year = paste0(year, "Q", quarter)) %>% 
+  group_by(quart_year, year, quarter) %>% 
+  summarise(nor_eps = sum(episodes)/1000)
 
+total_eps <- left_join(nor_eps, cov_eps, by = "quart_year") %>% 
+  mutate(cov_eps = coalesce(cov_eps,0),
+         quart_year = str_sub(quart_year, 3,6))
 
-cov_case_rate %>% 
-  mutate(month = factor(month)) %>% 
+total_eps %>% 
   ggplot()+
-  aes(x = date, y = daily_cases )+
-  geom_bar(stat = "identity")+
-  labs(
-    title = "Daily Covid Cases Per month"
-  )
+  geom_bar(aes(x = quart_year, y = nor_eps), stat = "identity", alpha = 0.7)+
+  geom_bar(aes(x = quart_year, y = cov_eps), stat = "identity", fill = "red", alpha = 0.75)+
+    theme(axis.text.x = element_text(angle = 45))+
+  labs(title = "Hospital Admission Trend",
+       subtitle = "Total Hospital Admission (Grey) vs Covid Related Admission(Red)")+
+  xlab("Time (Year/Quarter)")+
+  ylab("Admission count (per thousand)")
 
 
-cov_case_season <- day_case %>% 
-  mutate(season = case_when(
-    month = 1 & month = 2 & month = 12 ~ "winter",
-    month = 3 & month = 4 & month = 5 ~ "spring",    
-    month = 6 & month = 7 & month = 8 ~ "summer",
-    month = 9 & month = 10 & month = 11 ~ "autumn",
-    ))
+```
+
+
+```{r}
+test <- cov_ha_ans %>% 
+  
+```
+
+
+
+# Dump
+```{r}
+# day_case <- day_cum_case %>% 
+#   mutate(year = year(date),
+#          month = month(date),
+#            week = week(date))
+# 
+# cov_case_rate <- day_case %>% 
+#   group_by(year,month) %>% 
+#   mutate(rate = daily_cases - lag(daily_cases)) %>% 
+#   slice(-1)
+# 
+# 
+# cov_case_rate %>% 
+#   mutate(month = factor(month)) %>% 
+#   ggplot()+
+#   aes(x = date, y = daily_cases )+
+#   geom_bar(stat = "identity")+
+#   labs(
+#     title = "Daily Covid Cases Per month"
+#   )
+# 
+# 
+# cov_case_season <- day_case %>% 
+#   mutate(season = case_when(
+#     month == 1 & month == 2 & month == 12 ~ "winter",
+#     month == 3 & month == 4 & month == 5 ~ "spring",    
+#     month == 6 & month == 7 & month == 8 ~ "summer",
+#     month == 9 & month == 10 & month == 11 ~ "autumn",
+#     ))
 
 
 
