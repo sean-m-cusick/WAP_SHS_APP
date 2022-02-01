@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Roles & responsibilities of each member
 
-* **Aboubakar Hameed** was responsible for `Work Package 2.3 - Shiny App`; furthermore, supported <spatial visualisations>, <data cleaning>,... 
+* **Aboubakar Hameed** was responsible for `Work Package 2.3 - Shiny App MVP`; furthermore, supported <spatial visualisations>, <data cleaning>,... 
 
 * **Kang Hin Lee** was responsible for `Work Package 2.1 - Data Analysis`; furthermore, supported <spatial visualisations>, <data cleaning>,... 
 
@@ -31,13 +31,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * **All team members** worked on the following **Work Packages** (WP):  
   * `WP1.1 - Project Set-up`  
-  * `WP2 - Shiny App MVP`  
+  * `WP2 - Shiny App`  
   * `WP2.1.1 - DataSet Selection ` 
   * `WP2.1.2 - Data Cleaning`  
   * `WP2.1.3 - Data Wrangling`  
   * `WP2.2.1 - Temporal Visualisations`  
   * `WP2.2.2 - Spatial Visualisations`  
-  * `WP2.2.3 - Demographic Visualisations`  
+  * `WP2.2.3 - Demographic Visualisations`   
+  * `WP2.2.4 - Features`  
   * `WP2.3.1 - User Interface`  
   * `WP2.3.2 - Backend Code`  
   * `WP3.1 - Report`  
@@ -48,19 +49,46 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Brief description of dashboard topic
 
-Our dashboard contains three sections:
+The objective of this project is the creation of a dashboard which can demonstrate the affect that the Winter season has on the acute health sector in Scotland.  
+
+In order to realise this objective, a preliminary wire-frame of the end product was designed during the Initial Design Review (IDR) in `WP1.1 - Project Set-up`. More information on the design reviews is found in a later section.  
+
+![wire-frame: main page](../analysis_and_documentation/image/mvp_wireframe_general.png)  
+![wire-frame: section pages](../analysis_and_documentation/image/mvp_wireframe_questions.png)  
+The Minimum Value Product (MVP) of the dashboard, found in `WP 2.3 - Shiny App MVP`, can be separated into sidebar, with each tab displaying relevant information. 
+* The main, or **General Stats** page, can be divided into three key sections:  
+  * An about section  
+  * A map displaying hospital locations and Health Board areas  
+  * A graph displaying <hospital addmsion since 2016, and COVID-19 related admission>  
+* The first page, or **A&E Activity** page, can be divided into three key sections:  
+  * A heat map of where there is the most admissions  
+  * A time series of a&e activity from *2020* to *2021* ??? 
+  * A graph displaying <...>  
+* The second page, or **Deprivation page** page, which was re-prioritised after the Detailed Design Review (DDR) from the `WP 2.3 - Shiny App MVP` to `WP2.2.4 - Features`, can be divided into three key sections:  
+  * A heat map of where there is the most addmissions  
+  * A time series of a&e activity from *2020* to *2021* ??? 
+  * A graph displaying <...>    
+* The third page, or **COVID-19** page, can be divided into three key sections:  
+  * A heat map of where there is the most cases  
+  * A time series of covid cases from *2020* to *2021* ??? 
+  * A graph displaying <...>  
+
+
+Additionally, `WP2.2.4 - Features` added the following aspects to the Shiny App:
 1. checkboxes of each health board
 2. drop down menu for individual hospitals in that health board
 3. Tabs
   1). Map of Scotland
   2). Time series graphs
   3). proportional graphs
-  
-additionally, a number of buttons such as:
-* reset
-* select all
+4. buttons such as:
+  * reset
+  * select all
+* stats on deprivation
+* custom palettes, colour blind friendly
+* forecasting
 
-Our topic is ...
+The topic of our MVP is looking specifically at Accident and Emergency (A&E)
 
 The dashboard outlines our topic in terms of ...
 
