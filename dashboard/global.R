@@ -10,7 +10,7 @@ library(plotly)
 library(lubridate)
 
 # Data Files ------
-# Daily COVID health Board?
+# Daily COVID health Board? ----
 # Loading in COVID / Health Board / ans?
 cov_hb_ans <- read_csv(here("../clean_data/df_cov_hb_ans.csv"))
 
@@ -21,7 +21,7 @@ cov_hb_dep <- read_csv(here("../clean_data/df_cov_hb_dep.csv"))
 cov_hb_spe <- read_csv(here("../clean_data/df_cov_hb_spe.csv"))
 
 
-# Daily Covid HSCP?
+# Daily Covid HSCP? ----
 # Loading in COVID / Health Board / ans?
 cov_hscp_ans <- read_csv(here("../clean_data/df_cov_hscp_ans.csv"))
 
@@ -31,6 +31,18 @@ cov_hscp_dep <- read_csv(here("../clean_data/df_cov_hscp_dep.csv"))
 # Loading in COVID / Health Board / Speciality
 cov_hscp_spe <- read_csv(here("../clean_data/df_cov_hscp_spe.csv"))
 
+# TOTAL COVID -----
+# Loading in total covid cases by ans
+tot_cov_ans <- read_csv(here("../clean_data/df_tot_cov_ans.csv"))
+
+# Loading in COVID / Health Board / Deprivation
+cov_hscp_dep <- read_csv(here("../clean_data/df_tot_cov_dep.csv"))
+
+# Loading in COVID / Health Board / Speciality
+cov_hscp_spe <- read_csv(here("../clean_data/df_tot_cov_hb.csv"))
+
+# Loading in COVID / Health Board / Speciality
+cov_hscp_spe <- read_csv(here("../clean_data/df_tot_cov_loc.csv"))
 
 
 # TEMPORARY FILES -----
