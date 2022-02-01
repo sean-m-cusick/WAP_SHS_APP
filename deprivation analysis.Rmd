@@ -12,6 +12,64 @@ Deprivation breakdown for inpatient and daycase activity (episode and stays) by 
 
 Scottish Index of Multiple Deprivation (SIMD) quintile; 1(Most Deprived) - 5(Least Deprived); Most appropriate SIMD release used for each year
 
+## Dataset descriptions:
+df_ane_hb_dep: 2020-1, weekly data, health board, attendances
+df_cov_hb_dep: 2020-1, covid, weekly data, health board, attendances, attendance type
+df_cov_hscp_dep: 2020-1, covid, weekly data, hscp, attendances, attendance type
+df_ha_dep: 2016-2021, quarterly, hospital level, attendances, attendance type
+
+```{r}
+# Pivot wider to add simd as a column
+df_ha_dep_wide <- df_ha_dep %>% 
+  pivot_wider(names_from = simd, values_from = episodes)
+```
+
+```{r}
+# rename columns
+df_ha_dep_wide <- df_ha_dep_wide %>% 
+    `colnames<-`(c("year", "quarter", "hb", "location", "admission_type",
+                   "length_of_episode", "average_length_of_episode", "stays",
+                   "length_of_stay", "average_length_of_stay", "simd_1", 
+                   "simd_2", "simd_3", "simd_4", "simd_5", "missing_simd"))
+```
+
+```{r}
+# remove missing simd rows
+df_ha_dep_wide <- 
+  df_ha_dep_wide[is.na(df_ha_dep_wide$missing_simd),]
+```
+
+```{r}
+# select required columns
+df_ha_dep_wide <- df_ha_dep_wide %>% 
+  select("year", "quarter", "simd_1", "simd_2", "simd_3", "simd_4", "simd_5", 
+         "hb", "location", "admission_type", "length_of_episode")
+```
+
+```{r}
+df_ha_dep_wide %>%
+  ggplot(aes(x = year, fill = hb)) +
+  geom_histogram(colour="white", alpha=0.3) +
+#  scale_fill_manual(values=c("brown1", "darkgoldenrod1", "cyan2")) +
+  labs(
+    x = "\nBill length (mm)",
+    y = "Count\n",
+    title = "Comparing Bill Dimensions",
+    subtitle = "by Species\n"
+    ) 
+```
+
+
+
+
+
+
+
+
+
+
+
+
 ```{r}
 df_ha_dep %>% 
   group_by(simd) %>% 
