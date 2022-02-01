@@ -1,0 +1,202 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(leaflet)
+```
+
+Deprivation breakdown for inpatient and daycase activity (episode and stays) by health board of treatment of the patients.
+
+Scottish Index of Multiple Deprivation (SIMD) quintile; 1(Most Deprived) - 5(Least Deprived); Most appropriate SIMD release used for each year
+
+```{r}
+df_ha_dep %>% 
+  group_by(simd) %>% 
+  summarise(n())
+```
+
+```{r - Hospital Locations}
+# Produces an interactive map showing hospital locations
+df_hospital_location %>% 
+leaflet() %>% 
+    addTiles() %>% 
+addCircleMarkers(
+    data = df_hospital_location,
+    lng = ~ longitude,
+    lat = ~ latitude,
+    radius = 4,
+    stroke = FALSE,
+    weight = 0,
+    fillOpacity = 1,
+    clusterOptions = markerClusterOptions())
+```
+
+```{r - Hospital Locations}
+# Produces an interactive map showing hospital locations
+df_hospital_location %>% 
+leaflet() %>% 
+    addTiles() %>% 
+addCircleMarkers(
+    data = df_hospital_location,
+    lng = ~ longitude,
+    lat = ~ latitude,
+    radius = 4,
+    stroke = FALSE,
+    weight = 0,
+    fillOpacity = 1,
+    clusterOptions = markerClusterOptions())
+```
+
+```{r}
+map_code <- df_ha_dep %>% 
+  filter(year == 2016 & quarter == 1) %>% 
+  group_by(location) %>% 
+  summarise(mean(simd), na.rm = TRUE)
+```
+
+```{r}
+map_df_ha_dep = df_ha_dep %>% 
+  left_join(df_hospital_location, by ="location") %>% 
+  filter(!is.na(longitude))
+```
+
+```{r - Hospital Locations}
+# Produces an interactive map showing hospital locations
+map_df_ha_dep %>% 
+leaflet() %>% 
+    addTiles() %>% 
+addCircleMarkers(
+    data = map_df_ha_dep,
+    lng = ~ longitude,
+    lat = ~ latitude)
+  #  clusterOptions = markerClusterOptions())
+```
+
+```{r}
+# Produces an interactive map
+start_stations %>% 
+leaflet() %>% 
+    addTiles() %>% 
+    addCircleMarkers(lng = ~start_long, 
+                    lat = ~start_lat,
+                    fillColor = "darkorchid",
+                    fillOpacity = 0.6,
+                    stroke = F, 
+                    radius = ~count/10) %>% 
+addProviderTiles(providers$Stamen.Toner)
+```
+
+```{r}
+library(stringr)
+df_ha_dep <- df_ha_dep %>% 
+  mutate(q_year = str_c(year, " Q",quarter))
+```
+
+
+```{r}
+ggplot(df_ha_dep) +
+  aes(x = Year, y = Revenue, colour = Company) +
+  geom_line() +
+  geom_point() 
+```
+
+
+```{r}
+df_ha_dep %>%
+  group_by(location) %>%
+  filter(hb == "S08000022") %>% 
+  ggplot(aes(x = q_year, y = simd,
+             group = location, colour = location)) + 
+  geom_line() + 
+  theme_bw() + scale_colour_brewer(palette = "Set1") + 
+  theme(legend.position = c(0.9,0.8)) +
+  labs(y = "SIMD Level",
+       x = "",
+       title = "Hospital SIMD",
+       colour = "",
+       caption = "Source: USA social security administration via babynames R package")
+```
+
+```{r}
+df_ha_dep %>% 
+  group_by(year, quarter, simd, location) %>% 
+  summarise(n())
+```
+
+```{r}
+df_ha_dep %>% 
+  group_by(admission_type) %>% 
+  summarise(n())
+```
+
+```{r}
+df_ha_dep_emergency <- df_ha_dep %>% 
+  filter(admission_type == "Emergency Inpatients") %>% 
+  filter(simd > 0)
+```
+
+```{r}
+ggplot(df_ha_dep_emergency, aes(x=q_year, y = episodes, group = hb)) +
+  geom_line()
+  
+```
+
+```{r}  
+df_ha_dep %>%
+  group_by(location) %>%
+  filter(hb == "S08000022") %>% 
+  ggplot(aes(x = q_year, y = simd,
+             group = location, colour = location)) + 
+  geom_line() + 
+  theme_bw() + scale_colour_brewer(palette = "Set1") + 
+  theme(legend.position = c(0.9,0.8)) +
+  labs(y = "SIMD Level",
+       x = "",
+       title = "Hospital SIMD"
+  )
+```
+
+```{r}
+C313H <- df_ha_dep %>% 
+  filter(location == "C313H")
+```
+
+```{r}
+df_ha_dep %>% 
+  group_by(location) %>% 
+  summarise(n())
+```
+
+```{r}
+simd1_df_ha_dep<- df_ha_dep %>% 
+  filter(simd == 1)
+```
+
+```{r}
+summary_simd1_df_ha_dep <- simd1_df_ha_dep%>% 
+  group_by(q_year) %>% 
+  summarise(mean(episodes), mean(length_of_episode), mean(stays), mean(length_of_stay)) 
+```
+
+
+
+```{r}
+summary_simd1_df_ha_dep <- summary_simd1_df_ha_dep %>% 
+  `colnames<-`(c("q_year", "avg_episodes", "avg_length_epi", "avg_stays", "avg_length_stay"))
+```
+
+
+
+```{r}
+df_ha_dep %>% 
+ggplot(aes(x=year, y=episodes)) +
+    geom_line()
+```
+
+
+
+
+
