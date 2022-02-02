@@ -5,6 +5,7 @@ output:
   html_document:
     df_print: paged
   pdf_document: default
+  toc: true
 ---
 
 ```{r setup, include=FALSE}
@@ -21,13 +22,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Roles & responsibilities of each member
 <!-- additional supported WPs To be completed on Thursday -->
-* **Aboubakar Hameed** was responsible for `Work Package 2.3 - Shiny App MVP`; furthermore, supported <spatial visualisations>, <data cleaning>,... 
+* **Aboubakar Hameed** was responsible for the Minimum Viable Product (MVP) - summarised within Work Package (WP) `WP2.3 - Shiny App MVP`; furthermore, supported *<spatial visualisations>, <data cleaning>,...* 
 
-* **Kang Hin Lee** was responsible for `Work Package 2.1 - Data Analysis`; furthermore, supported <spatial visualisations>, <data cleaning>,... 
+* **Kang Hin Lee** was responsible for the Data Sets - summarised in `WP2.1 - Data Analysis`; furthermore, supported *<spatial visualisations>, <data cleaning>,... *
 
-* **Lucy Burns** was responsible for `Work Package 2.2 - Data Analysis`; furthermore, supported <spatial visualisations>, <data cleaning>,... 
+* **Lucy Burns** was responsible for the visualisations - summarised within WP `WP2.2 - Data Visualisation`; furthermore, supported *<spatial visualisations>, <data cleaning>,...* 
 
-* **Seàn M. Cusick** was responsible for  `Work Package 1 - Project Management` & `Work Package 3 - Documentation`; furthermore, supported <spatial visualisations>, <data cleaning>,...  
+* **Seàn M. Cusick** was responsible for Project Management and Documentation - summarised within WP `WP1 - Project Management` & `WP3 - Documentation`; furthermore, supported *<spatial visualisations>, <data cleaning>,...*  
 
 * **All team members** worked on the following **Work Packages** (WP):  
   * `WP1.1 - Project Set-up`  
@@ -46,51 +47,81 @@ knitr::opts_chunk$set(echo = TRUE)
   * `WP3.1.2 - README File`  
   * `WP3.2 - Presentation`  
    
+### Roles & responsibilities of each member
+<!-- additional supported WPs To be completed on Thursday -->
+* **Aboubakar Hameed** was responsible for the Minimum Viable Product (MVP) - summarised within Work Package (WP) `WP2.3 - Shiny App MVP`; furthermore, supported *<spatial visualisations>, <data cleaning>,...* 
+
+* **Kang Hin Lee** was responsible for the Data Sets - summarised in `WP2.1 - Data Analysis`; furthermore, supported *<spatial visualisations>, <data cleaning>,... *
+
+* **Lucy Burns** was responsible for the visualisations - summarised within WP `WP2.2 - Data Visualisation`; furthermore, supported *<spatial visualisations>, <data cleaning>,...* 
+
+* **Seàn M. Cusick** was responsible for Project Management and Documentation - summarised within WP `WP1 - Project Management` & `WP3 - Documentation`; furthermore, supported *<spatial visualisations>, <data cleaning>,...*  
+
 
 ### Brief description of dashboard topic
 
 The objective of this project is the creation of a dashboard which can demonstrate the affect that the Winter season has on the acute health sector in Scotland.  
 
-In order to realise this objective, a preliminary wire-frame of the end product was designed during the Initial Design Review (IDR) in `WP1.1 - Project Set-up`. More information on the design reviews is found in a later section.  
+##### Initial Wire-Frame for MVP (IDR) 
+In order to realise this objective, a preliminary wire-frame of the end product was designed during the Initial Design Review (IDR) in `WP1.1 - Project Set-up`. This wire-frame can be found in the annex.  
 
-![wire-frame: main page](../analysis_and_documentation/image/mvp_wireframe_general.png)  
-![wire-frame: section pages](../analysis_and_documentation/image/mvp_wireframe_questions.png)  
-The Minimum Value Product (MVP) of the dashboard, found in `WP 2.3 - Shiny App MVP`, can be separated into sidebar, with each tab displaying relevant information. 
-* The main, or **General Stats** page, can be divided into three key sections:  
+*** 
+
+##### Revised Wire-Frame for MVP (DDR)
+During the Detailed Design Review (DDR), the design was further streamlined, with superfluous features moved to the `WP2.2.4 - Features` work package. The updated wire-frame is displayed below:  
+
+![wire-frame: version 2 general page](../analysis_and_documentation/image/v2_mvp_wireframe_general.png)  
+
+![wire-frame: version 2 COVID page - Tab 1](../analysis_and_documentation/image/v2_mvp_wireframe_covid_tab1.png)  
+
+![wire-frame: version 2 COVID page - Tab 2](../analysis_and_documentation/image/v2_mvp_wireframe_covid_tab2.png)  
+
+![wire-frame: version 2 A&E page](../analysis_and_documentation/image/v2_mvp_wireframe_ae.png)
+
+
+
+The Minimum Value Product (MVP) of the dashboard, found in work package `WP 2.3 - Shiny App MVP`, can be separated into a sidebar, with each tab displaying relevant information. 
+* The main, or **General Statistics** page, can be divided into three key sections:  
   * An about section  
   * A map displaying hospital locations and Health Board areas  
-  * A graph displaying <hospital addmsion since 2016, and COVID-19 related admission>  
-* The first page, or **A&E Activity** page, can be divided into three key sections:  
+  * A section displaying key statistics, e.g.  _<hospital admission since 2016, and COVID-19 related admission>_, with a drop-down menu to select Health Board  
+* The first page, or **COVID-19** page, can be divided into Two tabs:  
+  * The first tab displays three key sections:  
+    * A summarisation of the results  
+    * A fixed graph displaying ... 
+    * A fixed graph displaying ... 
+  * The second, optional tab that displays an interactive graph:  
+* The second page, or **A&E Activity*** page, , can be divided into three key sections:  
   * A heat map of where there is the most admissions  
   * A time series of a&e activity from *2020* to *2021* ??? 
-  * A graph displaying <...>  
-* The second page, or **Deprivation page** page, which was re-prioritised after the Detailed Design Review (DDR) from the `WP 2.3 - Shiny App MVP` to `WP2.2.4 - Features`, can be divided into three key sections:  
-  * A heat map of where there is the most addmissions  
-  * A time series of a&e activity from *2020* to *2021* ??? 
   * A graph displaying <...>    
-* The third page, or **COVID-19** page, can be divided into three key sections:  
+* The third page which was re-prioritised after the Detailed Design Review (DDR) from the `WP 2.3 - Shiny App MVP` to `WP2.2.4 - Features`, *would have been* divided into three key sections:  
   * A heat map of where there is the most cases  
-  * A time series of covid cases from *2020* to *2021* ??? 
+  * A time series of COVID cases from *2020* to *2021* ??? 
   * A graph displaying <...>  
 
 
 Additionally, `WP2.2.4 - Features` added the following aspects to the Shiny App:
-1. checkboxes of each health board
-2. drop down menu for individual hospitals in that health board
-3. Tabs
+1. Interactivity of the Shiny App  
+2. check boxes of each health board
+3. drop down menu for individual hospitals in that health board
+4. Tabs
   1). Map of Scotland
   2). Time series graphs
   3). proportional graphs
-4. buttons such as:
+5. buttons such as:
   * reset
   * select all
-* stats on deprivation
-* custom palettes, colour blind friendly
-* forecasting
+6. Statistics on deprivation
+7. custom palettes, colour blind friendly
+8. forecasting
 
-The topic of our MVP is looking specifically at Accident and Emergency (A&E)
+The topic of our MVP is looking specifically at the __effect Winter__ has on the Health Service in Scotland __within Accident and Emergency (A&E)__, with a focus on the __COVID-19 pandemic's influence.__ 
 
-The dashboard outlines our topic in terms of ...
+The dashboard outlines our topic in terms of:
+* The geographic spread of the Scottish Health Service
+* COVID-19's spread through Scotland
+* The activity within A&E departments in Scotland.
 
 ***  
 
@@ -100,16 +131,17 @@ The dashboard outlines our topic in terms of ...
 * Project Management  
   * Work Breakdown Structure  
   * Project Gantt  
+  * Design Reviews & Milestones
   * Git branching  
   * Version control  
 * Application Development  
   * Choosing datasets  
-  * Dashboard wireframe  
+  * Dashboard wire-frame  
 ***
 
 #### **Role Allocation**
 
-asdf
+In our initial Kick-Off Meeting, the Team spoke about their strengths and weakness, as 
 
 #### **Project Management**
 
@@ -122,6 +154,11 @@ asdf
 
 
 ##### Project Gantt
+
+asdf
+
+
+##### Design Reviews & Milestones
 
 asdf
 
@@ -196,3 +233,16 @@ Benefits of storing the data like this are ...
 There are no/There may be ethical considerations, because ...
 
 The datasets are covered by the Open Government License, which means ...
+
+***  
+  
+# Appendix  
+
+# Glossary  
+  
+# Initial Design Review output:  
+![wire-frame: main page](../analysis_and_documentation/image/mvp_wireframe_general.png)  
+![wire-frame: section pages](../analysis_and_documentation/image/mvp_wireframe_questions.png)  
+
+
+
