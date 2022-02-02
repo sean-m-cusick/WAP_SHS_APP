@@ -19,73 +19,17 @@ library(rgdal)
 library(broom)
 require(readr)
 require(here)
+library(slider)
 ```
 ```{r}
-
-day_cum_case <- read_csv("clean_data/df_day_cum_cov.csv")
-
-# Normal Hospital Admission
-df_nor_ha_ans <- read_csv("clean_data/df_ha_ans.csv")
-
-# Covid Hospital Admission
-df_cov_ha_ans <- read_csv("clean_data/df_cov_hb_ans.csv")
-
+# Dataset required
 # Hospital Location
 df_hospital_location <- read_csv("clean_data/df_hospital_location.csv")
-```
-
-```{r}
-# hospital Admission activity
-
-
-
-```
-
-
-
-```{r}
-# Normal Hospital Admission
-df_nor_ha_ans <- read_csv("clean_data/df_ha_ans.csv")
-
-# Covid Hospital Admission
-df_cov_ha_ans <- read_csv("clean_data/df_cov_hb_ans.csv")
-
-cov_eps <- df_cov_ha_ans %>% 
-  mutate(quart_year = paste0(year, "Q", quarter)) %>% 
-  arrange(quart_year) %>% 
-  group_by(quart_year) %>% 
-  summarise(cov_eps = sum(number_admissions)/1000000)
-
-nor_eps <- df_nor_ha_ans %>% 
-    mutate(quart_year = paste0(year, "Q", quarter)) %>% 
-  group_by(quart_year, year, quarter) %>% 
-  summarise(nor_eps = sum(episodes)/1000000)
-
-
-# total admission
-total_eps <- left_join(nor_eps, cov_eps, by = "quart_year") %>% 
-  mutate(cov_eps = coalesce(cov_eps,0),
-         quart_year = str_sub(quart_year, 3,6))
-
-
-
-total_eps %>% 
-  ggplot()+
-  geom_bar(aes(x = quart_year, y = nor_eps), stat = "identity", alpha = 0.7)+
-  geom_bar(aes(x = quart_year, y = cov_eps), stat = "identity", fill = "red", alpha = 0.75)+
-    theme(axis.text.x = element_text(angle = 45))+
-  labs(title = "Hospital Admission Trend",
-       subtitle = "Total Hospital Admission (Grey) vs Covid Related Admission(Red)")+
-  xlab("Time (Year/Quarter)")+
-  ylab("Admission Count (per million)")
-
-
-
-```
-
-```{r}
-library(slider)
 df_cov_hb_ans <- read_csv("clean_data/df_cov_hb_ans.csv")
+```
+
+```{r}
+
 
 # covid_hospital_activity_age & sex dataset
 cov_hb_ans <- df_cov_hb_ans %>% 
@@ -240,4 +184,49 @@ age_group_trend_hb_ans %>%
 ```
 
 
+
+```{r}
+# Normal Hospital Admission
+# df_nor_ha_ans <- read_csv("clean_data/df_ha_ans.csv")
+# # Covid Hospital Admission
+# df_cov_ha_ans <- read_csv("clean_data/df_cov_hb_ans.csv")
+
+# day_cum_case <- read_csv("clean_data/df_day_cum_cov.csv")
+# Normal Hospital Admission
+# df_nor_ha_ans <- read_csv("clean_data/df_ha_ans.csv")
+# 
+# # Covid Hospital Admission
+# df_cov_ha_ans <- read_csv("clean_data/df_cov_hb_ans.csv")
+# 
+# cov_eps <- df_cov_ha_ans %>% 
+#   mutate(quart_year = paste0(year, "Q", quarter)) %>% 
+#   arrange(quart_year) %>% 
+#   group_by(quart_year) %>% 
+#   summarise(cov_eps = sum(number_admissions)/1000000)
+# 
+# nor_eps <- df_nor_ha_ans %>% 
+#     mutate(quart_year = paste0(year, "Q", quarter)) %>% 
+#   group_by(quart_year, year, quarter) %>% 
+#   summarise(nor_eps = sum(episodes)/1000000)
+# 
+# 
+# # total admission
+# total_eps <- left_join(nor_eps, cov_eps, by = "quart_year") %>% 
+#   mutate(cov_eps = coalesce(cov_eps,0),
+#          quart_year = str_sub(quart_year, 3,6))
+# 
+# 
+# 
+# total_eps %>% 
+#   ggplot()+
+#   geom_bar(aes(x = quart_year, y = nor_eps), stat = "identity", alpha = 0.7)+
+#   geom_bar(aes(x = quart_year, y = cov_eps), stat = "identity", fill = "red", alpha = 0.75)+
+#     theme(axis.text.x = element_text(angle = 45))+
+#   labs(title = "Hospital Admission Trend",
+#        subtitle = "Total Hospital Admission (Grey) vs Covid Related Admission(Red)")+
+#   xlab("Time (Year/Quarter)")+
+#   ylab("Admission Count (per million)")
+# 
+
+```
 
