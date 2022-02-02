@@ -1,26 +1,44 @@
 ---
-title: "Project Description Outline"
+title: "**Name of Dashboard** Report"
 author: "Team KLAS"
 output:
   html_document:
+    theme: darkly
+    number_sections: true
+    toc: true
+    toc_float: true
     df_print: paged
   pdf_document: default
-  toc: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# **Name of Dashboard**
 
-### Members of Team KLAS
+# Project Team Details {.tabset}
 
-* Aboubakar Hameed
-* Kang Hin Lee
-* Lucy Burns
-* Seàn M. Cusick
+The following section introduces the members of Team KLAS, the project team that worked on **Name of Dashboard**.
 
-### Roles & responsibilities of each member
+## Members of Team KLAS
+
+* **Aboubakar Hameed**  
+* **Kang Hin Lee**  
+* **Lucy Burns**  
+* **Seàn M. Cusick**  
+
+## Team learning goals  
+In the Kick-Off meeting, each member discussed their personal goals in regards to the knowledge they wished to consolidate and any new skill they wanted to learn:  
+
+* **Aboubakar Hameed** *LOREM IPSUM.*  
+
+* **Kang Hin Lee** *LOREM IPSUM.*  
+
+* **Lucy Burns** *LOREM IPSUM.*  
+
+* **Seàn M. Cusick** planned to solidify his experience in Project Management by incorporating his knowledge in leading Event and Technical Projects, into leading a Software based project. Additionally, to improve his working experience with spatial visualisations. 
+  
+  
+## Roles & Responsibilities
 <!-- additional supported WPs To be completed on Thursday -->
 * **Aboubakar Hameed** was responsible for the Minimum Viable Product (MVP) - summarised within Work Package (WP) `WP2.3 - Shiny App MVP`; furthermore, supported *<spatial visualisations>, <data cleaning>,...* 
 
@@ -30,6 +48,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * **Seàn M. Cusick** was responsible for Project Management and Documentation - summarised within WP `WP1 - Project Management` & `WP3 - Documentation`; furthermore, supported *<spatial visualisations>, <data cleaning>,...*  
 
+## Team Responsibilities
 * **All team members** worked on the following **Work Packages** (WP):  
   * `WP1.1 - Project Set-up`  
   * `WP2 - Shiny App`  
@@ -47,61 +66,65 @@ knitr::opts_chunk$set(echo = TRUE)
   * `WP3.1.2 - README File`  
   * `WP3.2 - Presentation`  
    
-### Roles & responsibilities of each member
-<!-- additional supported WPs To be completed on Thursday -->
-* **Aboubakar Hameed** was responsible for the Minimum Viable Product (MVP) - summarised within Work Package (WP) `WP2.3 - Shiny App MVP`; furthermore, supported *<spatial visualisations>, <data cleaning>,...* 
 
-* **Kang Hin Lee** was responsible for the Data Sets - summarised in `WP2.1 - Data Analysis`; furthermore, supported *<spatial visualisations>, <data cleaning>,... *
+# Dashboard Details
 
-* **Lucy Burns** was responsible for the visualisations - summarised within WP `WP2.2 - Data Visualisation`; furthermore, supported *<spatial visualisations>, <data cleaning>,...* 
-
-* **Seàn M. Cusick** was responsible for Project Management and Documentation - summarised within WP `WP1 - Project Management` & `WP3 - Documentation`; furthermore, supported *<spatial visualisations>, <data cleaning>,...*  
-
-
-### Brief description of dashboard topic
+## Brief description of dashboard topic
 
 The objective of this project is the creation of a dashboard which can demonstrate the affect that the Winter season has on the acute health sector in Scotland.  
 
-##### Initial Wire-Frame for MVP (IDR) 
-In order to realise this objective, a preliminary wire-frame of the end product was designed during the Initial Design Review (IDR) in `WP1.1 - Project Set-up`. This wire-frame can be found in the annex.  
+## Initial MVP (IDR) 
+In order to realise this objective, a preliminary wire-frame of the Minimal Viable Product (MVP) was designed during the Initial Design Review (IDR) in `WP1.1 - Project Set-up`. This wire-frame can be found in the annex.  
 
 *** 
 
-##### Revised Wire-Frame for MVP (DDR)
+## Revised MVP (DDR) {.tabset}
 During the Detailed Design Review (DDR), the design was further streamlined, with superfluous features moved to the `WP2.2.4 - Features` work package. The updated wire-frame is displayed below:  
 
-![wire-frame: version 2 general page](../analysis_and_documentation/image/v2_mvp_wireframe_general.png)  
+### General Page  
+![](../analysis_and_documentation/image/v2_mvp_wireframe_general.png)  
 
-![wire-frame: version 2 COVID page - Tab 1](../analysis_and_documentation/image/v2_mvp_wireframe_covid_tab1.png)  
+### COVID Page - Tab 1  
+![](../analysis_and_documentation/image/v2_mvp_wireframe_covid_tab1.png)  
 
-![wire-frame: version 2 COVID page - Tab 2](../analysis_and_documentation/image/v2_mvp_wireframe_covid_tab2.png)  
+### COVID Page - Tab 2  
+![](../analysis_and_documentation/image/v2_mvp_wireframe_covid_tab2.png)  
 
-![wire-frame: version 2 A&E page](../analysis_and_documentation/image/v2_mvp_wireframe_ae.png)
+### A&E Page  
+![](../analysis_and_documentation/image/v2_mvp_wireframe_ae.png)
 
 
-
+## MVP Details   {.tabset}
 The Minimum Value Product (MVP) of the dashboard, found in work package `WP 2.3 - Shiny App MVP`, can be separated into a sidebar, with each tab displaying relevant information. 
-* The main, or **General Statistics** page, can be divided into three key sections:  
+
+### Landing Page
+The main, or **General Statistics** page, can be divided into three key sections:  
   * An about section  
   * A map displaying hospital locations and Health Board areas  
   * A section displaying key statistics, e.g.  _<hospital admission since 2016, and COVID-19 related admission>_, with a drop-down menu to select Health Board  
-* The first page, or **COVID-19** page, can be divided into Two tabs:  
+
+### Page 1
+The first page, or **COVID-19** page, can be divided into Two tabs:  
   * The first tab displays three key sections:  
     * A summarisation of the results  
     * A fixed graph displaying ... 
     * A fixed graph displaying ... 
   * The second, optional tab that displays an interactive graph:  
-* The second page, or **A&E Activity*** page, , can be divided into three key sections:  
+
+### Page 2
+The second page, or **A&E Activity*** page, , can be divided into three key sections:  
   * A heat map of where there is the most admissions  
   * A time series of a&e activity from *2020* to *2021* ??? 
   * A graph displaying <...>    
-* The third page which was re-prioritised after the Detailed Design Review (DDR) from the `WP 2.3 - Shiny App MVP` to `WP2.2.4 - Features`, *would have been* divided into three key sections:  
+
+### Page 3 
+The third page which was re-prioritised after the Detailed Design Review (DDR) from the `WP 2.3 - Shiny App MVP` to `WP2.2.4 - Features`, *would have been* divided into three key sections:  
   * A heat map of where there is the most cases  
   * A time series of COVID cases from *2020* to *2021* ??? 
   * A graph displaying <...>  
 
-
-Additionally, `WP2.2.4 - Features` added the following aspects to the Shiny App:
+### Additional Features
+Additionally, `WP2.2.4 - Features` added the following aspects to the Shiny App to be worked on after the completion of the MVP:
 1. Interactivity of the Shiny App  
 2. check boxes of each health board
 3. drop down menu for individual hospitals in that health board
@@ -116,6 +139,7 @@ Additionally, `WP2.2.4 - Features` added the following aspects to the Shiny App:
 7. custom palettes, colour blind friendly
 8. forecasting
 
+## MVP Objective
 The topic of our MVP is looking specifically at the __effect Winter__ has on the Health Service in Scotland __within Accident and Emergency (A&E)__, with a focus on the __COVID-19 pandemic's influence.__ 
 
 The dashboard outlines our topic in terms of:
@@ -123,9 +147,11 @@ The dashboard outlines our topic in terms of:
 * COVID-19's spread through Scotland
 * The activity within A&E departments in Scotland.
 
-***  
+***
 
-### Stages of the project
+# Project Details  {.tabset}
+
+## Stages of the project
 
 * Role Allocation  
 * Project Management  
@@ -139,76 +165,80 @@ The dashboard outlines our topic in terms of:
   * Dashboard wire-frame  
 ***
 
-#### **Role Allocation**
+### **Role Allocation**
 
-In our initial Kick-Off Meeting, the Team spoke about their strengths and weakness, as 
+In our initial Kick-Off Meeting, the Team spoke about their strengths and weakness, as well as the learning goals for the project. From there, we spoke about which activities we would like to focus on. Although each team member was keen on participating in most activities, for each key activity, a team member was allocated responsibility for it. These responsibilities can be found 
 
-#### **Project Management**
-
-asdf
-
-
-##### Work Breakdown Structure
+### **Project Management**
 
 asdf
 
 
-##### Project Gantt
+#### Work Breakdown Structure
 
 asdf
 
 
-##### Design Reviews & Milestones
+#### Project Gantt
 
 asdf
 
 
-##### Git branching
+#### Design Reviews & Milestones
 
 asdf
 
 
-##### Version Control
+#### Git branching
 
 asdf
 
 
-#### **Application Development**
+#### Version Control
 
 asdf
 
 
-##### Dataset Selection
+### **Application Development**
 
 asdf
 
-##### Dashboard wireframe
+
+#### Dataset Selection
+
+asdf
+
+#### Dashboard wireframe
 
 asdf
 
 ***
 
-### Which tools were used in the project
+## Which tools were used in the project
 
 * Discord (daily stand-ups, occasional mob programming, sharing ideas and links)
 * GitHub/Projects (Project Management - Kaban Board)
 * Git/GitHub (collaboration & version control)
 * Microsoft Word (Work Breakdown Structure
 * Microsoft Excel (Gantt Chart)
+* Google Jamboard - (collaborative Wire-frame)
 
-and so on ...
+*and so on ...*
 
-### How did you gather and synthesise requirements for the project?
+***
+# Data Set Details  {.tabset}
+
+## How did you gather and synthesise requirements for the project?
 
 We synthesised the information given in the brief by ...
 
 We prioritised ...
 
-### Motivations for using the data you have chosen
+## Motivations for using the data you have chosen
 
 We used the dataset on ... to answer ... and because it was ...
 
-### Data quality and potential bias, including a brief summary of data cleaning and transformations
+## Data quality and potential bias, including a brief summary of data cleaning and transformations
 
 According to the About tab on the dataset page/dedicated page online, the data quality ...
 
@@ -216,7 +246,7 @@ The dataset may/may not be biased because ...
 
 To clean the datasets we ...
 
-### How is the data stored and structured
+## How is the data stored and structured
 
 [**Hint**: This page offers a good starting point for understanding the data structure: https://guides.statistics.gov.scot/article/34-understanding-the-data-structure]
 
@@ -226,7 +256,7 @@ This means ...
 
 Benefits of storing the data like this are ...
 
-### Ethical and legal considerations of the data
+## Ethical and legal considerations of the data
 
 [**Hint:** this page contains information on the Open Government License which covers most datasets on statistics.gov.scot: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/]
 
@@ -236,11 +266,11 @@ The datasets are covered by the Open Government License, which means ...
 
 ***  
   
-# Appendix  
+# Appendix  {.tabset}  
 
-# Glossary  
+## Glossary  
   
-# Initial Design Review output:  
+## Initial Design Review output:  
 ![wire-frame: main page](../analysis_and_documentation/image/mvp_wireframe_general.png)  
 ![wire-frame: section pages](../analysis_and_documentation/image/mvp_wireframe_questions.png)  
 
