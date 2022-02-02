@@ -146,7 +146,9 @@ specific_general_stat <- general_stat %>%
 ca_name_list = factor(general_stat$ca_name)
 
 all_general_stat
+
 specific_general_stat
+ca_name_list
 ```
 
 
