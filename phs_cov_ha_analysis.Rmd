@@ -46,8 +46,8 @@ cov_hb_ans <- df_cov_hb_ans %>%
 all_trend_hb_ans <- cov_hb_ans %>% 
   filter(age_group == "All ages" & sex == "All") %>% 
       group_by(year, week_ending, admission_type) %>% 
-  summarise(number_admissions = sum(number_admissions),
-            average20182019  = sum(average20182019)) %>% 
+  summarise(number_admissions = sum(number_admissions)/1000,
+            average20182019  = sum(average20182019)/1000) %>% 
     mutate(
     moving_avg_2021 = slide_dbl(
       .x = number_admissions,
@@ -63,26 +63,37 @@ all_trend_hb_ans <- cov_hb_ans %>%
       .before = 2
     )  ) %>%
   # Find the winter quarter
-  mutate(quarter = quarter(week_ending))
+  mutate(quarter = quarter(week_ending),
+         quarter = case_when(
+           quarter == "1" ~ 1,
+           quarter == "2" ~ 2,
+           quarter == "3" ~ 3,
+           quarter == "4" ~ 3
+         ))
 
 yrng <- range(all_trend_hb_ans$moving_avg_2021)
 
 # Plot ALL TREND
 all_trend_hb_ans %>% 
   ggplot()+
-  geom_line(aes(x = week_ending, y = moving_avg_2021, colour = admission_type))+
+  geom_line(aes(x = week_ending, y = moving_avg_2021, colour = admission_type), size=1.0)+
   geom_line(aes(x = week_ending, y = moving_avg_1819, colour = admission_type), linetype = "dashed")+
-  labs(title = "2 weeks Moving Average Hospital Admission",
-       subtitle = "solid = 2020-2021 data | dash = 2018-2019 data")+
-  geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = -Inf, ymax = Inf, fill = factor(quarter)), alpha = .3, show.legend = FALSE) +
-    scale_fill_manual(values = alpha(c("steelblue", "transparent" ,"transparent" ,"transparent"), .4))+
+  geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = -Inf, ymax = Inf, fill = factor(quarter)), alpha = .3, show.legend = TRUE) +
+    scale_fill_manual(labels = c("Winter", "Spring", "Other"), values = alpha(c("steelblue", "green" ,"transparent"), .1))+
   theme(panel.background = element_rect(fill = 'transparent'),
-                 legend.position="bottom")+
+        panel.grid.minor = element_line(colour = 'lightgrey'),
+        panel.grid.major = element_line(colour = 'lightgrey'),
+                 legend.position="top")+
     scale_x_date(date_breaks = "4 months",
-                 date_minor_breaks = "2 months",
+                 date_minor_breaks = "1 months",
                  date_labels = "%b-%y") +
+    labs(title = "2 weeks Moving Average Hospital Admission",
+       subtitle = "solid = 2020-2021 data | dash = 2018-2019 data",
+    colour = "Admission Type",
+    fill = "Seasons"
+  )+
   xlab("Time (date)")+
-  ylab("Average Admission Count")
+  ylab("Average Admission Count (Per 1'000)")
 
 
 
