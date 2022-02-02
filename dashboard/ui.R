@@ -1,7 +1,7 @@
 
 ui <- dashboardPage(
                     # ShinyDashboard tabs
-                    dashboardHeader(title = "PHS Project"),
+                    dashboardHeader(title = "Affect of Winter on the Scottish Health Service"),
                     dashboardSidebar(
                       sidebarMenu(
                         
@@ -114,8 +114,8 @@ ui <- dashboardPage(
                                   
                                 )
                         ),
-                        # LIFE EXPECTANCY PANEL ---------------------------------------
-                        tabItem(tabName = "life_expectancy",
+                        # Accident & Emergency Activity PANEL ---------------------------------------
+                        tabItem(tabName = "ae_activity",
                                 
                                 fluidRow(
                                   column(width = 12,
@@ -208,7 +208,7 @@ ui <- dashboardPage(
                         
                         
                         # Deprivation PANEL -------------------------------------------------------------
-                        tabItem(tabName = "drug_deaths",
+                        tabItem(tabName = "deprivation",
                                 
                                 fluidRow(
                                   column(width = 10,
@@ -275,9 +275,9 @@ ui <- dashboardPage(
                                   
                                 )),
                         
-                        # ALCOHOL PANEL -------------------------------------------------------------
+                        # COVID PANEL -------------------------------------------------------------
                         
-                        tabItem(tabName = "alcohol_deaths",
+                        tabItem(tabName = "covid",
                                 fluidRow(
                                   column(width = 10,
                                          tags$b("Covid in Scotland", style = "font-size: 30px"),
