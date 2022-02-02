@@ -20,6 +20,7 @@ library(broom)
 require(readr)
 require(here)
 library(slider)
+
 ```
 ```{r}
 # Dataset required
@@ -58,7 +59,11 @@ all_trend_hb_ans <- cov_hb_ans %>%
       .f = ~mean(.,na.rm = TRUE),
 # 2 weeks moving average = 7
       .before = 2
-    )  )
+    )  ) %>%
+  # Find the winter quarter
+  mutate(quarter = quarter(week_ending))
+
+yrng <- range(all_trend_hb_ans$moving_avg_2021)
 
 # Plot ALL TREND
 all_trend_hb_ans %>% 
@@ -67,12 +72,16 @@ all_trend_hb_ans %>%
   geom_line(aes(x = week_ending, y = moving_avg_1819, colour = admission_type), linetype = "dashed")+
   labs(title = "2 weeks Moving Average Hospital Admission",
        subtitle = "line = 2020-2021 data, dash = 2018-2019 data")+
+  geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = -Inf, ymax = Inf, fill = factor(quarter), show.legend = FALSE), alpha = .4) +
+    scale_fill_manual(values = alpha(c("steelblue", "white" ,"white" ,"white"), .3))+
   xlab("Time (date)")+
   ylab("Average Admission Count")
 
 
 # When input isnt ALL Ages
-
+  # geom_area(aes(x = week_ending, y = moving_avg_2021, fill = quarter == 4))+
+  # geom_rect(aes(NULL, NULL, xmin = start, xmax = end, fill = quarter), ymin = yrng[1], ymax = yrng[2], data = all_trend_hb_ans)+
+  # scale_fill_manual(values = alpha(c("blue", "red","red" ,"red"), .3))+
 ```
 
 ```{r}
@@ -104,6 +113,41 @@ age_group_trend_hb_ans %>%
 
 ```
 
+```{r}
+# Display General Stat : ALL 
+df_general_stat <- read_csv("clean_data/df_day_trend_loc.csv")
+
+general_stat <- df_general_stat %>% 
+  select(date, ca, ca_name, daily_positive, cumulative_positive, daily_deaths, cumulative_deaths) %>% 
+  arrange(date) %>% 
+  group_by(ca) %>% 
+  slice_tail(n  = 1)
+
+all_general_stat <- general_stat %>% 
+  ungroup() %>% 
+  group_by(date) %>% 
+  summarise(daily_positive = sum(daily_positive),
+            cumulative_positive = sum(cumulative_positive),
+            daily_deaths = sum(daily_deaths),
+            cumulative_deaths = sum(cumulative_deaths))
+
+
+#specific stat per local authority
+specific_general_stat <- general_stat %>% 
+  ungroup() %>% 
+  group_by(date, ca_name) %>% 
+  filter (ca_name == "Midlothian") %>%  # FILTER BY LOCAL AUTHORITY
+  summarise(daily_positive = sum(daily_positive),
+            cumulative_positive = sum(cumulative_positive),
+            daily_deaths = sum(daily_deaths),
+            cumulative_deaths = sum(cumulative_deaths))
+
+#Local Authority list
+ca_name_list = factor(general_stat$ca_name)
+
+all_general_stat
+specific_general_stat
+```
 
 
 # Dump
