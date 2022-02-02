@@ -53,12 +53,18 @@ emergency_inpatients %>%
     geom_bar(position="dodge", stat="identity") +
   scale_fill_manual(values=c("#E69F00",
                              "#56B4E9")) +
-  labs(title = "Admissions",
-       subtitle = "2016-2021")+
-      xlab("Year")+
+  labs(title = "Hospital Admissions by Quarter",
+       subtitle = "(2016-2021)",
+       fill = "")+
+      xlab("Quarter/Year")+
       ylab("Admission Count (100,000s)")  +
   facet_wrap(~year) +
-  theme(axis.text.x = element_text(angle = 45)) +
-  theme(legend.position="bottom")
+  theme(
+    legend.position = "bottom",
+    legend.justification = c("left", "top"),
+    legend.box.just = "right",
+    legend.margin = margin(6, 6, 6, 6),
+    legend.text = element_text(colour="slategray", size=8)
+    )
 ```
 
