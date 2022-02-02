@@ -94,8 +94,8 @@ During the Detailed Design Review (DDR), the design was further streamlined, wit
 ![](../analysis_and_documentation/image/v2_mvp_wireframe_ae.png)
 
 
-## MVP Details   {.tabset}
-The Minimum Value Product (MVP) of the dashboard, found in work package `WP 2.3 - Shiny App MVP`, can be separated into a sidebar, with each tab displaying relevant information. 
+## MVP Detail {.tabset}
+The Minimum Value Product (MVP) of the dashboard, found in work package `WP 2.3 - Shiny App MVP`, can be separated into a sidebar, with each tab displaying relevant information. Details on the page contents can be found in the tabs below:
 
 ### Landing Page
 The main, or **General Statistics** page, can be divided into three key sections:  
@@ -149,7 +149,7 @@ The dashboard outlines our topic in terms of:
 
 ***
 
-# Project Details  {.tabset}
+# Project Details
 
 ## Stages of the project
 
@@ -214,14 +214,39 @@ asdf
 
 ***
 
-## Which tools were used in the project
+## Project Tools{.tabset}
 
-* Discord (daily stand-ups, occasional mob programming, sharing ideas and links)
+### Project Management
+* GitHub Projects
+  Milestones
+  Kanban Board
+* Microsoft Excel
+   (Gantt Chart)
+* Microsoft Word
+   (Work Breakdown Structure
+
+### Collaboration
+* Discord
+  (daily stand-ups, occasional mob programming, sharing ideas and links)
+* GitHub
+  Code Pairing
+  Code Sharing
+* Google Jamboard
+  (collaborative Wire-frame)
+
+### File Management
+* GitHub
+  Version Control
+* RStudio
+  File Creation
+
+### Documentation
+
 * GitHub/Projects (Project Management - Kaban Board)
 * Git/GitHub (collaboration & version control)
-* Microsoft Word (Work Breakdown Structure
-* Microsoft Excel (Gantt Chart)
-* Google Jamboard - (collaborative Wire-frame)
+
+
+
 
 *and so on ...*
 
