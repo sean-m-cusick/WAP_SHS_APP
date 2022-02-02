@@ -503,12 +503,12 @@ server <- function(input, output, session) {
     ) %>%
       config(displayModeBar = FALSE) %>%
       layout(xaxis = list(title = "Year"),
-             yaxis = list(title = "Number of Deaths"),
+             yaxis = list(title = "Number of ----"),
              title = list(text = paste0(
-               'Number of deaths in ',
+               'Number of  in ',
                '<br>',
                '<sup>',
-               "input$drug_plot_name,",
+               "--",
                '</sup>',
                '<br>')),
              margin = list(t = 50, b = 50, l = 50) # to fully display the x and y axis labels

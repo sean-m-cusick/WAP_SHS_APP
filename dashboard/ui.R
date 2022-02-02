@@ -5,7 +5,7 @@ ui <- dashboardPage(
                     dashboardSidebar(
                       sidebarMenu(
                         
-                        menuItem("General Stats", tabName = "overview", icon = icon("table")),
+                        menuItem("General Stats", tabName = "overview"),
                         menuItem("A&E Activity", tabName = "life_expectancy"),
                         menuItem("Deprivation", tabName = "drug_deaths"),
                         menuItem("Covid", tabName = "alcohol_deaths"),
@@ -119,13 +119,13 @@ ui <- dashboardPage(
                                 
                                 fluidRow(
                                   column(width = 12,
-                                         tags$b("A&E Activity", style = "font-size: 30px"),
+                                         tags$b("Covid", style = "font-size: 30px"),
                                          
                                   )
                                 ),
                                 
                                 tabsetPanel(
-                                  tabPanel("By Area",
+                                  tabPanel("Overview",
                                            fluidRow(
                                              column(width = 6,
                                                     
@@ -181,7 +181,7 @@ ui <- dashboardPage(
                                   ),
                                   
                                   
-                                  tabPanel("Overview",
+                                  tabPanel("Specific Stat",
                                            
                                            fluidRow(
                                              column(width = 12, offset = 4,
