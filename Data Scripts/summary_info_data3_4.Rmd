@@ -1,0 +1,27 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(janitor)
+```
+
+```{r}
+hosp_activity_demographics %>% 
+  tabyl(age, sex)
+```
+
+```{r}
+hosp_activity_demographics %>%
+  ggplot(aes(x = age, fill = sex)) +
+  geom_bar(colour="white", alpha=0.3) +
+  theme(axis.text.x=element_text(angle=45,hjust=1))+
+  labs(
+    x = "\nage",
+    y = "Count\n",
+    title = "Age/Sex Distribution",
+    subtitle = "Data Set 3\n"
+    ) 
+```

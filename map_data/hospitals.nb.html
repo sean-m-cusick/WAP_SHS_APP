@@ -242,7 +242,7 @@ library(leaflet)</code></pre>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2NvdHRpc2hfaG9zcGl0YWxzIDwtIHBhc3RlMChcImh0dHBzOi8vd3d3Lm9wZW5kYXRhLm5ocy5zY290L2FwaS8zL2FjdGlvbi9kYXRhc3RvcmVfc2VhcmNoP3Jlc291cmNlX2lkPWM2OThmNDUwLWVlZWQtNDFhMC04OGY3LWMxZTQwYTU2OGFjYyZsaW1pdD0zMDBcIikgJT4lIFxuZnJvbUpTT04oKVxuYGBgIn0= -->
-<pre class="r"><code>scottish_hospitals &lt;- paste0(&quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c698f450-eeed-41a0-88f7-c1e40a568acc&amp;limit=300&quot;) %&gt;% 
+<pre class="r"><code>scottish_hospitals &lt;- paste0(&quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c698f450-eeed-41a0-88f7-c1e40a568acc&amp;limit=300&quot;) %&gt;%
 fromJSON()</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
@@ -264,7 +264,7 @@ fromJSON()</code></pre>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaG9zcGl0YWxzIDwtIGhvc3BpdGFscyAlPiUgXG4gIG11dGF0ZSh4X2Nvb3JkaW5hdGUgPSByZXBsYWNlX25hKHhfY29vcmRpbmF0ZSwgMzI3Njk5KSxcbiAgICAgICAgIHlfY29vcmRpbmF0ZSA9IHJlcGxhY2VfbmEoeV9jb29yZGluYXRlLCA2NjkxNDgpKVxuYGBgIn0= -->
-<pre class="r"><code>hospitals &lt;- hospitals %&gt;% 
+<pre class="r"><code>hospitals &lt;- hospitals %&gt;%
   mutate(x_coordinate = replace_na(x_coordinate, 327699),
          y_coordinate = replace_na(y_coordinate, 669148))</code></pre>
 <!-- rnb-source-end -->
@@ -286,10 +286,10 @@ lat_long &lt;- hospitals %&gt;%
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBQcm9kdWNlcyBhbiBpbnRlcmFjdGl2ZSBtYXBcbmxhdF9sb25nICU+JSBcbmxlYWZsZXQoKSAlPiUgXG4gICAgYWRkVGlsZXMoKSAlPiUgXG4gICAgYWRkQ2lyY2xlTWFya2VycyhsbmcgPSB+WCwgXG4gICAgICAgICAgICAgICAgICAgIGxhdCA9IH5ZLFxuICAgICAgICAgICAgICAgICAgIGNsdXN0ZXJPcHRpb25zID0gbWFya2VyQ2x1c3Rlck9wdGlvbnMoKSlcbmBgYCJ9 -->
 <pre class="r"><code># Produces an interactive map
-lat_long %&gt;% 
-leaflet() %&gt;% 
-    addTiles() %&gt;% 
-    addCircleMarkers(lng = ~X, 
+lat_long %&gt;%
+leaflet() %&gt;%
+    addTiles() %&gt;%
+    addCircleMarkers(lng = ~X,
                     lat = ~Y,
                    clusterOptions = markerClusterOptions())</code></pre>
 <!-- rnb-source-end -->

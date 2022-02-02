@@ -13,7 +13,7 @@ library(leaflet)
 
 
 ```{r}
-scottish_hospitals <- paste0("https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c698f450-eeed-41a0-88f7-c1e40a568acc&limit=300") %>% 
+scottish_hospitals <- paste0("https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c698f450-eeed-41a0-88f7-c1e40a568acc&limit=300") %>%
 fromJSON()
 ```
 
@@ -26,7 +26,7 @@ hospitals <- clean_names(hospitals)
 ```
 
 ```{r}
-hospitals <- hospitals %>% 
+hospitals <- hospitals %>%
   mutate(x_coordinate = replace_na(x_coordinate, 327699),
          y_coordinate = replace_na(y_coordinate, 669148))
 ```
@@ -42,10 +42,10 @@ lat_long <- hospitals %>%
 
 ```{r}
 # Produces an interactive map
-lat_long %>% 
-leaflet() %>% 
-    addTiles() %>% 
-    addCircleMarkers(lng = ~X, 
+lat_long %>%
+leaflet() %>%
+    addTiles() %>%
+    addCircleMarkers(lng = ~X,
                     lat = ~Y,
                    clusterOptions = markerClusterOptions())
 

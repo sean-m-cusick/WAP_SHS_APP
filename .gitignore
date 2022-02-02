@@ -37,14 +37,10 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
-<<<<<<< Updated upstream
 
 
 .Rproj.user
 .Rhistory
 .RData
 .DStore
-=======
-.Rproj.user
->>>>>>> Stashed changes
 notes/WPD-KLAS-ShinyApp.docx

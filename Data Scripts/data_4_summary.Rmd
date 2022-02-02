@@ -1,0 +1,45 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(janitor)
+```
+
+Scottish Index of Multiple Deprivation (SIMD) splits Scotland into data zones which are given ranking from most deprived to least deprived.
+
+This data set contains population weighted quintiles and deciles for health board, council area, and health and social care partnership where appropriate. Also available is an indicator as to whether a data zone is in the 15% most deprived or 15% least deprived data zones in Scotland.
+
+SIMD is based on a number of indicators:
+
+-   Access to Services
+
+-   Crime
+
+-   Education
+
+-   Employment
+
+-   Health
+
+-   Housing
+
+-   Income
+
+Note: An area may be classed as deprived but residents may not be deprived, and an area may be classed as not deprived but this doesn't mean residents are not deprived. SIMD is not a tool for saying how much more deprived one area is from another.
+
+```{r}
+hosp_activity_deprivation %>% 
+  group_by(admission_type) %>% 
+  summarise(count = n())
+```
+
+```{r}
+hosp_activity_deprivation %>% 
+  group_by(simd) %>% 
+  summarise(count = n())
+```
+
+The level of deprivation in all categories for SIMD 2004 and SIMD 2006 is increasing (1 = least deprived). From SIMD 2009 onwards, the level of deprivation is decreasing (1 = most deprived).

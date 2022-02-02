@@ -1,0 +1,83 @@
+---
+title: "Scottish Health Boards"
+output: html_notebook
+---
+
+> Copyright Scottish Government, contains Ordnance Survey data © Crown copyright and database right (insert year); The dataset covers all of Scotland, and is coterminous with Local Authorities (OS BoundaryLine, October 2017 with amendments at Keltybridge and Westfield); Open Government Licence (<http://www.nationalarchives.gov.uk/doc/open-government-licence/>)
+
+Created from a [tutorial](https://github.com/mmoench16/Personal-Website/blob/b2fca6b7bda4d0f4b21eb30c1338ad199979633f/content/post/2018-09-04-shapefiles-in-r-with-ggplot2-rgdal.Rmd) by mmoench16 with an up to date data file
+
+```{r}
+library(tidyverse)
+library(rgdal)
+library(here)
+library(broom)
+```
+
+```{r, eval = FALSE}
+NHSBoards <- readOGR(dsn = "SG_NHS_HealthBoards_2019/", 
+                     layer = "SG_NHS_HealthBoards_2019")
+```
+
+```{r, eval = FALSE}
+# tidy() comes from the package library(broom)
+# This produces a simple outline map of the NHS Boards
+NHSBoards_tidy <- tidy(NHSBoards)
+ggplot(NHSBoards_tidy, aes(x = long, y = lat, group = group)) +
+  geom_polygon(color = "black", size = 0.1, fill = "lightgrey") +
+  coord_equal() +
+  theme_minimal()
+```
+
+```{r, eval=FALSE}
+NHSBoards$id <- row.names(NHSBoards)
+NHSBoards_tidy <- left_join(NHSBoards_tidy, NHSBoards@data)
+```
+
+```{r, eval=FALSE}
+hospitalsSco <- data.frame(HBName = sort(NHSBoards@data$HBName),
+                           Hospitals = c(16,15,23,12,8,34,45,28,20,34,1,1,32,3))
+NHSBoards_tidy <- left_join(NHSBoards_tidy, hospitalsSco)
+```
+
+```{r, eval = FALSE}
+ggplot(NHSBoards_tidy, aes(x = long, y = lat, group = group, fill = Hospitals)) +
+  geom_polygon(color = "black", size = 0.1) +
+  coord_equal() +
+  theme_void() +
+  labs(title = "Hospital Density in Scotland (2018)") +
+  theme(plot.title = element_text(margin = margin(t = 40, b = -40)))
+```
+
+```{r, eval = FALSE}
+HBLabel <- NHSBoards_tidy %>%
+  group_by(HBName) %>%
+  summarise(label_long = mean(range(long)), label_lat = mean(range(lat)), Hospitals = mean(Hospitals))
+```
+
+```{r, eval=FALSE}
+map <- ggplot(NHSBoards_tidy, aes(x = long, y = lat, group = group, fill = Hospitals)) +
+  geom_polygon(color = "black", size = 0.1) +
+  coord_equal() +
+  theme_void() +
+  labs(title = "Hospital Density in Scotland (2018)") +
+  theme(plot.title = element_text(margin = margin(t = 40, b = -40)))
+map +
+  geom_text(data = HBLabel, mapping = aes(x = label_long, y = label_lat, label = Hospitals, group = NA)
+            , cex = 4, col = "white")
+```
+
+```{r, eval=FALSE}
+HBLabel <- NHSBoards_tidy %>%
+  group_by(HBName) %>%
+  summarise(label_long = mean(range(long)), label_lat = mean(range(lat)), Hospitals = mean(Hospitals)) %>%
+  mutate(LabelOutsideBoundaries = HBName %in% c("Orkney", "Shetland", "Western Isles"),
+         label_long = replace(label_long, HBName %in% c("Ayrshire and Arran", "Fife", "Forth Valley", "Highland", "Orkney", "Shetland", "Western Isles"), 
+                         c(245000, 340000, 260000, 250000, 375000, 400000, 75000)),
+         label_lat = replace(label_lat, HBName %in% c("Fife", "Forth Valley", "Highland", "Orkney", "Shetland"), 
+                        c(710000, 700000, 810000, 1000000, 1175000)))
+map +
+  geom_text(data = HBLabel, mapping = aes(x = label_long, y = label_lat, label = Hospitals, group = NA, col = LabelOutsideBoundaries)
+            , cex = 4, show.legend = FALSE) +
+  scale_color_manual(values = c("white", "black"))
+```

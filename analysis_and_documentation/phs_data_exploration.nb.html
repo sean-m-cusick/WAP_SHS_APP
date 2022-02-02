@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Aububakar, Kang, Lucy, Sean" />
+<meta name="author" content="Aboubakar, Kang, Lucy, Sean" />
 
 
 <title>PHS Shiny Dashboard</title>
@@ -211,7 +211,7 @@ pre code {
 
 
 <h1 class="title toc-ignore">PHS Shiny Dashboard</h1>
-<h4 class="author">Aububakar, Kang, Lucy, Sean</h4>
+<h4 class="author">Aboubakar, Kang, Lucy, Sean</h4>
 
 </div>
 
@@ -248,16 +248,16 @@ i Specify the column types or set `show_col_types = FALSE` to quiet this message
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBGdW5jdGlvbiBmb3IgZmV0Y2hpbmcgcGhzIGRhdGFmcmFtZXNcbnBoc19kZl9mdW5jIDwtIGZ1bmN0aW9uKGlkKXtcbiAgXG4gICMgTGluayB0ZW1wbGF0ZXMgZm9yIHNpbXBsaWNpdHlcbiAgcGhzX3VybCA9IFwiaHR0cHM6Ly93d3cub3BlbmRhdGEubmhzLnNjb3QvYXBpLzMvYWN0aW9uL2RhdGFzdG9yZV9zZWFyY2g/cmVzb3VyY2VfaWQ9XCJcbiAgIyBmZXRjaCBtYXhpbXVtIDk5OSc5OTkgcmVzdWx0cyBmb3Igc2ltcGxpY2l0eVxuICBsaW1pdF91cmwgPSBcIiZsaW1pdD05OTk5OTlcIlxuICBcbiAgIyBjb25zdHJ1Y3QgVVJMIGZvciBmZXRjaGluZyBwcm9jZXNzXG4gIHVybF9saW5rIDwtIHBhc3RlMChwaHNfdXJsLCBpZCwgbGltaXRfdXJsKSAlPiUgXG5mcm9tSlNPTigpXG4gIFxuICAjIGNvbnN0cnVjdCBkYXRhZnJhbWUgZnJvbSB1cmxcbiAgcGhzX2RmIDwtICB1cmxfbGlua1tbXCJyZXN1bHRcIl1dW1tcInJlY29yZHNcIl1dXG4gIHJldHVybihwaHNfZGYpXG59XG5cblxucGhzX2RpY3Rpb25hcnlfZnVuYyA8LSBmdW5jdGlvbihpZCl7XG4gIFxuICAjIExpbmsgdGVtcGxhdGVzIGZvciBzaW1wbGljaXR5XG4gIHBoc191cmwgPSBcImh0dHBzOi8vd3d3Lm9wZW5kYXRhLm5ocy5zY290L2FwaS8zL2FjdGlvbi9kYXRhc3RvcmVfc2VhcmNoP3Jlc291cmNlX2lkPVwiXG4gICMgZmV0Y2ggbWF4aW11bSA5OTknOTk5IHJlc3VsdHMgZm9yIHNpbXBsaWNpdHlcbiAgbGltaXRfdXJsID0gXCImbGltaXQ9MTBcIlxuICBcbiAgIyBjb25zdHJ1Y3QgVVJMIGZvciBmZXRjaGluZyBwcm9jZXNzXG4gIHVybF9saW5rIDwtIHBhc3RlMChwaHNfdXJsLCBpZCwgbGltaXRfdXJsKSAlPiUgXG5mcm9tSlNPTigpXG4gIFxuICAjIGNvbnN0cnVjdCBkYXRhZnJhbWUgZnJvbSB1cmxcbiAgcGhzX2RpY3Rpb25hcnkgPC0gIHVybF9saW5rW1tcInJlc3VsdFwiXV1bW1wiZmllbGRzXCJdXVxuICByZXR1cm4ocGhzX2RpY3Rpb25hcnkpXG59XG5cbmBgYCJ9 -->
 <pre class="r"><code># Function for fetching phs dataframes
 phs_df_func &lt;- function(id){
-  
+
   # Link templates for simplicity
   phs_url = &quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=&quot;
   # fetch maximum 999&#39;999 results for simplicity
   limit_url = &quot;&amp;limit=999999&quot;
-  
+
   # construct URL for fetching process
-  url_link &lt;- paste0(phs_url, id, limit_url) %&gt;% 
+  url_link &lt;- paste0(phs_url, id, limit_url) %&gt;%
 fromJSON()
-  
+
   # construct dataframe from url
   phs_df &lt;-  url_link[[&quot;result&quot;]][[&quot;records&quot;]]
   return(phs_df)
@@ -265,16 +265,16 @@ fromJSON()
 
 
 phs_dictionary_func &lt;- function(id){
-  
+
   # Link templates for simplicity
   phs_url = &quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=&quot;
   # fetch maximum 999&#39;999 results for simplicity
   limit_url = &quot;&amp;limit=10&quot;
-  
+
   # construct URL for fetching process
-  url_link &lt;- paste0(phs_url, id, limit_url) %&gt;% 
+  url_link &lt;- paste0(phs_url, id, limit_url) %&gt;%
 fromJSON()
-  
+
   # construct dataframe from url
   phs_dictionary &lt;-  url_link[[&quot;result&quot;]][[&quot;fields&quot;]]
   return(phs_dictionary)
@@ -291,11 +291,11 @@ fromJSON()
 board_of_treatment_n_specialty &lt;- phs_df_func(board_of_treatment_n_specialty_id)
 
 # Hospital Activity by Speciality
-# 
+#
 # Hospital Activity and Patient Demographics
-# 
+#
 # Hospital Activity and Deprivation
-# 
+#
 # Hospitalisations due to Covid 19
 hb_age_n_sex &lt;- phs_df_func(hb_age_n_sex_id)
 hb_age_deprivation &lt;- phs_df_func(hb_age_deprivation_id)
@@ -306,9 +306,9 @@ hscp_deprivation &lt;- phs_df_func(hscp_deprivation_id)
 hscp_specialty &lt;- phs_df_func(hscp_specialty_id)
 
 # A&amp;E attendances and performance data
-# 
+#
 # Quarterly Hospital Beds Information - Datasets - Scottish Health and Social Care Open Data - nhs.scot
-# 
+#
 # Delayed discharge data
 </code></pre>
 <!-- rnb-source-end -->
@@ -342,8 +342,8 @@ $ average_length_of_spell      &lt;dbl&gt; 2.841060, 1.813953, 1.516892, 2.48965
 $ average_length_of_spell_qf   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ~</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYnRfc3BlX2RhdGEgJT4lIFxuICBncm91cF9ieShzcGVjaWFsdHlfbmFtZSkgJT4lIFxuICBjb3VudChuID0gbigpKVxuYGBgIn0= -->
-<pre class="r"><code>bt_spe_data %&gt;% 
-  group_by(specialty_name) %&gt;% 
+<pre class="r"><code>bt_spe_data %&gt;%
+  group_by(specialty_name) %&gt;%
   count(n = n())</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiU3RvcmluZyBjb3VudHMgaW4gYG5uYCwgYXMgYG5gIGFscmVhZHkgcHJlc2VudCBpbiBpbnB1dFxuaSBVc2UgYG5hbWUgPSBcIm5ld19uYW1lXCJgIHRvIHBpY2sgYSBuZXcgbmFtZS5cbiJ9 -->

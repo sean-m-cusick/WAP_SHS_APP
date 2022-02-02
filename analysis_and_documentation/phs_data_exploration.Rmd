@@ -1,6 +1,6 @@
 ---
 title: "PHS Shiny Dashboard"
-author: "Aububakar, Kang, Lucy, Sean"
+author: "Aboubakar, Kang, Lucy, Sean"
 output: html_notebook
 ---
 
