@@ -1,4 +1,4 @@
-# Loading in packages ----
+# Loading in packages
 library(tidyverse)
 library(shiny)
 library(DT)
@@ -8,54 +8,16 @@ library(sf)
 library(here)
 library(plotly)
 library(lubridate)
-
-# Data Files ------
-# Daily COVID health Board? ----
-# Loading in COVID / Health Board / ans?
-cov_hb_ans <- read_csv(here("../clean_data/df_cov_hb_ans.csv"))
-
-# Loading in COVID / Health Board / Deprivation
-cov_hb_dep <- read_csv(here("../clean_data/df_cov_hb_dep.csv"))
-
-# Loading in COVID / Health Board / Speciality
-cov_hb_spe <- read_csv(here("../clean_data/df_cov_hb_spe.csv"))
+library(slider)
 
 
-# Daily Covid HSCP? ----
-# Loading in COVID / Health Board / ans?
-cov_hscp_ans <- read_csv(here("../clean_data/df_cov_hscp_ans.csv"))
-
-# Loading in COVID / Health Board / Deprivation
-cov_hscp_dep <- read_csv(here("../clean_data/df_cov_hscp_dep.csv"))
-
-# Loading in COVID / Health Board / Speciality
-cov_hscp_spe <- read_csv(here("../clean_data/df_cov_hscp_spe.csv"))
-
-# TOTAL COVID -----
-# Loading in total covid cases by ans
-tot_cov_ans <- read_csv(here("../clean_data/df_tot_cov_ans.csv"))
-
-# Loading in COVID / Health Board / Deprivation
-cov_hscp_dep <- read_csv(here("../clean_data/df_tot_cov_dep.csv"))
-
-# Loading in COVID / Health Board / Speciality
-cov_hscp_spe <- read_csv(here("../clean_data/df_tot_cov_hb.csv"))
-
-# Loading in COVID / Health Board / Speciality
-cov_hscp_spe <- read_csv(here("../clean_data/df_tot_cov_loc.csv"))
-
-
-# TEMPORARY FILES -----
-# Loading in Life expectancy data
-# life_expectancy_data <- read_csv(here("clean_data/Temp_files/life_expectancy_clean.csv")) %>%
-#   mutate(local_authority = if_else(local_authority == "Na h-Eileanan Siar", "Eilean Siar", local_authority),
-#          value = round(value, 2)) %>%
-#   rename(gender = sex) %>%
-#   filter(age == "0 years")
-life_expectancy_data  <- read_csv(here("clean_data/df_hospital_location.csv"))
-
-hospital_activty_dep <- read_csv(here("clean_data/df_ha_dep.csv"))
-
+# Loading in PHS data
+# loading hospitan location data
+df_hospital_location  <- read_csv(here("clean_data/df_hospital_location.csv"))
+hospital_activty_dep  <- read_csv(here("clean_data/df_ha_dep.csv"))
+df_cov_hb_ans         <- read_csv(here("clean_data/df_cov_hb_ans.csv"))
+#df_hospital_location  <- read_csv(here("clean_data/df_hospital_location.csv"))
+life_expectancy_data <- df_hospital_location
 # Loading in Scotland shape file
 scotland_shape <- st_read(here("clean_data/Temp_files/shape_data/pub_las.shp")) %>%
   st_simplify(dTolerance = 1000) %>%

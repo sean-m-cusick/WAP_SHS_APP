@@ -184,115 +184,216 @@ server <- function(input, output, session) {
   
   
   # LIFE EXPECTANCY MAP PLOT
-  output$life_exp_map <- renderLeaflet({
-    
-    #life_exp_map_filtered <- life_exp_map_filtered()
-    life_expectancy_data %>% 
-      leaflet() %>% 
-      addTiles() %>% 
-      addCircleMarkers(lng = ~longitude, 
-                       lat = ~latitude)
-    # bins <- c(70, 72, 74, 76, 78, 80, 82, 84, 86)
-    # pal <- colorBin("Blues", domain = life_exp_map_filtered$value, bins = bins)
-    # 
-    # life_exp_labels <- sprintf(
-    #   "<strong>%s</strong><br/>%g years",
-    #   life_exp_map_filtered$local_authority, life_exp_map_filtered$value
-    # ) %>%
-    #   lapply(htmltools::HTML)
-    # 
-    # 
-    # life_exp_map_filtered %>%
-    #   leaflet() %>%
-    #   setView(lng = -4.2026, lat = 57.8, zoom = 5.5, options = list()) %>%
-    #   addProviderTiles(providers$CartoDB.Positron)%>%
-    #   addPolygons(fillColor = ~pal(value),
-    #               weight = 0.5,
-    #               opacity = 0.9,
-    #               color = "black",
-    #               fillOpacity = 0.8,
-    #               highlightOptions = highlightOptions(color = "white", weight = 2,
-    #                                                   bringToFront = TRUE),
-    #               label = life_exp_labels,
-    #               labelOptions = labelOptions(
-    #                 style = list("font-weight" = "normal", padding = "3px 8px"),
-    #                 textsize = "15px",
-    #                 direction = "auto")) %>%
-    #   addLegend(pal = pal, values = ~density, opacity = 0.7, title = NULL,
-    #             position = "bottomright")
-    
-  })
+  # output$life_exp_map <- renderLeaflet({
+  #   
+  #   #life_exp_map_filtered <- life_exp_map_filtered()
+  #   df_hospital_location %>% 
+  #     leaflet() %>% 
+  #     addTiles() %>% 
+  #     addCircleMarkers(lng = ~longitude, 
+  #                      lat = ~latitude)
+  #   # bins <- c(70, 72, 74, 76, 78, 80, 82, 84, 86)
+  #   # pal <- colorBin("Blues", domain = life_exp_map_filtered$value, bins = bins)
+  #   # 
+  #   # life_exp_labels <- sprintf(
+  #   #   "<strong>%s</strong><br/>%g years",
+  #   #   life_exp_map_filtered$local_authority, life_exp_map_filtered$value
+  #   # ) %>%
+  #   #   lapply(htmltools::HTML)
+  #   # 
+  #   # 
+  #   # life_exp_map_filtered %>%
+  #   #   leaflet() %>%
+  #   #   setView(lng = -4.2026, lat = 57.8, zoom = 5.5, options = list()) %>%
+  #   #   addProviderTiles(providers$CartoDB.Positron)%>%
+  #   #   addPolygons(fillColor = ~pal(value),
+  #   #               weight = 0.5,
+  #   #               opacity = 0.9,
+  #   #               color = "black",
+  #   #               fillOpacity = 0.8,
+  #   #               highlightOptions = highlightOptions(color = "white", weight = 2,
+  #   #                                                   bringToFront = TRUE),
+  #   #               label = life_exp_labels,
+  #   #               labelOptions = labelOptions(
+  #   #                 style = list("font-weight" = "normal", padding = "3px 8px"),
+  #   #                 textsize = "15px",
+  #   #                 direction = "auto")) %>%
+  #   #   addLegend(pal = pal, values = ~density, opacity = 0.7, title = NULL,
+  #   #             position = "bottomright")
+  #   
+  # })
   
-  # LIFE EXPECTANCY PLOT DATA FILTER
-  life_exp_plot_filtered <- reactive({
+  # life covid plot_2
+  ##########################################
+  output$life_covid_plot_2 <- renderPlotly({
+    # covid_hospital_activity_age & sex dataset
+    cov_hb_ans <- df_cov_hb_ans %>% 
+      select(-percent_variation) %>% 
+      filter(admission_type != "All") %>% 
+      mutate(week = week(week_ending),
+             year = as.character(year))
     
-    if (input$area_input == "All") {
-      life_exp_area<- unique(life_expectancy_data$local_authority)
-    } else {
-      life_exp_area <- input$area_input
-    }
-    
-    life_expectancy_data %>%
-      filter(local_authority %in% life_exp_area) %>%
-      pivot_wider(names_from = measurement,
-                  values_from = value) %>%
-      rename(lower = "95% Lower Confidence Limit", upper = "95% Upper Confidence Limit", value = "Count") %>%
-      mutate(date_code = as.numeric(str_extract(date_code, "^20[0-9]{2}"))) %>%
-      group_by(date_code, gender) %>%
-      summarise(upper = mean(upper), lower = mean(lower), value = mean(value))
-    
-  })
-  
-  
-  # LIFE EXPECTANCY PLOT
-  output$life_expectancy_plot <- renderPlotly({
-    
-    # load filtered data
-    life_exp_plot_filtered <- life_exp_plot_filtered()
-    
+    age_group_trend_hb_ans <- cov_hb_ans %>% 
+      filter(sex == "All" & age_group != "All ages") %>% 
+      mutate(age_group = factor(age_group, levels = c("Under 5","5 - 14" ,"15 - 44", "45 - 64", "65 - 74", "75 - 84", "85 and over")
+      )) %>%
+      arrange(age_group) %>% 
+      group_by(year, week_ending, age_group) %>% 
+      summarise(number_admissions = sum(number_admissions)) %>% 
+      mutate(
+        moving_avg_2021 = slide_dbl(
+          .x = number_admissions,
+          .f = ~mean(.,na.rm = TRUE),
+          # 2 weeks moving average
+          .before = 2
+        )  )
+    cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+     
+      
     # plotly wrapper for ggplot graph
     ggplotly(
-      ggplot(life_exp_plot_filtered) +
-        aes(x = date_code,
-            y = value,
-            fill = gender
-        ) +
-        # add points and text for hover box
-        geom_point(aes(text = sprintf("Year: %g<br>Life Expectancy: %g<br>
-                                      Gender: %s<br>Upper: %g<br>Lower: %g", 
-                                      date_code, value, gender, upper, lower))) +
-        # add lines and ribbon with confidence intervals
-        geom_ribbon(aes(ymin = lower, ymax = upper, alpha = 0.2)) +
-        geom_line(colour = "black", alpha = 0.5) +
-        # set axis limits
-        scale_y_continuous(breaks = c(70:85), limits = c(70, 85)) +
-        scale_x_continuous(n.breaks = 10) +
-        scale_fill_manual(values=c("aquamarine", "cornflowerblue")) +
-        theme_minimal()+
-        theme(panel.grid.major = element_line(colour = "grey"),
-              plot.background = element_rect(fill = "#ecf0f6"),
-              panel.background = element_rect(fill = "#ecf0f6")),
-      tooltip = c("text")
-    ) %>%
-      # plotly configuration and axis labels
-      config(displayModeBar = FALSE) %>%
-      layout(legend = list(orientation = 'h',
-                           yanchor="bottom",
-                           y=0.99,
-                           xanchor="right",
-                           x=1),
-             xaxis = list(title = "Year"),
-             yaxis = list(title = "Life Expectancy in Years"),
-             title = list(text = paste0(
-               input$area_input, ' - Life Expectancy from 2009-2017',
-               '<br>',
-               '<sup>',
-               'Value shown with 95% Confidence Intervals',
-               '</sup>',
-               '<br>')),
-             # Adjust plot margins so labels are visible
-             margin = list(t = 50, b = 50, l = 50)
-      )
+      # Plot ALL TREND
+      ggplot(age_group_trend_hb_ans) +
+        aes(x = week_ending, y = moving_avg_2021, group = age_group, colour = age_group) +
+        geom_line() +
+        # labs(title = "2 weeks Moving Average Hospital Admission Per Age Group in 2020 - 2021",
+        #      subtitle = "line = 2020-2021 data, dash = 2018-2019 data")+
+        xlab("Time (date)") +
+        ylab("Average Admission Count") +
+        scale_colour_brewer(palette = "Set1") + theme(panel.background = element_rect(fill = 'gray82'))
+      
+      # ggplot(life_exp_plot_filtered) +
+      #   aes(x = date_code,
+      #       y = value,
+      #       fill = gender
+      #   ) +
+      #   # add points and text for hover box
+      #   geom_point(aes(text = sprintf("Year: %g<br>Life Expectancy: %g<br>
+      #                                 Gender: %s<br>Upper: %g<br>Lower: %g", 
+      #                                 date_code, value, gender, upper, lower))) +
+      #   # add lines and ribbon with confidence intervals
+      #   geom_ribbon(aes(ymin = lower, ymax = upper, alpha = 0.2)) +
+      #   geom_line(colour = "black", alpha = 0.5) +
+      #   # set axis limits
+      #   scale_y_continuous(breaks = c(70:85), limits = c(70, 85)) +
+      #   scale_x_continuous(n.breaks = 10) +
+      #   scale_fill_manual(values=c("aquamarine", "cornflowerblue")) +
+      #   theme_minimal()+
+      #   theme(panel.grid.major = element_line(colour = "grey"),
+      #         plot.background = element_rect(fill = "#ecf0f6"),
+      #         panel.background = element_rect(fill = "#ecf0f6")),
+      # tooltip = c("text")
+    )
+    #%>%
+      # # plotly configuration and axis labels
+      # config(displayModeBar = FALSE) %>%
+      # layout(legend = list(orientation = 'h',
+      #                      yanchor="bottom",
+      #                      y=0.99,
+      #                      xanchor="right",
+      #                      x=1),
+      #        xaxis = list(title = "Year"),
+      #        yaxis = list(title = "Life Expectancy in Years"),
+      #        title = list(text = paste0(
+      #          input$area_input, ' - Life Expectancy from 2009-2017',
+      #          '<br>',
+      #          '<sup>',
+      #          'Value shown with 95% Confidence Intervals',
+      #          '</sup>',
+      #          '<br>')),
+      #        # Adjust plot margins so labels are visible
+      #        margin = list(t = 50, b = 50, l = 50)
+      # )
+  })
+  
+  
+  ######################
+  # LIFE Covid PLOT_1
+  output$life_covid_plot_1 <- renderPlotly({
+    
+    # load filtered data
+    #life_exp_plot_filtered <- life_exp_plot_filtered()
+    
+    # covid_hospital_activity_age & sex dataset
+    cov_hb_ans <- df_cov_hb_ans %>% 
+      select(-percent_variation) %>% 
+      filter(admission_type != "All") %>% 
+      mutate(week = week(week_ending),
+             year = as.character(year))
+    
+    # For all trend, maybe a slider
+    # ALL GENERAL TREND, SEX = ALL, AGE = ALL
+    all_trend_hb_ans <- cov_hb_ans %>% 
+      filter(age_group == "All ages" & sex == "All") %>% 
+      group_by(year, week_ending, admission_type) %>% 
+      summarise(number_admissions = sum(number_admissions),
+                average20182019  = sum(average20182019)) %>% 
+      mutate(
+        moving_avg_2021 = slide_dbl(
+          .x = number_admissions,
+          .f = ~mean(.,na.rm = TRUE),
+          # 2 weeks moving average
+          .before = 2
+        )  ) %>% 
+      mutate(
+        moving_avg_1819 = slide_dbl(
+          .x = average20182019,
+          .f = ~mean(.,na.rm = TRUE),
+          # 2 weeks moving average = 7
+          .before = 2
+        )  )
+    # plotly wrapper for ggplot graph
+    ggplotly(
+      # Plot ALL TREND
+        ggplot(all_trend_hb_ans) +
+        geom_line(aes(x = week_ending, y = moving_avg_2021, colour = admission_type)) +
+        geom_line(aes(x = week_ending, y = moving_avg_1819, colour = admission_type), linetype = "dashed") +
+        # labs(title = "2 weeks Moving Average Hospital Admission",
+        #      subtitle = "line = 2020-2021 data, dash = 2018-2019 data") +
+        xlab("Time (date)") +
+        ylab("Average Admission Count")
+      # ggplot(life_exp_plot_filtered) +
+      #   aes(x = date_code,
+      #       y = value,
+      #       fill = gender
+      #   ) +
+      #   # add points and text for hover box
+      #   geom_point(aes(text = sprintf("Year: %g<br>Life Expectancy: %g<br>
+      #                                 Gender: %s<br>Upper: %g<br>Lower: %g", 
+      #                                 date_code, value, gender, upper, lower))) +
+      #   # add lines and ribbon with confidence intervals
+      #   geom_ribbon(aes(ymin = lower, ymax = upper, alpha = 0.2)) +
+      #   geom_line(colour = "black", alpha = 0.5) +
+      #   # set axis limits
+      #   scale_y_continuous(breaks = c(70:85), limits = c(70, 85)) +
+      #   scale_x_continuous(n.breaks = 10) +
+      #   scale_fill_manual(values=c("aquamarine", "cornflowerblue")) +
+      #   theme_minimal()+
+      #   theme(panel.grid.major = element_line(colour = "grey"),
+      #         plot.background = element_rect(fill = "#ecf0f6"),
+      #         panel.background = element_rect(fill = "#ecf0f6")),
+      # tooltip = c("text")
+    )
+    #  %>%
+    #   # plotly configuration and axis labels
+    #   config(displayModeBar = FALSE) %>%
+    #   layout(legend = list(orientation = 'h',
+    #                        yanchor="bottom",
+    #                        y=0.99,
+    #                        xanchor="right",
+    #                        x=1),
+    #          xaxis = list(title = "Year"),
+    #          yaxis = list(title = "Life Expectancy in Years"),
+    #          title = list(text = paste0(
+    #            input$area_input, ' - Life Expectancy from 2009-2017',
+    #            '<br>',
+    #            '<sup>',
+    #            'Value shown with 95% Confidence Intervals',
+    #            '</sup>',
+    #            '<br>')),
+    #          # Adjust plot margins so labels are visible
+    #          margin = list(t = 50, b = 50, l = 50)
+    #   )
   })
   
   
@@ -409,7 +510,7 @@ server <- function(input, output, session) {
  # General MAP OUTPUT
  output$general_map <- renderLeaflet({
 
-   life_expectancy_data %>%
+   df_hospital_location %>%
      leaflet() %>%
      addTiles() %>%
      addCircleMarkers(lng = ~longitude,
