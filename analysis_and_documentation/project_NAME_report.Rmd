@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 * Seàn M. Cusick
 
 ### Roles & responsibilities of each member
-
+<!-- additional supported WPs To be completed on Thursday -->
 * **Aboubakar Hameed** was responsible for `Work Package 2.3 - Shiny App MVP`; furthermore, supported <spatial visualisations>, <data cleaning>,... 
 
 * **Kang Hin Lee** was responsible for `Work Package 2.1 - Data Analysis`; furthermore, supported <spatial visualisations>, <data cleaning>,... 
