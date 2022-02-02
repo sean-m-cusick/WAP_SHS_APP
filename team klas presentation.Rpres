@@ -1,8 +1,34 @@
+---
+title: "TemplatePresentation"
+author: "MightyMauz"
+classoption: "portrait"
+output: beamer_presentation
+header-includes:
+  - \usetheme[sectionpage = none]{metropolis}
+---
+
+
+
+
+
+
+
+
 Team Klas Presentation
 ========================================================
 author: Kang Hin Lee, Seàn Cusick, Aboubakar Hameed, Lucy Burns
 date: February 2021
 autosize: true
+output:
+  beamer_presentation:
+    theme: "darkly"
+    colortheme: "dolphin"
+    fonttheme: "structurebold"
+---
+
+
+
+
 
 Public Health Scotland
 ========================================================
