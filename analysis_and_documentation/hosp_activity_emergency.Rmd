@@ -15,139 +15,7 @@ library(broom)
 here::here()
 ```
 
-# Bed Info - redundant code
-```{r}
-df_bed_info <- read_csv("clean_data/df_bed_info.csv") 
-```
-
-```{r}
-df_bed_info <- df_bed_info %>% 
-  mutate(q_year = str_c(year, " Q",quarter))
-```
-
-```{r}
-# Reorder the quarters
-df_bed_info$q_year <-
-  factor(df_bed_info$q_year, levels =
-           c("2016 Q2","2016 Q3","2016 Q4",
-             "2017 Q1", "2017 Q2","2017 Q3","2017 Q4",
-             "2018 Q1", "2018 Q2","2018 Q3","2018 Q4",             
-             "2019 Q1", "2019 Q2","2019 Q3","2019 Q4",            
-             "2020 Q1", "2020 Q2","2020 Q3","2020 Q4",           
-             "2021 Q1", "2021 Q2" ))
-```
-
-```{r}
-total_eps %>% 
-  ggplot()+
-  geom_bar(aes(x = quart_year, y = nor_eps), stat = "identity", alpha = 0.7)+
-  geom_bar(aes(x = quart_year, y = cov_eps), stat = "identity", fill = "red", alpha = 0.75)+
-    theme(axis.text.x = element_text(angle = 45))+
-  labs(title = "Hospital Admission Trend",
-       subtitle = "Total Hospital Admission (Grey) vs Covid Related Admission(Red)")+
-  xlab("Time (Year/Quarter)")+
-  ylab("Admission Count (per million)")
-```
-
-
-```{r, eval = FALSE}
-NHSBoards <- readOGR(dsn = "\\..SG_NHS_HealthBoards_2019.shp", 
-                     layer = "SG_NHS_HealthBoards_2019")
-```
-
-```{r, eval = FALSE}
-# tidy() comes from the package library(broom)
-# This produces a simple outline map of the NHS Boards
- NHSBoards_tidy <- tidy(NHSBoards)
-ggplot(NHSBoards_tidy, aes(x = long, y = lat, group = group)) +
-  geom_polygon(color = "black", size = 0.1, fill = "aquamarine1") +
-  coord_equal() +
-  theme_minimal()
-```
-
-```{r, eval=FALSE}
-NHSBoards$id <- row.names(NHSBoards)
-NHSBoards_tidy <- left_join(NHSBoards_tidy, NHSBoards@data)
-```
-
-```{r}
-df_bed_info %>% 
-  mutate(hb_name = case_when(
-	        hb == "S92000003" ~ "Scotland",
-	        hb == "S08000015" ~ "Ayrshire and Arran",
-	        hb == "S08000016" ~ "Borders",
-	        hb == "S08000017" ~ "Dumfries and Galloway",
-	        hb == "S08000019" ~ "Forth Valley",
-	        hb == "S08000020" ~ "Grampian",
-	        hb == "S08000022" ~ "Highland",
-	        hb == "S08000024" ~ "Lothian",
-	        hb == "S08000025" ~ "Orkney",
-	        hb == "S08000026" ~ "Shetland",
-	        hb == "S08000028" ~ "Western Isles",
-	        hb == "S08000029" ~ "Fife",
-	        hb == "S08000030" ~ "Tayside",
-        	hb == "S08000031" ~ "Greater Glasgow and Clyde",
-	        hb == "S08000032" ~ "Lanarkshire",
-	TRUE ~ as.character(NA))) %>% 
-  group_by(hb_name) %>% 
-  summarise(count = n())
-```
-
-```{r}
-df_bed_info %>% 
- group_by(location) %>% 
-  summarise(count = n())
-```
-
-```{r}
-hospitals <- read_csv("clean_data/df_hospital_location.csv") 
-```
-
-```{r}
-df_bed_info %>% 
-  mutate(location = case_when(
-	        hb == "A101H" ~ "Arran War Memorial Hospital",
-	        hb == "A111H" ~ "University Hospital Crosshouse",
-	        hb == "A210H" ~ "University Hospital Ayr",
-	        hb == "B120H" ~ "Borders General Hospital",
-	        hb == "D102H" ~ "Golden Jubilee National Hospital",
-	        hb == "S08000015" ~ "HB - Ayrshire and Arran",
-	        hb == "S08000016" ~ "HB - Borders",
-	        hb == "SB0801" ~ "NA",
-        	TRUE ~ as.character(NA))) %>% 
-  group_by(location) %>% 
-  summarise(count = n())
-```
-
-```{r}
-hospitals %>% 
-  filter(hb == "S08000015") %>% 
-  group_by(location)
-```
-
-```{r}
-df_bed_info %>% 
-  filter(specialty_name == "Accident & Emergency") %>% 
-  ggplot()+
-  geom_bar(aes(x = q_year, y = all staffed beds), 
-               fill= location, position = "dodge"), 
-                stat = "identity", alpha = 0.7) +
- # geom_bar(aes(x = quart_year, y = cov_eps), stat = "identity", fill = "red", alpha = 0.75) +
-    theme(axis.text.x = element_text(angle = 45))+
-  labs(title = "Hospital Admission Trend",
-       subtitle = "Total Hospital Admission (Grey) vs Covid Related Admission(Red)")+
-  xlab("Time (Year/Quarter)")+
-  ylab("Admission Count (per million)")
-
-```
-
-```{r}
-library(stringr)
-df_ha_dep <- df_ha_dep %>% 
-  mutate(q_year = str_c(year, " Q",quarter))
-```
-
-# Hosp Activity - Emergency Patients
+# Hosp Activity - Admission Types
 
 ```{r}
 hosp_activity <- read_csv(here("clean_data/df_ha_ans.csv"))
@@ -160,7 +28,7 @@ hosp_activity <- hosp_activity %>%
 
 ```{r}
 # Reorder the quarters
-hosp_activity <-hosp_activity %>% 
+hosp_activity_summary <-hosp_activity %>% 
   mutate(q_year = factor
          (q_year, levels =
            c("2016 Q2","2016 Q3","2016 Q4",
@@ -170,125 +38,27 @@ hosp_activity <-hosp_activity %>%
              "2020 Q1", "2020 Q2","2020 Q3","2020 Q4",           
              "2021 Q1", "2021 Q2" ))) %>% 
   arrange(q_year) %>% 
-  group_by(q_year, admission_type, year) %>% 
+  group_by(q_year, admission_type, year, quarter) %>% 
   summarise(tot_sum = (sum(episodes)/100000))
 ```
 
 ```{r}
-hosp_act_emergency_summary %>% 
-  ggplot(aes(fill=admission_type, y=q_year, x=tot_sum)) + 
-    geom_bar(position="dodge", stat="identity", alpha = 0.7) +
-    scale_fill_manual( values = c("2016 Q2","2016 Q3","2016 Q4",
-             "2017 Q1"= "steelblue", "2017 Q2","2017 Q3","2017 Q4",
-             "2018 Q1"= "steelblue", "2018 Q2","2018 Q3","2018 Q4",             
-             "2019 Q1"= "steelblue", "2019 Q2","2019 Q3","2019 Q4",            
-             "2020 Q1"= "steelblue", "2020 Q2","2020 Q3","2020 Q4",           
-             "2021 Q1"= "steelblue", "2021 Q2" ), 
-                guide = FALSE ) +
-      theme(axis.text.x = element_text(angle = 45))+
-  labs(title = "Emergency Admissions",
-       subtitle = "Q1 (Winter) highlighted")+
-      xlab("Time (Year/Quarter)")+
-      ylab("Admission Count (100,000s)")  
- # facet_grid(~year)
+emergency_inpatients <- hosp_activity_summary %>% 
+  filter(admission_type == "All Inpatients and Day cases" | admission_type == "Emergency Inpatients") 
 ```
 
 ```{r}
-hosp_activity %>% 
-  ggplot() +
-    geom_bar(aes(x = q_year, y = tot_sum, fill = q_year), 
-             stat = "identity", alpha = 0.7 ) +
-    scale_fill_manual( values = c("2016 Q2","2016 Q3","2016 Q4",
-             "2017 Q1"= "steelblue", "2017 Q2","2017 Q3","2017 Q4",
-             "2018 Q1"= "steelblue", "2018 Q2","2018 Q3","2018 Q4",             
-             "2019 Q1"= "steelblue", "2019 Q2","2019 Q3","2019 Q4",            
-             "2020 Q1"= "steelblue", "2020 Q2","2020 Q3","2020 Q4",           
-             "2021 Q1"= "steelblue", "2021 Q2" ), 
-                guide = FALSE ) +
-      theme(axis.text.x = element_text(angle = 45))+
-  labs(title = "Emergency Admissions",
-       subtitle = "Q1 (Winter) highlighted")+
-      xlab("Time (Year/Quarter)")+
+emergency_inpatients %>% 
+  ggplot(aes(x=quarter, y=tot_sum, fill=admission_type)) + 
+    geom_bar(position="dodge", stat="identity") +
+  scale_fill_manual(values=c("#E69F00",
+                             "#56B4E9")) +
+  labs(title = "Admissions",
+       subtitle = "2016-2021")+
+      xlab("Year")+
       ylab("Admission Count (100,000s)")  +
-  facet_grid(~year)
+  facet_wrap(~year) +
+  theme(axis.text.x = element_text(angle = 45)) +
+  theme(legend.position="bottom")
 ```
 
-
-# Hosp Activity - All Inpatients and Day Cases
-
-```{r}
-hosp_act_all_inp_day <- hosp_activity %>% 
-  filter(admission_type == "All Inpatients and Day cases")
-```
-
-```{r}
-hosp_act_all_inp_day <- hosp_act_all_inp_day %>% 
-  mutate(q_year = str_c(year, " Q",quarter))
-```
-
-```{r}
-# Reorder the quarters
-hosp_act_all_inp_day_summary <-hosp_act_all_inp_day %>% 
-  mutate(q_year = factor
-         (q_year, levels =
-           c("2016 Q2","2016 Q3","2016 Q4",
-             "2017 Q1", "2017 Q2","2017 Q3","2017 Q4",
-             "2018 Q1", "2018 Q2","2018 Q3","2018 Q4",             
-             "2019 Q1", "2019 Q2","2019 Q3","2019 Q4",            
-             "2020 Q1", "2020 Q2","2020 Q3","2020 Q4",           
-             "2021 Q1", "2021 Q2" ))) %>% 
-  arrange(q_year) %>% 
-  group_by(q_year) %>% 
-  summarise(tot_sum = (sum(episodes)/100000))
-```
-
-
-```{r}
-hosp_act_all_inp_day_summary %>% 
-  ggplot() +
-    geom_bar(aes(x = q_year, y = tot_sum, fill = q_year), 
-             stat = "identity", alpha = 0.7 ) +
-    scale_fill_manual( values = c("2016 Q2","2016 Q3","2016 Q4",
-             "2017 Q1"= "steelblue", "2017 Q2","2017 Q3","2017 Q4",
-             "2018 Q1"= "steelblue", "2018 Q2","2018 Q3","2018 Q4",             
-             "2019 Q1"= "steelblue", "2019 Q2","2019 Q3","2019 Q4",            
-             "2020 Q1"= "steelblue", "2020 Q2","2020 Q3","2020 Q4",           
-             "2021 Q1"= "steelblue", "2021 Q2" ), 
-                guide = FALSE ) +
-      theme(axis.text.x = element_text(angle = 45))+
-  labs(title = "All Inpatients and Day cases",
-       subtitle = "Q1 (Winter) highlighted")+
-      xlab("Time (Year/Quarter)")+
-      ylab("Admission Count (100,000s)")  
-```
-
-# Comparing emergency and non-emergency
-
-```{r}
-hosp_act <- hosp_activity %>% 
-  filter(admission_type %in% c("Emergency Inpatients","All Inpatients and Day cases" ))
-```
-
-```{r}
-hosp_act <- hosp_act %>% 
-  mutate(q_year = str_c(year, " Q",quarter))
-```
-
-```{r}
-hosp_act %>% 
-  ggplot(fill="admission_type") +
-    geom_histogram(aes(x = q_year, y = sum(episodes), fill = q_year), 
-             stat = "identity", alpha = 0.7 ) +
-    scale_fill_manual( values = c("2016 Q2","2016 Q3","2016 Q4",
-             "2017 Q1"= "steelblue", "2017 Q2","2017 Q3","2017 Q4",
-             "2018 Q1"= "steelblue", "2018 Q2","2018 Q3","2018 Q4",             
-             "2019 Q1"= "steelblue", "2019 Q2","2019 Q3","2019 Q4",            
-             "2020 Q1"= "steelblue", "2020 Q2","2020 Q3","2020 Q4",           
-             "2021 Q1"= "steelblue", "2021 Q2" ), 
-                guide = FALSE ) +
-      theme(axis.text.x = element_text(angle = 45))+
-  labs(title = "All Inpatients and Day cases",
-       subtitle = "Q1 (Winter) highlighted")+
-      xlab("Time (Year/Quarter)")+
-      ylab("Admission Count (100,000s)")  
-```
