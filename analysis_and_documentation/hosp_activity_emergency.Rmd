@@ -150,22 +150,17 @@ df_ha_dep <- df_ha_dep %>%
 # Hosp Activity - Emergency Patients
 
 ```{r}
-hosp_activity <- read_csv(here("../clean_data/df_cov_hb_ans.csv"))
+hosp_activity <- read_csv(here("clean_data/df_ha_ans.csv"))
 ```
 
 ```{r}
-hosp_act_emergency <- hosp_activity %>% 
-  filter(admission_type == "Emergency Inpatients")
-```
-
-```{r}
-hosp_act_emergency <- hosp_act_emergency %>% 
+hosp_activity <- hosp_activity %>% 
   mutate(q_year = str_c(year, " Q",quarter))
 ```
 
 ```{r}
 # Reorder the quarters
-hosp_act_emergency_summary <-hosp_act_emergency %>% 
+hosp_activity <-hosp_activity %>% 
   mutate(q_year = factor
          (q_year, levels =
            c("2016 Q2","2016 Q3","2016 Q4",
