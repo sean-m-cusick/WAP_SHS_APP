@@ -1,6 +1,8 @@
 ---
 title: "Covid Hospital Activity Analysis"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r}
@@ -71,11 +73,17 @@ all_trend_hb_ans %>%
   geom_line(aes(x = week_ending, y = moving_avg_2021, colour = admission_type))+
   geom_line(aes(x = week_ending, y = moving_avg_1819, colour = admission_type), linetype = "dashed")+
   labs(title = "2 weeks Moving Average Hospital Admission",
-       subtitle = "line = 2020-2021 data, dash = 2018-2019 data")+
-  geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = -Inf, ymax = Inf, fill = factor(quarter), show.legend = FALSE), alpha = .4) +
-    scale_fill_manual(values = alpha(c("steelblue", "white" ,"white" ,"white"), .3))+
+       subtitle = "solid = 2020-2021 data | dash = 2018-2019 data")+
+  geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = -Inf, ymax = Inf, fill = factor(quarter)), alpha = .3, show.legend = FALSE) +
+    scale_fill_manual(values = alpha(c("steelblue", "transparent" ,"transparent" ,"transparent"), .4))+
+  theme(panel.background = element_rect(fill = 'transparent'),
+                 legend.position="bottom")+
+    scale_x_date(date_breaks = "4 months",
+                 date_minor_breaks = "2 months",
+                 date_labels = "%b-%y") +
   xlab("Time (date)")+
   ylab("Average Admission Count")
+
 
 
 # When input isnt ALL Ages
@@ -98,17 +106,24 @@ age_group_trend_hb_ans <- cov_hb_ans %>%
       .f = ~mean(.,na.rm = TRUE),
 # 2 weeks moving average
       .before = 2
-    )  )
+    )  ) %>% 
+  mutate(quarter = quarter(week_ending))
+
+
 cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 age_group_trend_hb_ans %>% 
   ggplot()+
-  aes(x = week_ending, y = moving_avg_2021, group = age_group, colour = age_group)+
-  geom_line()+
+    geom_line(aes(x = week_ending, y = moving_avg_2021, group = age_group, colour = age_group))+
+  
+    geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = -Inf, ymax = Inf, fill = factor(quarter)), alpha = .3, show.legend = FALSE) +
+    scale_fill_manual(values = alpha(c("steelblue", "transparent" ,"transparent" ,"transparent"), .4))+
+  
   labs(title = "2 weeks Moving Average Hospital Admission Per Age Group in 2020 - 2021",
        subtitle = "line = 2020-2021 data, dash = 2018-2019 data")+
   xlab("Time (date)")+
   ylab("Average Admission Count")+
-  scale_colour_brewer(palette="Set1")+ theme(panel.background = element_rect(fill = 'gray82'))
+  scale_colour_brewer(palette="Set1")+ 
+  theme(panel.background = element_rect(fill = 'transparent'))
 
 
 ```
