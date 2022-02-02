@@ -17,7 +17,7 @@ df_ - dataframe
 
 sample_ - sample / test dataframe
 
-age_group_ - Dataframe with categorized age group (filtered out "all age" & "gender/sex" parameters)
+age_ - Dataframe with categorized age group (filtered out "all age" & "gender/sex" parameters)
 
 ## Acronym
 
@@ -25,17 +25,30 @@ ane - A&E (Group 03)
 
 cov - Covid (Group 02)
 
+tot- total case
+
+sas - Scottish Ambulance Service
+
 ans - Age and Sex
 
 dep - Deprivation 
 
 spe - Specialty 
 
+loc - local authority
+
 ha - Hospital Activity
 
 hb - Health Board
 
 hscp - Health and Social Care Partnership
+
+cum_cov - cumulative covid case
+
+trend - trend data
+
+sevday - seven day
+
 
 
 
