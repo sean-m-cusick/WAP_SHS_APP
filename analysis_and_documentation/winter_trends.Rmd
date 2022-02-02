@@ -1,0 +1,238 @@
+---
+title: "Covid Hospital Activity Analysis"
+output: html_notebook
+---
+
+```{r}
+# How does Covid affect hospital activity?
+# Was there a change post Q1 2020?
+```
+
+
+```{r, echo=FALSE, message=FALSE, results='hide'}
+library(tidyverse)
+library(sf)
+library(janitor)
+library(jsonlite)
+library(lubridate)
+library(rgdal)
+library(broom)
+library(readr)
+library(here)
+library(slider)
+```
+
+```{r}
+here::here()
+```
+
+
+```{r}
+# Dataset required
+# Hospital Location
+df_hospital_location <- read_csv("clean_data/clean_data/df_hospital_location.csv")
+df_day_trend_ans <- read_csv("clean_data/df_day_trend_ans.csv")
+```
+
+```{r}
+
+
+# covid_hospital_activity_age & sex dataset
+cov_hb_ans <- df_cov_hb_ans %>% 
+  select(-percent_variation) %>% 
+  filter(admission_type != "All") %>% 
+  mutate(week = week(week_ending),
+         year = as.character(year))
+
+# For all trend, maybe a slider
+# ALL GENERAL TREND, SEX = ALL, AGE = ALL
+all_trend_hb_ans <- cov_hb_ans %>% 
+  filter(age_group == "All ages" & sex == "All") %>% 
+      group_by(year, week_ending, admission_type) %>% 
+  summarise(number_admissions = sum(number_admissions),
+            average20182019  = sum(average20182019)) %>% 
+    mutate(
+    moving_avg_2021 = slide_dbl(
+      .x = number_admissions,
+      .f = ~mean(.,na.rm = TRUE),
+# 2 weeks moving average
+      .before = 2
+    )  ) %>% 
+          mutate(
+    moving_avg_1819 = slide_dbl(
+      .x = average20182019,
+      .f = ~mean(.,na.rm = TRUE),
+# 2 weeks moving average = 7
+      .before = 2
+    )  )
+
+# Plot ALL TREND
+all_trend_hb_ans %>% 
+  ggplot()+
+  geom_line(aes(x = week_ending, y = moving_avg_2021, colour = admission_type))+
+  geom_line(aes(x = week_ending, y = moving_avg_1819, colour = admission_type), linetype = "dashed")+
+  labs(title = "2 weeks Moving Average Hospital Admission",
+       subtitle = "line = 2020-2021 data, dash = 2018-2019 data")+
+  xlab("Time (date)")+
+  ylab("Average Admission Count")
+
+
+# When input isnt ALL Ages
+
+```
+
+```{r}
+age_group_trend_hb_ans <- cov_hb_ans %>% 
+  filter(sex == "All" & age_group != "All ages") %>% 
+  mutate(age_group = factor(age_group, levels = c("Under 5","5 - 14" ,"15 - 44", "45 - 64", "65 - 74", "75 - 84", "85 and over")
+  )) %>%
+  arrange(age_group) %>% 
+      group_by(year, week_ending, age_group) %>% 
+  summarise(number_admissions = sum(number_admissions)) %>% 
+    mutate(
+    moving_avg_2021 = slide_dbl(
+      .x = number_admissions,
+      .f = ~mean(.,na.rm = TRUE),
+# 2 weeks moving average
+      .before = 2
+    )  )
+cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+age_group_trend_hb_ans %>% 
+  ggplot()+
+  aes(x = week_ending, y = moving_avg_2021, group = age_group, colour = age_group)+
+  geom_line()+
+  labs(title = "2 weeks Moving Average Hospital Admission Per Age Group in 2020 - 2021",
+       subtitle = "line = 2020-2021 data, dash = 2018-2019 data")+
+  xlab("Time (date)")+
+  ylab("Average Admission Count")+
+  scale_colour_brewer(palette="Set1")+ theme(panel.background = element_rect(fill = 'gray82'))
+
+
+```
+
+
+
+# Dump
+```{r}
+# test <- df_cov_ha_ans %>% 
+#   filter(!grepl("All",admission_type))
+# day_case <- day_cum_case %>%
+#   mutate(year = year(date),
+#          month = month(date),
+#            week = week(date))
+# 
+# cov_case_rate <- day_case %>%
+#   group_by(year,month) %>%
+#   mutate(rate = daily_cases - lag(daily_cases)) %>%
+#   slice(-1)
+# 
+# 
+# cov_case_rate %>%
+#   mutate(month = factor(month)) %>%
+#   ggplot()+
+#   aes(x = date, y = daily_cases )+
+#   geom_bar(stat = "identity")+
+#   labs(
+#     title = "Daily Covid Cases Per month"
+#   )
+# 
+# 
+# cov_case_season <- day_case %>% 
+#   mutate(season = case_when(
+#     month == 1 & month == 2 & month == 12 ~ "winter",
+#     month == 3 & month == 4 & month == 5 ~ "spring",    
+#     month == 6 & month == 7 & month == 8 ~ "summer",
+#     month == 9 & month == 10 & month == 11 ~ "autumn",
+#     ))
+
+
+# df_hospital_location <- read_csv("clean_data/df_hospital_location.csv")
+# df_day_trend_hb <- read_csv("clean_data/df_day_trend_hb.csv")
+# 
+# hospital_location_func <- function(df, key_col){
+#             df <- df %>% 
+#             # Select location & hb as forgein keys
+#             # Join location_name, longitude & latitude to the main dataframe
+#             left_join(df_hospital_location %>% select(key_col, location_name, longitude, latitude),
+#             by = c(key_col),
+#             all.x = TRUE)
+#             
+#             return(df)
+# }
+# 
+# 
+# 
+# day_trend_hb <- hospital_location_func(df_day_trend_hb, "hb") %>%
+#   group_by(date, hb, hb_name) %>% 
+#   summarise(daily_positive = sum(daily_positive))
+# 
+# day_trend_hb %>% 
+#   ggplot()+
+#   aes(x = date, y = daily_positive)+
+#   geom_bar(stat = "identity")+
+#     labs(
+#     title = "Daily Trend Cases"
+#   )
+#   
+# day_trend_hb %>% 
+#   filter(hb_name == "NHS Borders") %>% 
+#   ggplot()+
+#   aes(x = date, y = daily_positive)+
+#   geom_bar(stat = "identity")+
+#   labs(
+#     title = "Daily Trend Cases Per Hospital"
+#   )
+# 
+
+# Suggestion Can do a Hospital Filter
+# Do a infection(count), death count,  infection rate, death rate
+
+```
+
+
+
+```{r}
+# Normal Hospital Admission
+# df_nor_ha_ans <- read_csv("clean_data/df_ha_ans.csv")
+# # Covid Hospital Admission
+# df_cov_ha_ans <- read_csv("clean_data/df_cov_hb_ans.csv")
+
+# day_cum_case <- read_csv("clean_data/df_day_cum_cov.csv")
+# Normal Hospital Admission
+# df_nor_ha_ans <- read_csv("clean_data/df_ha_ans.csv")
+# 
+# # Covid Hospital Admission
+# df_cov_ha_ans <- read_csv("clean_data/df_cov_hb_ans.csv")
+# 
+# cov_eps <- df_cov_ha_ans %>% 
+#   mutate(quart_year = paste0(year, "Q", quarter)) %>% 
+#   arrange(quart_year) %>% 
+#   group_by(quart_year) %>% 
+#   summarise(cov_eps = sum(number_admissions)/1000000)
+# 
+# nor_eps <- df_nor_ha_ans %>% 
+#     mutate(quart_year = paste0(year, "Q", quarter)) %>% 
+#   group_by(quart_year, year, quarter) %>% 
+#   summarise(nor_eps = sum(episodes)/1000000)
+# 
+# 
+# # total admission
+# total_eps <- left_join(nor_eps, cov_eps, by = "quart_year") %>% 
+#   mutate(cov_eps = coalesce(cov_eps,0),
+#          quart_year = str_sub(quart_year, 3,6))
+# 
+# 
+# 
+# total_eps %>% 
+#   ggplot()+
+#   geom_bar(aes(x = quart_year, y = nor_eps), stat = "identity", alpha = 0.7)+
+#   geom_bar(aes(x = quart_year, y = cov_eps), stat = "identity", fill = "red", alpha = 0.75)+
+#     theme(axis.text.x = element_text(angle = 45))+
+#   labs(title = "Hospital Admission Trend",
+#        subtitle = "Total Hospital Admission (Grey) vs Covid Related Admission(Red)")+
+#   xlab("Time (Year/Quarter)")+
+#   ylab("Admission Count (per million)")
+# 
+
+```
+
