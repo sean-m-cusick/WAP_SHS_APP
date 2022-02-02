@@ -8,16 +8,16 @@ library(sf)
 library(here)
 library(plotly)
 library(lubridate)
+library(slider)
 
 
-
-# Loading in Life expectancy data
-life_expectancy_data <- read_csv(here("clean_data/Temp_files/life_expectancy_clean.csv")) %>%
-  mutate(local_authority = if_else(local_authority == "Na h-Eileanan Siar", "Eilean Siar", local_authority),
-         value = round(value, 2)) %>%
-  rename(gender = sex) %>%
-  filter(age == "0 years")
-
+# Loading in PHS data
+# loading hospitan location data
+df_hospital_location  <- read_csv(here("clean_data/df_hospital_location.csv"))
+hospital_activty_dep  <- read_csv(here("clean_data/df_ha_dep.csv"))
+df_cov_hb_ans         <- read_csv(here("clean_data/df_cov_hb_ans.csv"))
+#df_hospital_location  <- read_csv(here("clean_data/df_hospital_location.csv"))
+life_expectancy_data <- df_hospital_location
 # Loading in Scotland shape file
 scotland_shape <- st_read(here("clean_data/Temp_files/shape_data/pub_las.shp")) %>%
   st_simplify(dTolerance = 1000) %>%

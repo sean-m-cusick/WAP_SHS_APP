@@ -4,157 +4,157 @@
 server <- function(input, output, session) {
   
   # OVERVIEW PANEL --------------------
-  output$value <- renderText({ input$about })
+  output$value <- renderText({input$about })
   
   
-  output$avg_m <- renderValueBox({
-    
-    valueBox(
-      value = 
-        tags$p(life_expectancy_data %>%
-                 filter(date_code == "2017-2019",
-                        gender == "Male",
-                        measurement == "Count") %>%
-                 summarise(mean = round(mean(value), 1)) %>%
-                 pull(mean),
-               style = "font-size: 80%;"),
-      subtitle = "Average Life Expectancy of Men in Scotland in 2019",
-      icon = icon("heart"),
-      color = "blue"
-    )
-  })
+  # output$avg_m <- renderValueBox({
+  #   
+  #   valueBox(
+  #     value = 
+  #       tags$p(life_expectancy_data %>%
+  #                filter(date_code == "2017-2019",
+  #                       gender == "Male",
+  #                       measurement == "Count") %>%
+  #                summarise(mean = round(mean(value), 1)) %>%
+  #                pull(mean),
+  #              style = "font-size: 80%;"),
+  #     subtitle = "Average Life Expectancy of Men in Scotland in 2019",
+  #     icon = icon("heart"),
+  #     color = "blue"
+  #   )
+  # })
   
-  output$avg_f <- renderValueBox({
-    
-    valueBox(
-      value = 
-        tags$p(life_expectancy_data %>%
-                 filter(date_code == "2017-2019",
-                        gender == "Female",
-                        measurement == "Count") %>%
-                 summarise(mean = round(mean(value), 1)) %>%
-                 pull(mean),
-               style = "font-size: 80%;"),
-      subtitle = "Average Life Expectancy of Women in Scotland in 2019",
-      icon = icon("heart"),
-      color = "blue"
-    )
-  })
+  # output$avg_f <- renderValueBox({
+  #   
+  #   valueBox(
+  #     value = 
+  #       tags$p(life_expectancy_data %>%
+  #                filter(date_code == "2017-2019",
+  #                       gender == "Female",
+  #                       measurement == "Count") %>%
+  #                summarise(mean = round(mean(value), 1)) %>%
+  #                pull(mean),
+  #              style = "font-size: 80%;"),
+  #     subtitle = "Average Life Expectancy of Women in Scotland in 2019",
+  #     icon = icon("heart"),
+  #     color = "blue"
+  #   )
+  # })
   
-  output$life_exp_area <- renderValueBox({
-    
-    valueBox(
-      value = 
-        tags$p(life_expectancy_data %>%
-                 filter(date_code == "2017-2019",
-                        measurement == "Count") %>%
-                 group_by(local_authority) %>%
-                 summarise(mean = mean(value)) %>%
-                 slice_min(mean) %>%
-                 pull(local_authority),
-               style = "font-size: 80%;"),
-      subtitle = "Council Area with the Lowest Life Expectancy in 2019",
-      icon = icon("home"),
-      color = "blue"
-    )
-  })
+  # output$life_exp_area <- renderValueBox({
+  #   
+  #   valueBox(
+  #     value = 
+  #       tags$p(life_expectancy_data %>%
+  #                filter(date_code == "2017-2019",
+  #                       measurement == "Count") %>%
+  #                group_by(local_authority) %>%
+  #                summarise(mean = mean(value)) %>%
+  #                slice_min(mean) %>%
+  #                pull(local_authority),
+  #              style = "font-size: 80%;"),
+  #     subtitle = "Council Area with the Lowest Life Expectancy in 2019",
+  #     icon = icon("home"),
+  #     color = "blue"
+  #   )
+  # })
   
-  output$most_drug_death <- renderValueBox({
-    
-    valueBox(
-      value = 
-        tags$p(drug_deaths %>% 
-                 filter(drug_name != "All drug-related deaths" & year == 2019) %>% 
-                 slice_max(num_deaths) %>% 
-                 pull(drug_name),
-               style = "font-size: 80%;"),
-      subtitle = "Most Reported Cause of Drug-related Deaths in 2019",
-      icon = icon("pills"),
-      color = "purple"
-    )
-  })
-  
-  output$total_drug_death <- renderValueBox({
-    
-    valueBox(
-      value = 
-        tags$p(drug_deaths %>% 
-                 filter(council_area == "Scotland" &
-                          drug_name == "All drug-related deaths" &
-                          year == 2019) %>%
-                 pull(num_deaths),
-               style = "font-size: 80%;"),
-      subtitle = "Total Drug-related Deaths in 2019",
-      icon = icon("pills"),
-      color = "purple"
-    )
-  })
-  
-  output$worst_drug_area <- renderValueBox({
-    
-    valueBox(
-      value = 
-        tags$p(drug_deaths %>% 
-                 filter(drug_name == "All drug-related deaths" &
-                          year == 2019 &
-                          council_area != "Scotland") %>%
-                 slice_max(num_deaths) %>% 
-                 pull(council_area),
-               style = "font-size: 80%;"),
-      subtitle = "Council Area with Most Drug-related Deaths in 2019",
-      icon = icon("home"),
-      color = "purple"
-    )
-  })
-  
-  output$alcohol_age <- renderValueBox({
-    
-    valueBox(
-      value = 
-        tags$p(alcohol_deaths %>% 
-                 drop_na(age_group) %>% 
-                 filter(year_of_death == 2019) %>% 
-                 slice_max(count, n = 1, with_ties = FALSE) %>% 
-                 pull(age_group),
-               style = "font-size: 80%;"),
-      subtitle = "Age Group with Most Alcohol-specific Deaths in 2019",
-      icon = icon("wine-glass"),
-      color = "green"
-    )
-  })
-  
-  output$total_alc_death <- renderValueBox({
-    
-    valueBox(
-      value = 
-        tags$p(alcohol_deaths %>% 
-                 drop_na(age_group) %>% 
-                 filter(year_of_death == 2019) %>% 
-                 summarise(count = sum(count)) %>% 
-                 pull(count),
-               style = "font-size: 80%;"),
-      subtitle = "Total Alcohol-specific Deaths in 2019",
-      icon = icon("wine-glass"),
-      color = "green"
-    )
-  })
-  
-  output$worst_alcohol_area <- renderValueBox({
-    
-    valueBox(
-      value = 
-        tags$p(alcohol_area %>% 
-                 filter(area != "All Scotland" &
-                          year_of_death == 2009) %>% 
-                 slice_max(count, n = 1) %>% 
-                 pull(area),
-               style = "font-size: 80%;"),
-      subtitle = "Council Area with Most Alcohol-specific Deaths in 2019",
-      icon = icon("home"),
-      color = "green"
-    )
-  })
-  
+  # output$most_drug_death <- renderValueBox({
+  #   
+  #   valueBox(
+  #     value = 
+  #       tags$p(drug_deaths %>% 
+  #                filter(drug_name != "All drug-related deaths" & year == 2019) %>% 
+  #                slice_max(num_deaths) %>% 
+  #                pull(drug_name),
+  #              style = "font-size: 80%;"),
+  #     subtitle = "Most Reported Cause of Drug-related Deaths in 2019",
+  #     icon = icon("pills"),
+  #     color = "purple"
+  #   )
+  # })
+  # 
+  # output$total_drug_death <- renderValueBox({
+  #   
+  #   valueBox(
+  #     value = 
+  #       tags$p(drug_deaths %>% 
+  #                filter(council_area == "Scotland" &
+  #                         drug_name == "All drug-related deaths" &
+  #                         year == 2019) %>%
+  #                pull(num_deaths),
+  #              style = "font-size: 80%;"),
+  #     subtitle = "Total Drug-related Deaths in 2019",
+  #     icon = icon("pills"),
+  #     color = "purple"
+  #   )
+  # })
+  # 
+  # output$worst_drug_area <- renderValueBox({
+  #   
+  #   valueBox(
+  #     value = 
+  #       tags$p(drug_deaths %>% 
+  #                filter(drug_name == "All drug-related deaths" &
+  #                         year == 2019 &
+  #                         council_area != "Scotland") %>%
+  #                slice_max(num_deaths) %>% 
+  #                pull(council_area),
+  #              style = "font-size: 80%;"),
+  #     subtitle = "Council Area with Most Drug-related Deaths in 2019",
+  #     icon = icon("home"),
+  #     color = "purple"
+  #   )
+  # })
+  # 
+  # output$alcohol_age <- renderValueBox({
+  #   
+  #   valueBox(
+  #     value = 
+  #       tags$p(alcohol_deaths %>% 
+  #                drop_na(age_group) %>% 
+  #                filter(year_of_death == 2019) %>% 
+  #                slice_max(count, n = 1, with_ties = FALSE) %>% 
+  #                pull(age_group),
+  #              style = "font-size: 80%;"),
+  #     subtitle = "Age Group with Most Alcohol-specific Deaths in 2019",
+  #     icon = icon("wine-glass"),
+  #     color = "green"
+  #   )
+  # })
+  # 
+  # output$total_alc_death <- renderValueBox({
+  #   
+  #   valueBox(
+  #     value = 
+  #       tags$p(alcohol_deaths %>% 
+  #                drop_na(age_group) %>% 
+  #                filter(year_of_death == 2019) %>% 
+  #                summarise(count = sum(count)) %>% 
+  #                pull(count),
+  #              style = "font-size: 80%;"),
+  #     subtitle = "Total Alcohol-specific Deaths in 2019",
+  #     icon = icon("wine-glass"),
+  #     color = "green"
+  #   )
+  # })
+  # 
+  # output$worst_alcohol_area <- renderValueBox({
+  #   
+  #   valueBox(
+  #     value = 
+  #       tags$p(alcohol_area %>% 
+  #                filter(area != "All Scotland" &
+  #                         year_of_death == 2009) %>% 
+  #                slice_max(count, n = 1) %>% 
+  #                pull(area),
+  #              style = "font-size: 80%;"),
+  #     subtitle = "Council Area with Most Alcohol-specific Deaths in 2019",
+  #     icon = icon("home"),
+  #     color = "green"
+  #   )
+  # })
+  # 
   # LIFE EXPECTANCY TAB ---------------------------------------------------------------
   
   # LIFE EXPECTANCY MAP DATA FILTER
@@ -184,111 +184,216 @@ server <- function(input, output, session) {
   
   
   # LIFE EXPECTANCY MAP PLOT
-  output$life_exp_map <- renderLeaflet({
-    
-    life_exp_map_filtered <- life_exp_map_filtered()
-    
-    bins <- c(70, 72, 74, 76, 78, 80, 82, 84, 86)
-    pal <- colorBin("Blues", domain = life_exp_map_filtered$value, bins = bins)
-    
-    life_exp_labels <- sprintf(
-      "<strong>%s</strong><br/>%g years",
-      life_exp_map_filtered$local_authority, life_exp_map_filtered$value
-    ) %>%
-      lapply(htmltools::HTML)
-    
-    
-    life_exp_map_filtered %>%
-      leaflet() %>%
-      setView(lng = -4.2026, lat = 57.8, zoom = 5.5, options = list()) %>%
-      addProviderTiles(providers$CartoDB.Positron)%>%
-      addPolygons(fillColor = ~pal(value),
-                  weight = 0.5,
-                  opacity = 0.9,
-                  color = "black",
-                  fillOpacity = 0.8,
-                  highlightOptions = highlightOptions(color = "white", weight = 2,
-                                                      bringToFront = TRUE),
-                  label = life_exp_labels,
-                  labelOptions = labelOptions(
-                    style = list("font-weight" = "normal", padding = "3px 8px"),
-                    textsize = "15px",
-                    direction = "auto")) %>%
-      addLegend(pal = pal, values = ~density, opacity = 0.7, title = NULL,
-                position = "bottomright")
-    
-  })
+  # output$life_exp_map <- renderLeaflet({
+  #   
+  #   #life_exp_map_filtered <- life_exp_map_filtered()
+  #   df_hospital_location %>% 
+  #     leaflet() %>% 
+  #     addTiles() %>% 
+  #     addCircleMarkers(lng = ~longitude, 
+  #                      lat = ~latitude)
+  #   # bins <- c(70, 72, 74, 76, 78, 80, 82, 84, 86)
+  #   # pal <- colorBin("Blues", domain = life_exp_map_filtered$value, bins = bins)
+  #   # 
+  #   # life_exp_labels <- sprintf(
+  #   #   "<strong>%s</strong><br/>%g years",
+  #   #   life_exp_map_filtered$local_authority, life_exp_map_filtered$value
+  #   # ) %>%
+  #   #   lapply(htmltools::HTML)
+  #   # 
+  #   # 
+  #   # life_exp_map_filtered %>%
+  #   #   leaflet() %>%
+  #   #   setView(lng = -4.2026, lat = 57.8, zoom = 5.5, options = list()) %>%
+  #   #   addProviderTiles(providers$CartoDB.Positron)%>%
+  #   #   addPolygons(fillColor = ~pal(value),
+  #   #               weight = 0.5,
+  #   #               opacity = 0.9,
+  #   #               color = "black",
+  #   #               fillOpacity = 0.8,
+  #   #               highlightOptions = highlightOptions(color = "white", weight = 2,
+  #   #                                                   bringToFront = TRUE),
+  #   #               label = life_exp_labels,
+  #   #               labelOptions = labelOptions(
+  #   #                 style = list("font-weight" = "normal", padding = "3px 8px"),
+  #   #                 textsize = "15px",
+  #   #                 direction = "auto")) %>%
+  #   #   addLegend(pal = pal, values = ~density, opacity = 0.7, title = NULL,
+  #   #             position = "bottomright")
+  #   
+  # })
   
-  # LIFE EXPECTANCY PLOT DATA FILTER
-  life_exp_plot_filtered <- reactive({
+  # life covid plot_2
+  ##########################################
+  output$life_covid_plot_2 <- renderPlotly({
+    # covid_hospital_activity_age & sex dataset
+    cov_hb_ans <- df_cov_hb_ans %>% 
+      select(-percent_variation) %>% 
+      filter(admission_type != "All") %>% 
+      mutate(week = week(week_ending),
+             year = as.character(year))
     
-    if (input$area_input == "All") {
-      life_exp_area<- unique(life_expectancy_data$local_authority)
-    } else {
-      life_exp_area <- input$area_input
-    }
-    
-    life_expectancy_data %>%
-      filter(local_authority %in% life_exp_area) %>%
-      pivot_wider(names_from = measurement,
-                  values_from = value) %>%
-      rename(lower = "95% Lower Confidence Limit", upper = "95% Upper Confidence Limit", value = "Count") %>%
-      mutate(date_code = as.numeric(str_extract(date_code, "^20[0-9]{2}"))) %>%
-      group_by(date_code, gender) %>%
-      summarise(upper = mean(upper), lower = mean(lower), value = mean(value))
-    
-  })
-  
-  
-  # LIFE EXPECTANCY PLOT
-  output$life_expectancy_plot <- renderPlotly({
-    
-    # load filtered data
-    life_exp_plot_filtered <- life_exp_plot_filtered()
-    
+    age_group_trend_hb_ans <- cov_hb_ans %>% 
+      filter(sex == "All" & age_group != "All ages") %>% 
+      mutate(age_group = factor(age_group, levels = c("Under 5","5 - 14" ,"15 - 44", "45 - 64", "65 - 74", "75 - 84", "85 and over")
+      )) %>%
+      arrange(age_group) %>% 
+      group_by(year, week_ending, age_group) %>% 
+      summarise(number_admissions = sum(number_admissions)) %>% 
+      mutate(
+        moving_avg_2021 = slide_dbl(
+          .x = number_admissions,
+          .f = ~mean(.,na.rm = TRUE),
+          # 2 weeks moving average
+          .before = 2
+        )  )
+    cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+     
+      
     # plotly wrapper for ggplot graph
     ggplotly(
-      ggplot(life_exp_plot_filtered) +
-        aes(x = date_code,
-            y = value,
-            fill = gender
-        ) +
-        # add points and text for hover box
-        geom_point(aes(text = sprintf("Year: %g<br>Life Expectancy: %g<br>
-                                      Gender: %s<br>Upper: %g<br>Lower: %g", 
-                                      date_code, value, gender, upper, lower))) +
-        # add lines and ribbon with confidence intervals
-        geom_ribbon(aes(ymin = lower, ymax = upper, alpha = 0.2)) +
-        geom_line(colour = "black", alpha = 0.5) +
-        # set axis limits
-        scale_y_continuous(breaks = c(70:85), limits = c(70, 85)) +
-        scale_x_continuous(n.breaks = 10) +
-        scale_fill_manual(values=c("aquamarine", "cornflowerblue")) +
-        theme_minimal()+
-        theme(panel.grid.major = element_line(colour = "grey"),
-              plot.background = element_rect(fill = "#ecf0f6"),
-              panel.background = element_rect(fill = "#ecf0f6")),
-      tooltip = c("text")
-    ) %>%
-      # plotly configuration and axis labels
-      config(displayModeBar = FALSE) %>%
-      layout(legend = list(orientation = 'h',
-                           yanchor="bottom",
-                           y=0.99,
-                           xanchor="right",
-                           x=1),
-             xaxis = list(title = "Year"),
-             yaxis = list(title = "Life Expectancy in Years"),
-             title = list(text = paste0(
-               input$area_input, ' - Life Expectancy from 2009-2017',
-               '<br>',
-               '<sup>',
-               'Value shown with 95% Confidence Intervals',
-               '</sup>',
-               '<br>')),
-             # Adjust plot margins so labels are visible
-             margin = list(t = 50, b = 50, l = 50)
-      )
+      # Plot ALL TREND
+      ggplot(age_group_trend_hb_ans) +
+        aes(x = week_ending, y = moving_avg_2021, group = age_group, colour = age_group) +
+        geom_line() +
+        # labs(title = "2 weeks Moving Average Hospital Admission Per Age Group in 2020 - 2021",
+        #      subtitle = "line = 2020-2021 data, dash = 2018-2019 data")+
+        xlab("Time (date)") +
+        ylab("Average Admission Count") +
+        scale_colour_brewer(palette = "Set1") + theme(panel.background = element_rect(fill = 'gray82'))
+      
+      # ggplot(life_exp_plot_filtered) +
+      #   aes(x = date_code,
+      #       y = value,
+      #       fill = gender
+      #   ) +
+      #   # add points and text for hover box
+      #   geom_point(aes(text = sprintf("Year: %g<br>Life Expectancy: %g<br>
+      #                                 Gender: %s<br>Upper: %g<br>Lower: %g", 
+      #                                 date_code, value, gender, upper, lower))) +
+      #   # add lines and ribbon with confidence intervals
+      #   geom_ribbon(aes(ymin = lower, ymax = upper, alpha = 0.2)) +
+      #   geom_line(colour = "black", alpha = 0.5) +
+      #   # set axis limits
+      #   scale_y_continuous(breaks = c(70:85), limits = c(70, 85)) +
+      #   scale_x_continuous(n.breaks = 10) +
+      #   scale_fill_manual(values=c("aquamarine", "cornflowerblue")) +
+      #   theme_minimal()+
+      #   theme(panel.grid.major = element_line(colour = "grey"),
+      #         plot.background = element_rect(fill = "#ecf0f6"),
+      #         panel.background = element_rect(fill = "#ecf0f6")),
+      # tooltip = c("text")
+    )
+    #%>%
+      # # plotly configuration and axis labels
+      # config(displayModeBar = FALSE) %>%
+      # layout(legend = list(orientation = 'h',
+      #                      yanchor="bottom",
+      #                      y=0.99,
+      #                      xanchor="right",
+      #                      x=1),
+      #        xaxis = list(title = "Year"),
+      #        yaxis = list(title = "Life Expectancy in Years"),
+      #        title = list(text = paste0(
+      #          input$area_input, ' - Life Expectancy from 2009-2017',
+      #          '<br>',
+      #          '<sup>',
+      #          'Value shown with 95% Confidence Intervals',
+      #          '</sup>',
+      #          '<br>')),
+      #        # Adjust plot margins so labels are visible
+      #        margin = list(t = 50, b = 50, l = 50)
+      # )
+  })
+  
+  
+  ######################
+  # LIFE Covid PLOT_1
+  output$life_covid_plot_1 <- renderPlotly({
+    
+    # load filtered data
+    #life_exp_plot_filtered <- life_exp_plot_filtered()
+    
+    # covid_hospital_activity_age & sex dataset
+    cov_hb_ans <- df_cov_hb_ans %>% 
+      select(-percent_variation) %>% 
+      filter(admission_type != "All") %>% 
+      mutate(week = week(week_ending),
+             year = as.character(year))
+    
+    # For all trend, maybe a slider
+    # ALL GENERAL TREND, SEX = ALL, AGE = ALL
+    all_trend_hb_ans <- cov_hb_ans %>% 
+      filter(age_group == "All ages" & sex == "All") %>% 
+      group_by(year, week_ending, admission_type) %>% 
+      summarise(number_admissions = sum(number_admissions),
+                average20182019  = sum(average20182019)) %>% 
+      mutate(
+        moving_avg_2021 = slide_dbl(
+          .x = number_admissions,
+          .f = ~mean(.,na.rm = TRUE),
+          # 2 weeks moving average
+          .before = 2
+        )  ) %>% 
+      mutate(
+        moving_avg_1819 = slide_dbl(
+          .x = average20182019,
+          .f = ~mean(.,na.rm = TRUE),
+          # 2 weeks moving average = 7
+          .before = 2
+        )  )
+    # plotly wrapper for ggplot graph
+    ggplotly(
+      # Plot ALL TREND
+        ggplot(all_trend_hb_ans) +
+        geom_line(aes(x = week_ending, y = moving_avg_2021, colour = admission_type)) +
+        geom_line(aes(x = week_ending, y = moving_avg_1819, colour = admission_type), linetype = "dashed") +
+        # labs(title = "2 weeks Moving Average Hospital Admission",
+        #      subtitle = "line = 2020-2021 data, dash = 2018-2019 data") +
+        xlab("Time (date)") +
+        ylab("Average Admission Count")
+      # ggplot(life_exp_plot_filtered) +
+      #   aes(x = date_code,
+      #       y = value,
+      #       fill = gender
+      #   ) +
+      #   # add points and text for hover box
+      #   geom_point(aes(text = sprintf("Year: %g<br>Life Expectancy: %g<br>
+      #                                 Gender: %s<br>Upper: %g<br>Lower: %g", 
+      #                                 date_code, value, gender, upper, lower))) +
+      #   # add lines and ribbon with confidence intervals
+      #   geom_ribbon(aes(ymin = lower, ymax = upper, alpha = 0.2)) +
+      #   geom_line(colour = "black", alpha = 0.5) +
+      #   # set axis limits
+      #   scale_y_continuous(breaks = c(70:85), limits = c(70, 85)) +
+      #   scale_x_continuous(n.breaks = 10) +
+      #   scale_fill_manual(values=c("aquamarine", "cornflowerblue")) +
+      #   theme_minimal()+
+      #   theme(panel.grid.major = element_line(colour = "grey"),
+      #         plot.background = element_rect(fill = "#ecf0f6"),
+      #         panel.background = element_rect(fill = "#ecf0f6")),
+      # tooltip = c("text")
+    )
+    #  %>%
+    #   # plotly configuration and axis labels
+    #   config(displayModeBar = FALSE) %>%
+    #   layout(legend = list(orientation = 'h',
+    #                        yanchor="bottom",
+    #                        y=0.99,
+    #                        xanchor="right",
+    #                        x=1),
+    #          xaxis = list(title = "Year"),
+    #          yaxis = list(title = "Life Expectancy in Years"),
+    #          title = list(text = paste0(
+    #            input$area_input, ' - Life Expectancy from 2009-2017',
+    #            '<br>',
+    #            '<sup>',
+    #            'Value shown with 95% Confidence Intervals',
+    #            '</sup>',
+    #            '<br>')),
+    #          # Adjust plot margins so labels are visible
+    #          margin = list(t = 50, b = 50, l = 50)
+    #   )
   })
   
   
@@ -401,7 +506,117 @@ server <- function(input, output, session) {
       # Convert to shape data from data frame
       st_as_sf()
   })
+ ################### ------------------------------------------------------------
+ # General MAP OUTPUT
+ output$general_map <- renderLeaflet({
+
+   df_hospital_location %>%
+     leaflet() %>%
+     addTiles() %>%
+     addCircleMarkers(lng = ~longitude,
+                      lat = ~latitude)
+
+   #drugs_map_data <- drugs_map_data()
+
+   # Labels variable for leaflet plot
+   # drugs_map_labels <- sprintf(
+   #   "<strong>%s</strong><br/>%g deaths",
+   #   drugs_map_data$council_area,
+   #   drugs_map_data$num_deaths) %>%
+   #   lapply(htmltools::HTML)
+
+   # if (input$drug_map_year == "All" & input$drug_map_name == "All drug-related deaths"){
+   #   drugs_map_bins <- c(0, 50, 100, 200, 500, 1000, 2000, Inf)
+   # } else {
+   #   drugs_map_bins <- c(0, 5, 15, 30, 50, 100, 250, Inf)
+   # }
+   #
+   # pal <- colorBin("Purples", domain = drugs_map_data$num_deaths, bins = drugs_map_bins)
+   #
+   #
+   # Initialise plot
+   # drugs_map_data %>%
+   #   leaflet() %>%
+   #   setView(lng = -4.2026, lat = 57.8, zoom = 6, options = list()) %>%
+   #   addProviderTiles(providers$CartoDB.Positron) %>%
+   #   addPolygons(fillColor = ~pal(num_deaths),
+   #               weight = 0.75,
+   #               opacity = 1,
+   #               color = "black",
+   #               dashArray = "2",
+   #               fillOpacity = 0.9,
+   #               highlightOptions = highlightOptions(color = "white", weight = 2,
+   #                                                   bringToFront = TRUE),
+   #               label = drugs_map_labels,
+   #               labelOptions = labelOptions(
+   #                 style = list("font-weight" = "normal", padding = "3px 8px"),
+   #                 textsize = "15px",
+   #                 direction = "auto")) %>%
+   #   addLegend(pal = pal, values = ~density, opacity = 0.7, title = NULL,
+   #             position = "bottomright")
+   #
+ })
   
+  # general PLOT OUTPUT
+  output$general_plot <- renderPlotly({
+    
+    # min_year <- drug_plot_data() %>%
+    #   slice_min(year) %>%
+    #   pull(year)
+    # 
+    # max_year <- drug_plot_data() %>%
+    #   slice_max(year) %>%
+    #   pull(year)
+    
+    
+    ggplotly(
+      hospital_activty_dep  %>% 
+        mutate(quarter = case_when(
+          quarter == "1" ~ "Winter",
+          quarter == "2"  ~ "Spring",
+          quarter == "3" ~ "Summer",
+          quarter == "4"  ~ "Autumn"
+          
+        )) %>% 
+        group_by(year,quarter) %>% 
+        summarise(average_length_of_stay = mean(length_of_stay)) %>% 
+        ggplot() +
+        aes(x = year, y = average_length_of_stay, group = quarter, color = quarter) +
+        geom_point() +
+        geom_line() +
+        labs(
+          x = "Winter",
+          y = "average length of stay"
+        )+
+      # drug_plot_data() %>%
+      #   ggplot() +
+      #   aes(x = year, y = num_deaths) +
+      #   geom_line(colour = "#605ca8", alpha = 0.75, size = 1.5) +
+      #   geom_point(aes(text=sprintf("Year: %g<br>Deaths: %g", year, num_deaths)),
+      #              colour = "black", size = 2, alpha = 0.9) +
+      #   scale_x_continuous(breaks = c(min_year:max_year)) +
+      #   scale_y_continuous(n.breaks = 8) +
+        theme_minimal() +
+        theme(panel.grid.major = element_line(colour = "grey"),
+              plot.background = element_rect(fill = "#ecf0f6"),
+              panel.background = element_rect(fill = "#ecf0f6")),
+      tooltip = c("text")
+    ) %>%
+      config(displayModeBar = FALSE) %>%
+      layout(xaxis = list(title = "Year"),
+             yaxis = list(title = "Number of ----"),
+             title = list(text = paste0(
+               'Number of  in ',
+               '<br>',
+               '<sup>',
+               "--",
+               '</sup>',
+               '<br>')),
+             margin = list(t = 50, b = 50, l = 50) # to fully display the x and y axis labels
+      )
+  })
+  
+  ######################------------------------------------------------------------
   
   # DRUG MAP OUTPUT
   output$drug_map <- renderLeaflet({
