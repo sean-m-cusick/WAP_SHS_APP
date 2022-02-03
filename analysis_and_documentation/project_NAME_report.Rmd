@@ -38,7 +38,7 @@ In the Kick-Off meeting, each member discussed their personal goals in regards t
   *LOREM IPSUM.*  
 
 * **Lucy Burns** -  
-  *LOREM IPSUM.*  
+  *""I really wanted to explore the mapping systems within Leaflet and RStudio. I wanted to reinforce all of my learnings over the past seven weeks and improve my coding and visualising skills. I don’t think I have achieved these and have found this week frustrating - mostly at my own inexperience and problematic datasets. It has however not all been negative with a sharp learning curve for me, and I think, my team."*  
 
 * **Seàn M. Cusick** -  
   *planned to solidify his experience in Project Management by incorporating his knowledge in leading Event and Technical Projects, into leading a Software based project. Additionally, to improve his working experience with spatial visualisations. *
@@ -339,9 +339,9 @@ The tabs below display the tools selected and utilised for the duration of this 
   
 ***  
 
-# Data Set Details  {.tabset}
+# Data Set Details  
 
-## Data Set Selection
+## Data Set Selection {.tabset}
 ### How did you gather and synthesise requirements for the project?
 
 We synthesised the information given in the brief by ...
@@ -352,21 +352,28 @@ We prioritised ...
 
 We used the dataset on ... to answer ... and because it was ...
 
-## Quality & Biases
+## Quality & Biases {.tabset}
 ### Data Quality 
 
 including a brief summary of data cleaning and transformations
 
 According to the About tab on the dataset page/dedicated page online, the data quality ...
 
+### Challenges  
+The deprivation data was confusing to use. Initially we thought that it would give us a good indicator of who was being admitted into hospital. What it seemed to reveal, however, was a ranking for all patients who were entering/being admitted to hospital so it was not possible to compare or track the rates by SIMD (Scottish Index of Multiple Deprivation) as roughly 20% of the people in the hospitals were allocated to each of the quintiles. Deeper analysis of the SIMD could possibly provide some interesting analysis but in the short time scale we had we devised to drop the data set.
+The bed capacity dataset was incomplete. It looked like it would be a good statistic to use to look at how full the hospitals are. On further investigation, however, we noticed that the data was only for a couple of hospitals across two of the 13 Health Boards in Scotland.
+
 ### Potential Biases
 The dataset may/may not be biased because ...
 
-## Data Manipulation
+
+## Data Manipulation {.tabset}
 ### Data Cleaning
 To clean the datasets we ...
 
 ### Data Wrangling
+
+
 
 ## How is the data stored and structured
 
