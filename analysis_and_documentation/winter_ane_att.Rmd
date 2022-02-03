@@ -10,6 +10,8 @@ library(stringr)
 library(rgdal)
 library(here)
 library(broom)
+library(slider)
+library(lubridate)
 ```
 
 ```{r}
@@ -19,12 +21,6 @@ ane_weekly_full <- read_csv(here("clean_data/df_ane_hb_ans.csv"))
 ```{r}
 ane_weekly <- ane_weekly_full %>% 
   filter(sex == "All" & age_group == "All ages")
-```
-
-```{r}
-ane_weekly %>% 
-  group_by(hb) %>% 
-  summarise(count = n())
 ```
 
 ```{r}
@@ -65,23 +61,46 @@ ane_weekly_trend <- ane_weekly %>%
       .f = ~mean(.,na.rm = TRUE),
 # 2 weeks moving average
       .before = 2
-    )  )
-ane_weekly_trend %>% 
+    )  ) %>% 
+  # Mutate back to quarter
+  # Adjust Season
+  mutate(quarter = quarter(week_ending),
+         season = case_when(
+           quarter == 1 ~ "winter",
+           quarter == 2 ~ "other",
+           quarter == 3 ~ "other",
+           quarter == 4 ~ "other"
+         )) 
+         ane_weekly_trend %>% 
   ggplot()+
-  aes(x = week_ending, y = moving_avg, group = hb_name, colour = hb_name)+
-  geom_line()+
+  geom_line(  aes(x = week_ending, y = moving_avg, group = hb_name, colour = hb_name))+
+  geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = -Inf, ymax = Inf, fill = factor(season == "winter")), alpha = .3, show.legend = TRUE) +
+    scale_fill_manual(labels = c("Winter", "other"), values = alpha(c("transparent", "steelblue"), .1))+
+  geom_vline(xintercept = as.Date(ymd("2020-03-16")), linetype= 2, color = "black", size=0.75)+
+  
+  annotate(geom = "text",
+             label = c("Lockdown"),
+             x = c( as.Date(ymd("2020-03-16"))),
+             y = c(4300),
+             vjust = 1,
+           hjust = -.05) +
+  
   labs(title = "2 Weeks Moving Average Hospital A&E attendance",
        subtitle = "by Health Board\n",
-       colour = "Health Board\n") +
+       colour = " Health Board\n") +
   xlab("Time (date)")+
   ylab("Average Attendance Count") +
- # scale_color_brewer(palette = "Paired") +
-  theme(panel.background = element_rect(fill = 'gray82')) +
-  theme(
-    legend.position = "bottom",
-    legend.justification = c("right", "top"),
-    legend.box.just = "right",
-    legend.margin = margin(6, 6, 6, 6),
-    legend.text = element_text(colour="slategray", size=8)
+  # choose grid
+      scale_x_date(date_breaks = "4 months",
+                 date_minor_breaks = "1 months",
+                 date_labels = "%b-%y") +
+  theme(        legend.position = "bottom",
+        legend.justification = c("right", "top"),
+        legend.box.just = "right",
+        legend.margin = margin(6, 6, 6, 6),
+        legend.text = element_text(colour="slategray", size=8),
+        panel.background = element_rect(fill = 'transparent'),
+        panel.grid.minor = element_line(colour = 'lightgrey'),
+        panel.grid.major = element_line(colour = 'lightgrey')
     )
 ```
