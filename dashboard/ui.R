@@ -134,8 +134,8 @@ ui <- dashboardPage(
                                   )
                                 ),
                                 
-                                tabsetPanel(
-                                  tabPanel("Overview",
+                                #tabsetPanel(
+                                #  tabPanel("Overview",
                                            br(),
                                            fluidRow(
                                              column(width = 10, offset = 1, align = "center", style = "border: 1px dashed black;",
@@ -186,12 +186,12 @@ ui <- dashboardPage(
                                            ),
                                            
                                            
-                                  ),
+                                #  ),
                                   
                                   
                                
       
-                                )
+                               # )
                         ),
                         
                         
