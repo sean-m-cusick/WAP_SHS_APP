@@ -47,18 +47,17 @@ In the Kick-Off meeting, each member discussed their personal goals in regards t
 ***  
 
 ## Roles & Responsibilities
-<!-- additional supported WPs To be completed on Thursday -->
 * **Aboubakar Hameed** -  
-  responsible for the Minimum Viable Product (MVP) - summarised within Work Package (WP) `WP2.3 - Shiny App MVP`; furthermore, supported *<spatial visualisations>, <data cleaning>,...* 
+  responsible for the Minimum Viable Product (MVP) - summarised within Work Package (WP) `WP2.3 - Shiny App MVP`; furthermore, supported `WP2.1.3 - Data Wrangling`, and `WP2.3.2 - Backend Code`.  
 
 * **Kang Hin Lee** -  
-  responsible for the Data Sets - summarised in `WP2.1 - Data Analysis`; furthermore, supported *<spatial visualisations>, <data cleaning>,... *
+  responsible for the Data Sets - summarised in `WP2.1 - Data Analysis`; furthermore, supported `WP2.1.3 - Data Wrangling`, and `WP2.3.2 - Backend Code`.
 
 * **Lucy Burns** -  
-  responsible for the visualisations - summarised within WP `WP2.2 - Data Visualisation`; furthermore, supported *<spatial visualisations>, <data cleaning>,...* 
+  responsible for the visualisations - summarised within WP `WP2.2 - Data Visualisation`; furthermore, supported `WP2.1.3 - Data Wrangling`, `WP3.1.2 - README File`, and `WP3.2 - Presentation` .
 
 * **Seàn M. Cusick** -  
-  responsible for Project Management and Documentation - summarised within WP `WP1 - Project Management` & `WP3 - Documentation`; furthermore, supported *<spatial visualisations>, <data cleaning>,...*  
+  responsible for Project Management and Documentation - summarised within WP `WP1 - Project Management` & `WP3 - Documentation`; furthermore, supported `WP3.1.2 - README File`, and `WP3.2 - Presentation`.
   
 ***  
 
