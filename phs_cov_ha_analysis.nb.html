@@ -272,25 +272,25 @@ indexing df_cov_hb_ans.csv [====================================================
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjb3ZpZF9ob3NwaXRhbF9hY3Rpdml0eV9hZ2UgJiBzZXggZGF0YXNldFxuY292X2hiX2FucyA8LSBkZl9jb3ZfaGJfYW5zICU+JSBcbiAgc2VsZWN0KC1wZXJjZW50X3ZhcmlhdGlvbikgJT4lIFxuICBmaWx0ZXIoYWRtaXNzaW9uX3R5cGUgIT0gXCJBbGxcIikgJT4lIFxuICBtdXRhdGUod2VlayA9IHdlZWsod2Vla19lbmRpbmcpLFxuICAgICAgICAgeWVhciA9IGFzLmNoYXJhY3Rlcih5ZWFyKSlcbiMgRm9yIGFsbCB0cmVuZCwgbWF5YmUgYSBzbGlkZXJcbiMgQUxMIEdFTkVSQUwgVFJFTkQsIFNFWCA9IEFMTCwgQUdFID0gQUxMXG5hbGxfdHJlbmRfaGJfYW5zIDwtIGNvdl9oYl9hbnMgJT4lIFxuICBmaWx0ZXIoYWdlX2dyb3VwID09IFwiQWxsIGFnZXNcIiAmIHNleCA9PSBcIkFsbFwiKSAlPiUgXG4gICAgICBncm91cF9ieSh5ZWFyLCB3ZWVrX2VuZGluZywgYWRtaXNzaW9uX3R5cGUpICU+JSBcbiAgc3VtbWFyaXNlKG51bWJlcl9hZG1pc3Npb25zID0gc3VtKG51bWJlcl9hZG1pc3Npb25zKSxcbiAgICAgICAgICAgIGF2ZXJhZ2UyMDE4MjAxOSAgPSBzdW0oYXZlcmFnZTIwMTgyMDE5KSkgJT4lIFxuICAgIG11dGF0ZShcbiAgICBtb3ZpbmdfYXZnXzIwMjEgPSBzbGlkZV9kYmwoXG4gICAgICAueCA9IG51bWJlcl9hZG1pc3Npb25zLFxuICAgICAgLmYgPSB+bWVhbiguLG5hLnJtID0gVFJVRSksXG4jIDIgd2Vla3MgbW92aW5nIGF2ZXJhZ2VcbiAgICAgIC5iZWZvcmUgPSAyXG4gICAgKSAgKSAlPiUgXG4gICAgICAgICAgbXV0YXRlKFxuICAgIG1vdmluZ19hdmdfMTgxOSA9IHNsaWRlX2RibChcbiAgICAgIC54ID0gYXZlcmFnZTIwMTgyMDE5LFxuICAgICAgLmYgPSB+bWVhbiguLG5hLnJtID0gVFJVRSksXG4jIDIgd2Vla3MgbW92aW5nIGF2ZXJhZ2UgPSA3XG4gICAgICAuYmVmb3JlID0gMlxuICAgICkgICkgJT4lXG4gICMgRmluZCB0aGUgd2ludGVyIHF1YXJ0ZXJcbiAgbXV0YXRlKHF1YXJ0ZXIgPSBxdWFydGVyKHdlZWtfZW5kaW5nKSlcbmBgYCJ9 -->
 <pre class="r"><code># covid_hospital_activity_age &amp; sex dataset
-cov_hb_ans &lt;- df_cov_hb_ans %&gt;% 
-  select(-percent_variation) %&gt;% 
-  filter(admission_type != &quot;All&quot;) %&gt;% 
+cov_hb_ans &lt;- df_cov_hb_ans %&gt;%
+  select(-percent_variation) %&gt;%
+  filter(admission_type != &quot;All&quot;) %&gt;%
   mutate(week = week(week_ending),
          year = as.character(year))
 # For all trend, maybe a slider
 # ALL GENERAL TREND, SEX = ALL, AGE = ALL
-all_trend_hb_ans &lt;- cov_hb_ans %&gt;% 
-  filter(age_group == &quot;All ages&quot; &amp; sex == &quot;All&quot;) %&gt;% 
-      group_by(year, week_ending, admission_type) %&gt;% 
+all_trend_hb_ans &lt;- cov_hb_ans %&gt;%
+  filter(age_group == &quot;All ages&quot; &amp; sex == &quot;All&quot;) %&gt;%
+      group_by(year, week_ending, admission_type) %&gt;%
   summarise(number_admissions = sum(number_admissions),
-            average20182019  = sum(average20182019)) %&gt;% 
+            average20182019  = sum(average20182019)) %&gt;%
     mutate(
     moving_avg_2021 = slide_dbl(
       .x = number_admissions,
       .f = ~mean(.,na.rm = TRUE),
 # 2 weeks moving average
       .before = 2
-    )  ) %&gt;% 
+    )  ) %&gt;%
           mutate(
     moving_avg_1819 = slide_dbl(
       .x = average20182019,
@@ -307,7 +307,7 @@ all_trend_hb_ans &lt;- cov_hb_ans %&gt;%
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueXJuZyA8LSByYW5nZShhbGxfdHJlbmRfaGJfYW5zJG1vdmluZ19hdmdfMjAyMSlcbiMgUGxvdCBBTEwgVFJFTkRcbmFsbF90cmVuZF9oYl9hbnMgJT4lIFxuICBnZ3Bsb3QoKStcbiAgZ2VvbV9saW5lKGFlcyh4ID0gd2Vla19lbmRpbmcsIHkgPSBtb3ZpbmdfYXZnXzIwMjEsIGNvbG91ciA9IGFkbWlzc2lvbl90eXBlKSkrXG4gIGdlb21fbGluZShhZXMoeCA9IHdlZWtfZW5kaW5nLCB5ID0gbW92aW5nX2F2Z18xODE5LCBjb2xvdXIgPSBhZG1pc3Npb25fdHlwZSksIGxpbmV0eXBlID0gXCJkYXNoZWRcIikrXG4gIGxhYnModGl0bGUgPSBcIjIgd2Vla3MgTW92aW5nIEF2ZXJhZ2UgSG9zcGl0YWwgQWRtaXNzaW9uXCIsXG4gICAgICAgc3VidGl0bGUgPSBcImxpbmUgPSAyMDIwLTIwMjEgZGF0YSwgZGFzaCA9IDIwMTgtMjAxOSBkYXRhXCIpK1xuICBnZW9tX3JlY3QoYWVzKHhtaW4gPSB3ZWVrX2VuZGluZywgeG1heCA9IGRwbHlyOjpsZWFkKHdlZWtfZW5kaW5nKSwgeW1pbiA9IC1JbmYsIHltYXggPSBJbmYsIGZpbGwgPSBmYWN0b3IocXVhcnRlciksIHNob3cubGVnZW5kID0gRkFMU0UpLCBhbHBoYSA9IC40KSArXG4gICAgc2NhbGVfZmlsbF9tYW51YWwodmFsdWVzID0gYWxwaGEoYyhcInN0ZWVsYmx1ZVwiLCBcIndoaXRlXCIgLFwid2hpdGVcIiAsXCJ3aGl0ZVwiKSwgLjMpKStcbiAgeGxhYihcIlRpbWUgKGRhdGUpXCIpK1xuICB5bGFiKFwiQXZlcmFnZSBBZG1pc3Npb24gQ291bnRcIilcbmBgYCJ9 -->
 <pre class="r"><code>yrng &lt;- range(all_trend_hb_ans$moving_avg_2021)
 # Plot ALL TREND
-all_trend_hb_ans %&gt;% 
+all_trend_hb_ans %&gt;%
   ggplot()+
   geom_line(aes(x = week_ending, y = moving_avg_2021, colour = admission_type))+
   geom_line(aes(x = week_ending, y = moving_avg_1819, colour = admission_type), linetype = &quot;dashed&quot;)+
@@ -343,12 +343,12 @@ all_trend_hb_ans %&gt;%
 2: In readChar(file, size, TRUE) : truncating string with embedded nuls</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICBmaWx0ZXIoc2V4ID09IFwiQWxsXCIgJiBhZ2VfZ3JvdXAgIT0gXCJBbGwgYWdlc1wiKSAlPiUgXG4gIG11dGF0ZShhZ2VfZ3JvdXAgPSBmYWN0b3IoYWdlX2dyb3VwLCBsZXZlbHMgPSBjKFwiVW5kZXIgNVwiLFwiNSAtIDE0XCIgLFwiMTUgLSA0NFwiLCBcIjQ1IC0gNjRcIiwgXCI2NSAtIDc0XCIsIFwiNzUgLSA4NFwiLCBcIjg1IGFuZCBvdmVyXCIpXG4gICkpICU+JVxuICBhcnJhbmdlKGFnZV9ncm91cCkgJT4lIFxuICAgICAgZ3JvdXBfYnkoeWVhciwgd2Vla19lbmRpbmcsIGFnZV9ncm91cCkgJT4lIFxuICBzdW1tYXJpc2UobnVtYmVyX2FkbWlzc2lvbnMgPSBzdW0obnVtYmVyX2FkbWlzc2lvbnMpKSAlPiUgXG4gICAgbXV0YXRlKFxuICAgIG1vdmluZ19hdmdfMjAyMSA9IHNsaWRlX2RibChcbiAgICAgIC54ID0gbnVtYmVyX2FkbWlzc2lvbnMsXG4gICAgICAuZiA9IH5tZWFuKC4sbmEucm0gPSBUUlVFKSxcbiMgMiB3ZWVrcyBtb3ZpbmcgYXZlcmFnZVxuICAgICAgLmJlZm9yZSA9IDJcbiAgICApICApXG5gYGAifQ== -->
-<pre class="r"><code>  filter(sex == &quot;All&quot; &amp; age_group != &quot;All ages&quot;) %&gt;% 
+<pre class="r"><code>  filter(sex == &quot;All&quot; &amp; age_group != &quot;All ages&quot;) %&gt;%
   mutate(age_group = factor(age_group, levels = c(&quot;Under 5&quot;,&quot;5 - 14&quot; ,&quot;15 - 44&quot;, &quot;45 - 64&quot;, &quot;65 - 74&quot;, &quot;75 - 84&quot;, &quot;85 and over&quot;)
   )) %&gt;%
-  arrange(age_group) %&gt;% 
-      group_by(year, week_ending, age_group) %&gt;% 
-  summarise(number_admissions = sum(number_admissions)) %&gt;% 
+  arrange(age_group) %&gt;%
+      group_by(year, week_ending, age_group) %&gt;%
+  summarise(number_admissions = sum(number_admissions)) %&gt;%
     mutate(
     moving_avg_2021 = slide_dbl(
       .x = number_admissions,
@@ -362,7 +362,7 @@ all_trend_hb_ans %&gt;%
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2JQYWxldHRlIDwtIGMoXCIjOTk5OTk5XCIsIFwiI0U2OUYwMFwiLCBcIiM1NkI0RTlcIiwgXCIjMDA5RTczXCIsIFwiI0YwRTQ0MlwiLCBcIiMwMDcyQjJcIiwgXCIjRDU1RTAwXCIsIFwiI0NDNzlBN1wiKVxuYWdlX2dyb3VwX3RyZW5kX2hiX2FucyAlPiUgXG4gIGdncGxvdCgpK1xuICBhZXMoeCA9IHdlZWtfZW5kaW5nLCB5ID0gbW92aW5nX2F2Z18yMDIxLCBncm91cCA9IGFnZV9ncm91cCwgY29sb3VyID0gYWdlX2dyb3VwKStcbiAgZ2VvbV9saW5lKCkrXG4gIGxhYnModGl0bGUgPSBcIjIgd2Vla3MgTW92aW5nIEF2ZXJhZ2UgSG9zcGl0YWwgQWRtaXNzaW9uIFBlciBBZ2UgR3JvdXAgaW4gMjAyMCAtIDIwMjFcIixcbiAgICAgICBzdWJ0aXRsZSA9IFwibGluZSA9IDIwMjAtMjAyMSBkYXRhLCBkYXNoID0gMjAxOC0yMDE5IGRhdGFcIikrXG4gIHhsYWIoXCJUaW1lIChkYXRlKVwiKStcbiAgeWxhYihcIkF2ZXJhZ2UgQWRtaXNzaW9uIENvdW50XCIpK1xuICBzY2FsZV9jb2xvdXJfYnJld2VyKHBhbGV0dGU9XCJTZXQxXCIpKyB0aGVtZShwYW5lbC5iYWNrZ3JvdW5kID0gZWxlbWVudF9yZWN0KGZpbGwgPSAnZ3JheTgyJykpXG5gYGAifQ== -->
 <pre class="r"><code>cbPalette &lt;- c(&quot;#999999&quot;, &quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;, &quot;#F0E442&quot;, &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;)
-age_group_trend_hb_ans %&gt;% 
+age_group_trend_hb_ans %&gt;%
   ggplot()+
   aes(x = week_ending, y = moving_avg_2021, group = age_group, colour = age_group)+
   geom_line()+
@@ -408,22 +408,22 @@ indexing df_day_trend_loc.csv [=================================================
 [36mℹ[39m Specify the column types or set [38;5;251m[48;5;235m[38;5;251m[48;5;235m`show_col_types = FALSE`[48;5;235m[38;5;251m[49m[39m to quiet this message.</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2VuZXJhbF9zdGF0IDwtIGRmX2dlbmVyYWxfc3RhdCAlPiUgXG4gIHNlbGVjdChkYXRlLCBjYSwgY2FfbmFtZSwgZGFpbHlfcG9zaXRpdmUsIGN1bXVsYXRpdmVfcG9zaXRpdmUsIGRhaWx5X2RlYXRocywgY3VtdWxhdGl2ZV9kZWF0aHMpICU+JSBcbiAgYXJyYW5nZShkYXRlKSAlPiUgXG4gIGdyb3VwX2J5KGNhKSAlPiUgXG4gIHNsaWNlX3RhaWwobiAgPSAxKVxuYWxsX2dlbmVyYWxfc3RhdCA8LSBnZW5lcmFsX3N0YXQgJT4lIFxuICB1bmdyb3VwKCkgJT4lIFxuICBncm91cF9ieShkYXRlKSAlPiUgXG4gIHN1bW1hcmlzZShkYWlseV9wb3NpdGl2ZSA9IHN1bShkYWlseV9wb3NpdGl2ZSksXG4gICAgICAgICAgICBjdW11bGF0aXZlX3Bvc2l0aXZlID0gc3VtKGN1bXVsYXRpdmVfcG9zaXRpdmUpLFxuICAgICAgICAgICAgZGFpbHlfZGVhdGhzID0gc3VtKGRhaWx5X2RlYXRocyksXG4gICAgICAgICAgICBjdW11bGF0aXZlX2RlYXRocyA9IHN1bShjdW11bGF0aXZlX2RlYXRocykpXG4jc3BlY2lmaWMgc3RhdCBwZXIgbG9jYWwgYXV0aG9yaXR5XG5zcGVjaWZpY19nZW5lcmFsX3N0YXQgPC0gZ2VuZXJhbF9zdGF0ICU+JSBcbiAgdW5ncm91cCgpICU+JSBcbiAgZ3JvdXBfYnkoZGF0ZSwgY2FfbmFtZSkgJT4lIFxuICBmaWx0ZXIgKGNhX25hbWUgPT0gXCJNaWRsb3RoaWFuXCIpICU+JSAgIyBGSUxURVIgQlkgTE9DQUwgQVVUSE9SSVRZXG4gIHN1bW1hcmlzZShkYWlseV9wb3NpdGl2ZSA9IHN1bShkYWlseV9wb3NpdGl2ZSksXG4gICAgICAgICAgICBjdW11bGF0aXZlX3Bvc2l0aXZlID0gc3VtKGN1bXVsYXRpdmVfcG9zaXRpdmUpLFxuICAgICAgICAgICAgZGFpbHlfZGVhdGhzID0gc3VtKGRhaWx5X2RlYXRocyksXG4gICAgICAgICAgICBjdW11bGF0aXZlX2RlYXRocyA9IHN1bShjdW11bGF0aXZlX2RlYXRocykpXG5gYGAifQ== -->
-<pre class="r"><code>general_stat &lt;- df_general_stat %&gt;% 
-  select(date, ca, ca_name, daily_positive, cumulative_positive, daily_deaths, cumulative_deaths) %&gt;% 
-  arrange(date) %&gt;% 
-  group_by(ca) %&gt;% 
+<pre class="r"><code>general_stat &lt;- df_general_stat %&gt;%
+  select(date, ca, ca_name, daily_positive, cumulative_positive, daily_deaths, cumulative_deaths) %&gt;%
+  arrange(date) %&gt;%
+  group_by(ca) %&gt;%
   slice_tail(n  = 1)
-all_general_stat &lt;- general_stat %&gt;% 
-  ungroup() %&gt;% 
-  group_by(date) %&gt;% 
+all_general_stat &lt;- general_stat %&gt;%
+  ungroup() %&gt;%
+  group_by(date) %&gt;%
   summarise(daily_positive = sum(daily_positive),
             cumulative_positive = sum(cumulative_positive),
             daily_deaths = sum(daily_deaths),
             cumulative_deaths = sum(cumulative_deaths))
 #specific stat per local authority
-specific_general_stat &lt;- general_stat %&gt;% 
-  ungroup() %&gt;% 
-  group_by(date, ca_name) %&gt;% 
+specific_general_stat &lt;- general_stat %&gt;%
+  ungroup() %&gt;%
+  group_by(date, ca_name) %&gt;%
   filter (ca_name == &quot;Midlothian&quot;) %&gt;%  # FILTER BY LOCAL AUTHORITY
   summarise(daily_positive = sum(daily_positive),
             cumulative_positive = sum(cumulative_positive),
@@ -459,13 +459,13 @@ all_general_stat</code></pre>
 <pre class="r"><code>ca_name_list</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBDbGFja21hbm5hbnNoaXJlICAgICAgRHVtZnJpZXMgYW5kIEdhbGxvd2F5IEVhc3QgQXlyc2hpcmUgICAgICAgICBFYXN0IExvdGhpYW4gICAgICAgICAgRWFzdCBSZW5mcmV3c2hpcmUgICAgXG4gWzZdIE5hIGgtRWlsZWFuYW4gU2lhciAgICBGYWxraXJrICAgICAgICAgICAgICAgSGlnaGxhbmQgICAgICAgICAgICAgIEludmVyY2x5ZGUgICAgICAgICAgICBNaWRsb3RoaWFuICAgICAgICAgICBcblsxMV0gTW9yYXkgICAgICAgICAgICAgICAgIE5vcnRoIEF5cnNoaXJlICAgICAgICBPcmtuZXkgSXNsYW5kcyAgICAgICAgU2NvdHRpc2ggQm9yZGVycyAgICAgIFNoZXRsYW5kIElzbGFuZHMgICAgIFxuWzE2XSBTb3V0aCBBeXJzaGlyZSAgICAgICAgU291dGggTGFuYXJrc2hpcmUgICAgIFN0aXJsaW5nICAgICAgICAgICAgICBBYmVyZGVlbiBDaXR5ICAgICAgICAgQWJlcmRlZW5zaGlyZSAgICAgICAgXG5bMjFdIEFyZ3lsbCBhbmQgQnV0ZSAgICAgICBDaXR5IG9mIEVkaW5idXJnaCAgICAgUmVuZnJld3NoaXJlICAgICAgICAgIFdlc3QgRHVuYmFydG9uc2hpcmUgICBXZXN0IExvdGhpYW4gICAgICAgICBcblsyNl0gQW5ndXMgICAgICAgICAgICAgICAgIER1bmRlZSBDaXR5ICAgICAgICAgICBFYXN0IER1bmJhcnRvbnNoaXJlICAgRmlmZSAgICAgICAgICAgICAgICAgIFBlcnRoIGFuZCBLaW5yb3NzICAgIFxuWzMxXSBHbGFzZ293IENpdHkgICAgICAgICAgTm9ydGggTGFuYXJrc2hpcmUgICAgXG4zMiBMZXZlbHM6IEFiZXJkZWVuIENpdHkgQWJlcmRlZW5zaGlyZSBBbmd1cyBBcmd5bGwgYW5kIEJ1dGUgQ2l0eSBvZiBFZGluYnVyZ2ggLi4uIFdlc3QgTG90aGlhblxuIn0= -->
-<pre><code> [1] Clackmannanshire      Dumfries and Galloway East Ayrshire         East Lothian          East Renfrewshire    
- [6] Na h-Eileanan Siar    Falkirk               Highland              Inverclyde            Midlothian           
-[11] Moray                 North Ayrshire        Orkney Islands        Scottish Borders      Shetland Islands     
-[16] South Ayrshire        South Lanarkshire     Stirling              Aberdeen City         Aberdeenshire        
-[21] Argyll and Bute       City of Edinburgh     Renfrewshire          West Dunbartonshire   West Lothian         
-[26] Angus                 Dundee City           East Dunbartonshire   Fife                  Perth and Kinross    
-[31] Glasgow City          North Lanarkshire    
+<pre><code> [1] Clackmannanshire      Dumfries and Galloway East Ayrshire         East Lothian          East Renfrewshire
+ [6] Na h-Eileanan Siar    Falkirk               Highland              Inverclyde            Midlothian
+[11] Moray                 North Ayrshire        Orkney Islands        Scottish Borders      Shetland Islands
+[16] South Ayrshire        South Lanarkshire     Stirling              Aberdeen City         Aberdeenshire
+[21] Argyll and Bute       City of Edinburgh     Renfrewshire          West Dunbartonshire   West Lothian
+[26] Angus                 Dundee City           East Dunbartonshire   Fife                  Perth and Kinross
+[31] Glasgow City          North Lanarkshire
 32 Levels: Aberdeen City Aberdeenshire Angus Argyll and Bute City of Edinburgh ... West Lothian</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
@@ -475,19 +475,19 @@ all_general_stat</code></pre>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyB0ZXN0IDwtIGRmX2Nvdl9oYV9hbnMgJT4lIFxuIyAgIGZpbHRlcighZ3JlcGwoXCJBbGxcIixhZG1pc3Npb25fdHlwZSkpXG4jIGRheV9jYXNlIDwtIGRheV9jdW1fY2FzZSAlPiVcbiMgICBtdXRhdGUoeWVhciA9IHllYXIoZGF0ZSksXG4jICAgICAgICAgIG1vbnRoID0gbW9udGgoZGF0ZSksXG4jICAgICAgICAgICAgd2VlayA9IHdlZWsoZGF0ZSkpXG4jIFxuIyBjb3ZfY2FzZV9yYXRlIDwtIGRheV9jYXNlICU+JVxuIyAgIGdyb3VwX2J5KHllYXIsbW9udGgpICU+JVxuIyAgIG11dGF0ZShyYXRlID0gZGFpbHlfY2FzZXMgLSBsYWcoZGFpbHlfY2FzZXMpKSAlPiVcbiMgICBzbGljZSgtMSlcbiMgXG4jIFxuIyBjb3ZfY2FzZV9yYXRlICU+JVxuIyAgIG11dGF0ZShtb250aCA9IGZhY3Rvcihtb250aCkpICU+JVxuIyAgIGdncGxvdCgpK1xuIyAgIGFlcyh4ID0gZGF0ZSwgeSA9IGRhaWx5X2Nhc2VzICkrXG4jICAgZ2VvbV9iYXIoc3RhdCA9IFwiaWRlbnRpdHlcIikrXG4jICAgbGFicyhcbiMgICAgIHRpdGxlID0gXCJEYWlseSBDb3ZpZCBDYXNlcyBQZXIgbW9udGhcIlxuIyAgIClcbiMgXG4jIFxuIyBjb3ZfY2FzZV9zZWFzb24gPC0gZGF5X2Nhc2UgJT4lIFxuIyAgIG11dGF0ZShzZWFzb24gPSBjYXNlX3doZW4oXG4jICAgICBtb250aCA9PSAxICYgbW9udGggPT0gMiAmIG1vbnRoID09IDEyIH4gXCJ3aW50ZXJcIixcbiMgICAgIG1vbnRoID09IDMgJiBtb250aCA9PSA0ICYgbW9udGggPT0gNSB+IFwic3ByaW5nXCIsICAgIFxuIyAgICAgbW9udGggPT0gNiAmIG1vbnRoID09IDcgJiBtb250aCA9PSA4IH4gXCJzdW1tZXJcIixcbiMgICAgIG1vbnRoID09IDkgJiBtb250aCA9PSAxMCAmIG1vbnRoID09IDExIH4gXCJhdXR1bW5cIixcbiMgICAgICkpXG5cblxuIyBkZl9ob3NwaXRhbF9sb2NhdGlvbiA8LSByZWFkX2NzdihcImNsZWFuX2RhdGEvZGZfaG9zcGl0YWxfbG9jYXRpb24uY3N2XCIpXG4jIGRmX2RheV90cmVuZF9oYiA8LSByZWFkX2NzdihcImNsZWFuX2RhdGEvZGZfZGF5X3RyZW5kX2hiLmNzdlwiKVxuIyBcbiMgaG9zcGl0YWxfbG9jYXRpb25fZnVuYyA8LSBmdW5jdGlvbihkZiwga2V5X2NvbCl7XG4jICAgICAgICAgICAgIGRmIDwtIGRmICU+JSBcbiMgICAgICAgICAgICAgIyBTZWxlY3QgbG9jYXRpb24gJiBoYiBhcyBmb3JnZWluIGtleXNcbiMgICAgICAgICAgICAgIyBKb2luIGxvY2F0aW9uX25hbWUsIGxvbmdpdHVkZSAmIGxhdGl0dWRlIHRvIHRoZSBtYWluIGRhdGFmcmFtZVxuIyAgICAgICAgICAgICBsZWZ0X2pvaW4oZGZfaG9zcGl0YWxfbG9jYXRpb24gJT4lIHNlbGVjdChrZXlfY29sLCBsb2NhdGlvbl9uYW1lLCBsb25naXR1ZGUsIGxhdGl0dWRlKSxcbiMgICAgICAgICAgICAgYnkgPSBjKGtleV9jb2wpLFxuIyAgICAgICAgICAgICBhbGwueCA9IFRSVUUpXG4jICAgICAgICAgICAgIFxuIyAgICAgICAgICAgICByZXR1cm4oZGYpXG4jIH1cbiMgXG4jIFxuIyBcbiMgZGF5X3RyZW5kX2hiIDwtIGhvc3BpdGFsX2xvY2F0aW9uX2Z1bmMoZGZfZGF5X3RyZW5kX2hiLCBcImhiXCIpICU+JVxuIyAgIGdyb3VwX2J5KGRhdGUsIGhiLCBoYl9uYW1lKSAlPiUgXG4jICAgc3VtbWFyaXNlKGRhaWx5X3Bvc2l0aXZlID0gc3VtKGRhaWx5X3Bvc2l0aXZlKSlcbiMgXG4jIGRheV90cmVuZF9oYiAlPiUgXG4jICAgZ2dwbG90KCkrXG4jICAgYWVzKHggPSBkYXRlLCB5ID0gZGFpbHlfcG9zaXRpdmUpK1xuIyAgIGdlb21fYmFyKHN0YXQgPSBcImlkZW50aXR5XCIpK1xuIyAgICAgbGFicyhcbiMgICAgIHRpdGxlID0gXCJEYWlseSBUcmVuZCBDYXNlc1wiXG4jICAgKVxuIyAgIFxuIyBkYXlfdHJlbmRfaGIgJT4lIFxuIyAgIGZpbHRlcihoYl9uYW1lID09IFwiTkhTIEJvcmRlcnNcIikgJT4lIFxuIyAgIGdncGxvdCgpK1xuIyAgIGFlcyh4ID0gZGF0ZSwgeSA9IGRhaWx5X3Bvc2l0aXZlKStcbiMgICBnZW9tX2JhcihzdGF0ID0gXCJpZGVudGl0eVwiKStcbiMgICBsYWJzKFxuIyAgICAgdGl0bGUgPSBcIkRhaWx5IFRyZW5kIENhc2VzIFBlciBIb3NwaXRhbFwiXG4jICAgKVxuIyBcblxuIyBTdWdnZXN0aW9uIENhbiBkbyBhIEhvc3BpdGFsIEZpbHRlclxuIyBEbyBhIGluZmVjdGlvbihjb3VudCksIGRlYXRoIGNvdW50LCAgaW5mZWN0aW9uIHJhdGUsIGRlYXRoIHJhdGVcblxuYGBgIn0= -->
-<pre class="r"><code># test &lt;- df_cov_ha_ans %&gt;% 
+<pre class="r"><code># test &lt;- df_cov_ha_ans %&gt;%
 #   filter(!grepl(&quot;All&quot;,admission_type))
 # day_case &lt;- day_cum_case %&gt;%
 #   mutate(year = year(date),
 #          month = month(date),
 #            week = week(date))
-# 
+#
 # cov_case_rate &lt;- day_case %&gt;%
 #   group_by(year,month) %&gt;%
 #   mutate(rate = daily_cases - lag(daily_cases)) %&gt;%
 #   slice(-1)
-# 
-# 
+#
+#
 # cov_case_rate %&gt;%
 #   mutate(month = factor(month)) %&gt;%
 #   ggplot()+
@@ -496,12 +496,12 @@ all_general_stat</code></pre>
 #   labs(
 #     title = &quot;Daily Covid Cases Per month&quot;
 #   )
-# 
-# 
-# cov_case_season &lt;- day_case %&gt;% 
+#
+#
+# cov_case_season &lt;- day_case %&gt;%
 #   mutate(season = case_when(
 #     month == 1 &amp; month == 2 &amp; month == 12 ~ &quot;winter&quot;,
-#     month == 3 &amp; month == 4 &amp; month == 5 ~ &quot;spring&quot;,    
+#     month == 3 &amp; month == 4 &amp; month == 5 ~ &quot;spring&quot;,
 #     month == 6 &amp; month == 7 &amp; month == 8 ~ &quot;summer&quot;,
 #     month == 9 &amp; month == 10 &amp; month == 11 ~ &quot;autumn&quot;,
 #     ))
@@ -509,41 +509,41 @@ all_general_stat</code></pre>
 
 # df_hospital_location &lt;- read_csv(&quot;clean_data/df_hospital_location.csv&quot;)
 # df_day_trend_hb &lt;- read_csv(&quot;clean_data/df_day_trend_hb.csv&quot;)
-# 
+#
 # hospital_location_func &lt;- function(df, key_col){
-#             df &lt;- df %&gt;% 
+#             df &lt;- df %&gt;%
 #             # Select location &amp; hb as forgein keys
 #             # Join location_name, longitude &amp; latitude to the main dataframe
 #             left_join(df_hospital_location %&gt;% select(key_col, location_name, longitude, latitude),
 #             by = c(key_col),
 #             all.x = TRUE)
-#             
+#
 #             return(df)
 # }
-# 
-# 
-# 
+#
+#
+#
 # day_trend_hb &lt;- hospital_location_func(df_day_trend_hb, &quot;hb&quot;) %&gt;%
-#   group_by(date, hb, hb_name) %&gt;% 
+#   group_by(date, hb, hb_name) %&gt;%
 #   summarise(daily_positive = sum(daily_positive))
-# 
-# day_trend_hb %&gt;% 
+#
+# day_trend_hb %&gt;%
 #   ggplot()+
 #   aes(x = date, y = daily_positive)+
 #   geom_bar(stat = &quot;identity&quot;)+
 #     labs(
 #     title = &quot;Daily Trend Cases&quot;
 #   )
-#   
-# day_trend_hb %&gt;% 
-#   filter(hb_name == &quot;NHS Borders&quot;) %&gt;% 
+#
+# day_trend_hb %&gt;%
+#   filter(hb_name == &quot;NHS Borders&quot;) %&gt;%
 #   ggplot()+
 #   aes(x = date, y = daily_positive)+
 #   geom_bar(stat = &quot;identity&quot;)+
 #   labs(
 #     title = &quot;Daily Trend Cases Per Hospital&quot;
 #   )
-# 
+#
 
 # Suggestion Can do a Hospital Filter
 # Do a infection(count), death count,  infection rate, death rate
@@ -562,30 +562,30 @@ all_general_stat</code></pre>
 # day_cum_case &lt;- read_csv(&quot;clean_data/df_day_cum_cov.csv&quot;)
 # Normal Hospital Admission
 # df_nor_ha_ans &lt;- read_csv(&quot;clean_data/df_ha_ans.csv&quot;)
-# 
+#
 # # Covid Hospital Admission
 # df_cov_ha_ans &lt;- read_csv(&quot;clean_data/df_cov_hb_ans.csv&quot;)
-# 
-# cov_eps &lt;- df_cov_ha_ans %&gt;% 
-#   mutate(quart_year = paste0(year, &quot;Q&quot;, quarter)) %&gt;% 
-#   arrange(quart_year) %&gt;% 
-#   group_by(quart_year) %&gt;% 
+#
+# cov_eps &lt;- df_cov_ha_ans %&gt;%
+#   mutate(quart_year = paste0(year, &quot;Q&quot;, quarter)) %&gt;%
+#   arrange(quart_year) %&gt;%
+#   group_by(quart_year) %&gt;%
 #   summarise(cov_eps = sum(number_admissions)/1000000)
-# 
-# nor_eps &lt;- df_nor_ha_ans %&gt;% 
-#     mutate(quart_year = paste0(year, &quot;Q&quot;, quarter)) %&gt;% 
-#   group_by(quart_year, year, quarter) %&gt;% 
+#
+# nor_eps &lt;- df_nor_ha_ans %&gt;%
+#     mutate(quart_year = paste0(year, &quot;Q&quot;, quarter)) %&gt;%
+#   group_by(quart_year, year, quarter) %&gt;%
 #   summarise(nor_eps = sum(episodes)/1000000)
-# 
-# 
+#
+#
 # # total admission
-# total_eps &lt;- left_join(nor_eps, cov_eps, by = &quot;quart_year&quot;) %&gt;% 
+# total_eps &lt;- left_join(nor_eps, cov_eps, by = &quot;quart_year&quot;) %&gt;%
 #   mutate(cov_eps = coalesce(cov_eps,0),
 #          quart_year = str_sub(quart_year, 3,6))
-# 
-# 
-# 
-# total_eps %&gt;% 
+#
+#
+#
+# total_eps %&gt;%
 #   ggplot()+
 #   geom_bar(aes(x = quart_year, y = nor_eps), stat = &quot;identity&quot;, alpha = 0.7)+
 #   geom_bar(aes(x = quart_year, y = cov_eps), stat = &quot;identity&quot;, fill = &quot;red&quot;, alpha = 0.75)+
@@ -594,7 +594,7 @@ all_general_stat</code></pre>
 #        subtitle = &quot;Total Hospital Admission (Grey) vs Covid Related Admission(Red)&quot;)+
 #   xlab(&quot;Time (Year/Quarter)&quot;)+
 #   ylab(&quot;Admission Count (per million)&quot;)
-# 
+#
 </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
