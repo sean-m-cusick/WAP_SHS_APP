@@ -113,57 +113,39 @@ During the Detailed Design Review (DDR), the design was further streamlined, wit
 
 
 ## MVP Details {.tabset}
+
+As a team we sketched out an MVP for the project. We identified three questions to look at - dealing with COVID, Winter and Deprivation.
+
+Using these and our knowledge of RShiny, we sketched the areas in jam board to allow us to start building the wire frame.
+
 The Minimum Value Product (MVP) of the dashboard, found in work package `WP 2.3 - Shiny App MVP`, can be separated into a sidebar, with each tab displaying relevant information. Details on the page contents can be found in the tabs below:
 
 ### Landing Page
-The main, or **General Statistics** page, can be divided into three key sections:  
-  * An about section  
-  * A map displaying hospital locations and Health Board areas  
-  * A section displaying key statistics, e.g.  _<hospital admission since 2016, and COVID-19 related admission>_, with a drop-down menu to select Health Board  
+The main page MVP was to contain a map showing the hospital locations, and some simple graphs showing some of the trends within the data as well as a short description.
+
+We mostly met the MVP and decided to change the graphs to a dashboard showing key Covid statistics. We also did not include a Health Board selection box to change the map.
   
 ***  
 
 ### Page 1
-The first page, or **COVID-19** page, can be divided into Two tabs:  
-* The first tab displays three key sections:  
-    * A summarisation of the results  
-    * A fixed graph displaying...  
-    * A fixed graph displaying...  
-* The second, optional tab that displays an interactive graph:  
+The MVP for the Covid table was a couple of fixed graphs giving us an overview of the impact of Covid on hospitalisation. As an extension we planned to look at some more specific stats - looking at using dropdown for age/gender/health board but we only managed to complete the MVP in the timescale.
   
 ***  
 
 ### Page 2
-The second page, or **A&E Activity*** page, , can be divided into three key sections:  
-  * A heat map of where there is the most admissions  
-  * A time series of a&e activity from *2020* to *2021* ???  
-  * A graph displaying <...>  
+A&E Activity - later renamed Winter
+The Winter page was looking at the impact of winter on hospital rates. We wanted to see if the media claims were correct that winter has a negative affect on the Scottish health system. We added links to some media stories to illustrate this. We met MVP on this tab.
   
 ***  
 
 ### Page 3 
-The third page which was re-prioritised after the Detailed Design Review (DDR) from the `WP 2.3 - Shiny App MVP` to `WP2.2.4 - Features`, *would have been* divided into three key sections:  
-  * A heat map of where there is the most cases  
-  * A time series of COVID cases from *2020* to *2021* ???  
-  * A graph displaying <...>  
+The third page which was re-prioritised after the Detailed Design Review (DDR) from the `WP 2.3 - Shiny App MVP` to `WP2.2.4 - Features`.
+We had planned to run a series of analysis on deprivation statistics but, in looking deeper into the data, we struggled to get anything meaningful from the datasets so dropped this.
   
 ***  
 
 ### Additional Features
-Additionally, `WP2.2.4 - Features` added the following aspects to the Shiny App to be worked on after the completion of the MVP:  
-* Interactivity of the Shiny App  
-* check boxes of each health board  
-* drop down menu for individual hospitals in that health board  
-* Tabs  
-    * - Map of Scotland  
-    * - Time series graphs  
-    * - proportional graphs  
-* buttons such as:  
-    * - reset  
-    * - select all  
-* Statistics on deprivation  
-* custom palettes, colour blind friendly  
-* forecasting  
+The winter analysis suggested to us that the winter was not in fact the busiest quarter and in order to look into this we added in some additional hypothesis analysis comparing the means of quarterly admissions as well as comparing data from Covid times and pre-pandemic. This was added into an additional area.
 
 ***
 
@@ -322,7 +304,7 @@ After establishing our goal of demonstrating if Winter has an affect on Scotland
 
 The following data set groups were selected:
 
-Data Group    | Data Set      
+Group Code    | Data Set Groups     
 :----------   | :-------------
 Data Group 00 | Hospital Location 
 Data Group 01 | Hospital Activity 
@@ -384,13 +366,15 @@ This section explores how and why the data was synthesised, what that data was, 
 
 We synthesised the information given in the brief by first separating the datasets between each team member, to familiarise ourselves with the contents. From there, we discussed the potential relevance of the datasets to specific questions.
 
-To increase our efficiency, we decided to choose a specific question for our topic, and 
+To increase our efficiency, we decided to choose a specific question for our topic, to narrow the data sets we would work with.  
 
-We prioritised ...
+We prioritised datasets based on the relevancy to the question, and the quality of the data.
+
+As we had planned additional features post-MVP, we also kept some additional datasets that may prove beneficial to future anaylsis outwith the scope of the MVP. 
 
 ### Data Groups
 
-For the MVP, only data groups `00`, `01`, `02`, and `06` were used. These groups can be further divided as follows:  
+For the MVP, only data groups `00`, `01`, `02`, and `06` were used. These groups can be further divided into data sets as follows:  
 
 .csv file   | Data Set        | Data Group  
 :---------- | :------------- | :-------------
@@ -418,10 +402,16 @@ For the MVP, only data groups `00`, `01`, `02`, and `06` were used. These groups
 
   
 ### Motivations
-for using the data you have chosen
 
-We used the dataset on ... to answer ... and because it was ..
+The table below demonstrates the thought process for each data set group that was used for the MVP:  
 
+
+Code | Data Set Groups  | Motivation
+:--- | :--------------- | :-------------
+00   | Hospital Location | *asdf*  
+01   | Hospital Activity | *asdf*  
+02   | Hospitalisations due to COVID-19 | *asdf*  
+06   | Daily COVID-19 Cases in Scotland | *asdf*  
 
 ## Quality & Biases {.tabset}
 ### Data Quality 
@@ -450,8 +440,8 @@ To clean the datasets we ...
 
 
 ## Storage and Structure {.tabset}
+The following tabs explores the file structure for the project. 
 
-[**Hint**: This page offers a good starting point for understanding the data structure: https://guides.statistics.gov.scot/article/34-understanding-the-data-structure]
 
 
 ### Storage
@@ -472,7 +462,7 @@ File type    | Use
 
 ***
 
-### Structure 
+### Structure {.tabset}
 The following tabs contain an explanation for the file naming methods utilised by the team to differentiate and synthesise between each data set:  
 
 #### Parameters naming methodology
@@ -528,18 +518,35 @@ The datasets used in this project are covered by the [Open Government License](h
 
 ## Glossary 
 
-
-### Acronyms
-Parameter      | Definition
+Abbreviation      | Definition
 :------------- | :-------------
+KLAS           | Kang, Lucy, Aboubakar, Seàn  
+MVP           | Minimum Viable Product 
+WP           | Work Package
+WPD          |  Work Package Description
+WBS            | Work Breakdown Structure
+App           | Application
+UI           | User Interface  
+A&E           | Accident and Emergency
+COVID           | Disease caused by the SARS-CoV2 virus
+IDR           | Initial Design Review
+DDR           | Detailed Design Review 
+PDR           | Prototype Design Review
+FDR           | Final Design Review 
+KPI           | Key Performance Indicator
+HB            | Health Board  
+HSPC          | Health and Social Care Partnership
 ane           | A&E (Group 03)  
 cov           | COVID (Group 02)  
 ans           | Age and Sex
-dep          |  sample / test data frame
-spe            | Speciality
-ha           | Hospital Activity  
-hb           | Health Board  
-hscp           | Health and Social Care Partnership
+dep           |  sample / test data frame
+spe           | Speciality
+ha            | Hospital Activity
+api       | Application Programming Interface values
+backup    | Backup Data frame (Stored loaded API data frames as backup)
+df        | Data frame
+sample    |  sample / test data frame
+agegroup  | Data frame with categorized age group (filtered out "all age" & "gender/sex" parameters)
 
 
 ## Data Sets
