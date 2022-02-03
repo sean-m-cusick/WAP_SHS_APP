@@ -87,12 +87,6 @@ server <- function(input, output, session) {
   # life covid plot_2
   ##########################################
   output$life_covid_plot_2 <- renderPlotly({
-    # covid_hospital_activity_age & sex dataset
-    cov_hb_ans <- df_cov_hb_ans %>% 
-      select(-percent_variation) %>% 
-      filter(admission_type != "All") %>% 
-      mutate(week = week(week_ending),
-             year = as.character(year))
     
     age_group_trend_hb_ans <- cov_hb_ans %>% 
       filter(sex == "All" & age_group != "All ages") %>% 
@@ -100,41 +94,54 @@ server <- function(input, output, session) {
       )) %>%
       arrange(age_group) %>% 
       group_by(year, week_ending, age_group) %>% 
-      summarise(number_admissions = sum(number_admissions)) %>% 
+      summarise(number_admissions = sum(number_admissions)/1000) %>% 
       mutate(
         moving_avg_2021 = slide_dbl(
           .x = number_admissions,
           .f = ~mean(.,na.rm = TRUE),
           # 2 weeks moving average
           .before = 2
-        )  )
-    cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-     
-      
-    # plotly wrapper for ggplot graph
-    ggplotly(
-      # Plot ALL TREND
-      ggplot(age_group_trend_hb_ans) +
-        aes(x = week_ending, y = moving_avg_2021, group = age_group, colour = age_group) +
-        geom_line() +
-        # labs(title = "2 weeks Moving Average Hospital Admission Per Age Group in 2020 - 2021",
-        #      subtitle = "line = 2020-2021 data, dash = 2018-2019 data")+
-        xlab("Time (date)") +
-        ylab("Average Admission Count") +
-        scale_colour_brewer(palette = "Set1") + theme(panel.background = element_rect(fill = 'gray82'))
+        )  ) %>% 
+      mutate(quarter = quarter(week_ending))
     
+    
+    cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+    ggplotly(
+    age_group_trend_hb_ans %>% 
+      ggplot()+
+      geom_line(aes(x = week_ending, y = moving_avg_2021, group = age_group, colour = age_group))+
+      
+      geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = 0, ymax = 6.5,
+                    fill = factor(quarter)), alpha = .3, show.legend = FALSE) +
+      scale_fill_manual(values = alpha(c("darkblue", "transparent" ,"transparent" ,"transparent"), 0.6))+
+      geom_vline(xintercept = as.Date(ymd("2020-03-16")), linetype= 2, color = "black", size=0.6)+
+      
+      annotate(geom = "text",
+               label = c("Lockdown"),
+               x = c( as.Date(ymd("2020-03-16"))),
+               y = c(6.1),
+               vjust = 1,
+               hjust = -.05) +
+      
+      labs(title = "2 weeks Moving Average Hospital Admission Per Age Group in 2020 - 2021")+
+      xlab("Time (date)")+
+      ylab("Average Admission Count (per 1'000)")+
+      scale_colour_brewer(palette="Set1")+ 
+      theme(panel.background = element_rect(fill = 'transparent'),
+            panel.grid.minor = element_line(colour = 'lightgrey'),
+            panel.grid.major = element_line(colour = 'lightgrey'),
+            legend.position="top")+
+      scale_x_date(date_breaks = "4 months",
+                   date_minor_breaks = "1 months",
+                   date_labels = "%b-%y")
     )
- 
-
   })
   
   
   ######################
   # LIFE Covid PLOT_1
-  output$life_covid_plot_1 <- renderPlotly({
+  output$life_covid_plot_1 <- renderPlotly({ 
     
-    # load filtered data
-    #life_exp_plot_filtered <- life_exp_plot_filtered()
     
     # covid_hospital_activity_age & sex dataset
     cov_hb_ans <- df_cov_hb_ans %>% 
@@ -148,8 +155,8 @@ server <- function(input, output, session) {
     all_trend_hb_ans <- cov_hb_ans %>% 
       filter(age_group == "All ages" & sex == "All") %>% 
       group_by(year, week_ending, admission_type) %>% 
-      summarise(number_admissions = sum(number_admissions),
-                average20182019  = sum(average20182019)) %>% 
+      summarise(number_admissions = sum(number_admissions)/1000,
+                average20182019  = sum(average20182019)/1000) %>% 
       mutate(
         moving_avg_2021 = slide_dbl(
           .x = number_admissions,
@@ -163,20 +170,49 @@ server <- function(input, output, session) {
           .f = ~mean(.,na.rm = TRUE),
           # 2 weeks moving average = 7
           .before = 2
-        )  )
-    # plotly wrapper for ggplot graph
-    ggplotly(
-      # Plot ALL TREND
-        ggplot(all_trend_hb_ans) +
-        geom_line(aes(x = week_ending, y = moving_avg_2021, colour = admission_type)) +
-        geom_line(aes(x = week_ending, y = moving_avg_1819, colour = admission_type), linetype = "dashed") +
-        # labs(title = "2 weeks Moving Average Hospital Admission",
-        #      subtitle = "line = 2020-2021 data, dash = 2018-2019 data") +
-        xlab("Time (date)") +
-        ylab("Average Admission Count")
-    )
+        )  ) %>%
+      # Find the winter quarter
+      mutate(quarter = quarter(week_ending),
+             quarter = case_when(
+               quarter == "1" ~ 1,
+               quarter == "2" ~ 3,
+               quarter == "3" ~ 3,
+               quarter == "4" ~ 3
+             ))
     
-  })
+    ggplotly(
+    all_trend_hb_ans %>% 
+      ggplot()+
+      geom_line(aes(x = week_ending, y = moving_avg_2021, colour = admission_type), size=1.0)+
+      geom_line(aes(x = week_ending, y = moving_avg_1819, colour = admission_type), linetype = "dashed")+
+      geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = 0, ymax = 30, fill = factor(quarter)), alpha = .3, show.legend = TRUE) +
+      scale_fill_manual(labels = c("Winter", "Other"), values = alpha(c("darkblue","transparent"), 0.4))+
+      
+      geom_vline(xintercept = as.Date(ymd("2020-03-16")), linetype= 2, color = "black", size=0.6)+
+      
+      annotate(geom = "text",
+               label = c("Lockdown"),
+               x = c( as.Date(ymd("2020-03-16"))),
+               y = c(26),
+               vjust = 1,
+               hjust = -.05) +
+      
+      theme(panel.background = element_rect(fill = 'transparent'),
+            panel.grid.minor = element_line(colour = 'lightgrey'),
+            panel.grid.major = element_line(colour = 'lightgrey'),
+            legend.position="top")+
+      scale_x_date(date_breaks = "4 months",
+                   date_minor_breaks = "1 months",
+                   date_labels = "%b-%y") +
+      labs(title = "2 weeks Moving Average Hospital Admission",
+           subtitle = "solid = 2020-2021 data | dash = 2018-2019 data",
+           colour = "Admission Type",
+           fill = "Seasons"
+      )+
+      xlab("Time (date)")+
+      ylab("Average Admission Count (Per 1'000)")
+    )
+    })
   
   
  
