@@ -9,9 +9,9 @@ ui <- dashboardPage(
                         br(),
                         menuItem("Covid", tabName = "life_covid"),
                         br(),
-                        menuItem("Winter", tabName = "winter"),
-                        br(),
-                        menuItem("Hypothesis Test", tabName = "hypo_test")
+                        menuItem("Winter", tabName = "winter")
+                      
+                       # menuItem("Hypothesis Test", tabName = "hypo_test")
                          
                       )
                     ),
