@@ -6,8 +6,12 @@ ui <- dashboardPage(
                       sidebarMenu(
                         
                         menuItem("General Stats", tabName = "overview"),
+                        br(),
                         menuItem("Covid", tabName = "life_covid"),
-                        menuItem("winter", tabName = "winter")
+                        br(),
+                        menuItem("Winter", tabName = "winter"),
+                        br(),
+                        menuItem("Hypothesis Test", tabName = "hypo_test")
                          
                       )
                     ),
@@ -233,6 +237,64 @@ ui <- dashboardPage(
                                     plotlyOutput("winter_plot_2", height = 500, reportTheme = TRUE)
                                   
                                   )
+                                  )
+                                  
+                                )),
+                        # -hypothesis test panel------------------------------
+                        tabItem(tabName = "hypo_test",
+                                
+                                fluidRow(
+                                  column(width = 10,
+                                         tags$b("winter", style = "font-size: 30px"),
+                                         br(), br(), 
+                                  )
+                                ),
+                                
+                                fluidRow(
+                                  column(width = 6,
+                                         fluidRow(   
+                                           box(width = NULL, solidHeader = TRUE, background = "purple", align = "center",
+                                               tags$b("hypothesis test", style = "font-size: 30px")
+                                               
+                                           ),
+                                           
+                                           plotlyOutput("hypo_test_plot_1", height = 300, reportTheme = TRUE)
+                                           
+                                         ),
+                                         fluidRow(
+                                           
+                                           box(width = NULL, solidHeader = TRUE, background = "purple", align = "center",
+                                               tags$b("Hhypothesis test", style = "font-size: 30px")
+                                               
+                                               
+                                           ),
+                                           
+                                           plotlyOutput("hypo_test_plot_2", height = 300, reportTheme = TRUE)
+                                           
+                                         )
+                                  ),
+                                  
+                                  column(width = 6,
+                                         fluidRow(   
+                                           box(width = NULL, solidHeader = TRUE, background = "purple", align = "center",
+                                               tags$b("hypothesis test", style = "font-size: 30px")
+                                               
+                                           ),
+                                           
+                                           plotlyOutput("hypo_test_plot_3", height = 300, reportTheme = TRUE)
+                                           
+                                         ),
+                                         fluidRow(
+                                           
+                                           box(width = NULL, solidHeader = TRUE, background = "purple", align = "center",
+                                               tags$b("Hhypothesis test", style = "font-size: 30px")
+                                               
+                                               
+                                           ),
+                                           
+                                           plotlyOutput("hypo_test_plot_4", height = 300, reportTheme = TRUE)
+                                           
+                                         )
                                   )
                                   
                                 )),
