@@ -20,6 +20,7 @@ library(broom)
 library(readr)
 library(here)
 library(slider)
+library(stringr)
 ```
 
 ```{r}
@@ -31,39 +32,48 @@ hosp_activity <- read_csv(here("clean_data/df_ha_dep.csv"))
 ```
 
 ```{r}
-hosp_activity <- hosp_activity %>% 
-  mutate(q_year = str_c(year, " Q",quarter))
-```
-
-# Comparing emergency and non-emergency
-
-```{r}
 hosp_act <- hosp_activity %>% 
+  mutate(q_year = str_c(year, " Q",quarter)) %>% 
   filter(admission_type %in% c("Emergency Inpatients","All Inpatients and Day cases" ))
 ```
 
 ```{r}
-hosp_act %>% 
-  ggplot(fill="admission_type") +
-    geom_histogram(aes(x = q_year, y = (sum(episodes)/100000), fill = q_year), 
-             stat = "identity", alpha = 0.7 ) +
-    scale_fill_manual( values = c("2016 Q2","2016 Q3","2016 Q4",
-             "2017 Q1"= "steelblue", "2017 Q2","2017 Q3","2017 Q4",
-             "2018 Q1"= "steelblue", "2018 Q2","2018 Q3","2018 Q4",             
-             "2019 Q1"= "steelblue", "2019 Q2","2019 Q3","2019 Q4",            
-             "2020 Q1"= "steelblue", "2020 Q2","2020 Q3","2020 Q4",           
-             "2021 Q1"= "steelblue", "2021 Q2" ), 
-                guide = FALSE ) +
-      theme(axis.text.x = element_text(angle = 45))+
-  labs(title = "All Inpatients and Day cases",
-       subtitle = "Q1 (Winter) highlighted")+
+# Reorder the quarters
+hosp_act_summary <-hosp_act %>% 
+  mutate(q_year = factor
+         (q_year, levels =
+           c("2016 Q2","2016 Q3","2016 Q4",
+             "2017 Q1", "2017 Q2","2017 Q3","2017 Q4",
+             "2018 Q1", "2018 Q2","2018 Q3","2018 Q4",             
+             "2019 Q1", "2019 Q2","2019 Q3","2019 Q4",            
+             "2020 Q1", "2020 Q2","2020 Q3","2020 Q4",           
+             "2021 Q1", "2021 Q2" ))) %>% 
+  arrange(q_year) %>% 
+  group_by(q_year, admission_type) %>% 
+  summarise(tot_sum = (sum(episodes)/100000))
+```
+
+```{r}
+hosp_act_summary <-hosp_act_summary %>% 
+  mutate(year = (str_sub(q_year,1,4))) %>% 
+  mutate(quarter = as.numeric(str_sub(q_year,-1,-1))) 
+```
+
+```{r}
+hosp_act_summary %>% 
+  ggplot() +
+    geom_bar(aes(x = quarter, y = tot_sum, group = admission_type, 
+                 fill = admission_type), 
+             stat = "identity", alpha = 0.7, position = "dodge") +
+  labs(title = "Hospital Admissions by Quarter\n",
+       fill = "")+
       xlab("Time (Year/Quarter)")+
-      ylab("Admission Count (100,000s)")  +
-  theme(        legend.position = "bottom",
-        legend.justification = c("right", "top"),
+      ylab("Admission Count (100,000s)\n")  +
+    theme(legend.position = "bottom",
+  #      legend.justification = c("right", "top"),
         legend.box.just = "right",
         legend.margin = margin(6, 6, 6, 6),
-        legend.text = element_text(colour="slategray", size=8))
-
-    
+        legend.text = element_text(colour="slategray", size=8)
+    ) +
+  facet_wrap( ~year, )
 ```
