@@ -1,5 +1,5 @@
 ---
-title: "**Name of Dashboard** Report"
+title: "**Winter Affectations post-2020 on the Scottish Health Sector Application** Report"
 author: "Team KLAS"
 output:
   html_document:
@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Project Team Details {.tabset}
 
-The following section introduces the members of Team KLAS, the project team that worked on **Name of Dashboard**. Each tab display an aspect of the Team and their goals.
+The following section introduces the members of Team KLAS, the project team that worked on __WAP SHS App__, also known as the **Winter Affectations post-2020 on the Scottish Health Sector Application**. Each tab display an aspect of the Team and their goals.
 
 ## Members of Team KLAS
 
@@ -72,12 +72,9 @@ In the Kick-Off meeting, each member discussed their personal goals in regards t
   * `WP2.2.2 - Spatial Visualisations`  
   * `WP2.2.3 - Demographic Visualisations`   
   * `WP2.2.4 - Features`  
-  * `WP2.3.1 - User Interface`  
-  * `WP2.3.2 - Backend Code`  
+  * `WP2.3.1 - User Interface` 
   * `WP3.1 - Report`  
-  * `WP3.1.1 - Analysis`  
-  * `WP3.1.2 - README File`  
-  * `WP3.2 - Presentation`  
+  * `WP3.1.1 - Analysis` 
 
    
 ***  
