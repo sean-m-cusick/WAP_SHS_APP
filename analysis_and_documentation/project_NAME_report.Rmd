@@ -38,7 +38,7 @@ In the Kick-Off meeting, each member discussed their personal goals in regards t
   *LOREM IPSUM.*  
 
 * **Lucy Burns** -  
-  *""I really wanted to explore the mapping systems within Leaflet and RStudio. I wanted to reinforce all of my learnings over the past seven weeks and improve my coding and visualising skills. I don’t think I have achieved these and have found this week frustrating - mostly at my own inexperience and problematic datasets. It has however not all been negative with a sharp learning curve for me, and I think, my team."*  
+  *"I really wanted to explore the mapping systems within Leaflet and RStudio. I wanted to reinforce all of my learnings over the past seven weeks and improve my coding and visualising skills. I don’t think I have achieved these and have found this week frustrating - mostly at my own inexperience and problematic datasets. It has however not all been negative with a sharp learning curve for me, and I think, my team."*  
 
 * **Seàn M. Cusick** -  
   *planned to solidify his experience in Project Management by incorporating his knowledge in leading Event and Technical Projects, into leading a Software based project. Additionally, to improve his working experience with spatial visualisations. *
@@ -125,18 +125,18 @@ The main, or **General Statistics** page, can be divided into three key sections
 
 ### Page 1
 The first page, or **COVID-19** page, can be divided into Two tabs:  
-  * The first tab displays three key sections:  
+* The first tab displays three key sections:  
     * A summarisation of the results  
-    * A fixed graph displaying ... 
-    * A fixed graph displaying ... 
-  * The second, optional tab that displays an interactive graph:  
+    * A fixed graph displaying...  
+    * A fixed graph displaying...  
+* The second, optional tab that displays an interactive graph:  
   
 ***  
 
 ### Page 2
 The second page, or **A&E Activity*** page, , can be divided into three key sections:  
   * A heat map of where there is the most admissions  
-  * A time series of a&e activity from *2020* to *2021* ??? 
+  * A time series of a&e activity from *2020* to *2021* ???  
   * A graph displaying <...>  
   
 ***  
@@ -144,7 +144,7 @@ The second page, or **A&E Activity*** page, , can be divided into three key sect
 ### Page 3 
 The third page which was re-prioritised after the Detailed Design Review (DDR) from the `WP 2.3 - Shiny App MVP` to `WP2.2.4 - Features`, *would have been* divided into three key sections:  
   * A heat map of where there is the most cases  
-  * A time series of COVID cases from *2020* to *2021* ??? 
+  * A time series of COVID cases from *2020* to *2021* ???  
   * A graph displaying <...>  
   
 ***  
@@ -200,11 +200,11 @@ To design a dashboard with Shiny in R, that would display the affect that Winter
 Key Performance Indicators, or KPIs, are a type of measurement used to track activities towards a goal. The project manager chose lead-based KPIs - that is, KPIs that aren't measured by outcome, but are measured by activity towards the outcome. 
 
 Five KPIs were chosen for this project:   
-* 2 Branch Commits per day  
-* 1 Branch merges per day  
-* 10,000 additions of code per day  
-* 2 Stand-Up meetings per day  
-* 5 minutes per person in Stand-Up meetings  
+* **2** Branch **commits** per day  
+* **1** Branch **merges** per day  
+* **10,000 additions** of code per day  
+* **2** Stand-Up **meetings** per day  
+* **5 minutes** per person in Stand-Up meetings  
 
 KPIs were tracked via GitHub:
 ![](image/team_KPIs.png)
@@ -305,10 +305,10 @@ Milestones:
 Design Reviews are meetings that are used to ensure that the project's objective is still feasible, and allows the team to make adjustments from any new information or challenges that have arisen from project activities.  
 
 Design Reviews:  
-* Initial Design Review - IDR  
-* Detailed Design Review - DDR  
-* Prototype Design Review - PDR  
-* Final Design Review - FDR  
+* Initial Design Review - **IDR ** 
+* Detailed Design Review - **DDR**  
+* Prototype Design Review - **PDR**  
+* Final Design Review - **FDR**  
 
 ***
 
@@ -329,8 +329,10 @@ Data Group 01 | Hospital Activity
 Data Group 02 | Hospitalisations due to COVID-19  
 Data Group 03 | A&E Activity    
 Data Group 04 | Hospital Bed Information    
-Data Group 05 | COVID-19 Wider Impacts      
-Data Group 06 | Daily COVID-19 Cases in Scotland
+Data Group 05 | COVID-19 Wider Impacts - Scottish Ambulance Services      
+Data Group 06 | Daily COVID-19 Cases in Scotland  
+
+It should be noted that only data groups `00`, `01`, `02`, and `06` were used for the MVP
 
 
 ***  
@@ -380,54 +382,40 @@ This section explores how and why the data was synthesised, what that data was, 
 ## Data Set Selection {.tabset}
 ### Project Requrements
 
-We synthesised the information given in the brief by ...
+We synthesised the information given in the brief by first separating the datasets between each team member, to familiarise ourselves with the contents. From there, we discussed the potential relevance of the datasets to specific questions.
+
+To increase our efficiency, we decided to choose a specific question for our topic, and 
 
 We prioritised ...
 
 ### Data Groups
 
-These groups can be further divided as follows:  
+For the MVP, only data groups `00`, `01`, `02`, and `06` were used. These groups can be further divided as follows:  
 
 .csv file   | Data Set        | Data Group  
 :---------- | :------------- | :-------------
-"00_Clean_Dataframe_List" | 
-"df_age_ane_hscp_ans" | 
-"df_age_day_trend_ans" | 
-"df_age_group_cov_hb_ans" | 
-"df_age_group_cov_hscp_ans" | 
-"df_age_group_ha_ans" | 
-"df_age_sas_hb_ans" | 
-"df_age_sas_hscp_ans" | 
-"df_age_tot_cov_ans" | 
+"00_Clean_Dataframe_List" | *N/A* | *N/A * 
 "df_ane_hb_ans" | A&E Activity by Health Board, Age and Sex | 03A  
 "df_ane_hb_dep" | &E Activity by Health Board and Deprivation | 03B  
 "df_ane_hscp_ans" | A&E Activity by HSCP, Age and Sex | 03C  
 "df_ane_hscp_dep" | &E Activity by HSCP and Deprivation | 03D  
-"df_bed_info" | 
+"df_bed_info" | Hospital Bed Information | 04  
 "df_cov_hb_ans" | Admissions By Health Board and Patient Demographics | 02B  
 "df_cov_hb_dep" | Admissions By Health Board and Deprivation | 02C  
 "df_cov_hb_spe" | Admissions By Health Board and Speciality | 02A  
 "df_cov_hscp_ans" | Admissions By HSCP and Patient Demographics | 02E
 "df_cov_hscp_dep | Admissions By HSCP and Deprivation | 02F
 "df_cov_hscp_spe" | Admissions By HSCP and Speciality | 02D   
-"df_day_cum_cov" | 
-"df_day_trend_ans" | 
-"df_day_trend_hb" | 
-"df_day_trend_loc" | 
+"df_day_cum_cov" | Daily cumulative COVID cases | 06
+"df_day_trend_ans" | Daily COVID by age and sex | 06   
+"df_day_trend_hb" | Daily COVID by Health Board | 06   
+"df_day_trend_loc" | Daily COVID by Location | 06     
 "df_ha_ans" | Hospital Activity and Patient Demographics | 01B  
 "df_ha_dep" | Hospital Activity and Deprivation | 01C
 "df_ha_spe" | Hospital Activity by Speciality | 01A
 "df_health_board" | Health Boards | 00  
 "df_hospital_location" | Hospital Location | 00  
-"df_sas_hb_ans" | 
-"df_sas_hb_dep" | 
-"df_sas_hscp_ans" | 
-"df_sas_hscp_dep" | 
-"df_sevday_trend_neighbourhood" | 
-"df_tot_cov_ans" | 
-"df_tot_cov_dep" | 
-"df_tot_cov_hb" | 
-"df_tot_cov_loc" | 
+
   
 ### Motivations
 for using the data you have chosen
@@ -556,8 +544,31 @@ hscp           | Health and Social Care Partnership
 
 ## Data Sets
 
-## Application Layout
-  
+.csv file   | Data Set        | Data Group  
+:---------- | :------------- | :-------------
+"00_Clean_Dataframe_List" | *N/A* | *N/A * 
+"df_ane_hb_ans" | A&E Activity by Health Board, Age and Sex | 03A  
+"df_ane_hb_dep" | &E Activity by Health Board and Deprivation | 03B  
+"df_ane_hscp_ans" | A&E Activity by HSCP, Age and Sex | 03C  
+"df_ane_hscp_dep" | &E Activity by HSCP and Deprivation | 03D  
+"df_bed_info" | Hospital Bed Information | 04  
+"df_cov_hb_ans" | Admissions By Health Board and Patient Demographics | 02B  
+"df_cov_hb_dep" | Admissions By Health Board and Deprivation | 02C  
+"df_cov_hb_spe" | Admissions By Health Board and Speciality | 02A  
+"df_cov_hscp_ans" | Admissions By HSCP and Patient Demographics | 02E
+"df_cov_hscp_dep | Admissions By HSCP and Deprivation | 02F
+"df_cov_hscp_spe" | Admissions By HSCP and Speciality | 02D   
+"df_day_cum_cov" | Daily cumulative COVID cases | 06
+"df_day_trend_ans" | Daily COVID by age and sex | 06   
+"df_day_trend_hb" | Daily COVID by Health Board | 06   
+"df_day_trend_loc" | Daily COVID by Location | 06     
+"df_ha_ans" | Hospital Activity and Patient Demographics | 01B  
+"df_ha_dep" | Hospital Activity and Deprivation | 01C
+"df_ha_spe" | Hospital Activity by Speciality | 01A
+"df_health_board" | Health Boards | 00  
+"df_hospital_location" | Hospital Location | 00  
+
+
 ## Initial Design Review output:  
 ![wire-frame: main page](../analysis_and_documentation/image/mvp_wireframe_general.png)  
 ![wire-frame: section pages](../analysis_and_documentation/image/mvp_wireframe_questions.png)  

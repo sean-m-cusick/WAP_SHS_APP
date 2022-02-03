@@ -133,6 +133,7 @@ df_ane_hb_dep <- clean_wkend_func(read_csv("raw_data/backup_ane_hb_dep.csv"))
 
 # Dataset 3C - A&E Activity by HSCP, Age and Sex
 df_ane_hscp_ans <-  clean_wkend_func(read_csv("raw_data/backup_ane_hscp_ans.csv"))
+
 # Dataset 3D - A&E Activity by HSCP and Deprivation
 df_ane_hscp_dep <-  clean_wkend_func(read_csv("raw_data/backup_ane_hscp_dep.csv"))
 ```
@@ -289,3 +290,20 @@ namelist_path <- paste0(target_directory,"00_Clean_Dataframe_List.csv")
 write.csv(name_list, namelist_path, row.names = FALSE)
 
 ```
+Abbreviation      | Definition
+:------------- | :-------------
+KLAS           | Kang, Lucy, Aboubakar, Seàn  
+MVP           | Minimum Viable Product 
+WP           | Work Package
+WPD          |  Work Package Description
+WBS            | Work Breakdown Structure
+App           | Application
+UI           | User Interface  
+A&E           | Accident and Emergency
+COVID           | Disease caused by the SARS-CoV2 virus
+IDR           | Initial Design Review
+DDR           | Detailed Design Review 
+IDR           | Initial Design Review
+DDR           | Detailed Design Review 
+IDR           | Initial Design Review
+DDR           | Detailed Design Review 
