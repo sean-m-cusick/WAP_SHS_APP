@@ -1,6 +1,8 @@
 ---
 title: "Covid Hospital Activity Analysis"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r}
@@ -14,13 +16,14 @@ library(tidyverse)
 library(sf)
 library(janitor)
 library(jsonlite)
-library(lubridate)
+
 library(rgdal)
 library(broom)
 require(readr)
 require(here)
 library(slider)
-
+library(lubridate)
+library(infer)
 ```
 ```{r}
 # Dataset required
@@ -44,8 +47,8 @@ cov_hb_ans <- df_cov_hb_ans %>%
 all_trend_hb_ans <- cov_hb_ans %>% 
   filter(age_group == "All ages" & sex == "All") %>% 
       group_by(year, week_ending, admission_type) %>% 
-  summarise(number_admissions = sum(number_admissions),
-            average20182019  = sum(average20182019)) %>% 
+  summarise(number_admissions = sum(number_admissions)/1000,
+            average20182019  = sum(average20182019)/1000) %>% 
     mutate(
     moving_avg_2021 = slide_dbl(
       .x = number_admissions,
@@ -61,21 +64,46 @@ all_trend_hb_ans <- cov_hb_ans %>%
       .before = 2
     )  ) %>%
   # Find the winter quarter
-  mutate(quarter = quarter(week_ending))
-
-yrng <- range(all_trend_hb_ans$moving_avg_2021)
+  mutate(quarter = quarter(week_ending),
+         quarter = case_when(
+           quarter == "1" ~ 1,
+           quarter == "2" ~ 3,
+           quarter == "3" ~ 3,
+           quarter == "4" ~ 3
+         ))
 
 # Plot ALL TREND
 all_trend_hb_ans %>% 
   ggplot()+
-  geom_line(aes(x = week_ending, y = moving_avg_2021, colour = admission_type))+
+  geom_line(aes(x = week_ending, y = moving_avg_2021, colour = admission_type), size=1.0)+
   geom_line(aes(x = week_ending, y = moving_avg_1819, colour = admission_type), linetype = "dashed")+
-  labs(title = "2 weeks Moving Average Hospital Admission",
-       subtitle = "line = 2020-2021 data, dash = 2018-2019 data")+
-  geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = -Inf, ymax = Inf, fill = factor(quarter), show.legend = FALSE), alpha = .4) +
-    scale_fill_manual(values = alpha(c("steelblue", "white" ,"white" ,"white"), .3))+
+  geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = -Inf, ymax = Inf, fill = factor(quarter)), alpha = .3, show.legend = TRUE) +
+    scale_fill_manual(labels = c("Winter", "Other"), values = alpha(c("darkblue","transparent"), .1))+
+  
+    geom_vline(xintercept = as.Date(ymd("2020-03-16")), linetype= 2, color = "black", size=0.6)+
+  
+  annotate(geom = "text",
+             label = c("Lockdown"),
+             x = c( as.Date(ymd("2020-03-16"))),
+             y = c(26),
+             vjust = 1,
+           hjust = -.05) +
+  
+  theme(panel.background = element_rect(fill = 'transparent'),
+        panel.grid.minor = element_line(colour = 'lightgrey'),
+        panel.grid.major = element_line(colour = 'lightgrey'),
+                 legend.position="top")+
+    scale_x_date(date_breaks = "4 months",
+                 date_minor_breaks = "1 months",
+                 date_labels = "%b-%y") +
+    labs(title = "2 weeks Moving Average Hospital Admission",
+       subtitle = "solid = 2020-2021 data | dash = 2018-2019 data",
+    colour = "Admission Type",
+    fill = "Seasons"
+  )+
   xlab("Time (date)")+
-  ylab("Average Admission Count")
+  ylab("Average Admission Count (Per 1'000)")
+
 
 
 # When input isnt ALL Ages
@@ -91,24 +119,43 @@ age_group_trend_hb_ans <- cov_hb_ans %>%
   )) %>%
   arrange(age_group) %>% 
       group_by(year, week_ending, age_group) %>% 
-  summarise(number_admissions = sum(number_admissions)) %>% 
+  summarise(number_admissions = sum(number_admissions)/1000) %>% 
     mutate(
     moving_avg_2021 = slide_dbl(
       .x = number_admissions,
       .f = ~mean(.,na.rm = TRUE),
 # 2 weeks moving average
       .before = 2
-    )  )
+    )  ) %>% 
+  mutate(quarter = quarter(week_ending))
+
+
 cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
 age_group_trend_hb_ans %>% 
   ggplot()+
-  aes(x = week_ending, y = moving_avg_2021, group = age_group, colour = age_group)+
-  geom_line()+
-  labs(title = "2 weeks Moving Average Hospital Admission Per Age Group in 2020 - 2021",
-       subtitle = "line = 2020-2021 data, dash = 2018-2019 data")+
+    geom_line(aes(x = week_ending, y = moving_avg_2021, group = age_group, colour = age_group))+
+  
+    geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = -Inf, ymax = Inf, fill = factor(quarter)), alpha = .3, show.legend = FALSE) +
+    scale_fill_manual(values = alpha(c("darkblue", "transparent" ,"transparent" ,"transparent"), .4))+
+      geom_vline(xintercept = as.Date(ymd("2020-03-16")), linetype= 2, color = "black", size=0.6)+
+  annotate(geom = "text",
+             label = c("Lockdown"),
+             x = c( as.Date(ymd("2020-03-16"))),
+             y = c(6.1),
+             vjust = 1,
+           hjust = -.05) +
+  labs(title = "2 weeks Moving Average Hospital Admission Per Age Group in 2020 - 2021")+
   xlab("Time (date)")+
-  ylab("Average Admission Count")+
-  scale_colour_brewer(palette="Set1")+ theme(panel.background = element_rect(fill = 'gray82'))
+  ylab("Average Admission Count (Per 1'000)")+
+  scale_colour_brewer(palette="Set1")+ 
+    theme(panel.background = element_rect(fill = 'transparent'),
+        panel.grid.minor = element_line(colour = 'lightgrey'),
+        panel.grid.major = element_line(colour = 'lightgrey'),
+                 legend.position="top")+
+    scale_x_date(date_breaks = "4 months",
+                 date_minor_breaks = "1 months",
+                 date_labels = "%b-%y")
 
 ```
 
@@ -149,129 +196,295 @@ all_general_stat
 specific_general_stat
 ca_name_list
 ```
-
-
-# Dump
+# hypothesis testing
 ```{r}
-# test <- df_cov_ha_ans %>% 
-#   filter(!grepl("All",admission_type))
-# day_case <- day_cum_case %>%
-#   mutate(year = year(date),
-#          month = month(date),
-#            week = week(date))
-# 
-# cov_case_rate <- day_case %>%
-#   group_by(year,month) %>%
-#   mutate(rate = daily_cases - lag(daily_cases)) %>%
-#   slice(-1)
-# 
-# 
-# cov_case_rate %>%
-#   mutate(month = factor(month)) %>%
-#   ggplot()+
-#   aes(x = date, y = daily_cases )+
-#   geom_bar(stat = "identity")+
-#   labs(
-#     title = "Daily Covid Cases Per month"
-#   )
-# 
-# 
-# cov_case_season <- day_case %>% 
-#   mutate(season = case_when(
-#     month == 1 & month == 2 & month == 12 ~ "winter",
-#     month == 3 & month == 4 & month == 5 ~ "spring",    
-#     month == 6 & month == 7 & month == 8 ~ "summer",
-#     month == 9 & month == 10 & month == 11 ~ "autumn",
-#     ))
+
+hypo_all_trend_hb_ans <- all_trend_hb_ans %>% 
+  select(year, week_ending, admission_type, number_admissions, average20182019) %>% 
+  mutate(quarter = quarter(week_ending)) %>% 
+  relocate(quarter, .after = year) %>% 
+  rename(cov_adm = number_admissions,
+         pre_cov_adm = average20182019) %>% 
+    ungroup() %>% 
+    mutate(cov_adm = cov_adm*1000,
+           pre_cov_adm = pre_cov_adm*1000) %>%  
+  mutate(cov_adm_rate = c(0, diff(cov_adm)),
+         pre_cov_adm_rate = c(0, diff(pre_cov_adm)))
+
+# Histogram for hypothesis test
+hypo_all_trend_hb_ans %>% 
+  ggplot()+
+  geom_histogram(aes(x = cov_adm_rate), alpha = 0.5, fill = "red", bin = 30, col = 'white')+
+    geom_histogram(aes(x = pre_cov_adm_rate), alpha = 0.5, fill = "blue", bin = 30, col = 'white')
 
 
-# df_hospital_location <- read_csv("clean_data/df_hospital_location.csv")
-# df_day_trend_hb <- read_csv("clean_data/df_day_trend_hb.csv")
-# 
-# hospital_location_func <- function(df, key_col){
-#             df <- df %>% 
-#             # Select location & hb as forgein keys
-#             # Join location_name, longitude & latitude to the main dataframe
-#             left_join(df_hospital_location %>% select(key_col, location_name, longitude, latitude),
-#             by = c(key_col),
-#             all.x = TRUE)
-#             
-#             return(df)
-# }
-# 
-# 
-# 
-# day_trend_hb <- hospital_location_func(df_day_trend_hb, "hb") %>%
-#   group_by(date, hb, hb_name) %>% 
-#   summarise(daily_positive = sum(daily_positive))
-# 
-# day_trend_hb %>% 
-#   ggplot()+
-#   aes(x = date, y = daily_positive)+
-#   geom_bar(stat = "identity")+
-#     labs(
-#     title = "Daily Trend Cases"
-#   )
-#   
-# day_trend_hb %>% 
-#   filter(hb_name == "NHS Borders") %>% 
-#   ggplot()+
-#   aes(x = date, y = daily_positive)+
-#   geom_bar(stat = "identity")+
-#   labs(
-#     title = "Daily Trend Cases Per Hospital"
-#   )
-# 
+hypo_all_trend_hb_ans %>% 
+  ggplot()+
+  geom_line(aes(x = week_ending, y = cov_adm_rate), colour = 'red')+
+  geom_line(aes(x = week_ending, y = pre_cov_adm_rate), colour = 'blue')
 
-# Suggestion Can do a Hospital Filter
-# Do a infection(count), death count,  infection rate, death rate
+
+
+
+
+hypo_all_trend_hb_ans %>% 
+  ggplot()+
+  geom_boxplot(aes(x = cov_adm_rate))
+  
+hypo_all_trend_hb_ans %>% 
+  ggplot()+
+  geom_boxplot(aes(x = pre_cov_adm_rate))
+
+# hypo_all_trend_hb_ans %>% 
+#   summarise(cov_sd = sd(cov_adm_rate),
+#          pre_cov_sd = sd(pre_cov_adm_rate))+
+
+```
+```{r}
+# boxplot
+hypo_cov <- hypo_all_trend_hb_ans %>% 
+  select(-pre_cov_adm_rate, -pre_cov_adm) %>% 
+  mutate(data_type = "cov") %>% 
+  relocate(data_type, .before = year) %>% 
+  rename(rate = cov_adm_rate,
+         adm_num = cov_adm)
+
+hypo_pre_cov <- hypo_all_trend_hb_ans %>% 
+  select(-cov_adm_rate, -cov_adm)%>% 
+  mutate(data_type = "pre_cov") %>% 
+  relocate(data_type, .before = year)%>% 
+  rename(rate = pre_cov_adm_rate,
+         adm_num = pre_cov_adm)
+
+hypo_all = bind_rows(hypo_cov,hypo_pre_cov) %>% 
+  group_by(data_type, year, quarter, week_ending) %>% 
+  summarise(adm_num = sum(adm_num))
+
+hypo_all %>% 
+  ggplot()+
+  aes(x = adm_num, y = data_type, group = data_type)+
+  geom_boxplot(show.legend = TRUE)+
+  stat_summary(fun.y = "mean", geom = "point", colour = "red")+
+    labs(title = "Covid Rate Boxplot")
 
 ```
 
 
 
-```{r}
-# Normal Hospital Admission
-# df_nor_ha_ans <- read_csv("clean_data/df_ha_ans.csv")
-# # Covid Hospital Admission
-# df_cov_ha_ans <- read_csv("clean_data/df_cov_hb_ans.csv")
+# Hypothesis test - Covid Impact Hospital Admission
 
-# day_cum_case <- read_csv("clean_data/df_day_cum_cov.csv")
-# Normal Hospital Admission
-# df_nor_ha_ans <- read_csv("clean_data/df_ha_ans.csv")
-# 
-# # Covid Hospital Admission
-# df_cov_ha_ans <- read_csv("clean_data/df_cov_hb_ans.csv")
-# 
-# cov_eps <- df_cov_ha_ans %>% 
-#   mutate(quart_year = paste0(year, "Q", quarter)) %>% 
-#   arrange(quart_year) %>% 
-#   group_by(quart_year) %>% 
-#   summarise(cov_eps = sum(number_admissions)/1000000)
-# 
-# nor_eps <- df_nor_ha_ans %>% 
-#     mutate(quart_year = paste0(year, "Q", quarter)) %>% 
-#   group_by(quart_year, year, quarter) %>% 
-#   summarise(nor_eps = sum(episodes)/1000000)
-# 
-# 
-# # total admission
-# total_eps <- left_join(nor_eps, cov_eps, by = "quart_year") %>% 
-#   mutate(cov_eps = coalesce(cov_eps,0),
-#          quart_year = str_sub(quart_year, 3,6))
-# 
-# 
-# 
-# total_eps %>% 
-#   ggplot()+
-#   geom_bar(aes(x = quart_year, y = nor_eps), stat = "identity", alpha = 0.7)+
-#   geom_bar(aes(x = quart_year, y = cov_eps), stat = "identity", fill = "red", alpha = 0.75)+
-#     theme(axis.text.x = element_text(angle = 45))+
-#   labs(title = "Hospital Admission Trend",
-#        subtitle = "Total Hospital Admission (Grey) vs Covid Related Admission(Red)")+
-#   xlab("Time (Year/Quarter)")+
-#   ylab("Admission Count (per million)")
-# 
+#### Hypothesis Test Setup
+* Test type: 2 Sample paired Test
+
+* Dataset: Hospital admission Number between Covid Data(2020-2021) and Pre-Covid Data(2018-2019)
+
+* $\alpha = 0.05$
+
+* $\Delta\mu = \mu_{cov} - \mu_{pre cov}$
+
+* $H_{0}: \Delta\mu = 0$
+
+* $H_{\alpha}: \Delta\mu > 0$
+
+
+```{r}
+hypo_covid <- hypo_all_trend_hb_ans %>% 
+  select(-pre_cov_adm_rate, - cov_adm_rate) %>% 
+  group_by(year,quarter,week_ending) %>% 
+  summarise(cov_adm = sum(cov_adm),
+            pre_cov_adm = sum(pre_cov_adm)) %>% 
+    mutate(diff_adm = cov_adm - pre_cov_adm)
+
+
+hypo_covid %>% 
+  ggplot()+
+  aes(x = diff_adm)+
+  geom_boxplot()
 
 ```
+
+
+```{r}
+null_distribution <- hypo_covid %>% 
+  specify(response = diff_adm) %>% 
+  hypothesize(null = "point", mu = 0) %>% 
+  generate(reps = 10000, type = "bootstrap") %>% 
+  calculate(stat = "mean")
+```
+
+```{r}
+observed_stat <- hypo_covid %>% 
+  specify(response = diff_adm) %>% 
+  calculate(stat = "mean")
+observed_stat
+```
+```{r}
+null_distribution %>%
+  visualise() +
+  shade_p_value(obs_stat = observed_stat, direction = "right")
+```
+```{r}
+p_value <- null_distribution %>% 
+  get_pvalue(obs_stat = observed_stat,
+             direction = "right")
+p_value
+```
+# Hypothesis Test Summary - Covid Impact Hospital Admission 
+
+`The p-value of ~1 is above α=0.05, so we reject the null hypothesis and conclude that, there is no significant evidence tha the admission is higher during covid period than pre-covid period.`
+
+
+#########
+
+# Hypothesis Test  - Winter Impact 
+```{r}
+hypo_season_all <- hypo_all_trend_hb_ans %>% 
+  select(-pre_cov_adm_rate, - cov_adm_rate)
+
+pre_cov_hypo_season <- hypo_season_all %>% 
+  select(-cov_adm) %>%
+  rename(adm_num = pre_cov_adm) %>% 
+  mutate(data_type = "pre_cov") %>% 
+  relocate(data_type, .before = year)
+
+cov_hypo_season <- hypo_season_all %>% 
+  select(-pre_cov_adm)%>%
+    rename(adm_num = cov_adm) %>% 
+  mutate(data_type = "cov") %>% 
+  relocate(data_type, .before = year)
+
+hypo_season = bind_rows(cov_hypo_season, pre_cov_hypo_season) %>% 
+  group_by(quarter, week_ending) %>% 
+  summarise(adm_num = sum(adm_num)) %>% 
+  mutate(quarter = factor(quarter))
+
+
+hypo_season %>% 
+  ggplot()+
+  aes(x = adm_num, y = quarter, group = quarter)+
+  geom_boxplot()
+
+```
+# Hypothesis Setup  - Winter Impact(Q1) on Spring (Q2) 
+# H0: mu_winter - mu_spring = 0
+# Ha: mu_winter - mu_spring > 0
+```{r}
+hypo_season_spring <- hypo_season %>% 
+  filter(quarter == c("1","2"))
+```
+```{r}
+null_distribution <- hypo_season_spring %>% 
+  specify(adm_num ~ quarter) %>% 
+  hypothesize(null = "independence") %>% 
+  generate(reps = 5000, type = "permute") %>% 
+  calculate(stat = "diff in means", order = c("1", "2")) 
+```
+
+```{r}
+observed_stat <- hypo_season_spring %>% 
+  specify(adm_num ~ quarter) %>% 
+  calculate(stat = "diff in means", order = c("1", "2")) 
+  
+observed_stat
+```
+
+```{r}
+null_distribution %>%
+  visualise() +
+  shade_p_value(obs_stat = observed_stat, direction = "right")
+```
+
+```{r}
+p_value <- null_distribution %>%
+  get_p_value(obs_stat = observed_stat, direction = "right")
+
+p_value
+```
+# Winter compare to Summer
+
+`The p-value of 0.1676 is above α=0.05, so we failed to reject the null hypothesis and conclude that, there is no significant evidence that the admission during winter period is higher than spring`
+
+
+
+
+# ############################
+# Hypothesis Setup  - Winter Impact(Q1) on Summer (Q2) 
+# H0: mu_winter - mu_spring = 0
+# Ha: mu_winter - mu_spring > 0
+```{r}
+hypo_season_summer <- hypo_season %>% 
+  filter(quarter == c("1","3"))
+```
+```{r}
+null_distribution <- hypo_season_summer %>% 
+  specify(adm_num ~ quarter) %>% 
+  hypothesize(null = "independence") %>% 
+  generate(reps = 5000, type = "permute") %>% 
+  calculate(stat = "diff in means", order = c("1", "3")) 
+```
+
+```{r}
+observed_stat <- hypo_season_summer %>% 
+  specify(adm_num ~ quarter) %>% 
+  calculate(stat = "diff in means", order = c("1", "3")) 
+  
+observed_stat
+```
+
+```{r}
+null_distribution %>%
+  visualise() +
+  shade_p_value(obs_stat = observed_stat, direction = "right")
+```
+
+```{r}
+p_value <- null_distribution %>%
+  get_p_value(obs_stat = observed_stat, direction = "right")
+
+p_value
+```
+
+
+
+# ######
+# ############################
+# Hypothesis Setup  - Winter Impact(Q1) on Summer (Q2) 
+# H0: mu_winter - mu_spring = 0
+# Ha: mu_winter - mu_spring > 0
+```{r}
+hypo_season_autumn <- hypo_season %>% 
+  filter(quarter == c("1","4"))
+```
+```{r}
+null_distribution <- hypo_season_autumn %>% 
+  specify(adm_num ~ quarter) %>% 
+  hypothesize(null = "independence") %>% 
+  generate(reps = 5000, type = "permute") %>% 
+  calculate(stat = "diff in means", order = c("1", "4")) 
+```
+
+```{r}
+observed_stat <- hypo_season_autumn %>% 
+  specify(adm_num ~ quarter) %>% 
+  calculate(stat = "diff in means", order = c("1", "4")) 
+  
+observed_stat
+```
+
+```{r}
+null_distribution %>%
+  visualise() +
+  shade_p_value(obs_stat = observed_stat, direction = "right")
+```
+
+```{r}
+p_value <- null_distribution %>%
+  get_p_value(obs_stat = observed_stat, direction = "right")
+
+p_value
+```
+
+
+
+
 
