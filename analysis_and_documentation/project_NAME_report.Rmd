@@ -84,19 +84,19 @@ In the Kick-Off meeting, each member discussed their personal goals in regards t
 ***  
 # Dashboard Details
 
-## MVP Objective
-The topic of our MVP is to demonstrate the __effect Winter__ has on the acute Health Sector in Scotland, specifically __within Accident and Emergency (A&E)__, with a focus on the __COVID-19 pandemic's additional influence.__ 
+## Objective
+The objective for our Minimum Viable Product (MVP) was to demonstrate the following topic: What, if any, __effect does the  Winter Season__ have on the acute Health Sector in Scotland, specifically __within Accident and Emergency (A&E)__; additionally, how does the __COVID-19 pandemic__ influence this further. 
 
-The dashboard outlines our topic in terms of:
-* The geographic spread of the Scottish Health Service
-* COVID-19's spread through Scotland
-* The activity within A&E departments in Scotland.
+The dashboard outlines our topic in terms of:  
+* The geographic spread of the Scottish Health Service  
+* COVID-19's spread through Scotland  
+* The activity within A&E departments in Scotland.  
 
 
-## Initial MVP (IDR) 
+## Initial Concept 
 In order to realise this objective, a preliminary wire-frame of the Minimal Viable Product (MVP) was designed during the Initial Design Review (IDR) in `WP1.1 - Project Set-up`. This wire-frame can be found in the annex.  
 
-## Revised MVP (DDR) {.tabset}
+## Revised Concept {.tabset}
 During the Detailed Design Review (DDR), the design was further streamlined, with superfluous features moved to the `WP2.2.4 - Features` work package. The updated wire-frames can be found in the tabs below: 
 
 ### General Page  
@@ -112,7 +112,7 @@ During the Detailed Design Review (DDR), the design was further streamlined, wit
 ![](../analysis_and_documentation/image/v2_mvp_wireframe_ae.png)
 
 
-## MVP Detail {.tabset}
+## MVP Details {.tabset}
 The Minimum Value Product (MVP) of the dashboard, found in work package `WP 2.3 - Shiny App MVP`, can be separated into a sidebar, with each tab displaying relevant information. Details on the page contents can be found in the tabs below:
 
 ### Landing Page
@@ -150,26 +150,26 @@ The third page which was re-prioritised after the Detailed Design Review (DDR) f
 ***  
 
 ### Additional Features
-Additionally, `WP2.2.4 - Features` added the following aspects to the Shiny App to be worked on after the completion of the MVP:
-1. Interactivity of the Shiny App  
-2. check boxes of each health board
-3. drop down menu for individual hospitals in that health board
-4. Tabs
-  1). Map of Scotland
-  2). Time series graphs
-  3). proportional graphs
-5. buttons such as:
-  * reset
-  * select all
-6. Statistics on deprivation
-7. custom palettes, colour blind friendly
-8. forecasting
+Additionally, `WP2.2.4 - Features` added the following aspects to the Shiny App to be worked on after the completion of the MVP:  
+* Interactivity of the Shiny App  
+* check boxes of each health board  
+* drop down menu for individual hospitals in that health board  
+* Tabs  
+    * - Map of Scotland  
+    * - Time series graphs  
+    * - proportional graphs  
+* buttons such as:  
+    * - reset  
+    * - select all  
+* Statistics on deprivation  
+* custom palettes, colour blind friendly  
+* forecasting  
 
 ***
 
 # Project Details
 
-## Stages of the project
+## Stages
 
 * **Role Allocation**  
 * **Project Management**  
@@ -192,11 +192,11 @@ An AGILE-4DX hybrid approach was taken by the Project Manager to develop the Shi
   
 Aspects of the Project Management framework are included in the tabs below:
 
-#### Project Objective
+#### Objective
 To design a dashboard with Shiny in R, that would display the affect that Winter had on the Scottish Health service, how COVID impacted this, and the geographical locations of Hospital within Scotland.
 
 ***
-#### Project Key Performance Indicators
+#### KPI
 Key Performance Indicators, or KPIs, are a type of measurement used to track activities towards a goal. The project manager chose lead-based KPIs - that is, KPIs that aren't measured by outcome, but are measured by activity towards the outcome. 
 
 Five KPIs were chosen for this project:   
@@ -210,147 +210,230 @@ KPIs were tracked via GitHub:
 ![](image/team_KPIs.png)
 
 ***
-#### Work Package Descriptions (WPD)
+#### WPD
 
-1. WP1 - Project Management:  
-    
+The Work Package Descriptions (WPD)s, can be found below - which give a brief overview of the work to be completed in each Work Package.  
+
+1.  `WP1 - Project Management`:  
+    Ensure the objectives of this project are met.
 	
-2. WP1.1		Project Set Up
+2.  `WP1.1 - Project Set Up`:  
+    Establish the project concept, team roles and responsibilities, work packages, and project plan.
 
-3. WP2	Shiny App
+3.  `WP2 - Shiny App`:
+		Creation of a Shiny App in R
 		
-4. WP2.1		Data Analysis
-		Kang
-5. WP2.1.1 			 Dataset Selection
+4.  `WP2.1 - Data Analysis`:  
+    Selection, Cleaning, Wrangling and Analysis of data set
+		
+5.  `WP2.1.1 - Dataset Selection`:  
+    Familiarise with Public Health Scotland's datasets and select which datasets are relevant for objective.
 			
 			
-6. WP2.1.2 			Data Cleaning
+6.  `WP2.1.2 - Data Cleaning`:  
+    Clean datasets
 
-7. WP2.1.3			Data Wrangling
+7.  `WP2.1.3 - Data Wrangling`:  
+    Manipulate datasets to prepare for analysis.
 
-8. WP2.2		Data Visualisation
-		Lucy
-9. WP2.2.1  Temporal
+8.  `WP2.2 - Data Visualisation`:  
+    Create visualisations of the dataset
+    
+9.  `WP2.2.1 - Temporal`:  
+    Visualisations with time-related information
 
-10. WP2.2.2 			Spatial
+10. `WP2.2.2 - Spatial`:  
+    Visualisations of geographic information
 
-11. WP2.2.3 			Demographics
+11. `WP2.2.3 - Demographics`:  
+    visualisations relating to demographics.
 
-12. WP2.3		Shiny App MVP
-		Aboubakar
-13. WP2.3.1			UI
+12. `WP2.3 - Shiny App MVP`:  
+    Creation of the Minimum Viable Product of the Shiny App.
+    
+13. `WP2.3.1 - UI`:  
+    Design and Creation of the User Interface for the app
 
-14. WP2.3.2			Backend
+14. `WP2.3.2 - Backend`:  
+    Design the Server side of the application to process the visualisations.
 
-15. WP2.4		Features
+15. `WP2.4 - Features`:  
+    Added features that can be worked on once the MVP has been completed.
 	
-16. WP3 	Documentation
-	Sean
-17. WP3.1 		Report
+16. `WP3 - 	Documentation`:  
+    Creation of all documentation for the project - including reports, presentation, README files. 
+	
+17. `WP3.1 - Report`:  
+    Explanation of the project structure
 			
-18. WP3.1.1			Analysis
+18. `WP3.1.1 - Analysis`:  
+    Documentation of the results of the data analysis. 
 
-19. WP3.1.2			README
+19. `WP3.1.2 - README`:  
+    A GitHub README to explain the project.
 
-20. WP3.2 		Presentation
+20. `WP3.2 - Presentation`:  
+    Presentation to demonstrated the Shiny App, and explain how the project progressed.
+    
 
-
-***
-#### Work Breakdown Structure (WBS)
-
-asdf
-
-***
-#### Project Gantt
-
-asdf
 
 ***
-#### Design Reviews & Milestones
+#### WBS
 
-asdf
+The Work Breakdown Structure (WBS) is a graphical representation of the relationships for each Work Package:  
 
-***
-#### Git branching
-
-asdf
+![](image/WBS.png)
 
 ***
-#### Version Control
+#### Gantt
 
-asdf
+This Gantt  Chart shows the timeline for each Work Package and the planned date for each milestone and design review:  
+![](image/gantt.png)
 
 ***
+#### Milestones
+
+Milestones are key points in the project that are outputs from certain Work Packages. They are used to measure if the Project is progressing at the planned pace successfully.  
+Milestones:  
+* Project Set-up  
+* Data Analysis  
+* Data Visualisation  
+* Shiny App MVP  
+* Documentation  
+* Presentation  
+
+Design Reviews are meetings that are used to ensure that the project's objective is still feasible, and allows the team to make adjustments from any new information or challenges that have arisen from project activities.  
+
+Design Reviews:  
+* Initial Design Review - IDR  
+* Detailed Design Review - DDR  
+* Prototype Design Review - PDR  
+* Final Design Review - FDR  
+
+***
+
 ### **Application Development** {.tabset}
+The tabs below provide an insight into the development process for the application:  
 
-asdf  
-  
-***  
 
 #### Dataset Selection
 
-asdf  
-  
+After establishing our goal of demonstrating if Winter has an affect on Scotland's acute Health sector, different data sets were selected from [Public Health Scotland's open data sets](https://www.opendata.nhs.scot/dataset).  
+
+The following data set groups were selected:
+
+Data Group    | Data Set      
+:----------   | :-------------
+Data Group 00 | Hospital Location 
+Data Group 01 | Hospital Activity 
+Data Group 02 | Hospitalisations due to COVID-19  
+Data Group 03 | A&E Activity    
+Data Group 04 | Hospital Bed Information    
+Data Group 05 | COVID-19 Wider Impacts      
+Data Group 06 | Daily COVID-19 Cases in Scotland
+
+
 ***  
 
-#### Dashboard wireframe
+#### Dashboard wire-frame
 
-asdf
+[Google Jamboard](https://jamboard.google.com/) was used in order to collaboratively create a concept wire-frame for the Shiny App. These wire-frames can be found in section 2.3, and in the appendix.
 
 ***
 
-## Project Tools{.tabset}
+#### Version Control
+GitHub was utilised for version control. Below is the Network graph of git branches.
+![](image/network1.png)
+![](image/network2.png)
+![](image/network3.png)
+
+***
+
+## Project Tools {.tabset}
 The tabs below display the tools selected and utilised for the duration of this project:
 
 ### Project Management
-* GitHub Projects
-  Milestones
-  Kanban Board
-* Microsoft Excel
-   (Gantt Chart)
-* Microsoft Word
-   (Work Breakdown Structure  
+* [GitHub Projects](https://github.com/Ephae/phs_rshiny_dashboard_grp1) - Overall management of project  
+* [GitHub Milestones](https://github.com/Ephae/phs_rshiny_dashboard_grp1/milestones) - Tracking of project milestones  
+* [Kanban Board](https://github.com/Ephae/phs_rshiny_dashboard_grp1/projects/1) - Tracking of daily tasks and issues  
+* [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) - Creation of project Gantt Chart  
+* [Microsoft Word](https://www.microsoft.com/en-us/microsoft-365/word) - Creation of Work Breakdown Structure  
   
 ***  
 
 ### Collaboration
-* Discord
-  (daily stand-ups, occasional mob programming, sharing ideas and links)
-* GitHub
-  Code Pairing
-  Code Sharing
-* Google Jamboard
-  (collaborative Wire-frame)  
+* [Discord](https://discord.com/) - Daily stand-ups, occasional mob programming, sharing ideas, links, etc.  
+* [GitHub](https://github.com/) - Code Pairing, Code Sharing  
+* [Google Jamboard](https://jamboard.google.com/) - Collaborative Wire-frame  
   
 ***  
 
 ### File Management
-* GitHub
-  Version Control
-* RStudio
-  File Creation  
-  
-***  
-
-### Documentation
-
-* GitHub/Projects (Project Management - Kaban Board)
-* Git/GitHub (collaboration & version control)  
+* [GitHub](https://github.com/) - Version Control  
+* [RStudio](https://www.rstudio.com/) - File Creation   
   
 ***  
 
 # Data Set Details  
+This section explores how and why the data was synthesised, what that data was, and the legal and ethical implications of using these data sets.  
 
 ## Data Set Selection {.tabset}
-### How did you gather and synthesise requirements for the project?
+### Project Requrements
 
 We synthesised the information given in the brief by ...
 
 We prioritised ...
 
-### Motivations for using the data you have chosen
+### Data Groups
 
-We used the dataset on ... to answer ... and because it was ...
+These groups can be further divided as follows:  
+
+.csv file   | Data Set        | Data Group  
+:---------- | :------------- | :-------------
+"00_Clean_Dataframe_List" | 
+"df_age_ane_hscp_ans" | 
+"df_age_day_trend_ans" | 
+"df_age_group_cov_hb_ans" | 
+"df_age_group_cov_hscp_ans" | 
+"df_age_group_ha_ans" | 
+"df_age_sas_hb_ans" | 
+"df_age_sas_hscp_ans" | 
+"df_age_tot_cov_ans" | 
+"df_ane_hb_ans" | A&E Activity by Health Board, Age and Sex | 03A  
+"df_ane_hb_dep" | &E Activity by Health Board and Deprivation | 03B  
+"df_ane_hscp_ans" | A&E Activity by HSCP, Age and Sex | 03C  
+"df_ane_hscp_dep" | &E Activity by HSCP and Deprivation | 03D  
+"df_bed_info" | 
+"df_cov_hb_ans" | Admissions By Health Board and Patient Demographics | 02B  
+"df_cov_hb_dep" | Admissions By Health Board and Deprivation | 02C  
+"df_cov_hb_spe" | Admissions By Health Board and Speciality | 02A  
+"df_cov_hscp_ans" | Admissions By HSCP and Patient Demographics | 02E
+"df_cov_hscp_dep | Admissions By HSCP and Deprivation | 02F
+"df_cov_hscp_spe" | Admissions By HSCP and Speciality | 02D   
+"df_day_cum_cov" | 
+"df_day_trend_ans" | 
+"df_day_trend_hb" | 
+"df_day_trend_loc" | 
+"df_ha_ans" | Hospital Activity and Patient Demographics | 01B  
+"df_ha_dep" | Hospital Activity and Deprivation | 01C
+"df_ha_spe" | Hospital Activity by Speciality | 01A
+"df_health_board" | Health Boards | 00  
+"df_hospital_location" | Hospital Location | 00  
+"df_sas_hb_ans" | 
+"df_sas_hb_dep" | 
+"df_sas_hscp_ans" | 
+"df_sas_hscp_dep" | 
+"df_sevday_trend_neighbourhood" | 
+"df_tot_cov_ans" | 
+"df_tot_cov_dep" | 
+"df_tot_cov_hb" | 
+"df_tot_cov_loc" | 
+  
+### Motivations
+for using the data you have chosen
+
+We used the dataset on ... to answer ... and because it was ..
+
 
 ## Quality & Biases {.tabset}
 ### Data Quality 
@@ -368,6 +451,9 @@ The dataset may/may not be biased because ...
 
 
 ## Data Manipulation {.tabset}
+
+
+
 ### Data Cleaning
 To clean the datasets we ...
 
@@ -375,31 +461,98 @@ To clean the datasets we ...
 
 
 
-## How is the data stored and structured
+## Storage and Structure {.tabset}
 
 [**Hint**: This page offers a good starting point for understanding the data structure: https://guides.statistics.gov.scot/article/34-understanding-the-data-structure]
 
-The data is in the form of ...
 
-This means ...
+### Storage
+The data on hospital activity and COVID cases were stored in the form of `.csv` files, also known as comma-separated values files. The value of using `.csv` is that they can be easily read by RStudio, and transformed into data frames which can be manipulated.
 
-Benefits of storing the data like this are ...
+
+In order to plot the maps, spatial data which was gleaned from `.csv` files were stored as the following file types:
+
+File type    | Use   
+:------ | :-------------
+.cpg    | code page used to specify the code page (only for .dbf)   
+.dbf    | shapefile attribute format; columnar attributes for each shape,  
+.prj    | projection description
+.sbn    | shapefile spatial index format 
+.shp    | shape format; feature geometry itself
+.shp.xml| geospatial metadata in XML format  
+.shx    | shape index format; positional index of the feature geometry   
+
+***
+
+### Structure 
+The following tabs contain an explanation for the file naming methods utilised by the team to differentiate and synthesise between each data set:  
+
+#### Parameters naming methodology
+Parameter      | Definition
+:------------- | :-------------
+api       | Application Programming Interface values
+backup    | Backup Data frame (Stored loaded API data frames as backup)
+df        | Data frame
+sample    |  sample / test data frame
+agegroup  | Data frame with categorized age group (filtered out "all age" & "gender/sex" parameters)
+
+
+#### Acronyms
+Parameter      | Definition
+:------------- | :-------------
+ane       | A&E (Group 03)  
+cov       | COVID (Group 02)  
+ans       | Age and Sex
+dep       |  sample / test data frame
+spe       | Speciality
+ha        | Hospital Activity  
+hb        | Health Board  
+hscp      | Health and Social Care Partnership
+
+***
+
+### Justification
+
+Benefits of storing the data like this are that it becomes easy to make a distinction between data sets at a glance, i.e. *to distinguish which data set is on A&E activity, and which is on COVID*.  
+  
+Conversely, it also helps to quickly group data sets that share a common link, i.e. *both sets group by speciality, or by age and sex*.  
+
+***
 
 ## Data Ethics
 
-[**Hint:** this page contains information on the Open Government License which covers most datasets on statistics.gov.scot: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/]
+There are no ethical considerations, because the datasets are devoid of any personal data, including third party information. Although the data sets are dealing with the health of individuals, no person can be discerned for the information provided. 
 
-There are no/There may be ethical considerations, because ...
+A draw back to the lack of personalised data is that the findings from the analysis would be not as accurate, but the author notes that it would not justify breaching the privacy of individuals.
+
+## Legality
+The datasets used in this project are covered by the [Open Government License](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), which means that as long as the source is acknowledged, any one has worldwide, royalty-free, perpetual, non-exclusive licence to utilise the data, including:  
+
+* copy, publish, distribute and transmit the Information;  
+* adapt the Information;  
+* exploit the Information commercially and non-commercially for example, by combining it with other Information, or by including it in your own product or application.  
 
 
-## Legalality
-legal considerations of the data - The datasets are covered by the Open Government License, which means ...
 
 ***  
   
-# Appendix  {.tabset}  
+# Appendix {.tabset}
 
-## Glossary
+## Glossary 
+
+
+### Acronyms
+Parameter      | Definition
+:------------- | :-------------
+ane           | A&E (Group 03)  
+cov           | COVID (Group 02)  
+ans           | Age and Sex
+dep          |  sample / test data frame
+spe            | Speciality
+ha           | Hospital Activity  
+hb           | Health Board  
+hscp           | Health and Social Care Partnership
+
 
 ## Data Sets
 
