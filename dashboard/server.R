@@ -30,7 +30,6 @@ server <- function(input, output, session) {
                  pull(daily_positive),
                style = "font-size: 70%;"),
       subtitle = "Daily Positive",
-      icon = icon("pills"),
       color = "purple"
     )
   })
@@ -43,7 +42,6 @@ server <- function(input, output, session) {
                   pull(date),
                 style = "font-size: 70%;"),
       subtitle = "Date",
-      icon = icon("home"),
       color = "green"
     )
   })
@@ -56,7 +54,6 @@ server <- function(input, output, session) {
                   pull(cumulative_positive),
                 style = "font-size: 70%;"),
       subtitle = "cumulative positive",
-      icon = icon("home"),
       color = "blue"
     )
   })
@@ -69,7 +66,6 @@ server <- function(input, output, session) {
                   pull(daily_deaths),
                 style = "font-size: 70%;"),
       subtitle = "Daily Deaths",
-      icon = icon("home"),
       color = "red"
     )
   })
@@ -83,7 +79,6 @@ server <- function(input, output, session) {
                   pull(cumulative_deaths),
                 style = "font-size: 70%;"),
       subtitle = "Cumulative Deaths",
-      icon = icon("home"),
       color = "red"
     )
   })
