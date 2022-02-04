@@ -185,7 +185,7 @@ server <- function(input, output, session) {
       ggplot()+
       geom_line(aes(x = week_ending, y = moving_avg_2021, colour = admission_type), size=1.0)+
       geom_line(aes(x = week_ending, y = moving_avg_1819, colour = admission_type), linetype = "dashed")+
-      geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = 0, ymax = 30, fill = factor(quarter)), alpha = .3, show.legend = TRUE) +
+      geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = 0, ymax = 30, fill = factor(quarter)), alpha = .3, show.legend = FALSE) +
       scale_fill_manual(labels = c("Winter", "Other"), values = alpha(c("darkblue","transparent"), 0.4))+
       
       geom_vline(xintercept = as.Date(ymd("2020-03-16")), linetype= 2, color = "black", size=0.6)+
@@ -200,14 +200,12 @@ server <- function(input, output, session) {
       theme(panel.background = element_rect(fill = 'transparent'),
             panel.grid.minor = element_line(colour = 'lightgrey'),
             panel.grid.major = element_line(colour = 'lightgrey'),
-            legend.position="top")+
+            legend.position ="top")+
       scale_x_date(date_breaks = "4 months",
-                   date_minor_breaks = "1 months",
+                   date_minor_breaks = "2 months",
                    date_labels = "%b-%y") +
-      labs(title = "2 weeks Moving Average Hospital Admission",
-           subtitle = "solid = 2020-2021 data | dash = 2018-2019 data",
-           colour = "Admission Type",
-           fill = "Seasons"
+      labs(subtitle = "solid = 2020-2021 data | dash = 2018-2019 data",
+           colour = "Admission Type"
       )+
       xlab("Time (date)")+
       ylab("Average Admission Count (Per 1'000)")
