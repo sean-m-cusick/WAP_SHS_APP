@@ -29,7 +29,7 @@ server <- function(input, output, session) {
         tags$p( general_stat_filtered() %>% 
                  pull(daily_positive),
                style = "font-size: 70%;"),
-      subtitle = "Daily Positive",
+      subtitle = "Daily Positive Cases",
       color = "purple"
     )
   })
@@ -41,7 +41,7 @@ server <- function(input, output, session) {
         tags$p( general_stat_filtered() %>% 
                   pull(date),
                 style = "font-size: 70%;"),
-      subtitle = "Date",
+      subtitle = "Last Updated",
       color = "green"
     )
   })
@@ -53,7 +53,7 @@ server <- function(input, output, session) {
         tags$p( general_stat_filtered() %>% 
                   pull(cumulative_positive),
                 style = "font-size: 70%;"),
-      subtitle = "cumulative positive",
+      subtitle = "Cumulative Positive Cases",
       color = "blue"
     )
   })

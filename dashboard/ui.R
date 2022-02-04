@@ -184,11 +184,11 @@ ui <- dashboardPage(
                         
                         
                         # winter PANEL -------------------------------------------------------------
-                        tabItem(tabName = "winter",
+                        tabItem(tabName = "Winter",
                                 
                                 fluidRow(
                                   column(width = 10,
-                                         tags$b("winter", style = "font-size: 30px"),
+                                         tags$b("Winter", style = "font-size: 30px"),
                                          br(), br(), 
                                   )
                                 ),
@@ -196,7 +196,7 @@ ui <- dashboardPage(
                                 fluidRow(
                                   column(width = 6,
                                          box(width = NULL, solidHeader = TRUE, background = "purple", align = "center",
-                                             tags$b("BBC NEWS", style = "font-size: 30px")
+                                             tags$b("Media Hype", style = "font-size: 30px")
  
                                          ),
                                          uiOutput("tab")
