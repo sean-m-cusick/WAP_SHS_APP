@@ -170,19 +170,23 @@ ui <- dashboardPage(
                                 ),
                                 
                                 fluidRow(
-                                  column(width = 6,
+                                  column(width = 6,offset = 0.7,
                                          fluidRow(
                                          box(width = NULL, solidHeader = TRUE, background = "purple", align = "center",
                                              tags$b("Media Hype", style = "font-size: 30px")
  
                                          ),
                                         
-                        img(src = "bbc_news.jpg", height = 300)
+                        img(src = "bbc_news.png", height = 600)
                                          
                                  ),
                         fluidRow(
-                          fluidRow(),
-                          img(src = "bbc_news2.png", height = 300)
+                          fluidRow(
+                            br(),
+                            br(),
+                            br(),
+                          ),
+                          img(src = "bbc_news2.png", height = 450)
                         )
                         ),
                                  
@@ -193,7 +197,7 @@ ui <- dashboardPage(
                                              
                                          ),
                                          
-                                         plotlyOutput("winter_plot_1", height = 400, reportTheme = TRUE)
+                                         plotlyOutput("winter_plot_1", height = 550, reportTheme = TRUE)
                                          
                                   ),
                                   fluidRow(
