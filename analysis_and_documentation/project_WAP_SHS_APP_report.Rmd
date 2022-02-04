@@ -451,8 +451,8 @@ Additional cleaning for each dataset require on individual dataset d was rarely 
 
 ### Data Wrangling
 
-The wrangling process is focused on standarised any catagory and foreign key columns. Such as establish a "year" & "quarter" columns for each dataset, and reordering any age_group columns.
-The output dataframes should have multiple foregin key columns ready to be process in the analysis stage.
+The wrangling process is focused on standardised any category and foreign key columns. Such as establish a "year" & "quarter" columns for each dataset, and reordering any age_group columns.
+The output data frames should have multiple foreign key columns ready to be process in the analysis stage.
 
 ***
 
