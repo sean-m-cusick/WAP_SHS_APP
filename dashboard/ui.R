@@ -183,8 +183,8 @@ ui <- dashboardPage(
                         ),
                         
                         
-                        # winter PANEL -------------------------------------------------------------
-                        tabItem(tabName = "Winter",
+                        # Winter PANEL -------------------------------------------------------------
+                        tabItem(tabName = "winter",
                                 
                                 fluidRow(
                                   column(width = 10,
