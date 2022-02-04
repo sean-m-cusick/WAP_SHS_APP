@@ -140,59 +140,27 @@ ui <- dashboardPage(
                                            br(),
                                            fluidRow(
                                              column(width = 10, offset = 1, align = "center", style = "border: 1px dashed black;",
-                                                    tags$b("Summary", style = "font-size: 25px"),
+                                                    tags$b("Hospital Admissions During the Covid pandemic", style = "font-size: 25px"),
                                                     br(), br(),
-                                                    p("Each Wednesday we publish a COVID-19 weekly report.
-                                                      It provides information about the spread of the disease and the activity in NHS Scotland to tackle it.
-                                                      There are two key points that we have learnt from the vaccine effectiveness analysis of omicron so far:
-
-                                                      Vaccine effectiveness wanes over time for all doses, so it is important to get your next dose as soon as
-                                                      possible after it becomes due, particularly if you are elderly and vulnerable, as your risk of a severe outcome will increase when the vaccine protection wanes.
-
-                                                      You can still get infected even if you are vaccinated - the biggest benefit of the vaccine is protection against severe disease. Therefore, even when you have been boosted you should be vigilant for symptoms and test yourself regularly with LFDs –
-                                                      especially before visiting those who are vulnerable.",
-                                                      style = "font-family: 'arial'; font-size: 12pt;"
-                                                    )
+                                                    # p("", 
+                                                    #   style = "font-family: 'lato'; font-size: 24pt;"
+                                                    # )
                                              )
                                              ),
                                            br(),
-                                           br(),
 
                                            fluidRow(
-                                             column(width = 6, align = "center",
+                                             column(width = 12, align = "center",
                                                     box(width = NULL, solidHeader = TRUE, background = "blue",
                                                         tags$b("2 weeks Moving Average Hospital Admission", style = "font-size: 24px")
 
 
                                                     ),
-
-
-                                                    plotlyOutput("life_covid_plot_1", height = 500)
+                                                    plotlyOutput("life_covid_plot_1", height = 550)
 
                                              ),
+                                                    )
 
-
-                                             column(width = 6, align = "center",
-                                                    box(width = NULL, solidHeader = TRUE, background = "blue",
-                                                        tags$b("2 weeks Moving Average Hospital Admission Per Age Group in 2020 - 2021", style = "font-size: 24px")
-
-
-                                                    ),
-
-                                                    plotlyOutput("life_covid_plot_2", height = 500)
-                                             )
-
-
-
-                                           ),
-
-
-                                #  ),
-
-
-
-
-                               # )
                         ),
 
 
@@ -208,14 +176,20 @@ ui <- dashboardPage(
 
                                 fluidRow(
                                   column(width = 6,
+                                         fluidRow(
                                          box(width = NULL, solidHeader = TRUE, background = "purple", align = "center",
                                              tags$b("BBC NEWS", style = "font-size: 30px")
 
                                          ),
-                                         uiOutput("tab")
 
+                        img(src = "bbc_news.jpg", height = 300)
 
-                                  ),
+                                 ),
+                        fluidRow(
+                          fluidRow(),
+                          img(src = "bbc_news2.png", height = 300)
+                        )
+                        ),
 
                                   column(width = 6,
                                          fluidRow(
