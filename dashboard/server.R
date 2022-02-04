@@ -279,7 +279,11 @@ server <- function(input, output, session) {
    winter_plot_1 <- reactive({
    
   })
-   
+  # BBC Image in winter
+  output$image <- renderUI({
+    src = "bbc_news.png"
+    tags$img(src=src)
+  })
    # winter page link
    url <- a("BBC NEWS", href="https://www.bbc.co.uk/news/health-59909860")
    output$tab <- renderUI({

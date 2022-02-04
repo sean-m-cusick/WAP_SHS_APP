@@ -199,8 +199,8 @@ ui <- dashboardPage(
                                              tags$b("Media Hype", style = "font-size: 30px")
  
                                          ),
-                                         uiOutput("tab")
-                              
+                                        
+                        img(src = "bbc_news.jpg", height = 300, width = 400)
                                          
                                   ),
                                  
