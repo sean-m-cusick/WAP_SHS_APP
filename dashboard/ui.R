@@ -1,3 +1,4 @@
+library(shinythemes)
 
 ui <- dashboardPage(
                     # ShinyDashboard tabs
@@ -20,7 +21,7 @@ ui <- dashboardPage(
                       tabItems(
                         # OVERVIEW PANEL ---------------------------------------
                         tabItem("overview",
-                                fluidPage(
+                                fluidPage(theme = shinytheme("darkly"),
                                   fluidRow(
                                     column(width = 10, offset = 1, align = "center", style = "border: 1px dashed black;",
                                            tags$b("Overview", style = "font-size: 40px"),
