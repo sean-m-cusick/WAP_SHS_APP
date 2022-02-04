@@ -131,11 +131,11 @@ ui <- dashboardPage(
                                            br(),
                                            fluidRow(
                                              column(width = 10, offset = 1, align = "center", style = "border: 1px dashed black;",
-                                                    tags$b("", style = "font-size: 25px"),
+                                                    tags$b("Hospital Admissions During the Covid pandemic", style = "font-size: 25px"),
                                                     br(), br(),
-                                                    p("Hospital Admissions During the Covid pandemic", 
-                                                      style = "font-family: 'lato'; font-size: 24pt;"
-                                                    )
+                                                    # p("", 
+                                                    #   style = "font-family: 'lato'; font-size: 24pt;"
+                                                    # )
                                              )
                                              ),
                                            br(),
