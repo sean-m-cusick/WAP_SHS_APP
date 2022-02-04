@@ -195,14 +195,20 @@ ui <- dashboardPage(
                                 
                                 fluidRow(
                                   column(width = 6,
+                                         fluidRow(
                                          box(width = NULL, solidHeader = TRUE, background = "purple", align = "center",
                                              tags$b("BBC NEWS", style = "font-size: 30px")
  
                                          ),
                                         
-                        img(src = "bbc_news.jpg", height = 300, width = 400)
+                        img(src = "bbc_news.jpg", height = 300)
                                          
-                                  ),
+                                 ),
+                        fluidRow(
+                          fluidRow(),
+                          img(src = "bbc_news2.png", height = 300)
+                        )
+                        ),
                                  
                                   column(width = 6,
                                          fluidRow(   
