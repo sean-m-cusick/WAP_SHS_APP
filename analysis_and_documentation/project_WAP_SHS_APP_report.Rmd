@@ -323,9 +323,7 @@ It should be noted that only data groups `00`, `01`, `02`, and `06` were used fo
 
 #### Version Control
 GitHub was utilised for version control. Below is the Network graph of git branches.
-![](image/network1.png)
-![](image/network2.png)
-![](image/network3.png)
+![](image/WAP SHS network.png)
 
 ***
 
@@ -439,21 +437,22 @@ The dataset may be biased because the data does not include variables that prope
 ***
 
 ## Data Manipulation {.tabset}
+The data cleaning & wrangling process are focused on the balance between time & computational efficiency. It aimed to perform a generic clean operation to remove redundant metadata and wrangle towards a standardised data frame layout 
+throughout the datasets.
 
 ### Data Cleaning
-The data cleaning process is built based on computational & time efficiency, aimed to perform a generic clean to all dataset with a standard consistency across most of the datasets.
 
-The datasets are first extracted from the PHS website using API keys then converted and stored at local repository as `.csv` files. 
-The cleaning script is then loaded the datasets and performed generic cleaning process such as remove redundant columns and created a 'quarter' & 'year' columns throughout most datasets.
-The cleaned datasets are then output into 'clean_script' folder for data analysis.
+he datasets are first extracted from the PHS website using API keys then converted `.csv` files and stored at local repository level.
+The API data is then loaded into the cleaning script to performed generic cleaning process such as format the dataset into data frames and any redundant columns that has zero value to our MVP goals.
 
-Additional cleaning may require on individual dataset depends on each analysis' requirement.
+Additional cleaning for each dataset require on individual dataset d was rarely required as the data sets use [open data standards](https://www.opendata.nhs.scot/uploads/admin/PHS-Open-Data-Standards-Version-1.0.pdf).
 
 ***
 
 ### Data Wrangling
 
-*ASDF LOREM IPSUM*
+The wrangling process is focused on standarised any catagory and foreign key columns. Such as establish a "year" & "quarter" columns for each dataset, and reordering any age_group columns.
+The output dataframes should have multiple foregin key columns ready to be process in the analysis stage.
 
 ***
 
