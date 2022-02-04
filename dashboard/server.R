@@ -226,7 +226,8 @@ server <- function(input, output, session) {
      leaflet() %>%
      addTiles() %>%
      addCircleMarkers(lng = ~longitude,
-                      lat = ~latitude)
+                      lat = ~latitude %>% 
+    cluste
  
    #
  })

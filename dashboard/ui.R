@@ -18,10 +18,19 @@ ui <- dashboardPage(
                     ),
 
                     dashboardBody(
+                      
+                      tags$style(".span12 {background-color: black;}"),
+                      useShinyjs(),
+                      tags$style(type='text/css', ".skin-blue .main-header .logo {background-color: #000000;}" ),
+                      tags$style(type='text/css', ".skin-blue .main-header .logo:hover {background-color: #000000;}"),
+                      tags$style(type='text/css', ".skin-blue .main-header .navbar {background-color: #000000;}"),
+                      tags$style(type="text/css",".shiny-output-error { visibility: hidden; }",".shiny-output-error:before { visibility: hidden; }"),
+                      
+                      
                       tabItems(
                         # OVERVIEW PANEL ---------------------------------------
                         tabItem("overview",
-                                fluidPage(theme = shinytheme("darkly"),
+                                fluidPage(theme = "css/",
                                   fluidRow(
                                     column(width = 10, offset = 1, align = "center", style = "border: 1px dashed black;",
                                            tags$b("Overview", style = "font-size: 40px"),
