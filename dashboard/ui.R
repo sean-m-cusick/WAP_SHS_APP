@@ -26,16 +26,8 @@ ui <- dashboardPage(
                                     column(width = 10, offset = 1, align = "center", style = "border: 1px dashed black;",
                                            tags$b("Overview", style = "font-size: 40px"),
                                            br(),  
-                                           p("Each Wednesday we publish a COVID-19 weekly report.
-                                             It provides information about the spread of the disease and the activity in NHS Scotland to tackle it.
-                                             There are two key points that we have learnt from the vaccine effectiveness analysis of omicron so far:
-
-                                             Vaccine effectiveness wanes over time for all doses, so it is important to get your next dose as soon as 
-                      possible after it becomes due, particularly if you are elderly and vulnerable, as your risk of a severe outcome will increase when the vaccine protection wanes.
-                                             
-                                             You can still get infected even if you are vaccinated - the biggest benefit of the vaccine is protection against severe disease. Therefore, even when you have been boosted you should be vigilant for symptoms and test yourself regularly with LFDs – 
-                                             especially before visiting those who are vulnerable.", 
-                                             style = "font-family: 'arial'; font-size: 12pt;"
+                                           p("Winter Affectations Post-2020 on Scottish Health Service Application", 
+                                             style = "font-family: 'arial'; font-size: 18pt;"
                                              )
                                     )
                                   ),
@@ -142,16 +134,12 @@ ui <- dashboardPage(
                                              column(width = 10, offset = 1, align = "center", style = "border: 1px dashed black;",
                                                     tags$b("Summary", style = "font-size: 25px"),
                                                     br(), br(),
-                                                    p("Each Wednesday we publish a COVID-19 weekly report.
-                                                      It provides information about the spread of the disease and the activity in NHS Scotland to tackle it.
-                                                      There are two key points that we have learnt from the vaccine effectiveness analysis of omicron so far:
+                                                    p("The two graphs below are looking at the hospital admissions during the Covid pandemic.  
+                                                    
+                                                      The first graph looks at hospital admissions comparing emergency and planned admissions.  
                                                       
-                                                      Vaccine effectiveness wanes over time for all doses, so it is important to get your next dose as soon as 
-                                                      possible after it becomes due, particularly if you are elderly and vulnerable, as your risk of a severe outcome will increase when the vaccine protection wanes.
-                                                      
-                                                      You can still get infected even if you are vaccinated - the biggest benefit of the vaccine is protection against severe disease. Therefore, even when you have been boosted you should be vigilant for symptoms and test yourself regularly with LFDs – 
-                                                      especially before visiting those who are vulnerable.", 
-                                                      style = "font-family: 'arial'; font-size: 12pt;"
+                                                      The second graph splits down the admissions by age group and it is clear to see that just after lockdown started the admission rate dropped sharply.", 
+                                                      style = "font-family: 'lato'; font-size: 16pt;"
                                                     )
                                              )
                                              ),
@@ -197,11 +185,11 @@ ui <- dashboardPage(
                         
                         
                         # winter PANEL -------------------------------------------------------------
-                        tabItem(tabName = "winter",
+                        tabItem(tabName = "Winter",
                                 
                                 fluidRow(
                                   column(width = 10,
-                                         tags$b("winter", style = "font-size: 30px"),
+                                         tags$b("Winter", style = "font-size: 30px"),
                                          br(), br(), 
                                   )
                                 ),
@@ -209,11 +197,11 @@ ui <- dashboardPage(
                                 fluidRow(
                                   column(width = 6,
                                          box(width = NULL, solidHeader = TRUE, background = "purple", align = "center",
-                                             tags$b("BBC NEWS", style = "font-size: 30px")
+                                             tags$b("Media Hype", style = "font-size: 30px")
  
                                          ),
-                                         uiOutput("tab")
-                              
+                                        
+                        img(src = "bbc_news.jpg", height = 300, width = 400)
                                          
                                   ),
                                  

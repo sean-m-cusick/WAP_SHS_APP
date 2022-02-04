@@ -29,7 +29,7 @@ server <- function(input, output, session) {
         tags$p( general_stat_filtered() %>% 
                  pull(daily_positive),
                style = "font-size: 70%;"),
-      subtitle = "Daily Positive",
+      subtitle = "Daily Positive Cases",
       color = "purple"
     )
   })
@@ -41,7 +41,7 @@ server <- function(input, output, session) {
         tags$p( general_stat_filtered() %>% 
                   pull(date),
                 style = "font-size: 70%;"),
-      subtitle = "Date",
+      subtitle = "Last Updated",
       color = "green"
     )
   })
@@ -53,7 +53,7 @@ server <- function(input, output, session) {
         tags$p( general_stat_filtered() %>% 
                   pull(cumulative_positive),
                 style = "font-size: 70%;"),
-      subtitle = "cumulative positive",
+      subtitle = "Cumulative Positive Cases",
       color = "blue"
     )
   })
@@ -279,7 +279,11 @@ server <- function(input, output, session) {
    winter_plot_1 <- reactive({
    
   })
-   
+  # BBC Image in winter
+  output$image <- renderUI({
+    src = "bbc_news.png"
+    tags$img(src=src)
+  })
    # winter page link
    url <- a("BBC NEWS", href="https://www.bbc.co.uk/news/health-59909860")
    output$tab <- renderUI({
