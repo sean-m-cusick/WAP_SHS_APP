@@ -329,6 +329,20 @@ p_value <- null_distribution %>%
              direction = "right")
 p_value
 ```
+
+
+```{r}
+df_ha_ans <- read_csv("clean_data/df_ha_ans.csv")
+
+ha_ans <- df_ha_ans %>% 
+  filter(admission_type == c("All Inpatients and Day cases", "Emergency Inpatients", "Not Specified")) %>% 
+  group_by(year, quarter) %>% 
+  rename(adm_num = episodes) %>% 
+  summarise(adm_num = sum(adm_num)) %>% 
+  mutate(quarter = factor(quarter))
+
+```
+
 # Hypothesis Test Summary - Covid Impact Hospital Admission 
 
 `The p-value of ~1 is above α=0.05, so we reject the null hypothesis and conclude that, there is no significant evidence tha the admission is higher during covid period than pre-covid period.`
@@ -337,40 +351,13 @@ p_value
 #########
 
 # Hypothesis Test  - Winter Impact 
-```{r}
-hypo_season_all <- hypo_all_trend_hb_ans %>% 
-  select(-pre_cov_adm_rate, - cov_adm_rate)
 
-pre_cov_hypo_season <- hypo_season_all %>% 
-  select(-cov_adm) %>%
-  rename(adm_num = pre_cov_adm) %>% 
-  mutate(data_type = "pre_cov") %>% 
-  relocate(data_type, .before = year)
-
-cov_hypo_season <- hypo_season_all %>% 
-  select(-pre_cov_adm)%>%
-    rename(adm_num = cov_adm) %>% 
-  mutate(data_type = "cov") %>% 
-  relocate(data_type, .before = year)
-
-hypo_season = bind_rows(cov_hypo_season, pre_cov_hypo_season) %>% 
-  group_by(quarter, week_ending) %>% 
-  summarise(adm_num = sum(adm_num)) %>% 
-  mutate(quarter = factor(quarter))
-
-
-hypo_season %>% 
-  ggplot()+
-  aes(x = adm_num, y = quarter, group = quarter)+
-  geom_boxplot()
-
-```
 # Hypothesis Setup  - Winter Impact(Q1) on Spring (Q2) 
 # H0: mu_winter - mu_spring = 0
 # Ha: mu_winter - mu_spring > 0
 ```{r}
-hypo_season_spring <- hypo_season %>% 
-  filter(quarter == c("1","2"))
+hypo_season_spring <- ha_ans %>% 
+  filter(quarter == "2" | quarter == "1")
 ```
 ```{r}
 null_distribution <- hypo_season_spring %>% 
@@ -412,8 +399,8 @@ p_value
 # H0: mu_winter - mu_spring = 0
 # Ha: mu_winter - mu_spring > 0
 ```{r}
-hypo_season_summer <- hypo_season %>% 
-  filter(quarter == c("1","3"))
+hypo_season_summer <- ha_ans %>% 
+  filter(quarter == "3" | quarter == "1")
 ```
 ```{r}
 null_distribution <- hypo_season_summer %>% 
@@ -452,8 +439,8 @@ p_value
 # H0: mu_winter - mu_spring = 0
 # Ha: mu_winter - mu_spring > 0
 ```{r}
-hypo_season_autumn <- hypo_season %>% 
-  filter(quarter == c("1","4"))
+hypo_season_autumn <- ha_ans %>% 
+  filter(quarter == "4" | quarter == "1")
 ```
 ```{r}
 null_distribution <- hypo_season_autumn %>% 
@@ -486,5 +473,34 @@ p_value
 
 
 
+# DUMP
+```{r}
 
+# hypo_season_all <- 
+# 
+# pre_cov_hypo_season <- hypo_season_all %>% 
+#   select(-cov_adm) %>%
+#   rename(adm_num = pre_cov_adm) %>% 
+#   mutate(data_type = "pre_cov") %>% 
+#   relocate(data_type, .before = year)
+# 
+# cov_hypo_season <- hypo_season_all %>% 
+#   select(-pre_cov_adm)%>%
+#     rename(adm_num = cov_adm) %>% 
+#   mutate(data_type = "cov") %>% 
+#   relocate(data_type, .before = year)
+# 
+# hypo_season = bind_rows(cov_hypo_season, pre_cov_hypo_season) %>% 
+#   group_by(quarter, week_ending) %>% 
+#   summarise(adm_num = sum(adm_num)) %>% 
+#   mutate(quarter = factor(quarter))
+# 
+# 
+# hypo_season %>% 
+#   ggplot()+
+#   aes(x = adm_num, y = quarter, group = quarter)+
+#   geom_boxplot()
+
+```
+```
 
