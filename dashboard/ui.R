@@ -143,52 +143,28 @@ ui <- dashboardPage(
                                              )
                                              ),
                                            br(),
-                                           br(),
                                           
                                            fluidRow(
-                                             column(width = 6, align = "center",
+                                             column(width = 12, align = "center",
                                                     box(width = NULL, solidHeader = TRUE, background = "blue",
                                                         tags$b("2 weeks Moving Average Hospital Admission", style = "font-size: 24px")
                                                         
                                                         
                                                     ),
-                                          
-                                                    
-                                                    plotlyOutput("life_covid_plot_1", height = 500)
+                                                    plotlyOutput("life_covid_plot_1", height = 550)
                                                     
                                              ),
-                                             
-                                             
-                                             column(width = 6, align = "center",
-                                                    box(width = NULL, solidHeader = TRUE, background = "blue",
-                                                        tags$b("2 weeks Moving Average Hospital Admission Per Age Group in 2020 - 2021", style = "font-size: 24px")
-                                                        
-                                                        
-                                                    ),
-                      
-                                                    plotlyOutput("life_covid_plot_2", height = 500)
-                                             )
-                                             
-                                             
-                                             
-                                           ),
-                                           
-                                           
-                                #  ),
-                                  
-                                  
-                               
-      
-                               # )
+                                                    )
+
                         ),
                         
                         
-                        # winter PANEL -------------------------------------------------------------
+                        # Winter PANEL -------------------------------------------------------------
                         tabItem(tabName = "winter",
                                 
                                 fluidRow(
                                   column(width = 10,
-                                         tags$b("winter", style = "font-size: 30px"),
+                                         tags$b("Winter", style = "font-size: 30px"),
                                          br(), br(), 
                                   )
                                 ),
@@ -197,7 +173,7 @@ ui <- dashboardPage(
                                   column(width = 6,
                                          fluidRow(
                                          box(width = NULL, solidHeader = TRUE, background = "purple", align = "center",
-                                             tags$b("BBC NEWS", style = "font-size: 30px")
+                                             tags$b("Media Hype", style = "font-size: 30px")
  
                                          ),
                                         
