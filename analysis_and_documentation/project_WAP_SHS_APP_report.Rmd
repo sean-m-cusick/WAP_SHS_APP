@@ -445,18 +445,17 @@ throughout the datasets.
 ### Data Cleaning
 The data cleaning process is built based on computational and time efficiency and aimed to perform a generic clean to all datasets with a standard consistency across most of them.
 
-The datasets are first extracted from the PHS website using API keys then converted and stored at local repository as `.csv` files.
-The cleaning script is then loaded into the datasets and run. Generic cleaning processes, such as removing redundant columns and creating a 'quarter' and 'year' column throughout most datasets, were then carried out.
-The cleaned datasets were then output into the 'clean_script' folder for data analysis.
+The datasets are first extracted from the PHS website using API keys then converted `.csv` files and stored at local repository level.
+The API data is then loaded into the cleaning script to performed generic cleaning process such as format the dataset into data frames and any redundant columns that has zero value to our MVP goals.
 
-Additional cleaning may be required on individual datasets depending on each analysis' requirement.
+Additional cleaning for each dataset require on individual dataset d was rarely required as the data sets use [open data standards](https://www.opendata.nhs.scot/uploads/admin/PHS-Open-Data-Standards-Version-1.0.pdf).
 
 ***
 
 ### Data Wrangling
 
-The wrangling process is focused on standardised any category and foreign key columns. Such as establish a "year" & "quarter" columns for each dataset, and reordering any age_group columns.
-The output data frames should have multiple foreign key columns ready to be process in the analysis stage.
+The wrangling process is focused on standardising any category and foreign key columns. For example establish a "year" and "quarter" column for each dataset, and reordering any age_group columns.
+The output data frames should have multiple foreign key columns ready to be processed in the analysis stage.
 
 ***
 
@@ -467,7 +466,7 @@ The following tabs explores details of the storage and structure of the data set
 The data on hospital activity and COVID cases were stored in the form of `.csv` files, also known as comma-separated values files. The value of using `.csv` is that they can be easily read by RStudio, and transformed into data frames which can be manipulated.
 
 
-In order to plot the maps, spatial data which was gleaned from `.csv` files were stored as the following file types:
+In order to plot the maps, spatial data was taken from the PHS site and stored as the following file types:
 
 File type    | Use   
 :------ | :-------------
