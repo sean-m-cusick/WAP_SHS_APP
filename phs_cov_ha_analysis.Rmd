@@ -114,12 +114,14 @@ all_trend_hb_ans %>%
 
 ```{r}
 age_group_trend_hb_ans <- cov_hb_ans %>% 
+  # Re order age groups
   filter(sex == "All" & age_group != "All ages") %>% 
   mutate(age_group = factor(age_group, levels = c("Under 5","5 - 14" ,"15 - 44", "45 - 64", "65 - 74", "75 - 84", "85 and over")
   )) %>%
   arrange(age_group) %>% 
       group_by(year, week_ending, age_group) %>% 
   summarise(number_admissions = sum(number_admissions)/1000) %>% 
+  # Calculate moving average
     mutate(
     moving_avg_2021 = slide_dbl(
       .x = number_admissions,
@@ -131,7 +133,7 @@ age_group_trend_hb_ans <- cov_hb_ans %>%
 
 
 cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-
+# output age group vs hospital admission plot
 age_group_trend_hb_ans %>% 
   ggplot()+
     geom_line(aes(x = week_ending, y = moving_avg_2021, group = age_group, colour = age_group))+
@@ -145,7 +147,8 @@ age_group_trend_hb_ans %>%
              y = c(6.1),
              vjust = 1,
            hjust = -.05) +
-  labs(title = "2 weeks Moving Average Hospital Admission Per Age Group in 2020 - 2021")+
+  labs(title = "2 weeks Moving Average Hospital Admission Per Age Group in 2020 - 2021",
+       subtitle = "winter season highligted in purple")+
   xlab("Time (date)")+
   ylab("Average Admission Count (Per 1'000)")+
   scale_colour_brewer(palette="Set1")+ 
@@ -265,7 +268,8 @@ hypo_all %>%
   aes(x = adm_num, y = data_type, group = data_type)+
   geom_boxplot(show.legend = TRUE)+
   stat_summary(fun.y = "mean", geom = "point", colour = "red")+
-    labs(title = "Covid Rate Boxplot")
+    labs(title = "Covid Admission Number Boxplot",
+         subtitle = "boxplot with plotted mean (red dot)")
 
 ```
 
@@ -274,7 +278,7 @@ hypo_all %>%
 # Hypothesis test - Covid Impact Hospital Admission
 
 #### Hypothesis Test Setup
-* Test type: 2 Sample paired Test
+* Test type: One-tailed two Samples paired Test
 
 * Dataset: Hospital admission Number between Covid Data(2020-2021) and Pre-Covid Data(2018-2019)
 
@@ -345,7 +349,8 @@ ha_ans <- df_ha_ans %>%
 
 # Hypothesis Test Summary - Covid Impact Hospital Admission 
 
-`The p-value of ~1 is above α=0.05, so we reject the null hypothesis and conclude that, there is no significant evidence tha the admission is higher during covid period than pre-covid period.`
+`The p-value of ~1 is above α=0.05, so we failed to reject the null hypothesis and,`
+`conclude that, there is no significant evidence tha the admission is higher during covid period than pre-covid period.`
 
 
 #########
