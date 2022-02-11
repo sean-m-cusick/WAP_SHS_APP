@@ -76,7 +76,7 @@ The dashboard outlines our topic in terms of:
 ## Initial Concept
 In order to realise this objective, a preliminary wire-frame of the Minimal Viable Product (MVP) was designed during the Initial Design Review (IDR) in `WP1.1 - Project Set-up`. This wire-frame can be found in the appendix.  
 
-## Revised Concept {.tabset}
+## Revised Concept
 During the Detailed Design Review (DDR), the design was further streamlined, with superfluous features moved to the `WP2.2.4 - Features` work package. The updated wire-frames can be found in the tabs below:
 ### Brief description of dashboard topic
 
@@ -225,7 +225,7 @@ File type    | Use
 
 ***
 
-### Structure {.tabset}
+### Structure
 The following tabs contain an explanation for the file naming methods utilised by the team to differentiate and synthesise between each data set:  
 
 #### Parameters naming methodology
