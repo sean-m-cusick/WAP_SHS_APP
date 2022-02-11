@@ -285,7 +285,7 @@ Milestones:
 Design Reviews are meetings that are used to ensure that the project's objective is still feasible, and allows the team to make adjustments from any new information or challenges that have arisen from project activities.  
 
 Design Reviews:  
-* Initial Design Review - **IDR **  
+* Initial Design Review - **IDR**  
 * Detailed Design Review - **DDR**  
 * Prototype Design Review - **PDR**  
 * Final Design Review - **FDR**  
