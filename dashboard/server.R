@@ -111,7 +111,7 @@ server <- function(input, output, session) {
       ggplot()+
       geom_line(aes(x = week_ending, y = moving_avg_2021, group = age_group, colour = age_group))+
       
-      geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = 0, ymax = 6.5,
+      geom_rect(aes(xmin = week_ending, xmax = dplyr::lead(week_ending), ymin = 0, ymax = 15,
                     fill = factor(quarter)), alpha = .3, show.legend = FALSE) +
       scale_fill_manual(values = alpha(c("darkblue", "transparent" ,"transparent" ,"transparent"), 0.6))+
       geom_vline(xintercept = as.Date(ymd("2020-03-16")), linetype= 2, color = "black", size=0.6)+
@@ -119,11 +119,10 @@ server <- function(input, output, session) {
       annotate(geom = "text",
                label = c("Lockdown"),
                x = c( as.Date(ymd("2020-03-16"))),
-               y = c(6.1),
+               y = c(14),
                vjust = 1,
                hjust = -.05) +
-      
-      labs(title = "2 weeks Moving Average Hospital Admission Per Age Group in 2020 - 2021")+
+
       xlab("Time (date)")+
       ylab("Average Admission Count (per 1'000)")+
       scale_colour_brewer(palette="Set1")+ 
