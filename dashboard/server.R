@@ -88,7 +88,7 @@ server <- function(input, output, session) {
   ##########################################
   output$life_covid_plot_2 <- renderPlotly({
     
-    age_group_trend_hb_ans <- cov_hb_ans %>% 
+    age_group_trend_hb_ans <- df_cov_hb_ans %>% 
       filter(sex == "All" & age_group != "All ages") %>% 
       mutate(age_group = factor(age_group, levels = c("Under 5","5 - 14" ,"15 - 44", "45 - 64", "65 - 74", "75 - 84", "85 and over")
       )) %>%
