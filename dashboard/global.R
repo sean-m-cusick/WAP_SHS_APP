@@ -1,9 +1,17 @@
 # Loading in packages
 library(tidyverse)
 library(shiny)
+<<<<<<< Updated upstream
 library(shinyjs)
 library(shinydashboard)
 library(shinythemes)
+=======
+library(shinyDarkmode)
+library(shinydashboard)
+library(shinyWidgets)
+library(shinythemes)
+library(shinyjs)
+>>>>>>> Stashed changes
 library(DT)
 library(leaflet)
 library(sf)

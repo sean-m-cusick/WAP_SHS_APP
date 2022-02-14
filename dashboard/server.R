@@ -3,6 +3,14 @@
 
 server <- function(input, output, session) {
   
+  # DARKMODE TOGGLE ----
+  
+  darkmode_toggle(inputid = 'togglemode')
+  
+  
+}
+
+  
   # OVERVIEW PANEL --------------------
   output$value <- renderText({input$about })
   
