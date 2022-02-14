@@ -22,7 +22,7 @@ hospital_activty_dep  <- read_csv(here("clean_data/df_ha_dep.csv"))
 df_cov_hb_ans         <- read_csv(here("clean_data/df_cov_hb_ans.csv"))
 df_general_stat       <- read_csv(here("clean_data/df_day_trend_loc.csv"))
 ane_weekly_full       <- read_csv(here("clean_data/df_ane_hb_ans.csv"))
-
+df_ca_name_list <- read_csv(here("clean_data/df_ca_name_list.csv"))
  
 #Launch App
 #shinyApp(ui = ui, server = server)

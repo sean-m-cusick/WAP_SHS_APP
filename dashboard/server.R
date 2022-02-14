@@ -12,6 +12,7 @@ server <- function(input, output, session) {
       select(date, ca, ca_name, daily_positive, cumulative_positive, daily_deaths, cumulative_deaths) %>% 
       arrange(date) %>% 
       group_by(ca) %>% 
+      filter(ca_name == input$ca_input) %>% 
       slice_tail(n  = 1) %>% 
       ungroup() %>% 
       group_by(date) %>% 
@@ -45,6 +46,8 @@ server <- function(input, output, session) {
       color = "green"
     )
   })
+
+  
   # cumulative_positive box
   output$cumulative_positive <- renderValueBox({
     
