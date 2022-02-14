@@ -163,9 +163,10 @@ age_group_trend_hb_ans %>%
 ```
 
 ```{r}
-# Display General Stat : ALL 
+# Load in Dataframe
 df_general_stat <- read_csv("clean_data/df_day_trend_loc.csv")
 
+# Display General Stat : ALL 
 general_stat <- df_general_stat %>% 
   select(date, ca, ca_name, daily_positive, cumulative_positive, daily_deaths, cumulative_deaths) %>% 
   arrange(date) %>% 
@@ -180,41 +181,19 @@ all_general_stat <- general_stat %>%
             daily_deaths = sum(daily_deaths),
             cumulative_deaths = sum(cumulative_deaths))
 
-
-#specific stat per local authority
+# Specific stat per Local Authority
 specific_general_stat <- general_stat %>% 
   ungroup() %>% 
   group_by(date, ca_name) %>% 
-  filter (ca_name == "Midlothian") %>%  # FILTER BY LOCAL AUTHORITY
+  filter (ca_name == "Midlothian") %>%  # FILTER BY LOCAL AUTHORITY # Adding Filter HERE
   summarise(daily_positive = sum(daily_positive),
             cumulative_positive = sum(cumulative_positive),
             daily_deaths = sum(daily_deaths),
             cumulative_deaths = sum(cumulative_deaths))
 
-#Local Authority list
+# Local Authority list
 ca_name_list = factor(general_stat$ca_name)
 
-all_general_stat
-
-specific_general_stat
-ca_name_list
-
-    df_general_stat %>% 
-      select(date, ca, ca_name, daily_positive, cumulative_positive, daily_deaths, cumulative_deaths) %>% 
-      arrange(date) %>% 
-      group_by(ca) %>% 
-      filter(ca_name == "Clackmannanshire") %>% 
-      slice_tail(n  = 1) %>% 
-      ungroup() %>% 
-      group_by(date) %>% 
-      summarise(daily_positive = sum(daily_positive),
-                cumulative_positive = sum(cumulative_positive),
-                daily_deaths = sum(daily_deaths),
-                cumulative_deaths = sum(cumulative_deaths))
-
-
-
-# write.csv(ca_name_list,"E:\\CodeClan\\phs_group_project\\phs_rshiny_dashboard_grp1\\clean_data\\df_ca_name_list.csv", row.names = FALSE)
 ```
 # hypothesis testing
 ```{r}
