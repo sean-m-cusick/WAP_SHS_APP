@@ -1,4 +1,6 @@
 
+
+
 ui <- dashboardPage(
                     # ShinyDashboard tabs
                     dashboardHeader(title = "PHS Project"),
@@ -33,43 +35,39 @@ ui <- dashboardPage(
                                   br(),
  
                                   fluidRow(
-                                    column(width = 6, align = "center",
+                                    column(width = 9, align = "center",
                                            box(width = NULL, solidHeader = TRUE, background = "purple",
                                                tags$b("Location of hospitals in Scotland", style = "font-size: 30px")
                                                
                                                
                                            ),
- 
-                                           
                                            leafletOutput("general_map", height = 500)
-                                           
                                     ),
                                     
-                                    column(width = 6, align = "center",
+                                    column(width = 3, align = "center",
                                            fluidRow(
                                              box(width = NULL, solidHeader = TRUE, background = "purple",
                                                  tags$b("Covid Summary", style = "font-size: 30px")
-
-
                                              )
-
-                                             #plotlyOutput("general_plot", height = 300, reportTheme = TRUE)
-
                                            ),
                                            fluidRow(
-                                             valueBoxOutput("date")
+                                             column(width = 12, align = "center",
+                                             # valueBoxOutput("date")
+                                             #############
+                                             selectInput("ca_input",
+                                                         "Hospital List",
+                                                         choices = df_ca_name_list))
+                                             #############
                                            ),
-                                           fluidRow(
-                                              valueBoxOutput("daily_positive"),
-                                              valueBoxOutput("daily_deaths")
-                                              
-                                             
-                                             
+                                           fluidRow(column(width = 12, align = "center",
+                                              valueBoxOutput("daily_positive"))
                                            ),
-                                           fluidRow(
-                                             valueBoxOutput("cumulative_positive"),
-                                             valueBoxOutput("cumulative_deaths")
-                                             
+                                           fluidRow(column(width = 12, align = "center",
+                                             valueBoxOutput("cumulative_positive"))
+                                           ),
+                                           fluidRow(column(width = 12, align = "center",
+                                             valueBoxOutput("cumulative_deaths"))
+                                           )
                                            )
                                            # fluidRow(
                                            #   
@@ -83,7 +81,6 @@ ui <- dashboardPage(
                                            # #  plotlyOutput("time_series_general_plot", height = 300, reportTheme = TRUE)
                                            #   
                                            # )
-                                    )
                                     
                                   ),
                                   # fluidRow(

@@ -198,6 +198,23 @@ all_general_stat
 
 specific_general_stat
 ca_name_list
+
+    df_general_stat %>% 
+      select(date, ca, ca_name, daily_positive, cumulative_positive, daily_deaths, cumulative_deaths) %>% 
+      arrange(date) %>% 
+      group_by(ca) %>% 
+      filter(ca_name == "Clackmannanshire") %>% 
+      slice_tail(n  = 1) %>% 
+      ungroup() %>% 
+      group_by(date) %>% 
+      summarise(daily_positive = sum(daily_positive),
+                cumulative_positive = sum(cumulative_positive),
+                daily_deaths = sum(daily_deaths),
+                cumulative_deaths = sum(cumulative_deaths))
+
+
+
+# write.csv(ca_name_list,"E:\\CodeClan\\phs_group_project\\phs_rshiny_dashboard_grp1\\clean_data\\df_ca_name_list.csv", row.names = FALSE)
 ```
 # hypothesis testing
 ```{r}
